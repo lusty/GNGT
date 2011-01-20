@@ -328,7 +328,7 @@
 	};
 	C992D88312E2EF13004E4C35 /* GardenInfo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {904, 492}}";
+			sepNavIntBoundsRect = "{{0, 0}, {811, 492}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 323}";
 		};
@@ -383,8 +383,8 @@
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{5832, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{5883, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{5933, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 9518}\";\n    s = 0;\n}";
 			sepNavIntBoundsRect = "{{0, 0}, {1517, 3731}}";
-			sepNavSelRange = "{6474, 0}";
-			sepNavVisRange = "{6105, 822}";
+			sepNavSelRange = "{6396, 0}";
+			sepNavVisRange = "{5598, 1642}";
 		};
 	};
 	C992D8E912E2FEA8004E4C35 /* PBXTextBookmark */ = {
@@ -431,9 +431,9 @@
 	};
 	C992D96512E37F3F004E4C35 /* GardenDescriptionViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 1261}}";
-			sepNavSelRange = "{970, 0}";
-			sepNavVisRange = "{0, 1365}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 1144}}";
+			sepNavSelRange = "{1699, 0}";
+			sepNavVisRange = "{984, 1456}";
 		};
 	};
 	C992D96C12E38325004E4C35 /* PBXTextBookmark */ = {

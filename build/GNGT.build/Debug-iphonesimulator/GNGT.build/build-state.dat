@@ -1,12 +1,13 @@
 TGNGT
 v7
 r0
-t317030088.692830
+t317190918.672171
 cCheck dependencies
 cProcessInfoPlistFile "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/Info.plist" GNGT-Info.plist
 cCompileXIB "/Users/lusty/Documents/iPhone Apps/GNGT/MainWindow.xib"
 cCpResource build/Debug-iphonesimulator/GNGT.app/GNGT.sqlite GNGT.sqlite
 cCompileXIB "/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.xib"
+cCpResource build/Debug-iphonesimulator/GNGT.app/GNGTAppIco.png GNGTAppIco.png
 cProcessPCH /var/folders/jb/jbmpR6z1F6Wc3GkjmiEPdU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/GNGT_Prefix-cwkhfpdanisuyaenzaeegdkytrbr/GNGT_Prefix.pch.gch GNGT_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 cDataModelVersionCompile "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT.momd" "/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.xcdatamodeld"
 cCompileC build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/main.o "/Users/lusty/Documents/iPhone Apps/GNGT/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
@@ -16,6 +17,9 @@ cCompileC build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/
 cCompileC build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardensListViewController.o "/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardensListViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenDescriptionViewController.o "/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenDescriptionView.o "/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT" normal i386
+cGenerateDSYMFile "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app.dSYM" "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT"
+cTouch "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app"
 
 N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
 c000000004CC128950000000000000110
@@ -109,9 +113,9 @@ s1595
 i<UIKit/UIKit.h>
 
 N/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m
-c000000004D3547480000000000000BC7
-t1295337288
-s3015
+c000000004D37BA830000000000000BCE
+t1295497859
+s3022
 i"GardenDescriptionViewController.h"
 i"GardenDescriptionView.h"
 i"GardenInfo.h"
@@ -144,6 +148,11 @@ N/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.xcdatamodeld
 c000000004D32BF740000000000000088
 t1295171444
 s136
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/GNGTAppIco.png
+c000000004D2E963700000000000017D7
+t1294898743
+s6103
 
 N/Users/lusty/Documents/iPhone Apps/GNGT/GNGT_Prefix.pch
 c000000004D31F771000000000000015C
@@ -185,16 +194,16 @@ t1295173248
 s24661
 
 N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app
-t1295317468
-s272
+t1295498118
+s340
 
 N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app.dSYM
-t1295201699
+t1295497859
 s102
 
 N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT
-t2
-s0
+t1295497859
+s58836
 
 N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT.momd
 t1295171444
@@ -204,20 +213,24 @@ N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GN
 t1295175473
 s167936
 
+N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGTAppIco.png
+t1295498118
+s6103
+
 N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GardenDescriptionViewController.nib
 t1295317467
 s1824
 
 N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/Info.plist
-t1295120733
-s579
+t1295498118
+s619
 
 N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/MainWindow.nib
 t1295173384
 s1530
 
 N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/PkgInfo
-t1295120733
+t1295498118
 s8
 
 N/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GNGT.LinkFileList
@@ -250,8 +263,8 @@ t1295321187
 s25208
 
 N/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenDescriptionViewController.o
-t2
-s0
+t1295497859
+s60248
 
 N/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenInfo.o
 t1295171551
@@ -276,13 +289,13 @@ t1295120734
 s16326640
 
 NGNGT-Info.plist
-c000000004D31F771000000000000038D
-t1295120241
-s909
+c000000004D37BB86000000000000039B
+t1295498118
+s923
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies317030088#317030088#0(0"0(0#1#0"8670986880#0"0#
+lSLF07#2@18"Check dependencies317190918#317190918#0(0"0(0#1#0"8662928448#0"0#
 
 CCompileC build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GNGTAppDelegate.o "/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GNGTAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 s317010371.200066
@@ -333,9 +346,9 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@79"Compile /Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionView.m317013986#317013987#0(0"0(0#0#71"/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionView.m8663314080#1929"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-generated-files.hmap" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-own-target-headers.hmap" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-all-target-headers.hmap" -iquote "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-project-headers.hmap" "-F/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/include" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/DerivedSources/i386" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/DerivedSources" -include /var/folders/jb/jbmpR6z1F6Wc3GkjmiEPdU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/GNGT_Prefix-cwkhfpdanisuyaenzaeegdkytrbr/GNGT_Prefix.pch -c "/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionView.m" -o "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenDescriptionView.o"0#
 
 CCompileC build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenDescriptionViewController.o "/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
-s317030088.598892
-e317030088.692768
-r0
+s317190659.150915
+e317190659.499914
+r1
 xCompileC
 xbuild/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenDescriptionViewController.o
 x/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m
@@ -343,16 +356,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-o/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m: In function '-[GardenDescriptionViewController viewWillAppear:]':
-o/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:52: error: '_context' undeclared (first use in this function)
-o/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:52: error: (Each undeclared identifier is reported only once
-o/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:52: error: for each function it appears in.)
-o/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:55: error: conflicting types for 'gardenDescription'
-o/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:52: error: previous definition of 'gardenDescription' was here
-o/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:55: error: 'FailedBankDatabase' undeclared (first use in this function)
-o/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:57: error: 'description' undeclared (first use in this function)
-o/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:55: warning: unused variable 'gardenDescription'
-lSLF07#2@89"Compile /Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m317030088#317030088#0(1275"/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m: In function '-[GardenDescriptionViewController viewWillAppear:]':/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:52: error: '_context' undeclared (first use in this function)/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:52: error: (Each undeclared identifier is reported only once/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:52: error: for each function it appears in.)/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:55: error: conflicting types for 'gardenDescription'/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:52: error: previous definition of 'gardenDescription' was here/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:55: error: 'FailedBankDatabase' undeclared (first use in this function)/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:57: error: 'description' undeclared (first use in this function)/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m:55: warning: unused variable 'gardenDescription'6(4@50"'_context' undeclared (first use in this function)317030088#149#144#0(6@81"/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m317030088#52#0#52#0#43"'*' undeclared (first use in this function)0(4@41"Conflicting types for 'gardenDescription'317030088#563#135#0(6@81"/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m317030088#55#0#55#0#25"conflicting types for '*'0(13@51"Previous definition of 'gardenDescription' was here317030088#698#145#0(6@81"/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m317030088#52#0#52#0#35"previous definition of '*' was here0(4@60"'FailedBankDatabase' undeclared (first use in this function)317030088#843#154#0(6@81"/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m317030088#55#0#55#0#43"'*' undeclared (first use in this function)0(4@53"'description' undeclared (first use in this function)317030088#997#147#0(6@81"/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m317030088#57#0#57#0#43"'*' undeclared (first use in this function)0(22@35"Unused variable 'gardenDescription'317030088#1144#131#0(6@81"/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m317030088#55#0#55#0#19"unused variable '*'0(0#0#81"/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m8667409344#1949"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-generated-files.hmap" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-own-target-headers.hmap" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-all-target-headers.hmap" -iquote "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-project-headers.hmap" "-F/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/include" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/DerivedSources/i386" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/DerivedSources" -include /var/folders/jb/jbmpR6z1F6Wc3GkjmiEPdU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/GNGT_Prefix-cwkhfpdanisuyaenzaeegdkytrbr/GNGT_Prefix.pch -c "/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m" -o "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenDescriptionViewController.o"1#
+lSLF07#2@89"Compile /Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m317190659#317190659#0(0"0(0#0#81"/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m8670126432#1949"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-generated-files.hmap" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-own-target-headers.hmap" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-all-target-headers.hmap" -iquote "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-project-headers.hmap" "-F/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/include" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/DerivedSources/i386" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/DerivedSources" -include /var/folders/jb/jbmpR6z1F6Wc3GkjmiEPdU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/GNGT_Prefix-cwkhfpdanisuyaenzaeegdkytrbr/GNGT_Prefix.pch -c "/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescriptionViewController.m" -o "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenDescriptionViewController.o"0#
 
 CCompileC build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenInfo.o "/Users/lusty/Documents/iPhone Apps/GNGT/GardenInfo.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 s316864351.309817
@@ -420,6 +424,15 @@ xbuild/Debug-iphonesimulator/GNGT.app/GNGT.sqlite
 xGNGT.sqlite
 lSLF07#2@16"Copy GNGT.sqlite316868273#316868273#0(0"0(0#0#51"/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.sqlite8669861696#475"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.sqlite" "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app"0#
 
+CCpResource build/Debug-iphonesimulator/GNGT.app/GNGTAppIco.png GNGTAppIco.png
+s317190918.623790
+e317190918.669029
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/GNGT.app/GNGTAppIco.png
+xGNGTAppIco.png
+lSLF07#2@19"Copy GNGTAppIco.png317190918#317190918#0(0"0(0#0#54"/Users/lusty/Documents/iPhone Apps/GNGT/GNGTAppIco.png8667343776#478"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/lusty/Documents/iPhone Apps/GNGT/GNGTAppIco.png" "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app"0#
+
 CDataModelVersionCompile "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT.momd" "/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.xcdatamodeld"
 s316864244.716206
 e316864244.826835
@@ -430,34 +443,32 @@ x/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.xcdatamodeld
 lSLF07#2@88"DataModelVersionCompile build/Debug-iphonesimulator/GNGT.app/GNGT.momd GNGT.xcdatamodeld316864244#316864244#0(0"0(0#0#57"/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.xcdatamodeld8631435808#386"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.6 "/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.xcdatamodeld" "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT.momd"0#
 
 CGenerateDSYMFile "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app.dSYM" "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT"
-s316894499.401980
-e316894499.417051
+s317190659.740922
+e317190659.850557
 r1
 xGenerateDSYMFile
 x/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app.dSYM
 x/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT
-lSLF07#2@100"GenerateDSYMFile build/Debug-iphonesimulator/GNGT.app.dSYM build/Debug-iphonesimulator/GNGT.app/GNGT316894499#316894499#0(0"0(0#0#81"/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT8670198944#383"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT" -o "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app.dSYM"0#
+lSLF07#2@100"GenerateDSYMFile build/Debug-iphonesimulator/GNGT.app.dSYM build/Debug-iphonesimulator/GNGT.app/GNGT317190659#317190659#0(0"0(0#0#81"/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT8669718144#383"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT" -o "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app.dSYM"0#
 
 CLd "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT" normal i386
-s317010267.689999
-e317010268.329757
-r0
+s317190659.499987
+e317190659.740841
+r1
 xLd
 x/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT
 xnormal
 xi386
-old: duplicate symbol _OBJC_METACLASS_$_GardenDescription in /Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenDescriptionView.o and /Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenDescription.o
-ocollect2: ld returned 1 exit status
-lSLF07#2@86"Link /Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT317010267#317010268#0(468"ld: duplicate symbol _OBJC_METACLASS_$_GardenDescription in /Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenDescriptionView.o and /Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenDescription.ocollect2: ld returned 1 exit statusCommand /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 failed with exit code 12(13@323"Duplicate symbol _OBJC_METACLASS_$_GardenDescription in /Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenDescriptionView.o and /Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GardenDescription.o317010268#0#328#0(6@0"317010268#0#0#0#0#0"0(4@103"Command /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 failed with exit code 1317010268#18446744073709551615#0#0(1@0"0(0#0#0"8635710560#920"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk "-L/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator" "-F/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator" -filelist "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GNGT.LinkFileList" -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT"1#
+lSLF07#2@86"Link /Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT317190659#317190659#0(0"0(0#0#0"8671444672#920"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk "-L/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator" "-F/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator" -filelist "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GNGT.LinkFileList" -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT"0#
 
 CProcessInfoPlistFile "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/Info.plist" GNGT-Info.plist
-s316813533.613664
-e316813533.617764
+s317190918.620492
+e317190918.623585
 r1
 xProcessInfoPlistFile
 x/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/Info.plist
 xGNGT-Info.plist
-lSLF07#2@23"Process GNGT-Info.plist316813533#316813533#0(0"0(0#0#55"/Users/lusty/Documents/iPhone Apps/GNGT/GNGT-Info.plist8659430656#479"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility GNGT-Info.plist -genpkginfo "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/Info.plist"0#
+lSLF07#2@23"Process GNGT-Info.plist317190918#317190918#0(0"0(0#0#55"/Users/lusty/Documents/iPhone Apps/GNGT/GNGT-Info.plist8668560896#479"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility GNGT-Info.plist -genpkginfo "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/Info.plist"0#
 
 CProcessPCH /var/folders/jb/jbmpR6z1F6Wc3GkjmiEPdU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/GNGT_Prefix-cwkhfpdanisuyaenzaeegdkytrbr/GNGT_Prefix.pch.gch GNGT_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 s316813533.939588
@@ -473,10 +484,10 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@26"Precompile GNGT_Prefix.pch316813533#316813534#0(0"0(0#0#55"/Users/lusty/Documents/iPhone Apps/GNGT/GNGT_Prefix.pch8667306144#1779"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-generated-files.hmap" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-own-target-headers.hmap" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-all-target-headers.hmap" -iquote "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-project-headers.hmap" "-F/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/include" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/DerivedSources/i386" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/DerivedSources" -c "/Users/lusty/Documents/iPhone Apps/GNGT/GNGT_Prefix.pch" -o /var/folders/jb/jbmpR6z1F6Wc3GkjmiEPdU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/GNGT_Prefix-cwkhfpdanisuyaenzaeegdkytrbr/GNGT_Prefix.pch.gch0#
 
 CTouch "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app"
-s316894499.417116
-e316894499.419476
+s317190918.669905
+e317190918.672145
 r1
 xTouch
 x/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app
-lSLF07#2@82"Touch /Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app316894499#316894499#0(0"0(0#0#0"8668819744#281"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app"0#
+lSLF07#2@82"Touch /Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app317190918#317190918#0(0"0(0#0#0"8670655904#281"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app"0#
 

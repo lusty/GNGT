@@ -48,6 +48,7 @@
 }
 */
 
+/*
 - (void)viewWillAppear:(BOOL)animated {
 	NSEntityDescription *gardenDescription = [NSEntityDescription entityForName:@"GardenInfo" inManagedObjectContext:_context];
 	 NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
@@ -61,6 +62,7 @@
         [_cityLabel setText:description.city];     
     }
 }
+ */
 
 /*
 // Override to allow orientations other than the default portrait orientation.

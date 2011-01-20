@@ -22,6 +22,7 @@
 		C992D96712E37F3F004E4C35 /* GardenDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C992D96512E37F3F004E4C35 /* GardenDescriptionViewController.m */; };
 		C992D96812E37F3F004E4C35 /* GardenDescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C992D96612E37F3F004E4C35 /* GardenDescriptionViewController.xib */; };
 		C992D98012E42394004E4C35 /* GardenDescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C992D97F12E42394004E4C35 /* GardenDescriptionView.m */; };
+		C992D9C412E7F2E5004E4C35 /* GNGTAppIco.png in Resources */ = {isa = PBXBuildFile; fileRef = C992D9C312E7F2E5004E4C35 /* GNGTAppIco.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		C992D96612E37F3F004E4C35 /* GardenDescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GardenDescriptionViewController.xib; sourceTree = "<group>"; };
 		C992D97E12E42394004E4C35 /* GardenDescriptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenDescriptionView.h; sourceTree = "<group>"; };
 		C992D97F12E42394004E4C35 /* GardenDescriptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenDescriptionView.m; sourceTree = "<group>"; };
+		C992D9C312E7F2E5004E4C35 /* GNGTAppIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GNGTAppIco.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C992D9C312E7F2E5004E4C35 /* GNGTAppIco.png */,
 				C992D93512E306AA004E4C35 /* GNGT.sqlite */,
 				C992D88212E2EF13004E4C35 /* GardenInfo.h */,
 				C992D88312E2EF13004E4C35 /* GardenInfo.m */,
@@ -189,6 +192,7 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				C992D93612E306AA004E4C35 /* GNGT.sqlite in Resources */,
 				C992D96812E37F3F004E4C35 /* GardenDescriptionViewController.xib in Resources */,
+				C992D9C412E7F2E5004E4C35 /* GNGTAppIco.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
