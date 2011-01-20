@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+@class GardensListViewController;
 
 @interface GNGTAppDelegate : NSObject <UIApplicationDelegate> {
     
     UIWindow *window;
 	UINavigationController *_navController;
+	GardensListViewController *gardenListController;
     
 @private
     NSManagedObjectContext *managedObjectContext_;
@@ -22,6 +24,7 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navController;
+@property (nonatomic, retain) IBOutlet GardensListViewController *gardenListController;
 
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;

@@ -9,13 +9,13 @@
 #import "GardensListViewController.h"
 #import "GardenDescriptionViewController.h"
 #import "GardenInfo.h"
-
+#import "GardenListViewCell.h"
 
 @implementation GardensListViewController
 @synthesize fetchedResultsController = _fetchedResultsController;
 @synthesize context = _context;
 @synthesize description = _description;
-
+@synthesize protoCell;
 
 #pragma mark -
 #pragma mark Initialization
@@ -43,7 +43,7 @@
     [fetchRequest setEntity:entity];
 	
     NSSortDescriptor *sort = [[NSSortDescriptor alloc] 
-							  initWithKey:@"gardenNumber" ascending:YES];
+							  initWithKey:@"gardenName" ascending:YES];
     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
 	
     [fetchRequest setFetchBatchSize:20];
@@ -129,70 +129,27 @@
 // Customize the appearance of table view cells.
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     GardenInfo *info = [_fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", info.gardenNumber, info.gardenName];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", 
-								 info.street, info.city];
+	GardenListViewCell *gcell = (GardenListViewCell*)cell;
+    gcell.gardenNameLabel.text  = info.gardenName;
+    gcell.gardenCityLabel.text = info.city;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 
 		 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"GardenListCell";
 	
-    UITableViewCell *cell = 
-	[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] 
-				 initWithStyle:UITableViewCellStyleSubtitle 
-				 reuseIdentifier:CellIdentifier] autorelease];
+		[[NSBundle mainBundle] loadNibNamed:@"GardenListViewCell" owner:self options:nil];
+        cell = protoCell; // loading the bundle sets this IBOutlet
+		self.protoCell = nil; // but then we have to clear it so the next load will create a fresh object
     }
 	
     // Set up the cell...
     [self configureCell:cell atIndexPath:indexPath];
-	
     return cell;
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source.
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }   
-}
-*/
-
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 
 #pragma mark -
 #pragma mark Table view delegate
@@ -210,7 +167,8 @@
 	if (self.description == nil) {
         self.description = [[[GardenDescriptionViewController alloc] initWithNibName:@"GardenDescriptionViewController" bundle:nil] autorelease];        
     }
-	GardenInfo *description = (GardenInfo *)[_fetchedResultsController objectAtIndexPath:indexPath];
+	GardenInfo *info = (GardenInfo *)[_fetchedResultsController objectAtIndexPath:indexPath];
+	self.description.gardenDescription = info;
     [self.navigationController pushViewController:_description animated:YES];
 }
 
