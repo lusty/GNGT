@@ -1,0 +1,40 @@
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:13: error: no declaration of property 'gardenNumber' found in the interface
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:14: error: no declaration of property 'gardenName' found in the interface
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:15: error: no declaration of property 'street' found in the interface
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:16: error: no declaration of property 'city' found in the interface
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:17: error: no declaration of property 'plantSale' found in the interface
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:18: error: no declaration of property 'designer' found in the interface
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:19: error: no declaration of property 'directions' found in the interface
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:20: error: no declaration of property 'gardenInstaller' found in the interface
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:21: error: no declaration of property 'other' found in the interface
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:22: error: no declaration of property 'showcase' found in the interface
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:23: error: no declaration of property 'sqft' found in the interface
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:24: error: no declaration of property 'wildlife' found in the interface
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:25: error: no declaration of property 'yearInstalled' found in the interface
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m: In function '-[GardenDescription initWithUniqueId:gardenName:street:city:plantSale:designer:directions:gardenInstaller:other:showcase:sqft:wildlife:yearInstalled:]':
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:32: error: request for member 'gardenNumber' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:33: error: request for member 'gardenName' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:34: error: request for member 'street' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:35: error: request for member 'city' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:36: error: request for member 'plantSale' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:37: error: request for member 'designer' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:38: error: request for member 'directions' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:39: error: request for member 'gardenInstaller' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:40: error: request for member 'other' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:41: error: request for member 'showcase' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:42: error: request for member 'sqft' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:43: error: request for member 'wildlife' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:44: error: request for member 'yearInstalled' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m: In function '-[GardenDescription dealloc]':
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:51: error: request for member 'gardenName' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:52: error: request for member 'street' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:53: error: request for member 'city' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:54: error: request for member 'plantSale' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:55: error: request for member 'designer' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:56: error: request for member 'directions' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:57: error: request for member 'gardenInstaller' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:58: error: request for member 'other' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:59: error: request for member 'showcase' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:60: error: request for member 'sqft' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:61: error: request for member 'wildlife' in something not a structure or union
+/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GardenDescription.m:62: error: request for member 'yearInstalled' in something not a structure or union

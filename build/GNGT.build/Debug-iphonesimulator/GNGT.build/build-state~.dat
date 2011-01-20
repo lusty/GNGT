@@ -1,0 +1,245 @@
+TGNGT
+v7
+r0
+t316813534.951222
+cCheck dependencies
+cProcessInfoPlistFile "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/Info.plist" GNGT-Info.plist
+cCompileXIB "/Users/lusty/Documents/iPhone Apps/GNGT/MainWindow.xib"
+cProcessPCH /var/folders/jb/jbmpR6z1F6Wc3GkjmiEPdU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/GNGT_Prefix-cwkhfpdanisuyaenzaeegdkytrbr/GNGT_Prefix.pch.gch GNGT_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cDataModelVersionCompile "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT.momd" "/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.xcdatamodeld"
+cCompileC build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/main.o "/Users/lusty/Documents/iPhone Apps/GNGT/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GNGTAppDelegate.o "/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GNGTAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT" normal i386
+cGenerateDSYMFile "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app.dSYM" "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT"
+cTouch "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app"
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreData.framework/CoreData
+c000000004CC122A000000000001D6CE0
+t1287725728
+s1928416
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.h
+c000000004CC12294000000000000046B
+t1287725716
+s1131
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/Availability.h
+c000000004CB3FA080000000000001ADD
+t1286863368
+s6877
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GNGTAppDelegate.h
+c000000004D31F771000000000000035E
+t1295120241
+s862
+i<UIKit/UIKit.h>
+i<CoreData/CoreData.h>
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GNGTAppDelegate.m
+c000000004D31F95D0000000000002817
+t1295120733
+s10263
+i"GNGTAppDelegate.h"
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.xcdatamodeld
+c000000004D31F95D0000000000000088
+t1295120733
+s136
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/GNGT_Prefix.pch
+c000000004D31F771000000000000015C
+t1295120241
+s348
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+i<CoreData/CoreData.h>
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/MainWindow.xib
+c000000004D31F77100000000000021B3
+t1295120241
+s8627
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app
+t1295120734
+s238
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app.dSYM
+t1295120734
+s102
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT
+t1295120734
+s21660
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT.momd
+t1295120734
+s136
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/Info.plist
+t1295120733
+s579
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/MainWindow.nib
+t1295120733
+s981
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/PkgInfo
+t1295120733
+s8
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GNGT.LinkFileList
+c000000004D31F95D00000000000000F5
+t1295120733
+s245
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GNGTAppDelegate.o
+t1295120734
+s70104
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/main.o
+t1295120734
+s6304
+
+N/Users/lusty/Documents/iPhone Apps/GNGT/main.m
+c000000004D31F7710000000000000169
+t1295120241
+s361
+i<UIKit/UIKit.h>
+
+N/var/folders/jb/jbmpR6z1F6Wc3GkjmiEPdU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/GNGT_Prefix-cwkhfpdanisuyaenzaeegdkytrbr/GNGT_Prefix.pch.gch
+t1295120734
+s16326640
+
+NGNGT-Info.plist
+c000000004D31F771000000000000038D
+t1295120241
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies316813533#316813533#0(0"0(0#1#0"8666438048#0"0#
+
+CCompileC build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GNGTAppDelegate.o "/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GNGTAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s316813534.457045
+e316813534.528080
+r1
+xCompileC
+xbuild/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GNGTAppDelegate.o
+x/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GNGTAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/lusty/Documents/iPhone Apps/GNGT/Classes/GNGTAppDelegate.m316813534#316813534#0(0"0(0#0#65"/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GNGTAppDelegate.m8657770336#1917"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-generated-files.hmap" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-own-target-headers.hmap" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-all-target-headers.hmap" -iquote "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-project-headers.hmap" "-F/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/include" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/DerivedSources/i386" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/DerivedSources" -include /var/folders/jb/jbmpR6z1F6Wc3GkjmiEPdU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/GNGT_Prefix-cwkhfpdanisuyaenzaeegdkytrbr/GNGT_Prefix.pch -c "/Users/lusty/Documents/iPhone Apps/GNGT/Classes/GNGTAppDelegate.m" -o "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GNGTAppDelegate.o"0#
+
+CCompileC build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/main.o "/Users/lusty/Documents/iPhone Apps/GNGT/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s316813534.456241
+e316813534.496770
+r1
+xCompileC
+xbuild/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/main.o
+x/Users/lusty/Documents/iPhone Apps/GNGT/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@54"Compile /Users/lusty/Documents/iPhone Apps/GNGT/main.m316813534#316813534#0(0"0(0#0#46"/Users/lusty/Documents/iPhone Apps/GNGT/main.m8659324544#1887"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-generated-files.hmap" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-own-target-headers.hmap" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-all-target-headers.hmap" -iquote "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-project-headers.hmap" "-F/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/include" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/DerivedSources/i386" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/DerivedSources" -include /var/folders/jb/jbmpR6z1F6Wc3GkjmiEPdU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/GNGT_Prefix-cwkhfpdanisuyaenzaeegdkytrbr/GNGT_Prefix.pch -c "/Users/lusty/Documents/iPhone Apps/GNGT/main.m" -o "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/main.o"0#
+
+CCompileXIB "/Users/lusty/Documents/iPhone Apps/GNGT/MainWindow.xib"
+s316813533.617840
+e316813533.939490
+r1
+xCompileXIB
+x/Users/lusty/Documents/iPhone Apps/GNGT/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib316813533#316813533#0(0"0(0#0#54"/Users/lusty/Documents/iPhone Apps/GNGT/MainWindow.xib8641589952#576"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/MainWindow.nib" "/Users/lusty/Documents/iPhone Apps/GNGT/MainWindow.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CDataModelVersionCompile "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT.momd" "/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.xcdatamodeld"
+s316813534.455551
+e316813534.589749
+r1
+xDataModelVersionCompile
+x/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT.momd
+x/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.xcdatamodeld
+o/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.xcdatamodeld/GNGT.xcdatamodel:gardenInfo.description: warning: gardenInfo.description -- property name conflicts with a method already on NSObject or NSManagedObject 
+lSLF07#2@88"DataModelVersionCompile build/Debug-iphonesimulator/GNGT.app/GNGT.momd GNGT.xcdatamodeld316813534#316813534#0(212"/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.xcdatamodeld/GNGT.xcdatamodel:gardenInfo.description: warning: gardenInfo.description -- property name conflicts with a method already on NSObject or NSManagedObject 1(22@103"gardenInfo.description -- property name conflicts with a method already on NSObject or NSManagedObject 316813534#18446744073709551615#0#0(6@74"/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.xcdatamodeld/GNGT.xcdatamodel316813533#0#0#0#0#0"0(0#0#57"/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.xcdatamodeld8661998464#386"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.6 "/Users/lusty/Documents/iPhone Apps/GNGT/GNGT.xcdatamodeld" "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT.momd"0#
+
+CGenerateDSYMFile "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app.dSYM" "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT"
+s316813534.931161
+e316813534.948702
+r1
+xGenerateDSYMFile
+x/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app.dSYM
+x/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT
+lSLF07#2@100"GenerateDSYMFile build/Debug-iphonesimulator/GNGT.app.dSYM build/Debug-iphonesimulator/GNGT.app/GNGT316813534#316813534#0(0"0(0#0#81"/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT8631316000#383"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT" -o "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app.dSYM"0#
+
+CLd "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT" normal i386
+s316813534.528166
+e316813534.931009
+r1
+xLd
+x/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT
+xnormal
+xi386
+lSLF07#2@86"Link /Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT316813534#316813534#0(0"0(0#0#0"8641727808#920"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk "-L/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator" "-F/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator" -filelist "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/Objects-normal/i386/GNGT.LinkFileList" -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/GNGT"0#
+
+CProcessInfoPlistFile "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/Info.plist" GNGT-Info.plist
+s316813533.613664
+e316813533.617764
+r1
+xProcessInfoPlistFile
+x/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/Info.plist
+xGNGT-Info.plist
+lSLF07#2@23"Process GNGT-Info.plist316813533#316813533#0(0"0(0#0#55"/Users/lusty/Documents/iPhone Apps/GNGT/GNGT-Info.plist8659430656#479"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility GNGT-Info.plist -genpkginfo "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app/Info.plist"0#
+
+CProcessPCH /var/folders/jb/jbmpR6z1F6Wc3GkjmiEPdU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/GNGT_Prefix-cwkhfpdanisuyaenzaeegdkytrbr/GNGT_Prefix.pch.gch GNGT_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s316813533.939588
+e316813534.455475
+r1
+xProcessPCH
+x/var/folders/jb/jbmpR6z1F6Wc3GkjmiEPdU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/GNGT_Prefix-cwkhfpdanisuyaenzaeegdkytrbr/GNGT_Prefix.pch.gch
+xGNGT_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@26"Precompile GNGT_Prefix.pch316813533#316813534#0(0"0(0#0#55"/Users/lusty/Documents/iPhone Apps/GNGT/GNGT_Prefix.pch8667306144#1779"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-generated-files.hmap" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-own-target-headers.hmap" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-all-target-headers.hmap" -iquote "/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/GNGT-project-headers.hmap" "-F/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/include" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/DerivedSources/i386" "-I/Users/lusty/Documents/iPhone Apps/GNGT/build/GNGT.build/Debug-iphonesimulator/GNGT.build/DerivedSources" -c "/Users/lusty/Documents/iPhone Apps/GNGT/GNGT_Prefix.pch" -o /var/folders/jb/jbmpR6z1F6Wc3GkjmiEPdU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/GNGT_Prefix-cwkhfpdanisuyaenzaeegdkytrbr/GNGT_Prefix.pch.gch0#
+
+CTouch "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app"
+s316813534.948773
+e316813534.951195
+r1
+xTouch
+x/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app
+lSLF07#2@82"Touch /Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app316813534#316813534#0(0"0(0#0#0"8672693664#281"    cd "/Users/lusty/Documents/iPhone Apps/GNGT"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/lusty/Documents/iPhone Apps/GNGT/build/Debug-iphonesimulator/GNGT.app"0#
+
