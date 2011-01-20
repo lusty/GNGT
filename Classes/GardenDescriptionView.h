@@ -6,45 +6,39 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-
-@interface GardenDescriptionView : NSObject {
-	int _uniqueId;
-	int _gardenNumber;
-	NSString *_gardenName;
-	NSString *_street;
-	NSString *_city;
-	NSString *_plantSale;
-	NSString *_designer;
-	NSString *_directions;
-	NSString *_gardenInstaller;
-	NSString *_other;
-	NSString *_showcase;
-	int _sqft;
-	NSString *_wildlife;
-	int _yearInstalled;
+@class GardenInfo;
+@interface GardenDescriptionView : UIView {
+	UILabel* _gardenNumberLabel;
+	UILabel* _gardenNameLabel;
+	UILabel* _streetLabel;
+	UILabel* _cityLabel;
+	UILabel* _plantSaleLabel;
+	UILabel* _designerLabel;
+	UILabel* _directionsLabel;
+	UILabel* _gardenInstallerLabel;
+	UILabel* _otherLabel;
+	UILabel* _showcaseLabel;
+	UILabel* _sqftLabel;
+	UILabel* _wildlifeLabel;
+	UILabel* _yearInstalledLabel;
 }
 
-@property (nonatomic, assign) int uniqueId;
-@property (nonatomic, assign) int gardenNumber;
-@property (nonatomic, copy) NSString *gardenName;
-@property (nonatomic, copy) NSString *street;
-@property (nonatomic, copy) NSString *city;
-@property (nonatomic, copy) NSString *plantSale;
-@property (nonatomic, copy) NSString *designer;
-@property (nonatomic, copy) NSString *directions;
-@property (nonatomic, copy) NSString *gardenInstaller;
-@property (nonatomic, copy) NSString *other;
-@property (nonatomic, copy) NSString *showcase;
-@property (nonatomic, assign) int sqft;
-@property (nonatomic, copy) NSString *wildlife;
-@property (nonatomic, assign) int yearInstalled;
+@property (nonatomic, retain) IBOutlet UILabel* gardenNumberLabel;
+@property (nonatomic, retain) IBOutlet UILabel* gardenNameLabel;
+@property (nonatomic, retain) IBOutlet UILabel* streetLabel;
+@property (nonatomic, retain) IBOutlet UILabel* cityLabel;
+@property (nonatomic, retain) IBOutlet UILabel* plantSaleLabel;
+@property (nonatomic, retain) IBOutlet UILabel* designerLabel;
+@property (nonatomic, retain) IBOutlet UILabel* directionsLabel;
+@property (nonatomic, retain) IBOutlet UILabel* gardenInstallerLabel;
+@property (nonatomic, retain) IBOutlet UILabel* otherLabel;
+@property (nonatomic, retain) IBOutlet UILabel* showcaseLabel;
+@property (nonatomic, retain) IBOutlet UILabel* sqftLabel;
+@property (nonatomic, retain) IBOutlet UILabel* wildlifeLabel;
+@property (nonatomic, retain) IBOutlet UILabel* yearInstalledLabel;
 
-- (id)initWithUniqueId:(int)uniqueId gardenNumber:(int)gardenNumber gardenName:(NSString *)gardenName 
-				street:(NSString *)street city:(NSString *)city plantSale:(NSString *)plantSale
-			  designer:(NSString *)designer directions:(NSString *)directions gardenInstaller:(NSString *)gardenInstaller
-				 other:(NSString *)other showcase:(NSString *)showcase sqft:(int)sqft wildlife:(NSString *)wildlife
-		 yearInstalled:(int)yearInstalled;
+- (void)setGardenInfo:(GardenInfo *)info;
 
 @end

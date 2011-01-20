@@ -168,7 +168,7 @@
         self.description = [[[GardenDescriptionViewController alloc] initWithNibName:@"GardenDescriptionViewController" bundle:nil] autorelease];        
     }
 	GardenInfo *info = (GardenInfo *)[_fetchedResultsController objectAtIndexPath:indexPath];
-	self.description.gardenDescription = info;
+	self.description.info = info;
     [self.navigationController pushViewController:_description animated:YES];
 }
 
