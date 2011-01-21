@@ -16,7 +16,7 @@
 
 @synthesize window;
 @synthesize navController = _navController;
-
+@synthesize gardenListController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -52,23 +52,22 @@
 	*/
 	
 	// Test listing all GardenInfos from the store
-	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-	NSEntityDescription *entity = [NSEntityDescription entityForName:@"GardenInfo" 
-											  inManagedObjectContext:context];
-	[fetchRequest setEntity:entity];
-	NSError *error;
-	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-	for (GardenInfo *info in fetchedObjects) {
-		NSLog(@"Garden Name: %@", info.gardenName);
-		GardenDescription *gardenDescription = info.gardenDescription;
-		NSLog(@"Showcase: %@", gardenDescription.showcase);
-	}        
-	[fetchRequest release];
+//	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+//	NSEntityDescription *entity = [NSEntityDescription entityForName:@"GardenInfo" 
+//											  inManagedObjectContext:context];
+//	[fetchRequest setEntity:entity];
+//	NSError *error;
+//	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+//	for (GardenInfo *info in fetchedObjects) {
+//		NSLog(@"Garden Name: %@", info.gardenName);
+//		GardenDescription *gardenDescription = info.gardenDescription;
+//		NSLog(@"Showcase: %@", gardenDescription.showcase);
+//	}        
+//	[fetchRequest release];
     
     // Override point for customization after application launch.
 	
-	GardensListViewController *root = (GardensListViewController *) [_navController topViewController];
-	root.context = [self managedObjectContext];
+	gardenListController.context = [self managedObjectContext];
 	[window addSubview:_navController.view];
     
     [self.window makeKeyAndVisible];

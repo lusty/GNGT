@@ -12,57 +12,12 @@
 
 
 @implementation GardenDescriptionViewController
-@synthesize gardenNumberLabel = _gardenNumberLabel;
-@synthesize gardenNameLabel = _gardenNameLabel;
-@synthesize streetLabel = _streetLabel;
-@synthesize cityLabel = _cityLabel;
-@synthesize plantSaleLabel = _plantSaleLabel;
-@synthesize designerLabel = _designerLabel;
-@synthesize directionsLabel = _directionsLabel;
-@synthesize gardenInstallerLabel = _gardenInstallerLabel;
-@synthesize otherLabel = _otherLabel;
-@synthesize showcaseLabel = _showcaseLabel;
-@synthesize sqftLabel = _sqftLabel;
-@synthesize wildlifeLabel = _wildlifeLabel;
-@synthesize yearInstalledLabel = _yearInstalledLabel;
-@synthesize uniqueId = _uniqueId;
-@synthesize gardenDescription = _gardenDescription;
+@synthesize info;
 
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
-
-
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
-
-/*
 - (void)viewWillAppear:(BOOL)animated {
-	NSEntityDescription *gardenDescription = [NSEntityDescription entityForName:@"GardenInfo" inManagedObjectContext:_context];
-	 NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
-	[request setEntity:gardenDescription];
-	GardenInfo *gardenDescription = [[FailedBankDatabase database] 
-									  gardenDescription:_uniqueId];
-    if (description != nil) {
-        [_gardenNumberLabel setText:[NSString stringWithFormat:@"%d", description.gardenNumber]];
-        [_gardenNameLabel setText:description.gardenName];
-        [_streetLabel setText:description.street];
-        [_cityLabel setText:description.city];     
-    }
+	GardenDescriptionView *gview = (GardenDescriptionView*)self.view;
+	[gview setGardenInfo:info];
 }
- */
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -87,10 +42,6 @@
 
 
 - (void)dealloc {
-	self.gardenNumberLabel = nil;
-	self.gardenNameLabel = nil;
-	self.streetLabel = nil;
-	self.cityLabel = nil;
     [super dealloc];
 }
 

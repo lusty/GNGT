@@ -7,58 +7,44 @@
 //
 
 #import "GardenDescriptionView.h"
-
+#import "GardenInfo.h"
 
 @implementation GardenDescriptionView
-@synthesize uniqueId = _uniqueId;
-@synthesize gardenNumber = _gardenNumber;
-@synthesize gardenName = _gardenName;
-@synthesize street = _street;
-@synthesize city = _city;
-@synthesize plantSale = _plantSale;
-@synthesize designer = _designer;
-@synthesize directions = _directions;
-@synthesize gardenInstaller = _gardenInstaller;
-@synthesize other = _other;
-@synthesize showcase = _showcase;
-@synthesize sqft = _sqft;
-@synthesize wildlife = _wildlife;
-@synthesize yearInstalled = _yearInstalled;
+@synthesize gardenNumberLabel = _gardenNumberLabel;
+@synthesize gardenNameLabel = _gardenNameLabel;
+@synthesize streetLabel = _streetLabel;
+@synthesize cityLabel = _cityLabel;
+@synthesize plantSaleLabel = _plantSaleLabel;
+@synthesize designerLabel = _designerLabel;
+@synthesize directionsLabel = _directionsLabel;
+@synthesize gardenInstallerLabel = _gardenInstallerLabel;
+@synthesize otherLabel = _otherLabel;
+@synthesize showcaseLabel = _showcaseLabel;
+@synthesize sqftLabel = _sqftLabel;
+@synthesize wildlifeLabel = _wildlifeLabel;
+@synthesize yearInstalledLabel = _yearInstalledLabel;
 
-- (id)initWithUniqueId:(int)uniqueId gardenNumber:(int)gardenNumber gardenName:(NSString *)gardenName 
-				street:(NSString *)street city:(NSString *)city plantSale:(NSString *)plantSale
-			  designer:(NSString *)designer directions:(NSString *)directions gardenInstaller:(NSString *)gardenInstaller
-				 other:(NSString *)other showcase:(NSString *)showcase sqft:(int)sqft wildlife:(NSString *)wildlife
-		 yearInstalled:(int)yearInstalled {
-    if ((self = [super init])) {
-        self.uniqueId = uniqueId;
-		self.gardenNumber = gardenNumber;
-        self.gardenName = gardenName;
-		self.street = street;
-        self.city = city;
-        self.plantSale = plantSale;
-        self.designer = designer;
-        self.directions = directions;
-        self.gardenInstaller = gardenInstaller;
-        self.other = other;
-        self.showcase = showcase;
-        self.sqft = sqft;
-        self.wildlife = wildlife;
-    }
-    return self;
+- (void)setGardenInfo:(GardenInfo *)info {
+//	self.gardenNumberLabel.text = info.gardenNumber; // TODO format this into a string
+	self.gardenNameLabel.text = info.gardenName;
+	self.streetLabel.text = info.street;
+	self.cityLabel.text = info.city;
+	self.plantSaleLabel.text = info.plantSale;
+	
+	// Talk to me about an alternate way of doing this (as a collection of named data items instead of one big object) -- RDC
+//	GardenDescription *description = info.gardenDescription;
+//	self.designer = description.designer;
+//	self.directions = description.directions;
+//	self.gardenInstaller = description.gardenInstaller;
+//	self.other = description.other;
+//	self.showcase = description.showcase;
+//	self.sqft = description.sqft;
+//	self.wildlife = description.wildlife;
 }
 
+
+
 - (void) dealloc {
-	self.gardenName = nil;
-	self.street = nil;
-	self.city = nil;
-	self.plantSale = nil;
-	self.designer = nil;
-	self.directions = nil;
-	self.gardenInstaller = nil;
-	self.other = nil;
-	self.showcase = nil;
-	self.wildlife = nil;
 	[super dealloc];
 }
 
