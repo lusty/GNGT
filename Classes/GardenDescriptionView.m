@@ -25,7 +25,7 @@
 @synthesize yearInstalledLabel = _yearInstalledLabel;
 
 - (void)setGardenInfo:(GardenInfo *)info {
-//	self.gardenNumberLabel.text = info.gardenNumber; // TODO format this into a string
+	self.gardenNumberLabel.text = [NSString stringWithFormat:@"%d", [info.gardenNumber integerValue]];
 	self.gardenNameLabel.text = info.gardenName;
 	self.streetLabel.text = info.street;
 	self.cityLabel.text = info.city;
@@ -33,7 +33,7 @@
 	
 	// Talk to me about an alternate way of doing this (as a collection of named data items instead of one big object) -- RDC
 //	GardenDescription *description = info.gardenDescription;
-//	self.designer = description.designer;
+//	self.designerLabel.text = description.designer;
 //	self.directions = description.directions;
 //	self.gardenInstaller = description.gardenInstaller;
 //	self.other = description.other;
