@@ -19,7 +19,7 @@ def mysplit (string):
 
 conn = sqlite3.connect('gardenList.sqlite3')
 c = conn.cursor()
-c.execute('drop table if exists failed_banks')
+c.execute('drop table if exists gardens')
 c.execute('create table gardens(id integer primary key autoincrement, garden_number integer, garden_name text, nospacename text, street text, city text, plant_sale text, showcase text, other text, wildlife text, designer text, installer text, year_installed integer, garden_size text, sqft integer, directions text, email text)')
 # Read lines from file, skipping first line
 data = open("dks_export.csv", "r").readlines()[1:]

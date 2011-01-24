@@ -16,15 +16,15 @@
 
 @synthesize window;
 @synthesize navController = _navController;
-@synthesize gardenListController;
+@synthesize tabBarController, gardenListController;
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { 
 	
-	NSManagedObjectContext *context = [self managedObjectContext];
 	/*
+	 NSManagedObjectContext *context = [self managedObjectContext];
 	GardenInfo *gardenInfo = [NSEntityDescription
 									  insertNewObjectForEntityForName:@"GardenInfo" 
 									  inManagedObjectContext:context];
@@ -68,7 +68,7 @@
     // Override point for customization after application launch.
 	
 	gardenListController.context = [self managedObjectContext];
-	[window addSubview:_navController.view];
+	[window addSubview:tabBarController.view];
     
     [self.window makeKeyAndVisible];
     

@@ -1,4 +1,5 @@
 build
+*~
 
 .DS_Store
 *.swp
@@ -8,6 +9,9 @@ build
 *.pbxuser
 *.perspective
 *.perspectivev3
+
+# Don't store the cruft left by the Python IDE either
+app
 
 
 
