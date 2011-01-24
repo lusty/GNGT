@@ -5,6 +5,9 @@ build
 *.swp
 *~.nib
 
+# Don't store the temporary database
+gardenList.sqlite3
+
 # Don't store the most volatile XCode files as they make merging difficult
 *.pbxuser
 *.perspective
