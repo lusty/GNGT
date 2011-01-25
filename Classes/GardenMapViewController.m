@@ -48,23 +48,18 @@
 	
 }
 
+/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	NSError *error = nil;
-	if ([self.fetchedResultsController performFetch:&error]) {
-		[mapView addAnnotations:fetchedResultsController.fetchedObjects];
-	}
-	// TODO else, log the error
 }
+*/
 
-/*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
 }
-*/
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -84,5 +79,50 @@
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark Map adjustments
+
+- (void)setCurrentLocation:(CLLocation *)location {
+	MKCoordinateRegion region = {{0.0f, 0.0f}, {0.0f, 0.0f}};
+	region.center = location.coordinate;
+	region.span.longitudeDelta = 0.15f;
+	region.span.latitudeDelta = 0.15f;
+	[self.mapView setRegion:region animated:YES];
+	
+	// TODO show all annotations within this region? (possible optimization)
+	NSError *error = nil;
+	if (mapView.annotations.count <= 1) {
+		if ([self.fetchedResultsController performFetch:&error]) {
+			[mapView addAnnotations:fetchedResultsController.fetchedObjects];
+		}
+		// TODO else, log the error
+	}
+
+	
+}
+
+#pragma mark MapKit Delegate
+- (MKAnnotationView *)mapView:(MKMapView *)aMapView 
+            viewForAnnotation:(id <MKAnnotation>)annotation {
+	MKPinAnnotationView *view = nil;
+	if(annotation != aMapView.userLocation) {
+		view = (MKPinAnnotationView *)
+        [aMapView dequeueReusableAnnotationViewWithIdentifier:@"annotations"];
+		if(nil == view) {
+			view = [[[MKPinAnnotationView alloc]
+					 initWithAnnotation:annotation reuseIdentifier:@"annotations"]
+					autorelease];
+		}
+		[view setPinColor:MKPinAnnotationColorPurple];
+		[view setCanShowCallout:YES];
+		[view setAnimatesDrop:YES];
+	} else {
+		CLLocation *location = [[CLLocation alloc] 
+								initWithLatitude:annotation.coordinate.latitude
+								longitude:annotation.coordinate.longitude];
+		[self setCurrentLocation:location];
+	}
+	return view;
+}
 
 @end

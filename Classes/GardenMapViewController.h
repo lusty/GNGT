@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h> 
 #import <MapKit/MapKit.h>
 
-@interface GardenMapViewController : UIViewController {
+@interface GardenMapViewController : UIViewController <MKMapViewDelegate> {
 	MKMapView	*mapView;
 	
 	NSFetchedResultsController *fetchedResultsController;
