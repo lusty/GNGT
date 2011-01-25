@@ -7,6 +7,7 @@
 //
 
 #import "GardenMapViewController.h"
+#import "GardenDescriptionViewController.h"
 
 
 @implementation GardenMapViewController
@@ -112,6 +113,7 @@
 			view = [[[MKPinAnnotationView alloc]
 					 initWithAnnotation:annotation reuseIdentifier:@"annotations"]
 					autorelease];
+			view.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
 		}
 		[view setPinColor:MKPinAnnotationColorPurple];
 		[view setCanShowCallout:YES];
@@ -123,6 +125,23 @@
 		[self setCurrentLocation:location];
 	}
 	return view;
+}
+
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control { 
+	GardenDescriptionViewController *detailController = [[[GardenDescriptionViewController alloc] init] autorelease]; 
+	UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:detailController]
+																																																										   autorelease];
+	detailController.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc]
+												  initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self
+												  action:@selector(stopShowingDetails)]
+												 autorelease];
+	detailController.info = (GardenInfo *)view.annotation; 
+	[self presentModalViewController:nav animated:YES];
+}
+
+- (void)stopShowingDetails {
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 @end
