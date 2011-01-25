@@ -55,6 +55,7 @@
     self.fetchedResultsController = theFetchedResultsController;
     _fetchedResultsController.delegate = self;
 	
+    [sort release];
     [fetchRequest release];
     [theFetchedResultsController release];
 	

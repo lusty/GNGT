@@ -42,6 +42,7 @@
     self.fetchedResultsController = theFetchedResultsController;
 //    fetchedResultsController.delegate = self; // TODO enable if the data will ever change
 	
+	[sort release];
     [fetchRequest release];
     [theFetchedResultsController release];
 	
