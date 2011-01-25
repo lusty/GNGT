@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+
 @class GardensListViewController;
+@class GardenMapViewController;
 
 @interface GNGTAppDelegate : NSObject <UIApplicationDelegate> {
     
@@ -16,6 +18,7 @@
 	UINavigationController *_navController;
 	UITabBarController *tabBarController;
 	GardensListViewController *gardenListController;
+	GardenMapViewController *gardenMapController;
     
 @private
     NSManagedObjectContext *managedObjectContext_;
@@ -27,6 +30,7 @@
 @property (nonatomic, retain) IBOutlet UINavigationController *navController;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 @property (nonatomic, retain) IBOutlet GardensListViewController *gardenListController;
+@property (nonatomic, retain) IBOutlet GardenMapViewController *gardenMapController;
 
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;

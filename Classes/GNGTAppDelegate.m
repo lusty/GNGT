@@ -10,64 +10,24 @@
 #import "GardenInfo.h"
 #import "GardenDescription.h"
 #import "GardensListViewController.h"
+#import "GardenMapViewController.h"
 
 
 @implementation GNGTAppDelegate
 
 @synthesize window;
 @synthesize navController = _navController;
-@synthesize tabBarController, gardenListController;
+@synthesize tabBarController, gardenListController, gardenMapController;
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { 
-	
-	/*
-	 NSManagedObjectContext *context = [self managedObjectContext];
-	GardenInfo *gardenInfo = [NSEntityDescription
-									  insertNewObjectForEntityForName:@"GardenInfo" 
-									  inManagedObjectContext:context];
-	gardenInfo.gardenName = @"Test Garden";
-	gardenInfo.gardenNumber = [NSNumber numberWithInt:12345];
-	gardenInfo.city = @"Testville";
-	gardenInfo.street = @"Teststreet";
-	gardenInfo.plantSale = @"Test Nursery";
-	GardenDescription *gardenDescription = [NSEntityDescription
-											insertNewObjectForEntityForName:@"GardenDescription" 
-											inManagedObjectContext:context];
-	gardenDescription.designer = @"Test Designer";
-	gardenDescription.directions = @"Test Directions";
-	gardenDescription.gardenInstaller = @"Test Installer";
-	gardenDescription.other = @"Other garden attractions";
-	gardenDescription.showcase = @"Test Showcase Features";
-	gardenDescription.sqft = [NSNumber numberWithInt:12345];
-	gardenDescription.wildlife = @"Test Wildlife";
-	gardenDescription.yearInstalled = [NSNumber numberWithInt:2006];
-	gardenDescription.info = gardenInfo;
-	NSError *error;
-	if (![context save:&error]) {
-		NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-	}
-	*/
-	
-	// Test listing all GardenInfos from the store
-//	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-//	NSEntityDescription *entity = [NSEntityDescription entityForName:@"GardenInfo" 
-//											  inManagedObjectContext:context];
-//	[fetchRequest setEntity:entity];
-//	NSError *error;
-//	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-//	for (GardenInfo *info in fetchedObjects) {
-//		NSLog(@"Garden Name: %@", info.gardenName);
-//		GardenDescription *gardenDescription = info.gardenDescription;
-//		NSLog(@"Showcase: %@", gardenDescription.showcase);
-//	}        
-//	[fetchRequest release];
-    
+	    
     // Override point for customization after application launch.
 	
 	gardenListController.context = [self managedObjectContext];
+	gardenMapController.context = [self managedObjectContext];
 	[window addSubview:tabBarController.view];
     
     [self.window makeKeyAndVisible];

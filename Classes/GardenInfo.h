@@ -7,10 +7,11 @@
 //
 
 #import <CoreData/CoreData.h>
+#import <MapKit/MapKit.h>
 
 @class GardenDescription;
 
-@interface GardenInfo :  NSManagedObject  
+@interface GardenInfo :  NSManagedObject <MKAnnotation> 
 {
 }
 
@@ -20,6 +21,10 @@
 @property (nonatomic, retain) NSString * city;
 @property (nonatomic, retain) NSString * plantSale;
 @property (nonatomic, retain) GardenDescription * gardenDescription;
+@property (nonatomic, retain) NSNumber * latitude;
+@property (nonatomic, retain) NSNumber * longitude;
+
+@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
 @end
 

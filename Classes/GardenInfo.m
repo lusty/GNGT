@@ -17,5 +17,20 @@
 @dynamic city;
 @dynamic plantSale;
 @dynamic gardenDescription;
+@dynamic latitude;
+@dynamic longitude;
+
+- (CLLocationCoordinate2D)coordinate;
+{
+    CLLocationCoordinate2D theCoordinate;
+    theCoordinate.latitude = [self.latitude floatValue];
+    theCoordinate.longitude = [self.longitude floatValue];
+    return theCoordinate; 
+}
+
+- (NSString *)title
+{
+    return self.gardenName;
+}
 
 @end
