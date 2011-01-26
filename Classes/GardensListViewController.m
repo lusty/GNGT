@@ -42,20 +42,26 @@
 								   entityForName:@"GardenInfo" inManagedObjectContext:_context];
     [fetchRequest setEntity:entity];
 	
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc] 
-							  initWithKey:@"gardenName" ascending:YES];
-    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
+    NSSortDescriptor *citySort = [[[NSSortDescriptor alloc] 
+								   initWithKey:@"city" 
+								   ascending:YES
+								   selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
+    NSSortDescriptor *nameSort = [[[NSSortDescriptor alloc] 
+								   initWithKey:@"gardenName" 
+								   ascending:YES
+								   selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
+	
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:citySort, nameSort, nil]];
 	
     [fetchRequest setFetchBatchSize:20];
 	
     NSFetchedResultsController *theFetchedResultsController = 
 	[[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
-										managedObjectContext:_context sectionNameKeyPath:nil 
-												   cacheName:@"Root"];
+										managedObjectContext:_context sectionNameKeyPath:@"city" 
+												   cacheName:nil];
     self.fetchedResultsController = theFetchedResultsController;
     _fetchedResultsController.delegate = self;
 	
-    [sort release];
     [fetchRequest release];
     [theFetchedResultsController release];
 	
@@ -78,6 +84,7 @@
 		exit(-1);  // Fail
 	}
 	
+	((UITableView *)self.view).sectionIndexMinimumDisplayRowCount = 500; // turn off the letters on the right-hand side
     self.title = @"Gardens";
 	
 }
@@ -116,23 +123,32 @@
 #pragma mark Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
+    
+    return [[self.fetchedResultsController sections] count];
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section { 
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo name];
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return [self.fetchedResultsController sectionIndexTitles];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
+}
 
 // Customize the appearance of table view cells.
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     GardenInfo *info = [_fetchedResultsController objectAtIndexPath:indexPath];
-	GardenListViewCell *gcell = (GardenListViewCell*)cell;
-    gcell.gardenNameLabel.text  = info.gardenName;
-    gcell.gardenCityLabel.text = info.city;
+    [( (GardenListViewCell*)cell) useInfo:info];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 

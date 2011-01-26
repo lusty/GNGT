@@ -7,11 +7,11 @@
 //
 
 #import "GardenListViewCell.h"
-
+#import "GardenInfo.h"
 
 @implementation GardenListViewCell
 
-@synthesize gardenNameLabel, gardenCityLabel;
+@synthesize gardenNameLabel, gardenCityLabel, plantSaleLabel, talkLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     
@@ -30,6 +30,12 @@
     // Configure the view for the selected state.
 }
 
+- (void) useInfo:(GardenInfo *)info {
+    self.gardenNameLabel.text  = info.gardenName;
+    self.gardenCityLabel.text = info.city;
+	self.plantSaleLabel.hidden = info.plantSale == nil || info.plantSale.length == 0;
+	NSLog(info.plantSale);
+}
 
 - (void)dealloc {
     [super dealloc];

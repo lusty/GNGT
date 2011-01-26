@@ -8,13 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@class GardenInfo;
 
 @interface GardenListViewCell : UITableViewCell {
 	IBOutlet UILabel *gardenNameLabel;
 	IBOutlet UILabel *gardenCityLabel;
+	IBOutlet UILabel *talkLabel;
+	IBOutlet UILabel *plantSaleLabel;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *gardenNameLabel;
 @property (nonatomic, retain) IBOutlet UILabel *gardenCityLabel;
+@property (nonatomic, retain) IBOutlet UILabel *talkLabel;
+@property (nonatomic, retain) IBOutlet UILabel *plantSaleLabel;
+
+- (void) useInfo:(GardenInfo *)info;
 
 @end
