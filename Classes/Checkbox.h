@@ -17,7 +17,7 @@
 	BOOL tracking;
 }
 
-@property BOOL on;
+@property (nonatomic) BOOL on;
 
 @property (retain) UIImage *checkmark;
 

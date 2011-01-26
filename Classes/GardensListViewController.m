@@ -189,6 +189,9 @@
     [self.navigationController pushViewController:_description animated:YES];
 }
 
+#pragma mark -
+#pragma mark Fetched results controller delegate
+
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
     // The fetch controller is about to start sending change notifications, so prepare the table view for updates.
     [self.tableView beginUpdates];

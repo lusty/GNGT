@@ -34,7 +34,7 @@
     self.gardenNameLabel.text  = info.gardenName;
     self.gardenCityLabel.text = info.city;
 	self.plantSaleLabel.hidden = info.plantSale == nil || info.plantSale.length == 0;
-	NSLog(info.plantSale);
+	// TODO add label for talks
 }
 
 - (void)dealloc {
