@@ -20,7 +20,7 @@
 		5C87149D12EE429A0025B7B0 /* GNGT.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5C87149C12EE429A0025B7B0 /* GNGT.sqlite */; };
 		5C8714BE12EE4B830025B7B0 /* GardenMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8714BD12EE4B830025B7B0 /* GardenMapViewController.m */; };
 		5C8714C312EE4CCA0025B7B0 /* GardenMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8714C212EE4CCA0025B7B0 /* GardenMapView.xib */; };
-		5C99568112EFA6D0003D4908 /* Checkbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C99568012EFA6D0003D4908 /* Checkbox.m */; };
+		5C99568112EFA6D0003D4908 /* StarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C99568012EFA6D0003D4908 /* StarControl.m */; };
 		5CE2FCF612E8C90300D88C6A /* GardenListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2FCF512E8C90300D88C6A /* GardenListViewCell.m */; };
 		5CE2FD0112E8CBCF00D88C6A /* GardenListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE2FD0012E8CBCF00D88C6A /* GardenListViewCell.xib */; };
 		5CE2FE0612E8E1C500D88C6A /* GardenDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2FE0412E8E1C500D88C6A /* GardenDescription.m */; };
@@ -50,8 +50,8 @@
 		5C8714BC12EE4B830025B7B0 /* GardenMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenMapViewController.h; sourceTree = "<group>"; };
 		5C8714BD12EE4B830025B7B0 /* GardenMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenMapViewController.m; sourceTree = "<group>"; };
 		5C8714C212EE4CCA0025B7B0 /* GardenMapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GardenMapView.xib; sourceTree = "<group>"; };
-		5C99567F12EFA6D0003D4908 /* Checkbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Checkbox.h; sourceTree = "<group>"; };
-		5C99568012EFA6D0003D4908 /* Checkbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Checkbox.m; sourceTree = "<group>"; };
+		5C99567F12EFA6D0003D4908 /* StarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarControl.h; sourceTree = "<group>"; };
+		5C99568012EFA6D0003D4908 /* StarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarControl.m; sourceTree = "<group>"; };
 		5CE2FCF412E8C90300D88C6A /* GardenListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenListViewCell.h; sourceTree = "<group>"; };
 		5CE2FCF512E8C90300D88C6A /* GardenListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenListViewCell.m; sourceTree = "<group>"; };
 		5CE2FD0012E8CBCF00D88C6A /* GardenListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GardenListViewCell.xib; sourceTree = "<group>"; };
@@ -159,8 +159,8 @@
 		5C99568C12EFA7DB003D4908 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				5C99567F12EFA6D0003D4908 /* Checkbox.h */,
-				5C99568012EFA6D0003D4908 /* Checkbox.m */,
+				5C99567F12EFA6D0003D4908 /* StarControl.h */,
+				5C99568012EFA6D0003D4908 /* StarControl.m */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -268,7 +268,7 @@
 				5CE2FE0612E8E1C500D88C6A /* GardenDescription.m in Sources */,
 				5CE2FE0712E8E1C500D88C6A /* GardenInfo.m in Sources */,
 				5C8714BE12EE4B830025B7B0 /* GardenMapViewController.m in Sources */,
-				5C99568112EFA6D0003D4908 /* Checkbox.m in Sources */,
+				5C99568112EFA6D0003D4908 /* StarControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
