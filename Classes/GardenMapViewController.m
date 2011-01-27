@@ -10,10 +10,16 @@
 #import "GardenDescriptionViewController.h"
 
 
+@interface GardenMapViewController (Private)
+- (void)startStandardUpdates;
+@end
+
 @implementation GardenMapViewController
 @synthesize mapView;
 @synthesize context;
 @synthesize fetchedResultsController;
+@synthesize locationManager;
+
 #pragma mark -
 #pragma mark Initialization
 
@@ -50,12 +56,23 @@
 	
 }
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewWillAppear:(BOOL)animated
+{	
+	MKCoordinateRegion region = {{37.33336995f, -121.9985405f}, {0.23f, 0.36f}};
+//	region.center = location.coordinate;
+//	region.span.longitudeDelta = 0.15f;
+//	region.span.latitudeDelta = 0.15f;
+	[self.mapView setRegion:region animated:NO];
 }
-*/
+
+- (void)viewDidAppear:(BOOL)animated
+{
+	if (![CLLocationManager locationServicesEnabled]) return;
+	// get the location
+	[self startStandardUpdates];
+	
+}
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -91,7 +108,7 @@
 	region.span.latitudeDelta = 0.15f;
 	[self.mapView setRegion:region animated:YES];
 	
-	// TODO show all annotations within this region? (possible optimization)
+	// TODO show just the annotations within this region? (possible optimization)
 	NSError *error = nil;
 	if (mapView.annotations.count <= 1) {
 		if ([self.fetchedResultsController performFetch:&error]) {
@@ -119,11 +136,11 @@
 		[view setPinColor:MKPinAnnotationColorPurple];
 		[view setCanShowCallout:YES];
 		[view setAnimatesDrop:YES];
-	} else {
-		CLLocation *location = [[CLLocation alloc] 
-								initWithLatitude:annotation.coordinate.latitude
-								longitude:annotation.coordinate.longitude];
-		[self setCurrentLocation:location];
+//	} else {
+//		CLLocation *location = [[CLLocation alloc] 
+//								initWithLatitude:annotation.coordinate.latitude
+//								longitude:annotation.coordinate.longitude];
+//		[self setCurrentLocation:location];
 	}
 	return view;
 }
@@ -143,6 +160,40 @@
 
 - (void)stopShowingDetails {
 	[self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark -
+#pragma mark Location updates
+
+- (void)startStandardUpdates
+{
+    // Create the location manager if this object does not
+    // already have one.
+    if (nil == locationManager)
+        self.locationManager = [[CLLocationManager alloc] init];
+	
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+	
+    // Set a movement threshold for new events.
+    locationManager.distanceFilter = 500;
+	
+    [locationManager startUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+		   fromLocation:(CLLocation *)oldLocation
+{
+	[self setCurrentLocation:newLocation];
+	[manager stopUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+	   didFailWithError:(NSError *)error;
+{
+	// TODO report the error
+	[manager stopUpdatingLocation];
 }
 
 @end

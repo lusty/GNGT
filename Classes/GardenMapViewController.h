@@ -10,15 +10,17 @@
 #import <CoreLocation/CoreLocation.h> 
 #import <MapKit/MapKit.h>
 
-@interface GardenMapViewController : UIViewController <MKMapViewDelegate> {
+@interface GardenMapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate> {
 	MKMapView	*mapView;
 	
 	NSFetchedResultsController *fetchedResultsController;
 	NSManagedObjectContext *context;
+	CLLocationManager *locationManager;
 }
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *context;
+@property (nonatomic, retain) CLLocationManager *locationManager;
 
 @end
