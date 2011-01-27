@@ -23,8 +23,11 @@
 @property (nonatomic, retain) GardenDescription * gardenDescription;
 @property (nonatomic, retain) NSNumber * latitude;
 @property (nonatomic, retain) NSNumber * longitude;
+@property (nonatomic, retain) NSNumber * isFavorite;
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+
+- (BOOL) hasPlantSale;
 
 @end
 

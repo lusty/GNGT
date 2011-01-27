@@ -9,13 +9,12 @@
 #import "GardensListViewController.h"
 #import "GardenDescriptionViewController.h"
 #import "GardenInfo.h"
-#import "GardenListViewCell.h"
+#import "GardenInfoViewCell.h"
 
 @implementation GardensListViewController
 @synthesize fetchedResultsController = _fetchedResultsController;
 @synthesize context = _context;
 @synthesize description = _description;
-@synthesize protoCell;
 
 #pragma mark -
 #pragma mark Initialization
@@ -148,7 +147,7 @@
 // Customize the appearance of table view cells.
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     GardenInfo *info = [_fetchedResultsController objectAtIndexPath:indexPath];
-    [( (GardenListViewCell*)cell) useInfo:info];
+	((GardenInfoViewCell*)cell).info = info;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 
@@ -156,11 +155,9 @@
 	
     static NSString *CellIdentifier = @"GardenListCell";
 	
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    GardenInfoViewCell* cell = (GardenInfoViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-		[[NSBundle mainBundle] loadNibNamed:@"GardenListViewCell" owner:self options:nil];
-        cell = protoCell; // loading the bundle sets this IBOutlet
-		self.protoCell = nil; // but then we have to clear it so the next load will create a fresh object
+		cell = [[[GardenInfoViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
 	
     // Set up the cell...

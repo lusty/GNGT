@@ -29,12 +29,21 @@
 	gardenListController.context = [self managedObjectContext];
 	gardenMapController.context = [self managedObjectContext];
 	[window addSubview:tabBarController.view];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+		selector:@selector(gardenInfoChangeHandler:)
+		name:@"GardenInfoChanged" object:nil];
     [self.window makeKeyAndVisible];
     
     return YES;
 }
 
+- (void)gardenInfoChangeHandler:(NSNotification *)notification
+{
+	NSError *err = nil;
+	GardenInfo *info = [notification object];
+	[info.managedObjectContext save:&err];
+	// TODO handle the error if it's non-nil
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
@@ -71,6 +80,7 @@
  applicationWillTerminate: saves changes in the application's managed object context before the application terminates.
  */
 - (void)applicationWillTerminate:(UIApplication *)application {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];	
     [self saveContext];
 }
 
@@ -154,8 +164,9 @@
 	}
     
     NSError *error = nil;
+	NSDictionary *storeOptions = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],NSMigratePersistentStoresAutomaticallyOption, [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
 	persistentStoreCoordinator_ = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![persistentStoreCoordinator_ addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![persistentStoreCoordinator_ addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:storeOptions error:&error]) {
         /*
          Replace this implementation with code to handle the error appropriately.
          

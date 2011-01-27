@@ -19,6 +19,7 @@
 @dynamic gardenDescription;
 @dynamic latitude;
 @dynamic longitude;
+@dynamic isFavorite;
 
 - (CLLocationCoordinate2D)coordinate;
 {
@@ -33,4 +34,10 @@
     return self.gardenName;
 }
 
+- (BOOL) hasPlantSale 
+{
+	return self.plantSale != NULL && self.plantSale.length > 0;
+}
 @end
+
+

@@ -21,10 +21,10 @@
 		5C8714BE12EE4B830025B7B0 /* GardenMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8714BD12EE4B830025B7B0 /* GardenMapViewController.m */; };
 		5C8714C312EE4CCA0025B7B0 /* GardenMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8714C212EE4CCA0025B7B0 /* GardenMapView.xib */; };
 		5C99568112EFA6D0003D4908 /* StarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C99568012EFA6D0003D4908 /* StarControl.m */; };
-		5CE2FCF612E8C90300D88C6A /* GardenListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2FCF512E8C90300D88C6A /* GardenListViewCell.m */; };
-		5CE2FD0112E8CBCF00D88C6A /* GardenListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE2FD0012E8CBCF00D88C6A /* GardenListViewCell.xib */; };
 		5CE2FE0612E8E1C500D88C6A /* GardenDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2FE0412E8E1C500D88C6A /* GardenDescription.m */; };
 		5CE2FE0712E8E1C500D88C6A /* GardenInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2FE0512E8E1C500D88C6A /* GardenInfo.m */; };
+		5CE7F51612F0E7A70023C96A /* GardenInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7F51512F0E7A70023C96A /* GardenInfoViewCell.m */; };
+		5CE7F55212F0F1220023C96A /* AddFavorite.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7F55112F0F1220023C96A /* AddFavorite.xcmappingmodel */; };
 		C992D8CF12E2FA50004E4C35 /* GardensListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C992D8CE12E2FA50004E4C35 /* GardensListViewController.m */; };
 		C992D96712E37F3F004E4C35 /* GardenDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C992D96512E37F3F004E4C35 /* GardenDescriptionViewController.m */; };
 		C992D96812E37F3F004E4C35 /* GardenDescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C992D96612E37F3F004E4C35 /* GardenDescriptionViewController.xib */; };
@@ -46,18 +46,19 @@
 		32CA4F630368D1EE00C91783 /* GNGT_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNGT_Prefix.pch; sourceTree = "<group>"; };
 		5C4C84EF12EDF9AF0086B133 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5C4C84F512EDFABD0086B133 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5C59F44F12F0F20700B786C0 /* GNGT 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GNGT 2.xcdatamodel"; sourceTree = "<group>"; };
 		5C87149C12EE429A0025B7B0 /* GNGT.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = GNGT.sqlite; path = db/GNGT.sqlite; sourceTree = "<group>"; };
 		5C8714BC12EE4B830025B7B0 /* GardenMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenMapViewController.h; sourceTree = "<group>"; };
 		5C8714BD12EE4B830025B7B0 /* GardenMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenMapViewController.m; sourceTree = "<group>"; };
 		5C8714C212EE4CCA0025B7B0 /* GardenMapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GardenMapView.xib; sourceTree = "<group>"; };
 		5C99567F12EFA6D0003D4908 /* StarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarControl.h; sourceTree = "<group>"; };
 		5C99568012EFA6D0003D4908 /* StarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarControl.m; sourceTree = "<group>"; };
-		5CE2FCF412E8C90300D88C6A /* GardenListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenListViewCell.h; sourceTree = "<group>"; };
-		5CE2FCF512E8C90300D88C6A /* GardenListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenListViewCell.m; sourceTree = "<group>"; };
-		5CE2FD0012E8CBCF00D88C6A /* GardenListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GardenListViewCell.xib; sourceTree = "<group>"; };
 		5CE2FE0312E8E1C500D88C6A /* GardenDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenDescription.h; sourceTree = "<group>"; };
 		5CE2FE0412E8E1C500D88C6A /* GardenDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenDescription.m; sourceTree = "<group>"; };
 		5CE2FE0512E8E1C500D88C6A /* GardenInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenInfo.m; sourceTree = "<group>"; };
+		5CE7F51412F0E7A70023C96A /* GardenInfoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenInfoViewCell.h; sourceTree = "<group>"; };
+		5CE7F51512F0E7A70023C96A /* GardenInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenInfoViewCell.m; sourceTree = "<group>"; };
+		5CE7F55112F0F1220023C96A /* AddFavorite.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = AddFavorite.xcmappingmodel; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* GNGT-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GNGT-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		C992D88212E2EF13004E4C35 /* GardenInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenInfo.h; sourceTree = "<group>"; };
 		C992D8CD12E2FA50004E4C35 /* GardensListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardensListViewController.h; sourceTree = "<group>"; };
@@ -137,8 +138,8 @@
 				2819305F112F816700ECF9B4 /* GNGT.xcdatamodeld */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* GNGT-Info.plist */,
-				5CE2FD0012E8CBCF00D88C6A /* GardenListViewCell.xib */,
 				5C8714C212EE4CCA0025B7B0 /* GardenMapView.xib */,
+				5CE7F55112F0F1220023C96A /* AddFavorite.xcmappingmodel */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -168,14 +169,14 @@
 		5CE2FCE812E8C82400D88C6A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5CE7F51412F0E7A70023C96A /* GardenInfoViewCell.h */,
+				5CE7F51512F0E7A70023C96A /* GardenInfoViewCell.m */,
 				C992D8CD12E2FA50004E4C35 /* GardensListViewController.h */,
 				C992D8CE12E2FA50004E4C35 /* GardensListViewController.m */,
 				C992D96412E37F3F004E4C35 /* GardenDescriptionViewController.h */,
 				C992D96512E37F3F004E4C35 /* GardenDescriptionViewController.m */,
 				C992D97E12E42394004E4C35 /* GardenDescriptionView.h */,
 				C992D97F12E42394004E4C35 /* GardenDescriptionView.m */,
-				5CE2FCF412E8C90300D88C6A /* GardenListViewCell.h */,
-				5CE2FCF512E8C90300D88C6A /* GardenListViewCell.m */,
 				5C8714BC12EE4B830025B7B0 /* GardenMapViewController.h */,
 				5C8714BD12EE4B830025B7B0 /* GardenMapViewController.m */,
 			);
@@ -245,7 +246,6 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				C992D96812E37F3F004E4C35 /* GardenDescriptionViewController.xib in Resources */,
 				C992D9C412E7F2E5004E4C35 /* GNGTAppIco.png in Resources */,
-				5CE2FD0112E8CBCF00D88C6A /* GardenListViewCell.xib in Resources */,
 				5C87149D12EE429A0025B7B0 /* GNGT.sqlite in Resources */,
 				5C8714C312EE4CCA0025B7B0 /* GardenMapView.xib in Resources */,
 			);
@@ -264,11 +264,12 @@
 				C992D8CF12E2FA50004E4C35 /* GardensListViewController.m in Sources */,
 				C992D96712E37F3F004E4C35 /* GardenDescriptionViewController.m in Sources */,
 				C992D98012E42394004E4C35 /* GardenDescriptionView.m in Sources */,
-				5CE2FCF612E8C90300D88C6A /* GardenListViewCell.m in Sources */,
 				5CE2FE0612E8E1C500D88C6A /* GardenDescription.m in Sources */,
 				5CE2FE0712E8E1C500D88C6A /* GardenInfo.m in Sources */,
 				5C8714BE12EE4B830025B7B0 /* GardenMapViewController.m in Sources */,
 				5C99568112EFA6D0003D4908 /* StarControl.m in Sources */,
+				5CE7F51612F0E7A70023C96A /* GardenInfoViewCell.m in Sources */,
+				5CE7F55212F0F1220023C96A /* AddFavorite.xcmappingmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,8 +390,9 @@
 			isa = XCVersionGroup;
 			children = (
 				28C3AD890F43EF2300507BA6 /* GNGT.xcdatamodel */,
+				5C59F44F12F0F20700B786C0 /* GNGT 2.xcdatamodel */,
 			);
-			currentVersion = 28C3AD890F43EF2300507BA6 /* GNGT.xcdatamodel */;
+			currentVersion = 5C59F44F12F0F20700B786C0 /* GNGT 2.xcdatamodel */;
 			path = GNGT.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
