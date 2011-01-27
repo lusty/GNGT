@@ -18,6 +18,7 @@
 	UINavigationController *_navController;
 	UITabBarController *tabBarController;
 	GardensListViewController *gardenListController;
+	GardensListViewController *favoritesListController;
 	GardenMapViewController *gardenMapController;
     
 @private
@@ -30,6 +31,7 @@
 @property (nonatomic, retain) IBOutlet UINavigationController *navController;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 @property (nonatomic, retain) IBOutlet GardensListViewController *gardenListController;
+@property (nonatomic, retain) IBOutlet GardensListViewController *favoritesListController;
 @property (nonatomic, retain) IBOutlet GardenMapViewController *gardenMapController;
 
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;

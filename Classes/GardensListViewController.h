@@ -13,10 +13,12 @@
 	NSFetchedResultsController *_fetchedResultsController;
 	NSManagedObjectContext *_context;
 	GardenDescriptionViewController *_description;
+	BOOL isFavoritesDisplay;
 }
 
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) GardenDescriptionViewController *description;
+@property (nonatomic)		  BOOL isFavoritesDisplay;
 
 @end

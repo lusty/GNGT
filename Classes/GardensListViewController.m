@@ -15,20 +15,11 @@
 @synthesize fetchedResultsController = _fetchedResultsController;
 @synthesize context = _context;
 @synthesize description = _description;
+@synthesize isFavoritesDisplay;
 
 #pragma mark -
 #pragma mark Initialization
 
-/*
-- (id)initWithStyle:(UITableViewStyle)style {
-    // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
 
 - (NSFetchedResultsController *)fetchedResultsController {
 	
@@ -40,6 +31,11 @@
     NSEntityDescription *entity = [NSEntityDescription 
 								   entityForName:@"GardenInfo" inManagedObjectContext:_context];
     [fetchRequest setEntity:entity];
+	
+	if (isFavoritesDisplay) {
+		NSPredicate *predicate = [NSPredicate predicateWithFormat:@"isFavorite == YES"];
+		[fetchRequest setPredicate:predicate];
+	}
 	
     NSSortDescriptor *citySort = [[[NSSortDescriptor alloc] 
 								   initWithKey:@"city" 
@@ -84,7 +80,7 @@
 	}
 	
 	((UITableView *)self.view).sectionIndexMinimumDisplayRowCount = 500; // turn off the letters on the right-hand side
-    self.title = @"Gardens";
+    self.title = isFavoritesDisplay ? @"Favorites" :  @"Gardens";
 	
 }
 
