@@ -17,7 +17,7 @@
 
 @synthesize window;
 @synthesize navController = _navController;
-@synthesize tabBarController, gardenListController, favoritesListController, gardenMapController;
+@synthesize tabBarController, gardenListController, gardenMapController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -27,8 +27,6 @@
     // Override point for customization after application launch.
 	
 	gardenListController.context = [self managedObjectContext];
-	favoritesListController.context = [self managedObjectContext];
-	favoritesListController.isFavoritesDisplay = YES;
 	gardenMapController.context = [self managedObjectContext];
 	[window addSubview:tabBarController.view];
     [[NSNotificationCenter defaultCenter] addObserver:self
