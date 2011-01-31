@@ -23,6 +23,8 @@
 		5C99568112EFA6D0003D4908 /* StarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C99568012EFA6D0003D4908 /* StarControl.m */; };
 		5CE2FE0612E8E1C500D88C6A /* GardenDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2FE0412E8E1C500D88C6A /* GardenDescription.m */; };
 		5CE2FE0712E8E1C500D88C6A /* GardenInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2FE0512E8E1C500D88C6A /* GardenInfo.m */; };
+		5CE4733F12F69110009DCC8C /* poppy.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CE4733D12F69110009DCC8C /* poppy.png */; };
+		5CE4734012F69110009DCC8C /* poppy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CE4733E12F69110009DCC8C /* poppy@2x.png */; };
 		5CE7F51612F0E7A70023C96A /* GardenInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7F51512F0E7A70023C96A /* GardenInfoViewCell.m */; };
 		5CE7F55212F0F1220023C96A /* AddFavorite.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7F55112F0F1220023C96A /* AddFavorite.xcmappingmodel */; };
 		C992D8CF12E2FA50004E4C35 /* GardensListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C992D8CE12E2FA50004E4C35 /* GardensListViewController.m */; };
@@ -56,6 +58,8 @@
 		5CE2FE0312E8E1C500D88C6A /* GardenDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenDescription.h; sourceTree = "<group>"; };
 		5CE2FE0412E8E1C500D88C6A /* GardenDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenDescription.m; sourceTree = "<group>"; };
 		5CE2FE0512E8E1C500D88C6A /* GardenInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenInfo.m; sourceTree = "<group>"; };
+		5CE4733D12F69110009DCC8C /* poppy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = poppy.png; path = images/poppy.png; sourceTree = "<group>"; };
+		5CE4733E12F69110009DCC8C /* poppy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "poppy@2x.png"; path = "images/poppy@2x.png"; sourceTree = "<group>"; };
 		5CE7F51412F0E7A70023C96A /* GardenInfoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenInfoViewCell.h; sourceTree = "<group>"; };
 		5CE7F51512F0E7A70023C96A /* GardenInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenInfoViewCell.m; sourceTree = "<group>"; };
 		5CE7F55112F0F1220023C96A /* AddFavorite.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = AddFavorite.xcmappingmodel; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5CE4733D12F69110009DCC8C /* poppy.png */,
+				5CE4733E12F69110009DCC8C /* poppy@2x.png */,
 				5C87149C12EE429A0025B7B0 /* GNGT.sqlite */,
 				C992D96612E37F3F004E4C35 /* GardenDescriptionViewController.xib */,
 				C992D9C312E7F2E5004E4C35 /* GNGTAppIco.png */,
@@ -248,6 +254,8 @@
 				C992D9C412E7F2E5004E4C35 /* GNGTAppIco.png in Resources */,
 				5C87149D12EE429A0025B7B0 /* GNGT.sqlite in Resources */,
 				5C8714C312EE4CCA0025B7B0 /* GardenMapView.xib in Resources */,
+				5CE4733F12F69110009DCC8C /* poppy.png in Resources */,
+				5CE4734012F69110009DCC8C /* poppy@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

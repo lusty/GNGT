@@ -123,26 +123,44 @@
 #pragma mark MapKit Delegate
 - (MKAnnotationView *)mapView:(MKMapView *)aMapView 
             viewForAnnotation:(id <MKAnnotation>)annotation {
-	MKPinAnnotationView *view = nil;
-	if(annotation != aMapView.userLocation) {
-		view = (MKPinAnnotationView *)
-        [aMapView dequeueReusableAnnotationViewWithIdentifier:@"annotations"];
-		if(nil == view) {
-			view = [[[MKPinAnnotationView alloc]
-					 initWithAnnotation:annotation reuseIdentifier:@"annotations"]
-					autorelease];
-			view.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-		}
-		[view setPinColor:MKPinAnnotationColorPurple];
-		[view setCanShowCallout:YES];
-		[view setAnimatesDrop:YES];
-//	} else {
-//		CLLocation *location = [[CLLocation alloc] 
-//								initWithLatitude:annotation.coordinate.latitude
-//								longitude:annotation.coordinate.longitude];
-//		[self setCurrentLocation:location];
-	}
-	return view;
+	if(annotation == aMapView.userLocation) return nil;
+	
+	MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"Garden"];
+	if (annotationView != nil) {
+		annotationView.annotation = annotation;
+		return annotationView;
+	}																 
+	
+	annotationView = [[[MKAnnotationView alloc] initWithAnnotation:annotation
+												reuseIdentifier:@"Garden"] autorelease];
+	annotationView.canShowCallout = YES;
+	
+	UIImage *flagImage = [UIImage imageNamed:@"poppy.png"];
+	
+	CGRect resizeRect;
+	
+	resizeRect.size = flagImage.size;
+//	CGSize maxSize = CGRectInset(self.view.bounds, 10.0f, 10.0f).size;
+//	maxSize.height -= self.navigationController.navigationBar.frame.size.height + 40.0f;
+//	if (resizeRect.size.width > maxSize.width)
+//		resizeRect.size = CGSizeMake(maxSize.width, resizeRect.size.height / resizeRect.size.width * maxSize.width);
+//	if (resizeRect.size.height > maxSize.height)
+//		resizeRect.size = CGSizeMake(resizeRect.size.width / resizeRect.size.height * maxSize.height, maxSize.height);
+//	
+	resizeRect.origin = (CGPoint){0.0f, 0.0f};
+	UIGraphicsBeginImageContext(flagImage.size);
+	[flagImage drawInRect:resizeRect];
+	UIImage *resizedImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+	annotationView.image = resizedImage;
+	annotationView.opaque = NO;
+	
+	UIImageView *sfIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SFIcon.png"]];
+	annotationView.leftCalloutAccessoryView = sfIconView;
+	[sfIconView release];
+	
+	return annotationView;
 }
 
 
