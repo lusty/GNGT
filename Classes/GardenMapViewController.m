@@ -8,17 +8,25 @@
 
 #import "GardenMapViewController.h"
 #import "GardenDescriptionViewController.h"
-
+#import "GardenInfo.h"
 
 @interface GardenMapViewController (Private)
 - (void)startStandardUpdates;
 @end
 
 @implementation GardenMapViewController
-@synthesize mapView;
+@synthesize mapView, viewSelector;
+@synthesize filteredResults;
 @synthesize context;
 @synthesize fetchedResultsController;
 @synthesize locationManager;
+
+enum {
+	viewAll = 0,
+	viewFavorites,
+	viewPlantSales,
+	viewTalks
+};
 
 #pragma mark -
 #pragma mark Initialization
@@ -56,6 +64,7 @@
 	
 }
 
+#pragma mark View setup
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewWillAppear:(BOOL)animated
 {	
@@ -66,19 +75,70 @@
 	[self.mapView setRegion:region animated:NO];
 }
 
+
 - (void)viewDidAppear:(BOOL)animated
 {
 	if (![CLLocationManager locationServicesEnabled]) return;
 	// get the location
 	[self startStandardUpdates];
 	
+	// Add annotations
+	NSError *error = nil;
+	if (self.filteredResults == nil) {
+		if ([self.fetchedResultsController performFetch:&error]) {
+			self.filteredResults = [NSMutableArray arrayWithArray:fetchedResultsController.fetchedObjects];
+			self.viewSelector.selectedSegmentIndex = viewAll;
+			[mapView addAnnotations:self.filteredResults];
+			[self.viewSelector addTarget:self
+								  action:@selector(changeViewFilter:)
+						forControlEvents:UIControlEventValueChanged];
+		}
+		// TODO else, log the error
+	}
+	
 }
 
+- (IBAction)changeViewFilter:(id)sender
+{
+	GardenInfo *info;
+	
+	[mapView removeAnnotations:filteredResults];
+	[filteredResults removeAllObjects];
+	switch (self.viewSelector.selectedSegmentIndex) {
+		case viewAll:
+			[filteredResults addObjectsFromArray:fetchedResultsController.fetchedObjects];
+			break;
+		
+		case viewFavorites:
+			// TODO use filteredListWithPredicate?
+			for (info in fetchedResultsController.fetchedObjects) {
+				if (info.isFavorite) [filteredResults addObject:info];
+			}
+			break;
+			
+		case viewPlantSales:
+			for (info in fetchedResultsController.fetchedObjects) {
+				if (info.hasPlantSale) [filteredResults addObject:info];
+			}
+			break;
+			
+		case viewTalks:
+			// TODO implement viewTalks
+			break;
+			
+		default:
+			break;
+	}
+	[mapView addAnnotations:filteredResults];
+
+}
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
     return YES;
 }
+
+#pragma mark Shutdown
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -99,6 +159,25 @@
 }
 
 #pragma mark -
+#pragma mark View filters
+
+-(IBAction)showAll {
+	
+}
+-(IBAction)showFavorites {
+
+}
+
+-(IBAction)showPlantSales {
+	
+}
+
+-(IBAction)showTalks {
+	
+}
+
+
+#pragma mark -
 #pragma mark Map adjustments
 
 - (void)setCurrentLocation:(CLLocation *)location {
@@ -109,13 +188,13 @@
 	[self.mapView setRegion:region animated:YES];
 	
 	// TODO show just the annotations within this region? (possible optimization)
-	NSError *error = nil;
-	if (mapView.annotations.count <= 1) {
-		if ([self.fetchedResultsController performFetch:&error]) {
-			[mapView addAnnotations:fetchedResultsController.fetchedObjects];
-		}
-		// TODO else, log the error
-	}
+//	NSError *error = nil;
+//	if (mapView.annotations.count <= 1) {
+//		if ([self.fetchedResultsController performFetch:&error]) {
+//			[mapView addAnnotations:fetchedResultsController.fetchedObjects];
+//		}
+//		// TODO else, log the error
+//	}
 
 	
 }

@@ -12,15 +12,24 @@
 
 @interface GardenMapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate> {
 	MKMapView	*mapView;
+	UISegmentedControl *viewSelector;
 	
 	NSFetchedResultsController *fetchedResultsController;
+	NSMutableArray *filteredResults;
 	NSManagedObjectContext *context;
 	CLLocationManager *locationManager;
 }
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
+@property (nonatomic, retain) IBOutlet UISegmentedControl *viewSelector;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, retain) NSMutableArray *filteredResults;
 @property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) CLLocationManager *locationManager;
+
+-(IBAction)showAll;
+-(IBAction)showFavorites;
+-(IBAction)showPlantSales;
+-(IBAction)showTalks;
 
 @end
