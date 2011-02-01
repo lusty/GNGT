@@ -205,9 +205,17 @@ enum {
 	if(annotation == aMapView.userLocation) return nil;
 	
 	BOOL isFavorite = [((GardenInfo *)annotation).isFavorite boolValue];
+	BOOL hasPlantSale = ((GardenInfo *)annotation).hasPlantSale;
 	
-	NSString *annotationIdentifier = isFavorite ? @"Favorite" : @"Garden";
 	NSString *imageName = isFavorite ? @"favorite.png" : @"poppy.png";
+	NSString *overlayImageName = hasPlantSale ? @"flowerpot.png" : NULL;
+	
+	NSString *annotationIdentifier = NULL;
+	if (hasPlantSale) {
+		annotationIdentifier = isFavorite ? @"FavoriteWithSale" : @"GardenWithSale";
+	} else {
+		annotationIdentifier = isFavorite ? @"Favorite" : @"Garden";
+	}
 	
 	MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
 	if (annotationView != nil) {
@@ -217,13 +225,20 @@ enum {
 	
 	annotationView = [[[MKAnnotationView alloc] initWithAnnotation:annotation
 												reuseIdentifier:annotationIdentifier] autorelease];
-	annotationView.canShowCallout = YES;
 	
+	CGRect annotationRect = CGRectMake(0.0f, 0.0f, 0.0f, 0.0f);
 	UIImage *annotationImage = [UIImage imageNamed:imageName];
+	annotationRect.size = annotationImage.size;
 	
-	CGRect resizeRect;
+	UIImage *overlayImage = NULL;
+	CGRect overlayRect = CGRectMake(0.0f, 0.0f, 0.0f, 0.0f);
+	if (hasPlantSale) {
+		overlayImage = [UIImage imageNamed:overlayImageName];
+		overlayRect.size = annotationImage.size;
+		// align to center and bottom of annotation image
+		overlayRect = CGRectOffset(overlayRect, (annotationImage.size.width - overlayImage.size.width) / 2.0, annotationImage.size.height - overlayImage.size.height);
+	}
 	
-	resizeRect.size = annotationImage.size;
 //	CGSize maxSize = CGRectInset(self.view.bounds, 10.0f, 10.0f).size;
 //	maxSize.height -= self.navigationController.navigationBar.frame.size.height + 40.0f;
 //	if (resizeRect.size.width > maxSize.width)
@@ -231,15 +246,19 @@ enum {
 //	if (resizeRect.size.height > maxSize.height)
 //		resizeRect.size = CGSizeMake(resizeRect.size.width / resizeRect.size.height * maxSize.height, maxSize.height);
 //	
-	resizeRect.origin = (CGPoint){0.0f, 0.0f};
 	UIGraphicsBeginImageContext(annotationImage.size);
-	[annotationImage drawInRect:resizeRect];
+	[annotationImage drawInRect:annotationRect];
+	if (hasPlantSale) [overlayImage drawInRect:overlayRect];
 	UIImage *resizedImage = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
 	
 	annotationView.image = resizedImage;
 	annotationView.opaque = NO;
-		
+	annotationView.canShowCallout = YES;
+	
+	UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+	annotationView.rightCalloutAccessoryView = rightButton;
+	
 	return annotationView;
 }
 
