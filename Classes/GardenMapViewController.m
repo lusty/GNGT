@@ -204,21 +204,26 @@ enum {
             viewForAnnotation:(id <MKAnnotation>)annotation {
 	if(annotation == aMapView.userLocation) return nil;
 	
-	MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"Garden"];
+	BOOL isFavorite = [((GardenInfo *)annotation).isFavorite boolValue];
+	
+	NSString *annotationIdentifier = isFavorite ? @"Favorite" : @"Garden";
+	NSString *imageName = isFavorite ? @"favorite.png" : @"poppy.png";
+	
+	MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
 	if (annotationView != nil) {
 		annotationView.annotation = annotation;
 		return annotationView;
 	}																 
 	
 	annotationView = [[[MKAnnotationView alloc] initWithAnnotation:annotation
-												reuseIdentifier:@"Garden"] autorelease];
+												reuseIdentifier:annotationIdentifier] autorelease];
 	annotationView.canShowCallout = YES;
 	
-	UIImage *flagImage = [UIImage imageNamed:@"poppy.png"];
+	UIImage *annotationImage = [UIImage imageNamed:imageName];
 	
 	CGRect resizeRect;
 	
-	resizeRect.size = flagImage.size;
+	resizeRect.size = annotationImage.size;
 //	CGSize maxSize = CGRectInset(self.view.bounds, 10.0f, 10.0f).size;
 //	maxSize.height -= self.navigationController.navigationBar.frame.size.height + 40.0f;
 //	if (resizeRect.size.width > maxSize.width)
@@ -227,18 +232,14 @@ enum {
 //		resizeRect.size = CGSizeMake(resizeRect.size.width / resizeRect.size.height * maxSize.height, maxSize.height);
 //	
 	resizeRect.origin = (CGPoint){0.0f, 0.0f};
-	UIGraphicsBeginImageContext(flagImage.size);
-	[flagImage drawInRect:resizeRect];
+	UIGraphicsBeginImageContext(annotationImage.size);
+	[annotationImage drawInRect:resizeRect];
 	UIImage *resizedImage = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
 	
 	annotationView.image = resizedImage;
 	annotationView.opaque = NO;
-	
-	UIImageView *sfIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SFIcon.png"]];
-	annotationView.leftCalloutAccessoryView = sfIconView;
-	[sfIconView release];
-	
+		
 	return annotationView;
 }
 
