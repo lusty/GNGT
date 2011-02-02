@@ -93,10 +93,23 @@ const int NOTES_TAG = 3;
 	nameLabel.text = info.gardenName;
 
 	// flag plant sales and talks, adjusting the name label if needed
+	NSString *labelString = NULL;
 	if ([info hasPlantSale]) {
+		labelString = @"plant sale";
+	}
+	
+	if ([info hasGardenTalk]) {
+		if (labelString) {
+			labelString = [labelString stringByAppendingString:@", garden talk"];
+		} else {
+			labelString = @"garden talk";
+		}
+	}
+	
+	if (labelString) {
 		nameLabel.frame = CGRectOffset(nameLabel.frame, 0, -6.0f);
 		UILabel *notesLabel = (UILabel *)[self viewWithTag:NOTES_TAG];
-		notesLabel.text = @"plant sale";
+		notesLabel.text = labelString;
 		notesLabel.hidden = NO;
 	}
 }
