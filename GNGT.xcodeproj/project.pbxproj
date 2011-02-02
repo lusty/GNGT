@@ -86,7 +86,7 @@
 		C992D8CE12E2FA50004E4C35 /* GardensListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardensListViewController.m; sourceTree = "<group>"; };
 		C992D96412E37F3F004E4C35 /* GardenDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenDescriptionViewController.h; sourceTree = "<group>"; };
 		C992D96512E37F3F004E4C35 /* GardenDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenDescriptionViewController.m; sourceTree = "<group>"; };
-		C992D96612E37F3F004E4C35 /* GardenDescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GardenDescriptionViewController.xib; path = Classes/GardenDescriptionViewController.xib; sourceTree = "<group>"; };
+		C992D96612E37F3F004E4C35 /* GardenDescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GardenDescriptionViewController.xib; sourceTree = "<group>"; };
 		C992D97E12E42394004E4C35 /* GardenDescriptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenDescriptionView.h; sourceTree = "<group>"; };
 		C992D97F12E42394004E4C35 /* GardenDescriptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenDescriptionView.m; sourceTree = "<group>"; };
 		C992D9C312E7F2E5004E4C35 /* GNGTAppIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GNGTAppIco.png; sourceTree = "<group>"; };
