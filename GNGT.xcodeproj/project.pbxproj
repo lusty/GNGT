@@ -25,6 +25,7 @@
 		5C87149D12EE429A0025B7B0 /* GNGT.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5C87149C12EE429A0025B7B0 /* GNGT.sqlite */; };
 		5C8714BE12EE4B830025B7B0 /* GardenMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8714BD12EE4B830025B7B0 /* GardenMapViewController.m */; };
 		5C8714C312EE4CCA0025B7B0 /* GardenMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8714C212EE4CCA0025B7B0 /* GardenMapView.xib */; };
+		5C901E2C12F8DFE00091BB68 /* AddTalks.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5C901E2B12F8DFE00091BB68 /* AddTalks.xcmappingmodel */; };
 		5C99568112EFA6D0003D4908 /* StarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C99568012EFA6D0003D4908 /* StarControl.m */; };
 		5CE2FE0612E8E1C500D88C6A /* GardenDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2FE0412E8E1C500D88C6A /* GardenDescription.m */; };
 		5CE2FE0712E8E1C500D88C6A /* GardenInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2FE0512E8E1C500D88C6A /* GardenInfo.m */; };
@@ -63,6 +64,8 @@
 		5C8714BC12EE4B830025B7B0 /* GardenMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenMapViewController.h; sourceTree = "<group>"; };
 		5C8714BD12EE4B830025B7B0 /* GardenMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenMapViewController.m; sourceTree = "<group>"; };
 		5C8714C212EE4CCA0025B7B0 /* GardenMapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GardenMapView.xib; sourceTree = "<group>"; };
+		5C901E0F12F8DE360091BB68 /* GNGT 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GNGT 3.xcdatamodel"; sourceTree = "<group>"; };
+		5C901E2B12F8DFE00091BB68 /* AddTalks.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = AddTalks.xcmappingmodel; sourceTree = "<group>"; };
 		5C99567F12EFA6D0003D4908 /* StarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarControl.h; sourceTree = "<group>"; };
 		5C99568012EFA6D0003D4908 /* StarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarControl.m; sourceTree = "<group>"; };
 		5CE2FE0312E8E1C500D88C6A /* GardenDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenDescription.h; sourceTree = "<group>"; };
@@ -161,6 +164,7 @@
 				8D1107310486CEB800E47090 /* GNGT-Info.plist */,
 				5C8714C212EE4CCA0025B7B0 /* GardenMapView.xib */,
 				5CE7F55112F0F1220023C96A /* AddFavorite.xcmappingmodel */,
+				5C901E2B12F8DFE00091BB68 /* AddTalks.xcmappingmodel */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -298,6 +302,7 @@
 				5C99568112EFA6D0003D4908 /* StarControl.m in Sources */,
 				5CE7F51612F0E7A70023C96A /* GardenInfoViewCell.m in Sources */,
 				5CE7F55212F0F1220023C96A /* AddFavorite.xcmappingmodel in Sources */,
+				5C901E2C12F8DFE00091BB68 /* AddTalks.xcmappingmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,8 +424,9 @@
 			children = (
 				28C3AD890F43EF2300507BA6 /* GNGT.xcdatamodel */,
 				5C59F44F12F0F20700B786C0 /* GNGT 2.xcdatamodel */,
+				5C901E0F12F8DE360091BB68 /* GNGT 3.xcdatamodel */,
 			);
-			currentVersion = 5C59F44F12F0F20700B786C0 /* GNGT 2.xcdatamodel */;
+			currentVersion = 5C901E0F12F8DE360091BB68 /* GNGT 3.xcdatamodel */;
 			path = GNGT.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

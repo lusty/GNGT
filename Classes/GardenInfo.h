@@ -20,6 +20,7 @@
 @property (nonatomic, retain) NSString * street;
 @property (nonatomic, retain) NSString * city;
 @property (nonatomic, retain) NSString * plantSale;
+@property (nonatomic, retain) NSString * gardenTalk;
 @property (nonatomic, retain) GardenDescription * gardenDescription;
 @property (nonatomic, retain) NSNumber * latitude;
 @property (nonatomic, retain) NSNumber * longitude;
@@ -28,6 +29,7 @@
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
 - (BOOL) hasPlantSale;
+- (BOOL) hasGardenTalk;
 
 @end
 

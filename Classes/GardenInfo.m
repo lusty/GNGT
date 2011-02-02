@@ -16,6 +16,7 @@
 @dynamic street;
 @dynamic city;
 @dynamic plantSale;
+@dynamic gardenTalk;
 @dynamic gardenDescription;
 @dynamic latitude;
 @dynamic longitude;
@@ -37,6 +38,11 @@
 - (BOOL) hasPlantSale 
 {
 	return self.plantSale != NULL && self.plantSale.length > 0;
+}
+
+- (BOOL) hasGardenTalk 
+{
+	return self.gardenTalk != NULL && self.gardenTalk.length > 0;
 }
 @end
 
