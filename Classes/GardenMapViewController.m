@@ -123,7 +123,9 @@ enum {
 			break;
 			
 		case viewTalks:
-			// TODO implement viewTalks
+			for (info in fetchedResultsController.fetchedObjects) {
+				if (info.hasGardenTalk) [filteredResults addObject:info];
+			}
 			break;
 			
 		default:
@@ -157,25 +159,6 @@ enum {
 - (void)dealloc {
     [super dealloc];
 }
-
-#pragma mark -
-#pragma mark View filters
-
--(IBAction)showAll {
-	
-}
--(IBAction)showFavorites {
-
-}
-
--(IBAction)showPlantSales {
-	
-}
-
--(IBAction)showTalks {
-	
-}
-
 
 #pragma mark -
 #pragma mark Map adjustments

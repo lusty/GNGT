@@ -27,9 +27,4 @@
 @property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) CLLocationManager *locationManager;
 
--(IBAction)showAll;
--(IBAction)showFavorites;
--(IBAction)showPlantSales;
--(IBAction)showTalks;
-
 @end
