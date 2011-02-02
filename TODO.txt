@@ -1,12 +1,15 @@
 Tasks to be done
 ================
 - Add detail view
-- Add "unlock code" and time-sensitive display
+- Add "unlock code" and time-sensitive display (question: will there be some public gardens always available?)
 - Add OTA update
-- Add talks (DB format change, again)
 - Update with proper annotation icons, tab icons
 - Add "open in maps" feature
 
 - Add search function
-- Map use case: filtered view shows no annotations in vcurrent view (reposition to show annotated items)
-- Map use case: current position is out of the geography (no zoom)
+- Map use case: when filtered view shows no annotations in current view, reposition to show annotated items
+- Map use case: when current position is out of the geography, don't zoom
+
+Done
+====
+- Add talks [DB format change] (a4)
