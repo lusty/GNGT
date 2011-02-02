@@ -1,0 +1,12 @@
+Tasks to be done
+================
+- Add detail view
+- Add "unlock code" and time-sensitive display
+- Add OTA update
+- Add talks (DB format change, again)
+- Update with proper annotation icons, tab icons
+- Add "open in maps" feature
+
+- Add search function
+- Map use case: filtered view shows no annotations in vcurrent view (reposition to show annotated items)
+- Map use case: current position is out of the geography (no zoom)
