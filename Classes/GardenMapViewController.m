@@ -189,15 +189,16 @@ enum {
 	
 	BOOL isFavorite = [((GardenInfo *)annotation).isFavorite boolValue];
 	BOOL hasPlantSale = ((GardenInfo *)annotation).hasPlantSale;
-	
+	BOOL hasGardenTalk = ((GardenInfo *)annotation).hasGardenTalk;
+		
 	NSString *imageName = isFavorite ? @"favorite.png" : @"poppy.png";
-	NSString *overlayImageName = hasPlantSale ? @"flowerpot.png" : NULL;
 	
-	NSString *annotationIdentifier = NULL;
+	NSString *annotationIdentifier = isFavorite ? @"Favorite" : @"Garden";
 	if (hasPlantSale) {
-		annotationIdentifier = isFavorite ? @"FavoriteWithSale" : @"GardenWithSale";
-	} else {
-		annotationIdentifier = isFavorite ? @"Favorite" : @"Garden";
+		annotationIdentifier = [annotationIdentifier stringByAppendingString:@"WithSale"];
+	}
+	if (hasGardenTalk) {
+		annotationIdentifier = [annotationIdentifier stringByAppendingString:@"WithTalk"];
 	}
 	
 	MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
@@ -213,16 +214,25 @@ enum {
 	UIImage *annotationImage = [UIImage imageNamed:imageName];
 	annotationRect.size = annotationImage.size;
 	
-	UIImage *overlayImage = NULL;
-	CGRect overlayRect = CGRectMake(0.0f, 0.0f, 0.0f, 0.0f);
+	UIImage *flowerpot = NULL;
+	CGRect flowerpotRect = CGRectMake(0.0f, 0.0f, 0.0f, 0.0f);
 	if (hasPlantSale) {
-		overlayImage = [UIImage imageNamed:overlayImageName];
-		overlayRect.size = annotationImage.size;
+		flowerpot = [UIImage imageNamed:@"flowerpot.png"];
+		flowerpotRect.size = flowerpot.size;
 		// align to center and bottom of annotation image
-		overlayRect = CGRectOffset(overlayRect, (annotationImage.size.width - overlayImage.size.width) / 2.0, annotationImage.size.height - overlayImage.size.height);
+		flowerpotRect = CGRectOffset(flowerpotRect, (annotationImage.size.width - flowerpot.size.width) / 2.0, annotationImage.size.height - flowerpot.size.height);
 	}
 	
-//	CGSize maxSize = CGRectInset(self.view.bounds, 10.0f, 10.0f).size;
+	UIImage *speechBubble = NULL;
+	CGRect speechRect = CGRectMake(0.0f, 0.0f, 0.0f, 0.0f);
+	if (hasGardenTalk) {
+		speechBubble = [UIImage imageNamed:@"talk.png"];
+		speechRect.size = speechBubble.size;
+		// align to center and a corresponding point down in the annotation image
+		speechRect = CGRectOffset(speechRect, annotationImage.size.width / 2.0,  (annotationImage.size.width / 2.0) - speechRect.size.height);
+	}
+	
+	//	CGSize maxSize = CGRectInset(self.view.bounds, 10.0f, 10.0f).size;
 //	maxSize.height -= self.navigationController.navigationBar.frame.size.height + 40.0f;
 //	if (resizeRect.size.width > maxSize.width)
 //		resizeRect.size = CGSizeMake(maxSize.width, resizeRect.size.height / resizeRect.size.width * maxSize.width);
@@ -231,7 +241,8 @@ enum {
 //	
 	UIGraphicsBeginImageContext(annotationImage.size);
 	[annotationImage drawInRect:annotationRect];
-	if (hasPlantSale) [overlayImage drawInRect:overlayRect];
+	if (hasPlantSale) [flowerpot drawInRect:flowerpotRect];
+	if (hasGardenTalk) [speechBubble drawInRect:speechRect];
 	UIImage *resizedImage = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
 	

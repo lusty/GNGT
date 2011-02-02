@@ -26,6 +26,8 @@
 		5C8714BE12EE4B830025B7B0 /* GardenMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8714BD12EE4B830025B7B0 /* GardenMapViewController.m */; };
 		5C8714C312EE4CCA0025B7B0 /* GardenMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8714C212EE4CCA0025B7B0 /* GardenMapView.xib */; };
 		5C901E2C12F8DFE00091BB68 /* AddTalks.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5C901E2B12F8DFE00091BB68 /* AddTalks.xcmappingmodel */; };
+		5C901E6E12F8E7470091BB68 /* talk.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C901E6C12F8E7470091BB68 /* talk.png */; };
+		5C901E6F12F8E7470091BB68 /* talk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C901E6D12F8E7470091BB68 /* talk@2x.png */; };
 		5C99568112EFA6D0003D4908 /* StarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C99568012EFA6D0003D4908 /* StarControl.m */; };
 		5CE2FE0612E8E1C500D88C6A /* GardenDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2FE0412E8E1C500D88C6A /* GardenDescription.m */; };
 		5CE2FE0712E8E1C500D88C6A /* GardenInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2FE0512E8E1C500D88C6A /* GardenInfo.m */; };
@@ -66,6 +68,8 @@
 		5C8714C212EE4CCA0025B7B0 /* GardenMapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GardenMapView.xib; sourceTree = "<group>"; };
 		5C901E0F12F8DE360091BB68 /* GNGT 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GNGT 3.xcdatamodel"; sourceTree = "<group>"; };
 		5C901E2B12F8DFE00091BB68 /* AddTalks.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = AddTalks.xcmappingmodel; sourceTree = "<group>"; };
+		5C901E6C12F8E7470091BB68 /* talk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = talk.png; path = images/talk.png; sourceTree = "<group>"; };
+		5C901E6D12F8E7470091BB68 /* talk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "talk@2x.png"; path = "images/talk@2x.png"; sourceTree = "<group>"; };
 		5C99567F12EFA6D0003D4908 /* StarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarControl.h; sourceTree = "<group>"; };
 		5C99568012EFA6D0003D4908 /* StarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarControl.m; sourceTree = "<group>"; };
 		5CE2FE0312E8E1C500D88C6A /* GardenDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenDescription.h; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5C901E6C12F8E7470091BB68 /* talk.png */,
+				5C901E6D12F8E7470091BB68 /* talk@2x.png */,
 				5C42631512F7F951007E0ABF /* flowerpot.png */,
 				5C42631612F7F951007E0ABF /* flowerpot@2x.png */,
 				5C4262DF12F7F482007E0ABF /* favorite.png */,
@@ -280,6 +286,8 @@
 				5C42631712F7F951007E0ABF /* flowerpot.png in Resources */,
 				5C42631812F7F951007E0ABF /* flowerpot@2x.png in Resources */,
 				5C33321912F8DD070066C6CB /* TODO.txt in Resources */,
+				5C901E6E12F8E7470091BB68 /* talk.png in Resources */,
+				5C901E6F12F8E7470091BB68 /* talk@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
