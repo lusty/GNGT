@@ -84,6 +84,8 @@
 		}
 		self.labels = labelArray;
 		self.values = valuesArray;
+		
+		[((UITableView *)self.view) reloadData];
     }
 }
 
