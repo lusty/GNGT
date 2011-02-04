@@ -16,8 +16,8 @@
 	GardenInfo *info;
 }
 
-- (void)setCheckboxHidden:(BOOL)visible animated:(BOOL)animate;
-
 @property (nonatomic, retain) GardenInfo *info;
+
+- (id)initWithReuseIdentifier:(NSString *)identifier hasNotes:(BOOL)hasNotes;
 
 @end

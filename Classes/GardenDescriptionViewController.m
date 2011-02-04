@@ -105,7 +105,16 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 	// TODO add a view header as well
+	[((UITableView *)self.view) scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
 }
+
+/*
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+*/
+
+
 
 #pragma mark -
 #pragma mark Table view data source

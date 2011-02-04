@@ -143,12 +143,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView 
 		 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-    static NSString *CellIdentifier = @"GardenListCell";
+    GardenInfo *info = [_fetchedResultsController objectAtIndexPath:indexPath];
+	BOOL hasNotes = info.hasPlantSale | info.hasGardenTalk;
+	NSString *CellIdentifier = hasNotes ? @"GardenListWIthNotes" : @"GardenListCell";
 	
-    GardenInfoViewCell* cell = (GardenInfoViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-		cell = [[[GardenInfoViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
+//    GardenInfoViewCell* cell = (GardenInfoViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    if (cell == nil) {
+	GardenInfoViewCell* cell = [[[GardenInfoViewCell alloc] initWithReuseIdentifier:CellIdentifier hasNotes:hasNotes] autorelease];
+//    }
 	
     // Set up the cell...
     [self configureCell:cell atIndexPath:indexPath];
@@ -159,15 +161,6 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
-	
 	if (self.description == nil) {
         self.description = [[[GardenDescriptionViewController alloc] initWithNibName:@"GardenDescriptionViewController" bundle:nil] autorelease];        
     }
