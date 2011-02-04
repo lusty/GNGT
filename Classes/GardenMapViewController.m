@@ -12,6 +12,7 @@
 
 @interface GardenMapViewController (Private)
 - (void)startStandardUpdates;
+- (void)showDefaultMapAnimated:(BOOL)animated;
 @end
 
 @implementation GardenMapViewController
@@ -69,12 +70,18 @@ enum {
 //- (void)viewWillAppear:(BOOL)animated
 - (void)viewDidLoad 
 {	
-	MKCoordinateRegion region = {{37.33336995f, -121.9985405f}, {0.23f, 0.36f}};
-//	region.center = location.coordinate;
-//	region.span.longitudeDelta = 0.15f;
-//	region.span.latitudeDelta = 0.15f;
-	[self.mapView setRegion:region animated:NO];
+	[super viewDidLoad];
+	[self showDefaultMapAnimated:NO];
 	[self goToCurrentLocation];
+}
+
+- (void)showDefaultMapAnimated:(BOOL)animated 
+{
+	MKCoordinateRegion region = {{37.33336995f, -121.9985405f}, {0.23f, 0.36f}};
+	//	region.center = location.coordinate;
+	//	region.span.longitudeDelta = 0.15f;
+	//	region.span.latitudeDelta = 0.15f;
+	[self.mapView setRegion:region animated:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -101,6 +108,7 @@ enum {
 	
 	[mapView removeAnnotations:filteredResults];
 	[filteredResults removeAllObjects];
+	NSString *searchType = NULL;
 	switch (self.viewSelector.selectedSegmentIndex) {
 		case viewAll:
 			[filteredResults addObjectsFromArray:fetchedResultsController.fetchedObjects];
@@ -108,18 +116,21 @@ enum {
 		
 		case viewFavorites:
 			// TODO use filteredListWithPredicate?
+			searchType = @"favorites";
 			for (info in fetchedResultsController.fetchedObjects) {
 				if (info.isFavorite) [filteredResults addObject:info];
 			}
 			break;
 			
 		case viewPlantSales:
+			searchType = @"plant sales";
 			for (info in fetchedResultsController.fetchedObjects) {
 				if (info.hasPlantSale) [filteredResults addObject:info];
 			}
 			break;
 			
 		case viewTalks:
+			searchType = @"garden talks";
 			for (info in fetchedResultsController.fetchedObjects) {
 				if (info.hasGardenTalk) [filteredResults addObject:info];
 			}
@@ -129,13 +140,34 @@ enum {
 			break;
 	}
 	[mapView addAnnotations:filteredResults];
+	if (filteredResults.count == 0 && self.viewSelector.selectedSegmentIndex != viewAll) {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"UIAlertView" message:[NSString stringWithFormat:@"No %@ found", searchType]
+													   delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+		[alert show];	
+		[alert release];
+	} else {
+		// If nothing will be visible, rescale to show the found items
+ 		if ([[mapView annotationsInMapRect:mapView.visibleMapRect] count] == 0) 
+			[self showDefaultMapAnimated:YES];
+	}
 
 }
+
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
     return YES;
 }
+
+#pragma mark -
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	self.viewSelector.selectedSegmentIndex = viewAll;
+	// TODO send a change event or call the view filter function?
+}
+
 
 #pragma mark Shutdown
 
