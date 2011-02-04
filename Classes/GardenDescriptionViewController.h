@@ -11,12 +11,12 @@
 @class GardenInfo;
 @interface GardenDescriptionViewController : UITableViewController {
 	GardenInfo *info;
-	NSArray *labels;
-	NSArray *values;
+	NSMutableArray *labels;
+	NSMutableArray *values;
 }
 
 @property (nonatomic, retain) GardenInfo *info;
-@property (nonatomic, copy) NSArray *labels;
-@property (nonatomic, copy) NSArray *values;
+@property (nonatomic, copy) NSMutableArray *labels;
+@property (nonatomic, copy) NSMutableArray *values;
 
 @end

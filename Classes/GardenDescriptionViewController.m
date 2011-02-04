@@ -12,7 +12,7 @@
 
 @interface GardenDescriptionViewController (Private)
 - (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath;
-- (CGFloat)heightOfValueText:(NSString *)valueText;
+- (CGFloat)heightOfText:(NSString *)valueText forWidth:(CGFloat)maxWidth;
 @end
 
 @implementation GardenDescriptionViewController
@@ -166,7 +166,8 @@ const float DETAIL_MAIN_FONT_SIZE = 12.0;
 	label.tag = NAME_TAG;
 	label.font = [UIFont systemFontOfSize:DETAIL_MAIN_FONT_SIZE];
 	label.textAlignment = UITextAlignmentRight;
-	label.adjustsFontSizeToFitWidth = NO; // TODO wrap this too
+	label.lineBreakMode = UILineBreakModeWordWrap;
+	label.adjustsFontSizeToFitWidth = NO;
 	label.textColor = [UIColor blueColor];
 	[cell.contentView addSubview:label];
 	label.highlightedTextColor = [UIColor whiteColor];
@@ -207,21 +208,25 @@ const float DETAIL_MAIN_FONT_SIZE = 12.0;
 	
 	// Set the label.
 	label = (UILabel *)[cell viewWithTag:NAME_TAG];
-	label.text = [self.labels objectAtIndex:[indexPath row]];
+	NSString *labelText = [self.labels objectAtIndex:[indexPath row]];
+	CGFloat labelHeight = [self heightOfText:labelText forWidth:DETAIL_LEFT_COLUMN_WIDTH];
+	label.text = labelText;
+	label.frame = CGRectMake(DETAIL_LEFT_COLUMN_OFFSET, DETAIL_ROW_TOP, DETAIL_LEFT_COLUMN_WIDTH, labelHeight);
+	label.numberOfLines = 0;
 	
 	// Set the value.
 	label = (UILabel *)[cell viewWithTag:TIME_TAG];
 	NSString *valueText = [self.values objectAtIndex:[indexPath row]];
-	CGFloat labelHeight = [self heightOfValueText:valueText];
+	labelHeight = [self heightOfText:valueText forWidth:DETAIL_MIDDLE_COLUMN_WIDTH];
 	label.frame = CGRectMake(DETAIL_MIDDLE_COLUMN_OFFSET, DETAIL_ROW_TOP, DETAIL_MIDDLE_COLUMN_WIDTH, labelHeight);
 	label.text = valueText;
 	label.numberOfLines = 0;
 //	[label sizeToFit];
 }    
 
-- (CGFloat)heightOfValueText:(NSString *)valueText 
+- (CGFloat)heightOfText:(NSString *)valueText  forWidth:(CGFloat)maxWidth
 {
-	CGSize maxLabelSize = CGSizeMake(DETAIL_MIDDLE_COLUMN_WIDTH, 9999.0f);
+	CGSize maxLabelSize = CGSizeMake(maxWidth, 9999.0f);
 	CGSize textSize = [valueText sizeWithFont:[UIFont systemFontOfSize:DETAIL_MAIN_FONT_SIZE] 
 							constrainedToSize:maxLabelSize 
 								lineBreakMode:UILineBreakModeWordWrap];
@@ -240,8 +245,11 @@ const float DETAIL_MAIN_FONT_SIZE = 12.0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  {  
+	NSString *labelText = [self.labels objectAtIndex:[indexPath row]];
+	CGFloat labelHeight = [self heightOfText:labelText forWidth:DETAIL_LEFT_COLUMN_WIDTH];
 	NSString *valueText = [self.values objectAtIndex:[indexPath row]];
-	return [self heightOfValueText:valueText] + 2.0f * DETAIL_ROW_TOP;
+	CGFloat valueHeight = [self heightOfText:valueText forWidth:DETAIL_MIDDLE_COLUMN_WIDTH];
+	return  (valueHeight > labelHeight ? valueHeight : labelHeight) + 2.0f * DETAIL_ROW_TOP;
 }
 
 #pragma mark -
