@@ -54,7 +54,8 @@
 #pragma mark -
 #pragma mark View lifecycle
 
-- (void)viewDidLoad {
+- (void)viewDidLoad 
+{
 	self.labels = [NSMutableArray arrayWithCapacity:10];
 	self.values = [NSMutableArray arrayWithCapacity:10];
     [super viewDidLoad];
