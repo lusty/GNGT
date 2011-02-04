@@ -66,22 +66,22 @@ enum {
 
 #pragma mark View setup
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewWillAppear:(BOOL)animated
+//- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidLoad 
 {	
 	MKCoordinateRegion region = {{37.33336995f, -121.9985405f}, {0.23f, 0.36f}};
 //	region.center = location.coordinate;
 //	region.span.longitudeDelta = 0.15f;
 //	region.span.latitudeDelta = 0.15f;
 	[self.mapView setRegion:region animated:NO];
+	if (![CLLocationManager locationServicesEnabled]) return;
+	// get the location
+	[self startStandardUpdates];
 }
 
 
 - (void)viewDidAppear:(BOOL)animated
 {
-	if (![CLLocationManager locationServicesEnabled]) return;
-	// get the location
-	[self startStandardUpdates];
-	
 	// Add annotations
 	NSError *error = nil;
 	if (self.filteredResults == nil) {
