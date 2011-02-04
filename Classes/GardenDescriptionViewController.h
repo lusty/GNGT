@@ -16,7 +16,7 @@
 }
 
 @property (nonatomic, retain) GardenInfo *info;
-@property (nonatomic, copy) NSMutableArray *labels;
-@property (nonatomic, copy) NSMutableArray *values;
+@property (nonatomic, retain) NSMutableArray *labels;
+@property (nonatomic, retain) NSMutableArray *values;
 
 @end

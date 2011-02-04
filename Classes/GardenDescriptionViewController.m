@@ -11,6 +11,8 @@
 #import "GardenDescription.h"
 
 @interface GardenDescriptionViewController (Private)
+- (void)addLabel:(NSString *)labelText andText:(NSString *)valueText;
+- (void)addLabel:(NSString *)labelText andNumber:(NSNumber *)value;
 - (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath;
 - (CGFloat)heightOfText:(NSString *)valueText forWidth:(CGFloat)maxWidth;
 @end
@@ -20,9 +22,6 @@
 @dynamic info;
 @synthesize labels, values;
 
-//=========================================================== 
-//  info 
-//=========================================================== 
 - (GardenInfo *)info
 {
     return [[info retain] autorelease]; 
@@ -33,83 +32,70 @@
     if (info != anInfo) {
         [info release];
         info = [anInfo retain];
-		
-		BOOL authorized = YES;
-		
-		
-		// Build the data used by the display table
-		NSMutableArray *labelArray = [NSMutableArray arrayWithCapacity:10];
-		NSMutableArray *valuesArray = [NSMutableArray arrayWithCapacity:10];
-		GardenDescription *description = info.gardenDescription;
-
-		[labelArray addObject:@"Name"];
-		[valuesArray addObject:info.gardenName];
-		[labelArray addObject:@"#"];
-		[valuesArray addObject:[info.gardenNumber stringValue]];
-		if (authorized && info.street) {
-			[labelArray addObject:@"Address"];
-			[valuesArray addObject:info.street];
-		}
-		[labelArray addObject:@"City"];
-		[valuesArray addObject:info.city];
-		if (authorized && description.directions) {
-			[labelArray addObject:@"Directions"];
-			[valuesArray addObject:description.directions];
-		}
-		
-		// Description items, may be a secondary table
-		if (description.designer && description.designer.length > 0) {
-			[labelArray addObject:@"Designer"];
-			[valuesArray addObject:description.designer];
-		}
-		if (description.gardenInstaller && description.gardenInstaller.length > 0) {
-			[labelArray addObject:@"Installer"];
-			[valuesArray addObject:description.gardenInstaller];
-		}
-		if (description.sqft) {
-			[labelArray addObject:@"Size"];
-			[valuesArray addObject:[NSString stringWithFormat:@"%i sq. ft.", [description.sqft intValue]]];
-		}
-		if (description.yearInstalled) {
-			[labelArray addObject:@"Installed in"];
-			[valuesArray addObject:[description.yearInstalled stringValue]];
-		}
-		if (description.showcase && description.showcase.length > 0) {
-			[labelArray addObject:@"Showcase feature"];
-			[valuesArray addObject:description.showcase];
-		}
-		if (description.wildlife && description.wildlife.length > 0) {
-			[labelArray addObject:@"Gardening for wildlife"];
-			[valuesArray addObject:description.wildlife];
-		}
-		if (description.other && description.other.length > 0) {
-			[labelArray addObject:@"Other garden attractions"];
-			[valuesArray addObject:description.other];
-		}
-		self.labels = labelArray;
-		self.values = valuesArray;
-		
-		[((UITableView *)self.view) reloadData];
     }
+}
+
+
+- (void)addLabel:(NSString *)labelText andText:(NSString *)valueText 
+{
+//	assert labelText && labelText.length > 0;
+	if (valueText && valueText.length > 0) {
+		[self.labels addObject:labelText];
+		[self.values addObject:valueText];
+	}
+}
+
+- (void)addLabel:(NSString *)labelText andNumber:(NSNumber *)value 
+{
+	if (value) [self addLabel:labelText andText:[value stringValue]];
 }
 
 
 #pragma mark -
 #pragma mark View lifecycle
 
-/*
 - (void)viewDidLoad {
+	self.labels = [NSMutableArray arrayWithCapacity:10];
+	self.values = [NSMutableArray arrayWithCapacity:10];
     [super viewDidLoad];
-
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-*/
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-	// TODO add a view header as well
+	[super viewWillAppear:animated];
+	BOOL authorized = YES; // TODO have the application set this from outside
+	
+	// Build the data used by the display table
+	[self.labels removeAllObjects];
+	[self.values removeAllObjects];
+	GardenDescription *description = info.gardenDescription;
+	
+	[self addLabel:@"Garden name" andText:info.gardenName];
+	[self addLabel:@"Garden number" andNumber:info.gardenNumber];
+	[self addLabel:@"Plant sale" andText:info.plantSale];
+	[self addLabel:@"Garden talk" andText:info.gardenTalk];
+	
+	if (authorized && info.street && info.street.length > 0) {
+		[self addLabel:@"Address" andText:[NSString stringWithFormat:@"%@, %@", info.street, info.city]];
+	} else {
+		[self addLabel:@"City" andText:info.city];
+	}
+	if (authorized)
+		[self addLabel:@"Directions" andText:description.directions];
+	
+	// Description items, may be a secondary table
+	[self addLabel:@"Designer" andText:description.designer]; // TODO add disclosure for designer if needed
+	[self addLabel:@"Installer" andText:description.gardenInstaller];
+	if (description.sqft)
+		[self addLabel:@"Size" andText:[NSString stringWithFormat:@"%i sq. ft.", [description.sqft intValue]]];
+	[self addLabel:@"Installed in" andNumber:description.yearInstalled];
+	[self addLabel:@"Showcase feature" andText:description.showcase];
+	[self addLabel:@"Gardening for wildlife" andText:description.wildlife];
+	[self addLabel:@"Other garden attractions" andText:description.other];
+	
+	// TODO setup the view header as well
 	[((UITableView *)self.view) scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
+	
+	[((UITableView *)self.view) reloadData];
 }
 
 /*
@@ -117,8 +103,6 @@
     [super viewDidAppear:animated];
 }
 */
-
-
 
 #pragma mark -
 #pragma mark Table view data source
@@ -131,7 +115,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return self.labels == NULL ? 0 : [self.labels count];
+    return labels == NULL ? 0 : [labels count];
 }
 
 #pragma mark -
@@ -208,7 +192,7 @@ const float DETAIL_MAIN_FONT_SIZE = 12.0;
 	
 	// Set the label.
 	label = (UILabel *)[cell viewWithTag:NAME_TAG];
-	NSString *labelText = [self.labels objectAtIndex:[indexPath row]];
+	NSString *labelText = [labels objectAtIndex:[indexPath row]];
 	CGFloat labelHeight = [self heightOfText:labelText forWidth:DETAIL_LEFT_COLUMN_WIDTH];
 	label.text = labelText;
 	label.frame = CGRectMake(DETAIL_LEFT_COLUMN_OFFSET, DETAIL_ROW_TOP, DETAIL_LEFT_COLUMN_WIDTH, labelHeight);
@@ -216,7 +200,7 @@ const float DETAIL_MAIN_FONT_SIZE = 12.0;
 	
 	// Set the value.
 	label = (UILabel *)[cell viewWithTag:TIME_TAG];
-	NSString *valueText = [self.values objectAtIndex:[indexPath row]];
+	NSString *valueText = [values objectAtIndex:[indexPath row]];
 	labelHeight = [self heightOfText:valueText forWidth:DETAIL_MIDDLE_COLUMN_WIDTH];
 	label.frame = CGRectMake(DETAIL_MIDDLE_COLUMN_OFFSET, DETAIL_ROW_TOP, DETAIL_MIDDLE_COLUMN_WIDTH, labelHeight);
 	label.text = valueText;
@@ -245,9 +229,9 @@ const float DETAIL_MAIN_FONT_SIZE = 12.0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  {  
-	NSString *labelText = [self.labels objectAtIndex:[indexPath row]];
+	NSString *labelText = [labels objectAtIndex:[indexPath row]];
 	CGFloat labelHeight = [self heightOfText:labelText forWidth:DETAIL_LEFT_COLUMN_WIDTH];
-	NSString *valueText = [self.values objectAtIndex:[indexPath row]];
+	NSString *valueText = [values objectAtIndex:[indexPath row]];
 	CGFloat valueHeight = [self heightOfText:valueText forWidth:DETAIL_MIDDLE_COLUMN_WIDTH];
 	return  (valueHeight > labelHeight ? valueHeight : labelHeight) + 2.0f * DETAIL_ROW_TOP;
 }
@@ -263,17 +247,15 @@ const float DETAIL_MAIN_FONT_SIZE = 12.0;
 }
 
 - (void)viewDidUnload {
-    // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
-}
-
-
-- (void)dealloc {
-	[info release];
-	info = nil;
 	[labels release];
 	labels = nil;
 	[values release];
 	values = nil;
+}
+
+- (void)dealloc {
+	[info release];
+	info = nil;
     [super dealloc];
 }
 
