@@ -58,11 +58,11 @@
 		}
 		
 		// Description items, may be a secondary table
-		if (description.designer) {
+		if (description.designer && description.designer.length > 0) {
 			[labelArray addObject:@"Designer"];
 			[valuesArray addObject:description.designer];
 		}
-		if (description.gardenInstaller) {
+		if (description.gardenInstaller && description.gardenInstaller.length > 0) {
 			[labelArray addObject:@"Installer"];
 			[valuesArray addObject:description.gardenInstaller];
 		}
@@ -74,12 +74,16 @@
 			[labelArray addObject:@"Installed in"];
 			[valuesArray addObject:[description.yearInstalled stringValue]];
 		}
-		if (description.showcase) {
-			[labelArray addObject:@"Showcase"];
+		if (description.showcase && description.showcase.length > 0) {
+			[labelArray addObject:@"Showcase feature"];
 			[valuesArray addObject:description.showcase];
 		}
-		if (description.other) {
-			[labelArray addObject:@"Other"];
+		if (description.wildlife && description.wildlife.length > 0) {
+			[labelArray addObject:@"Gardening for wildlife"];
+			[valuesArray addObject:description.wildlife];
+		}
+		if (description.other && description.other.length > 0) {
+			[labelArray addObject:@"Other garden attractions"];
 			[valuesArray addObject:description.other];
 		}
 		self.labels = labelArray;
@@ -156,7 +160,7 @@ const float DETAIL_MAIN_FONT_SIZE = 12.0;
 	UILabel *label;
 	CGRect rect;
 	
-	// Create a label for the time zone name.
+	// Create a label value label.
 	rect = CGRectMake(DETAIL_LEFT_COLUMN_OFFSET, DETAIL_ROW_TOP, DETAIL_LEFT_COLUMN_WIDTH, DETAIL_LABEL_HEIGHT);
 	label = [[UILabel alloc] initWithFrame:rect];
 	label.tag = NAME_TAG;
@@ -183,7 +187,6 @@ const float DETAIL_MAIN_FONT_SIZE = 12.0;
 }
 
 
-// Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
