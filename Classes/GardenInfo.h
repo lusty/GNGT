@@ -30,7 +30,6 @@
 
 - (BOOL) hasPlantSale;
 - (BOOL) hasGardenTalk;
-
 @end
 
 
