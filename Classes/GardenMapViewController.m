@@ -74,11 +74,8 @@ enum {
 //	region.span.longitudeDelta = 0.15f;
 //	region.span.latitudeDelta = 0.15f;
 	[self.mapView setRegion:region animated:NO];
-	if (![CLLocationManager locationServicesEnabled]) return;
-	// get the location
-	[self startStandardUpdates];
+	[self goToCurrentLocation];
 }
-
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -275,6 +272,13 @@ enum {
 
 #pragma mark -
 #pragma mark Location updates
+
+-(IBAction)goToCurrentLocation
+{
+	if (![CLLocationManager locationServicesEnabled]) return;
+	// get the location
+	[self startStandardUpdates];
+}
 
 - (void)startStandardUpdates
 {

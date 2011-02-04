@@ -27,4 +27,6 @@
 @property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) CLLocationManager *locationManager;
 
+-(IBAction)goToCurrentLocation;
+
 @end
