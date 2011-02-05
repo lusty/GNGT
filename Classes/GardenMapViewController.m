@@ -141,7 +141,7 @@ enum {
 	}
 	[mapView addAnnotations:filteredResults];
 	if (filteredResults.count == 0 && self.viewSelector.selectedSegmentIndex != viewAll) {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"UIAlertView" message:[NSString stringWithFormat:@"No %@ found", searchType]
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"No %@ found", searchType]
 													   delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
 		[alert show];	
 		[alert release];

@@ -1,6 +1,5 @@
 Tasks to be done
 ================
-- Add detail view
 - Add "unlock code" and time-sensitive display (question: will there be some public gardens always available?)
 - Add OTA update
 - Update with proper annotation icons, tab icons
