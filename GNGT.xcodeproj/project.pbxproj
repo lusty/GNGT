@@ -45,8 +45,8 @@
 		5CE4734012F69110009DCC8C /* poppy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CE4733E12F69110009DCC8C /* poppy@2x.png */; };
 		5CE7F51612F0E7A70023C96A /* GardenInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7F51512F0E7A70023C96A /* GardenInfoViewCell.m */; };
 		5CE7F55212F0F1220023C96A /* AddFavorite.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7F55112F0F1220023C96A /* AddFavorite.xcmappingmodel */; };
+		C992612B12FDEC5E00FA5E8B /* GNGTAppIco.png in Resources */ = {isa = PBXBuildFile; fileRef = C992612A12FDEC5E00FA5E8B /* GNGTAppIco.png */; };
 		C992D8CF12E2FA50004E4C35 /* GardensListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C992D8CE12E2FA50004E4C35 /* GardensListViewController.m */; };
-		C992D9C412E7F2E5004E4C35 /* GNGTAppIco.png in Resources */ = {isa = PBXBuildFile; fileRef = C992D9C312E7F2E5004E4C35 /* GNGTAppIco.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,10 +100,10 @@
 		5CE7F51512F0E7A70023C96A /* GardenInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenInfoViewCell.m; sourceTree = "<group>"; };
 		5CE7F55112F0F1220023C96A /* AddFavorite.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = AddFavorite.xcmappingmodel; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* GNGT-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GNGT-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C992612A12FDEC5E00FA5E8B /* GNGTAppIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GNGTAppIco.png; path = ../../../CNPS/GNGTAppIco.png; sourceTree = SOURCE_ROOT; };
 		C992D88212E2EF13004E4C35 /* GardenInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenInfo.h; sourceTree = "<group>"; };
 		C992D8CD12E2FA50004E4C35 /* GardensListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardensListViewController.h; sourceTree = "<group>"; };
 		C992D8CE12E2FA50004E4C35 /* GardensListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardensListViewController.m; sourceTree = "<group>"; };
-		C992D9C312E7F2E5004E4C35 /* GNGTAppIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GNGTAppIco.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +201,7 @@
 		5CDF403F12FC8C300014742E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C992612A12FDEC5E00FA5E8B /* GNGTAppIco.png */,
 				5C50D2EA12FCE29A001C94EF /* clarkia.png */,
 				5C50D2EB12FCE29A001C94EF /* clarkia@2x.png */,
 				5CDF404F12FC8D010014742E /* star.png */,
@@ -215,7 +216,6 @@
 				5C42631612F7F951007E0ABF /* flowerpot@2x.png */,
 				5CE4733D12F69110009DCC8C /* poppy.png */,
 				5CE4733E12F69110009DCC8C /* poppy@2x.png */,
-				C992D9C312E7F2E5004E4C35 /* GNGTAppIco.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -320,7 +320,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				C992D9C412E7F2E5004E4C35 /* GNGTAppIco.png in Resources */,
 				5C87149D12EE429A0025B7B0 /* GNGT.sqlite in Resources */,
 				5C8714C312EE4CCA0025B7B0 /* GardenMapView.xib in Resources */,
 				5CE4733F12F69110009DCC8C /* poppy.png in Resources */,
@@ -340,6 +339,7 @@
 				5C50D2DF12FCDA8E001C94EF /* TourInfoController.xib in Resources */,
 				5C50D2EC12FCE29A001C94EF /* clarkia.png in Resources */,
 				5C50D2ED12FCE29A001C94EF /* clarkia@2x.png in Resources */,
+				C992612B12FDEC5E00FA5E8B /* GNGTAppIco.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
