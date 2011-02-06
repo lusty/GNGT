@@ -13,6 +13,9 @@
 	NSArray *_sortDescriptors;
 	NSFetchRequest *_fetchRequest;
 	NSFetchedResultsController *_fetchedResultsController;
+	int sortMode;
+	BOOL sortModeChanged;
+	
 	NSManagedObjectContext *_context;
 	GardenDescriptionViewController *_description;
 	UIColor *lightGreen;
@@ -23,6 +26,8 @@
 @property (nonatomic, retain) NSFetchRequest *fetchRequest;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, readonly) NSString *sectionNameKeyPath;
+@property (nonatomic) int sortMode;
+@property (nonatomic) BOOL sortModeChanged;
 
 @property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) GardenDescriptionViewController *description;

@@ -17,18 +17,24 @@
 @synthesize sortDescriptors = _sortDescriptors;;
 @synthesize fetchedResultsController = _fetchedResultsController;
 @synthesize context = _context;
+@synthesize sortMode, sortModeChanged;
 
 @synthesize description = _description;
 @synthesize lightGreen, darkGreen;
 
 @dynamic sectionNameKeyPath;
 
+enum sorting {
+	byCity = 0,
+	byName
+};
+
 #pragma mark -
 #pragma mark Initialization
 
 - (NSArray *)sortDescriptors
 {
-	if (_sortDescriptors == NULL) {
+	if (_sortDescriptors == NULL || sortModeChanged) {
 		NSSortDescriptor *citySort = [[[NSSortDescriptor alloc] 
 									   initWithKey:@"city" 
 									   ascending:YES
@@ -37,7 +43,9 @@
 									   initWithKey:@"gardenName" 
 									   ascending:YES
 									   selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
-		_sortDescriptors = [NSArray arrayWithObjects:citySort, nameSort, nil];
+		NSMutableArray *temp = [NSMutableArray arrayWithObject:nameSort];
+		if (sortMode == byCity) [temp insertObject:citySort atIndex:0];
+		self.sortDescriptors = [NSArray arrayWithArray:temp];
 	}
 	return [[_sortDescriptors retain] autorelease];
 }
@@ -49,17 +57,19 @@
 		NSEntityDescription *entity = [NSEntityDescription 
 									   entityForName:@"GardenInfo" inManagedObjectContext:_context];
 		[_fetchRequest setEntity:entity];
-		
+//		[_fetchRequest setFetchBatchSize:20];
+	}
+	
+	if (sortModeChanged) {
 		[_fetchRequest setSortDescriptors:self.sortDescriptors];
-		
-		[_fetchRequest setFetchBatchSize:20];
+		sortModeChanged = NO;
 	}
 	return [[_fetchRequest retain] autorelease];
 }
 
 - (NSString *) sectionNameKeyPath
 {
-	return @"city";
+	return (sortMode == byCity) ? @"city" : NULL;
 }
 
 - (NSFetchedResultsController *)fetchedResultsController 
@@ -84,25 +94,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-    NSError *error;
-	if (![[self fetchedResultsController] performFetch:&error]) {
-		// Update to handle the error appropriately.
-		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-		exit(-1);  // Fail
-	}
-	
 	((UITableView *)self.view).sectionIndexMinimumDisplayRowCount = 500; // turn off the letters on the right-hand side
     self.title = @"Gardens";
 	
 	self.darkGreen = [UIColor colorWithRed:0.176f green:0.396f blue:0.204f alpha:1.0f];
 	self.lightGreen = [UIColor colorWithRed:0.808f green:0.863f blue:0.816 alpha:1.0f];
+	self.sortMode = byCity;
+	self.sortModeChanged = YES;
 }
 
-/*
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+	NSError *error;
+	if (![[self fetchedResultsController] performFetch:&error]) {
+		// Update to handle the error appropriately.
+		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+		exit(-1);  // Fail
+	}
 }
-*/
 
 /*
 - (void)viewDidAppear:(BOOL)animated {
