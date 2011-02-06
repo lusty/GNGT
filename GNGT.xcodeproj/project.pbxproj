@@ -15,7 +15,6 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
-		5C33321912F8DD070066C6CB /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C33321812F8DD070066C6CB /* TODO.txt */; };
 		5C42631712F7F951007E0ABF /* flowerpot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C42631512F7F951007E0ABF /* flowerpot.png */; };
 		5C42631812F7F951007E0ABF /* flowerpot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C42631612F7F951007E0ABF /* flowerpot@2x.png */; };
 		5C4C84F012EDF9AF0086B133 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4C84EF12EDF9AF0086B133 /* MapKit.framework */; };
@@ -61,7 +60,6 @@
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* GNGT_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNGT_Prefix.pch; sourceTree = "<group>"; };
-		5C33321812F8DD070066C6CB /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
 		5C42631512F7F951007E0ABF /* flowerpot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flowerpot.png; sourceTree = "<group>"; };
 		5C42631612F7F951007E0ABF /* flowerpot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flowerpot@2x.png"; sourceTree = "<group>"; };
 		5C4C84EF12EDF9AF0086B133 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -100,7 +98,7 @@
 		5CE7F51512F0E7A70023C96A /* GardenInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenInfoViewCell.m; sourceTree = "<group>"; };
 		5CE7F55112F0F1220023C96A /* AddFavorite.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = AddFavorite.xcmappingmodel; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* GNGT-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GNGT-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		C992612A12FDEC5E00FA5E8B /* GNGTAppIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GNGTAppIco.png; path = ../../../CNPS/GNGTAppIco.png; sourceTree = SOURCE_ROOT; };
+		C992612A12FDEC5E00FA5E8B /* GNGTAppIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GNGTAppIco.png; sourceTree = "<group>"; };
 		C992D88212E2EF13004E4C35 /* GardenInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenInfo.h; sourceTree = "<group>"; };
 		C992D8CD12E2FA50004E4C35 /* GardensListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardensListViewController.h; sourceTree = "<group>"; };
 		C992D8CE12E2FA50004E4C35 /* GardensListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardensListViewController.m; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				5C33321812F8DD070066C6CB /* TODO.txt */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -326,7 +323,6 @@
 				5CE4734012F69110009DCC8C /* poppy@2x.png in Resources */,
 				5C42631712F7F951007E0ABF /* flowerpot.png in Resources */,
 				5C42631812F7F951007E0ABF /* flowerpot@2x.png in Resources */,
-				5C33321912F8DD070066C6CB /* TODO.txt in Resources */,
 				5C901E6E12F8E7470091BB68 /* talk.png in Resources */,
 				5C901E6F12F8E7470091BB68 /* talk@2x.png in Resources */,
 				5CDFEF7512F92271006AC87D /* GardenDescriptionViewController.xib in Resources */,
