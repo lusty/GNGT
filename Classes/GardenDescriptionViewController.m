@@ -9,6 +9,7 @@
 #import "GardenDescriptionViewController.h"
 #import "GardenInfo.h"
 #import "GardenDescription.h"
+#import "StarControl.h"
 
 @interface GardenDescriptionViewController (Private)
 - (void)addLabel:(NSString *)labelText andText:(NSString *)valueText;
@@ -21,6 +22,7 @@
 
 @dynamic info;
 @synthesize labels, values;
+@synthesize headerView, starControl, nameLabel, numberLabel;
 
 - (GardenInfo *)info
 {
@@ -34,7 +36,6 @@
         info = [anInfo retain];
     }
 }
-
 
 - (void)addLabel:(NSString *)labelText andText:(NSString *)valueText 
 {
@@ -70,8 +71,6 @@
 	[self.values removeAllObjects];
 	GardenDescription *description = info.gardenDescription;
 	
-	[self addLabel:@"Garden name" andText:info.gardenName];
-	[self addLabel:@"Garden number" andNumber:info.gardenNumber];
 	[self addLabel:@"Plant sale" andText:info.plantSale];
 	[self addLabel:@"Garden talk" andText:info.gardenTalk];
 	
@@ -93,17 +92,32 @@
 	[self addLabel:@"Gardening for wildlife" andText:description.wildlife];
 	[self addLabel:@"Other garden attractions" andText:description.other];
 	
-	// TODO setup the view header as well
-	[((UITableView *)self.view) scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
+	UITableView *tview = (UITableView *)self.view;
+
+	// Set up the view header
+	self.nameLabel.text = info.gardenName;
+	self.numberLabel.text = [info.gardenNumber stringValue];
+	// TODO Add the garden number
+	starControl.on = [info.isFavorite boolValue];
+	[starControl addTarget:self action:@selector(starControlChanged:) forControlEvents:UIControlEventTouchUpInside];
 	
-	[((UITableView *)self.view) reloadData];
+	[tview setTableHeaderView:headerView];
+	[tview scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO]; // Scroll to the top
+	
+	[tview reloadData];
 }
 
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)starControlChanged:(id)control
+{
+	BOOL checked= [control on];
+	self.info.isFavorite = [NSNumber numberWithBool:checked];
 }
-*/
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+	[super viewDidDisappear:animated];
+	[starControl removeTarget:self action:@selector(starControlChanged:)  forControlEvents:UIControlEventTouchUpInside];
+}
 
 #pragma mark -
 #pragma mark Table view data source

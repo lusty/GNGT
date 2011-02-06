@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class GardenDescriptionViewController;
 
-@interface GardensListViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
+@interface GardensListViewController : UITableViewController <NSFetchedResultsControllerDelegate, UINavigationControllerDelegate> {
 	NSFetchedResultsController *_fetchedResultsController;
 	NSManagedObjectContext *_context;
 	GardenDescriptionViewController *_description;
