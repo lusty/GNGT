@@ -12,50 +12,67 @@
 #import "GardenInfoViewCell.h"
 
 @implementation GardensListViewController
+
+@synthesize fetchRequest = _fetchRequest;
+@synthesize sortDescriptors = _sortDescriptors;;
 @synthesize fetchedResultsController = _fetchedResultsController;
 @synthesize context = _context;
+
 @synthesize description = _description;
 @synthesize lightGreen, darkGreen;
+
+@dynamic sectionNameKeyPath;
 
 #pragma mark -
 #pragma mark Initialization
 
+- (NSArray *)sortDescriptors
+{
+	if (_sortDescriptors == NULL) {
+		NSSortDescriptor *citySort = [[[NSSortDescriptor alloc] 
+									   initWithKey:@"city" 
+									   ascending:YES
+									   selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
+		NSSortDescriptor *nameSort = [[[NSSortDescriptor alloc] 
+									   initWithKey:@"gardenName" 
+									   ascending:YES
+									   selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
+		_sortDescriptors = [NSArray arrayWithObjects:citySort, nameSort, nil];
+	}
+	return [[_sortDescriptors retain] autorelease];
+}
 
-- (NSFetchedResultsController *)fetchedResultsController {
-	
-    if (_fetchedResultsController != nil) {
-        return _fetchedResultsController;
-    }
-	
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription 
-								   entityForName:@"GardenInfo" inManagedObjectContext:_context];
-    [fetchRequest setEntity:entity];
+- (NSFetchRequest *)fetchRequest 
+{
+	if (_fetchRequest == NULL) {
+		_fetchRequest = [[NSFetchRequest alloc] init];
+		NSEntityDescription *entity = [NSEntityDescription 
+									   entityForName:@"GardenInfo" inManagedObjectContext:_context];
+		[_fetchRequest setEntity:entity];
 		
-    NSSortDescriptor *citySort = [[[NSSortDescriptor alloc] 
-								   initWithKey:@"city" 
-								   ascending:YES
-								   selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
-    NSSortDescriptor *nameSort = [[[NSSortDescriptor alloc] 
-								   initWithKey:@"gardenName" 
-								   ascending:YES
-								   selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
+		[_fetchRequest setSortDescriptors:self.sortDescriptors];
+		
+		[_fetchRequest setFetchBatchSize:20];
+	}
+	return [[_fetchRequest retain] autorelease];
+}
+
+- (NSString *) sectionNameKeyPath
+{
+	return @"city";
+}
+
+- (NSFetchedResultsController *)fetchedResultsController 
+{
 	
-    [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:citySort, nameSort, nil]];
-	
-    [fetchRequest setFetchBatchSize:20];
-	
-    NSFetchedResultsController *theFetchedResultsController = 
-	[[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
-										managedObjectContext:_context sectionNameKeyPath:@"city" 
-												   cacheName:nil];
-    self.fetchedResultsController = theFetchedResultsController;
-    _fetchedResultsController.delegate = self;
-	
-    [fetchRequest release];
-    [theFetchedResultsController release];
-	
-    return _fetchedResultsController;    
+    if (_fetchedResultsController == NULL) {
+		_fetchedResultsController = 
+		[[NSFetchedResultsController alloc] initWithFetchRequest:self.fetchRequest 
+											managedObjectContext:_context sectionNameKeyPath:self.sectionNameKeyPath 
+													   cacheName:nil];
+		_fetchedResultsController.delegate = self;
+	}
+    return [[_fetchedResultsController retain] autorelease];    
 	
 }
 

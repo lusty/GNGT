@@ -10,6 +10,8 @@
 @class GardenDescriptionViewController;
 
 @interface GardensListViewController : UITableViewController <NSFetchedResultsControllerDelegate, UINavigationControllerDelegate> {
+	NSArray *_sortDescriptors;
+	NSFetchRequest *_fetchRequest;
 	NSFetchedResultsController *_fetchedResultsController;
 	NSManagedObjectContext *_context;
 	GardenDescriptionViewController *_description;
@@ -17,7 +19,11 @@
 	UIColor *darkGreen;
 }
 
+@property (nonatomic, retain) NSArray *sortDescriptors;
+@property (nonatomic, retain) NSFetchRequest *fetchRequest;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, readonly) NSString *sectionNameKeyPath;
+
 @property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) GardenDescriptionViewController *description;
 @property (nonatomic, retain) UIColor *lightGreen;
