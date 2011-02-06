@@ -225,6 +225,14 @@
     [self.tableView endUpdates];
 }
 
+#pragma mark -
+#pragma mark UINavigationControllerDelegate
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+	// Ensure that the table is up to date on returning from a detail view (e.g. if the favorites star changed)
+	[self.tableView reloadData];
+}
 
 #pragma mark -
 #pragma mark Memory management
