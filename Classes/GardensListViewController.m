@@ -15,6 +15,7 @@
 @synthesize fetchedResultsController = _fetchedResultsController;
 @synthesize context = _context;
 @synthesize description = _description;
+@synthesize lightGreen, darkGreen;
 
 #pragma mark -
 #pragma mark Initialization
@@ -76,6 +77,8 @@
 	((UITableView *)self.view).sectionIndexMinimumDisplayRowCount = 500; // turn off the letters on the right-hand side
     self.title = @"Gardens";
 	
+	self.darkGreen = [UIColor colorWithRed:0.176f green:0.396f blue:0.204f alpha:1.0f];
+	self.lightGreen = [UIColor colorWithRed:0.808f green:0.863f blue:0.816 alpha:1.0f];
 }
 
 /*
@@ -134,6 +137,9 @@
     return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
 }
 
+#pragma mark -
+#pragma mark Table view delegate
+
 // Customize the appearance of table view cells.
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     GardenInfo *info = [_fetchedResultsController objectAtIndexPath:indexPath];
@@ -157,9 +163,6 @@
     return cell;
 }
 
-#pragma mark -
-#pragma mark Table view delegate
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (self.description == nil) {
         self.description = [[[GardenDescriptionViewController alloc] initWithNibName:@"GardenDescriptionViewController" bundle:nil] autorelease];        
@@ -167,6 +170,31 @@
 	GardenInfo *info = (GardenInfo *)[_fetchedResultsController objectAtIndexPath:indexPath];
 	self.description.info = info;
     [self.navigationController pushViewController:_description animated:YES];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    NSString *sectionTitle = [self tableView:tableView titleForHeaderInSection:section];
+    if (sectionTitle == nil) {
+        return nil;
+    }
+	
+    // Create label with section title
+    UILabel *label = [[[UILabel alloc] init] autorelease];
+    label.frame = CGRectMake(0, 0, 320, 20);
+    label.backgroundColor = self.lightGreen;
+    label.textColor = self.darkGreen;
+    label.shadowColor = [UIColor lightGrayColor];
+    label.shadowOffset = CGSizeMake(0.0, 1.0);
+    label.font = [UIFont boldSystemFontOfSize:16];
+    label.text = sectionTitle;
+	
+    // Create header view and add label as a subview
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20.0f)];
+	view.backgroundColor = self.lightGreen;
+    [view autorelease];
+    [view addSubview:label];
+	
+    return view;
 }
 
 #pragma mark -

@@ -13,10 +13,14 @@
 	NSFetchedResultsController *_fetchedResultsController;
 	NSManagedObjectContext *_context;
 	GardenDescriptionViewController *_description;
+	UIColor *lightGreen;
+	UIColor *darkGreen;
 }
 
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) GardenDescriptionViewController *description;
+@property (nonatomic, retain) UIColor *lightGreen;
+@property (nonatomic, retain) UIColor *darkGreen;
 
 @end
