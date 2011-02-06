@@ -79,8 +79,6 @@
 	} else {
 		[self addLabel:@"City" andText:info.city];
 	}
-	if (authorized)
-		[self addLabel:@"Directions" andText:description.directions];
 	
 	// Description items, may be a secondary table
 	[self addLabel:@"Designer" andText:description.designer]; // TODO add disclosure for designer if needed
@@ -241,6 +239,15 @@ const float DETAIL_MAIN_FONT_SIZE = 12.0;
 	 deselect the row after it has been selected.
 	 */
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	
+	// If this is the Address entry, show it on the map
+	NSUInteger row = [indexPath row];
+	NSString *chosenLabel = [labels objectAtIndex:row];
+	if ([chosenLabel isEqualToString:@"Address"]) {
+		NSString *searchQuery = [[values objectAtIndex:row] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+		NSString* urlString = [NSString stringWithFormat:@"http://maps.google.com/maps?q=%@", searchQuery];
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+	}
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  {  
