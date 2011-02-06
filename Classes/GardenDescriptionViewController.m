@@ -41,8 +41,9 @@
 {
 //	assert labelText && labelText.length > 0;
 	if (valueText && valueText.length > 0) {
+		NSString *cleanedValue = [valueText stringByReplacingOccurrencesOfString:@"\\n" withString:@"\r"];
 		[self.labels addObject:labelText];
-		[self.values addObject:valueText];
+		[self.values addObject:cleanedValue];
 	}
 }
 
