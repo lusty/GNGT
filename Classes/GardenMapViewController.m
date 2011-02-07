@@ -13,16 +13,17 @@
 @interface GardenMapViewController (Private)
 - (void)startStandardUpdates;
 - (void)showDefaultMapAnimated:(BOOL)animated;
+- (NSArray *)performFetch;
 @end
 
 @implementation GardenMapViewController
 @synthesize mapView, viewSelector;
 @synthesize filteredResults;
 @synthesize context;
-@synthesize fetchedResultsController;
+@synthesize fetchRequest = _fetchRequest;
 @synthesize locationManager;
 
-enum {
+enum viewFilter {
 	viewAll = 0,
 	viewFavorites,
 	viewPlantSales,
@@ -33,36 +34,16 @@ enum {
 #pragma mark Initialization
 
 
-- (NSFetchedResultsController *)fetchedResultsController {
+- (NSFetchRequest *)fetchRequest {
 	
-    if (fetchedResultsController != nil) {
-        return fetchedResultsController;
-    }
-	
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription 
-								   entityForName:@"GardenInfo" inManagedObjectContext:context];
-    [fetchRequest setEntity:entity];
-
-	NSSortDescriptor *sort = [[NSSortDescriptor alloc] 
-							  initWithKey:@"gardenName" ascending:YES];
-    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
-	
-    [fetchRequest setFetchBatchSize:20];
-	
-    NSFetchedResultsController *theFetchedResultsController = 
-	[[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
-										managedObjectContext:context sectionNameKeyPath:nil 
-												   cacheName:@"Root"];
-    self.fetchedResultsController = theFetchedResultsController;
-//    fetchedResultsController.delegate = self; // TODO enable if the data will ever change
-	
-	[sort release];
-    [fetchRequest release];
-    [theFetchedResultsController release];
-	
-    return fetchedResultsController;    
-	
+    if (_fetchRequest == NULL) {
+		_fetchRequest = [[NSFetchRequest alloc] init];
+		NSEntityDescription *entity = [NSEntityDescription 
+									   entityForName:@"GardenInfo" inManagedObjectContext:context];
+		[_fetchRequest setEntity:entity];
+		[_fetchRequest setResultType:NSManagedObjectResultType];
+	}	
+    return [[_fetchRequest retain] autorelease];    
 }
 
 #pragma mark View setup
@@ -73,6 +54,9 @@ enum {
 	[super viewDidLoad];
 	[self showDefaultMapAnimated:NO];
 	[self goToCurrentLocation];
+	self.viewSelector.selectedSegmentIndex = viewAll;
+	// TODO initialize filter predicate as well
+	[self.viewSelector addTarget:self action:@selector(changeViewFilter:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)showDefaultMapAnimated:(BOOL)animated 
@@ -86,28 +70,27 @@ enum {
 
 - (void)viewDidAppear:(BOOL)animated
 {
+	NSArray *fetchResults = [self performFetch];
+	if (fetchResults)
+		[mapView addAnnotations:fetchResults];
+}
+
+- (NSArray *)performFetch
+{
 	// Add annotations
 	NSError *error = nil;
-	if (self.filteredResults == nil) {
-		if ([self.fetchedResultsController performFetch:&error]) {
-			self.filteredResults = [NSMutableArray arrayWithArray:fetchedResultsController.fetchedObjects];
-			self.viewSelector.selectedSegmentIndex = viewAll;
-			[mapView addAnnotations:self.filteredResults];
-			[self.viewSelector addTarget:self
-								  action:@selector(changeViewFilter:)
-						forControlEvents:UIControlEventValueChanged];
-		}
-		// TODO else, log the error
+	NSArray *fetchResults = [context executeFetchRequest:self.fetchRequest error:&error];
+	if (error) {
+		// TODO log the error
 	}
-	
+	return fetchResults;
 }
 
 - (IBAction)changeViewFilter:(id)sender
 {
 	GardenInfo *info;
-	
-	[mapView removeAnnotations:filteredResults];
-	[filteredResults removeAllObjects];
+/*	
+	[mapView removeAnnotations:mapView.annotations];
 	NSString *searchType = NULL;
 	switch (self.viewSelector.selectedSegmentIndex) {
 		case viewAll:
@@ -150,7 +133,7 @@ enum {
  		if ([[mapView annotationsInMapRect:mapView.visibleMapRect] count] == 0) 
 			[self showDefaultMapAnimated:YES];
 	}
-
+*/
 }
 
 // Override to allow orientations other than the default portrait orientation.
