@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 @class GardenDescriptionViewController;
 
-@interface GardensListViewController : UITableViewController <NSFetchedResultsControllerDelegate, UINavigationControllerDelegate> {
+@interface GardensListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, UINavigationControllerDelegate> {
+	UITableView *tableView;
+	UISegmentedControl *sortControl;
 	NSArray *_sortDescriptors;
 	NSFetchRequest *_fetchRequest;
 	NSFetchedResultsController *_fetchedResultsController;
@@ -21,6 +23,9 @@
 	UIColor *lightGreen;
 	UIColor *darkGreen;
 }
+
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (nonatomic, retain) IBOutlet UISegmentedControl *sortControl;
 
 @property (nonatomic, retain) NSArray *sortDescriptors;
 @property (nonatomic, retain) NSFetchRequest *fetchRequest;

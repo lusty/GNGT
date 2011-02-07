@@ -11,7 +11,15 @@
 #import "GardenInfo.h"
 #import "GardenInfoViewCell.h"
 
+@interface GardensListViewController (Private)
+- (IBAction)sortControlChanged:(id)sender;
+- (void)updateFetchRequest;
+- (void)performFetch;
+@end
+
 @implementation GardensListViewController
+
+@synthesize tableView, sortControl;
 
 @synthesize fetchRequest = _fetchRequest;
 @synthesize sortDescriptors = _sortDescriptors;;
@@ -59,10 +67,9 @@ enum sorting {
 		[_fetchRequest setEntity:entity];
 //		[_fetchRequest setFetchBatchSize:20];
 	}
-	
 	if (sortModeChanged) {
 		[_fetchRequest setSortDescriptors:self.sortDescriptors];
-		sortModeChanged = NO;
+		 sortModeChanged = NO;
 	}
 	return [[_fetchRequest retain] autorelease];
 }
@@ -94,9 +101,6 @@ enum sorting {
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	((UITableView *)self.view).sectionIndexMinimumDisplayRowCount = 500; // turn off the letters on the right-hand side
-    self.title = @"Gardens";
-	
 	self.darkGreen = [UIColor colorWithRed:0.176f green:0.396f blue:0.204f alpha:1.0f];
 	self.lightGreen = [UIColor colorWithRed:0.808f green:0.863f blue:0.816 alpha:1.0f];
 	self.sortMode = byCity;
@@ -105,12 +109,13 @@ enum sorting {
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-	NSError *error;
-	if (![[self fetchedResultsController] performFetch:&error]) {
-		// Update to handle the error appropriately.
-		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-		exit(-1);  // Fail
-	}
+	self.tableView.sectionIndexMinimumDisplayRowCount = 500; // turn off the letters on the right-hand side
+    self.title = @"Gardens";
+
+	[self.sortControl addTarget:self action:@selector(sortControlChanged:) forControlEvents:UIControlEventValueChanged];
+	
+	[self performFetch];
+	[self.tableView reloadData];
 }
 
 /*
@@ -123,11 +128,12 @@ enum sorting {
     [super viewWillDisappear:animated];
 }
 */
-/*
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+	[self.sortControl removeTarget:self action:@selector(sortControlChanged:) forControlEvents:UIControlEventValueChanged];
+
 }
-*/
+
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -136,7 +142,28 @@ enum sorting {
 }
 */
 
+- (IBAction)sortControlChanged:(id)sender
+{
+    int newMode = self.sortControl.selectedSegmentIndex;
+	if (sortMode != newMode) {
+		sortMode = newMode;
+		sortModeChanged = YES;
+		self.fetchedResultsController = NULL;
+		[self performFetch];
+		[self.tableView reloadData];
+		[self.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES]; // Scroll to the top
+	}
+}
 
+- (void)performFetch;
+{
+	NSError *error;
+	if (![[self fetchedResultsController] performFetch:&error]) {
+		// Update to handle the error appropriately.
+		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+		exit(-1);  // Fail
+	}
+}
 #pragma mark -
 #pragma mark Table view data source
 
@@ -179,10 +206,8 @@ enum sorting {
 	BOOL hasNotes = info.hasPlantSale | info.hasGardenTalk;
 	NSString *CellIdentifier = hasNotes ? @"GardenListWIthNotes" : @"GardenListCell";
 	
-//    GardenInfoViewCell* cell = (GardenInfoViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    if (cell == nil) {
+	// Don't recycle - we need each cell to be unique both for the attached info and also for the favorite control
 	GardenInfoViewCell* cell = [[[GardenInfoViewCell alloc] initWithReuseIdentifier:CellIdentifier hasNotes:hasNotes] autorelease];
-//    }
 	
     // Set up the cell...
     [self configureCell:cell atIndexPath:indexPath];
@@ -198,8 +223,8 @@ enum sorting {
     [self.navigationController pushViewController:_description animated:YES];
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    NSString *sectionTitle = [self tableView:tableView titleForHeaderInSection:section];
+- (UIView *)tableView:(UITableView *)tv viewForHeaderInSection:(NSInteger)section {
+    NSString *sectionTitle = [self tableView:tv titleForHeaderInSection:section];
     if (sectionTitle == nil) {
         return nil;
     }
@@ -233,9 +258,7 @@ enum sorting {
 
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
-	
-    UITableView *tableView = self.tableView;
-	
+		
     switch(type) {
 			
         case NSFetchedResultsChangeInsert:
@@ -303,7 +326,6 @@ enum sorting {
     // For example: self.myOutlet = nil;
 	self.fetchedResultsController = nil;
 }
-
 
 - (void)dealloc {
 	self.fetchedResultsController = nil;

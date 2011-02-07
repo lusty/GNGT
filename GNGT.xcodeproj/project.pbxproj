@@ -30,6 +30,7 @@
 		5C901E6E12F8E7470091BB68 /* talk.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C901E6C12F8E7470091BB68 /* talk.png */; };
 		5C901E6F12F8E7470091BB68 /* talk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C901E6D12F8E7470091BB68 /* talk@2x.png */; };
 		5C99568112EFA6D0003D4908 /* StarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C99568012EFA6D0003D4908 /* StarControl.m */; };
+		5CCF0CB512FF18A500D88913 /* FilteredGardenList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CCF0CB312FF18A500D88913 /* FilteredGardenList.xib */; };
 		5CDF404912FC8C8B0014742E /* chevron.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF404512FC8C8B0014742E /* chevron.png */; };
 		5CDF404A12FC8C8B0014742E /* chevron@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF404612FC8C8B0014742E /* chevron@2x.png */; };
 		5CDF404B12FC8C8B0014742E /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF404712FC8C8B0014742E /* favorite.png */; };
@@ -80,6 +81,7 @@
 		5C901E6D12F8E7470091BB68 /* talk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk@2x.png"; sourceTree = "<group>"; };
 		5C99567F12EFA6D0003D4908 /* StarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarControl.h; sourceTree = "<group>"; };
 		5C99568012EFA6D0003D4908 /* StarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarControl.m; sourceTree = "<group>"; };
+		5CCF0CB312FF18A500D88913 /* FilteredGardenList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FilteredGardenList.xib; path = ../Classes/FilteredGardenList.xib; sourceTree = "<group>"; };
 		5CDF404512FC8C8B0014742E /* chevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chevron.png; sourceTree = "<group>"; };
 		5CDF404612FC8C8B0014742E /* chevron@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chevron@2x.png"; sourceTree = "<group>"; };
 		5CDF404712FC8C8B0014742E /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 		5CDF404012FC8C530014742E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				5CCF0CB312FF18A500D88913 /* FilteredGardenList.xib */,
 				5C50D2DD12FCDA8E001C94EF /* TourInfoController.xib */,
 				5CDFEF7312F92271006AC87D /* GardenDescriptionViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -336,6 +339,7 @@
 				5C50D2EC12FCE29A001C94EF /* clarkia.png in Resources */,
 				5C50D2ED12FCE29A001C94EF /* clarkia@2x.png in Resources */,
 				C992612B12FDEC5E00FA5E8B /* GNGTAppIco.png in Resources */,
+				5CCF0CB512FF18A500D88913 /* FilteredGardenList.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
