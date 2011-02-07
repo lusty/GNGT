@@ -14,6 +14,7 @@
 - (void)startStandardUpdates;
 - (void)showDefaultMapAnimated:(BOOL)animated;
 - (NSArray *)performFetch;
+- (void)setPredicateForFilter:(int)filterType;
 @end
 
 @implementation GardenMapViewController
@@ -68,8 +69,15 @@ enum viewFilter {
 	[self.mapView setRegion:region animated:animated];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated]; 
+	[mapView removeAnnotations:mapView.annotations]; // Drop them here and return in viewWillAppear -- let's see if that solves the problem with annotations disappearing
+}
+
+
 - (void)viewDidAppear:(BOOL)animated
 {
+	[super viewDidAppear:animated];
 	NSArray *fetchResults = [self performFetch];
 	if (fetchResults)
 		[mapView addAnnotations:fetchResults];
@@ -86,54 +94,48 @@ enum viewFilter {
 	return fetchResults;
 }
 
-- (IBAction)changeViewFilter:(id)sender
+- (void)setPredicateForFilter:(int)filterType
 {
-	GardenInfo *info;
-/*	
-	[mapView removeAnnotations:mapView.annotations];
-	NSString *searchType = NULL;
-	switch (self.viewSelector.selectedSegmentIndex) {
+	// TODO if this doesn't work, go to in-memory filtering
+	NSPredicate *predicate = NULL;
+	switch (filterType) {
 		case viewAll:
-			[filteredResults addObjectsFromArray:fetchedResultsController.fetchedObjects];
+			predicate = NULL;
 			break;
 		
 		case viewFavorites:
-			// TODO use filteredListWithPredicate?
-			searchType = @"favorites";
-			for (info in fetchedResultsController.fetchedObjects) {
-				if (info.isFavorite) [filteredResults addObject:info];
-			}
+			predicate = [NSPredicate predicateWithFormat:@"isFavorite == %@", [NSNumber numberWithBool:YES]];
 			break;
-			
+		
 		case viewPlantSales:
-			searchType = @"plant sales";
-			for (info in fetchedResultsController.fetchedObjects) {
-				if (info.hasPlantSale) [filteredResults addObject:info];
-			}
+			predicate = [NSPredicate predicateWithFormat:@"plantSale > ''"];
 			break;
-			
+		
 		case viewTalks:
-			searchType = @"garden talks";
-			for (info in fetchedResultsController.fetchedObjects) {
-				if (info.hasGardenTalk) [filteredResults addObject:info];
-			}
-			break;
-			
-		default:
+			predicate = [NSPredicate predicateWithFormat:@"gardenTalk > ''"];
 			break;
 	}
-	[mapView addAnnotations:filteredResults];
-	if (filteredResults.count == 0 && self.viewSelector.selectedSegmentIndex != viewAll) {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"No %@ found", searchType]
-													   delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-		[alert show];	
-		[alert release];
-	} else {
-		// If nothing will be visible, rescale to show the found items
- 		if ([[mapView annotationsInMapRect:mapView.visibleMapRect] count] == 0) 
-			[self showDefaultMapAnimated:YES];
+	[self.fetchRequest setPredicate:predicate];
+}
+
+- (IBAction)changeViewFilter:(id)sender
+{
+	int newFilterValue = self.viewSelector.selectedSegmentIndex;
+	[mapView removeAnnotations:mapView.annotations];
+	[self setPredicateForFilter:newFilterValue];
+	// TODO save last value and bounce back to it if nothing found
+	NSArray *fetchResults = [self performFetch];
+	if (fetchResults) {
+		if (fetchResults.count > 0) {
+			[mapView addAnnotations:fetchResults];
+			// show the annotated values if they exist but nothing is on screen
+			if ([[mapView annotationsInMapRect:mapView.visibleMapRect] count] == 0) 
+				[self showDefaultMapAnimated:YES];
+		} else if (newFilterValue != viewAll) { // fetchResults.count == 0
+			UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:@"No matching gardens found" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+			[alert show];
+		}
 	}
-*/
 }
 
 // Override to allow orientations other than the default portrait orientation.
@@ -143,7 +145,7 @@ enum viewFilter {
 }
 
 #pragma mark -
-#pragma mark - UIAlertViewDelegate
+#pragma mark UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
