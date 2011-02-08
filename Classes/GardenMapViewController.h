@@ -10,7 +10,9 @@
 #import <CoreLocation/CoreLocation.h> 
 #import <MapKit/MapKit.h>
 
-@interface GardenMapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate> {
+@class GardenDescriptionViewController;
+
+@interface GardenMapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate, UINavigationControllerDelegate> {
 	MKMapView	*mapView;
 	UISegmentedControl *viewSelector;
 	
@@ -18,6 +20,8 @@
 	NSMutableArray *filteredResults;
 	NSManagedObjectContext *context;
 	CLLocationManager *locationManager;
+
+	GardenDescriptionViewController *description;
 
 @private
 	int lastView;
@@ -29,7 +33,9 @@
 @property (nonatomic, retain) NSMutableArray *filteredResults;
 @property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) CLLocationManager *locationManager;
+
 @property (nonatomic) int lastView;
+@property (nonatomic, retain) IBOutlet GardenDescriptionViewController *description;
 
 -(IBAction)goToCurrentLocation;
 

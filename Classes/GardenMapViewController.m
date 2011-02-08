@@ -25,6 +25,7 @@
 @synthesize fetchRequest = _fetchRequest;
 @synthesize locationManager;
 @synthesize lastView;
+@synthesize description;
 
 enum viewFilter {
 	viewAll = 0,
@@ -49,6 +50,7 @@ enum viewFilter {
     return [[_fetchRequest retain] autorelease];    
 }
 
+#pragma mark -
 #pragma mark View setup
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 //- (void)viewWillAppear:(BOOL)animated
@@ -82,6 +84,9 @@ enum viewFilter {
 	if (fetchResults)
 		[mapView addAnnotations:fetchResults];
 }
+
+#pragma mark -
+#pragma mark View filtering
 
 - (NSArray *)performFetch
 {
@@ -283,15 +288,11 @@ enum viewFilter {
 
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control { 
-	GardenDescriptionViewController *detailController = [[[GardenDescriptionViewController alloc] init] autorelease]; 
-	UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:detailController]
-																																																										   autorelease];
-	detailController.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc]
-												  initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self
-												  action:@selector(stopShowingDetails)]
-												 autorelease];
-	detailController.info = (GardenInfo *)view.annotation; 
-	[self presentModalViewController:nav animated:YES];
+	if (self.description == nil) {
+        self.description = [[[GardenDescriptionViewController alloc] initWithNibName:@"GardenDescriptionViewController" bundle:nil] autorelease];        
+    }
+	self.description.info = (GardenInfo *)view.annotation; 
+    [self.navigationController pushViewController:description animated:YES];
 }
 
 - (void)stopShowingDetails {
