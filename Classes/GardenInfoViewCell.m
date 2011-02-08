@@ -11,7 +11,7 @@
 #import "StarControl.h"
 #import "GardenInfo.h"
 
-const CGFloat STAR_CONTROL_SIZE = 44.0f;
+const CGFloat STAR_CONTROL_SIZE = 42.0f;
 
 const CGFloat ROW_HEIGHT = 48.0f;
 const CGFloat ROW_WIDTH = 320.0f;
