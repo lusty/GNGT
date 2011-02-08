@@ -15,6 +15,7 @@
 - (void)showDefaultMapAnimated:(BOOL)animated;
 - (NSArray *)performFetch;
 - (void)setPredicateForFilter:(int)filterType;
+- (void)changeViewFilterTo:(int)newFilterValue;
 @end
 
 @implementation GardenMapViewController
@@ -23,6 +24,7 @@
 @synthesize context;
 @synthesize fetchRequest = _fetchRequest;
 @synthesize locationManager;
+@synthesize lastView;
 
 enum viewFilter {
 	viewAll = 0,
@@ -55,9 +57,8 @@ enum viewFilter {
 	[super viewDidLoad];
 	[self showDefaultMapAnimated:NO];
 	[self goToCurrentLocation];
-	self.viewSelector.selectedSegmentIndex = viewAll;
-	// TODO initialize filter predicate as well
-	[self.viewSelector addTarget:self action:@selector(changeViewFilter:) forControlEvents:UIControlEventValueChanged];
+	self.lastView = self.viewSelector.selectedSegmentIndex = viewAll;
+	[self.viewSelector addTarget:self action:@selector(viewSelectorChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)showDefaultMapAnimated:(BOOL)animated 
@@ -73,7 +74,6 @@ enum viewFilter {
 	[super viewWillAppear:animated]; 
 	[mapView removeAnnotations:mapView.annotations]; // Drop them here and return in viewWillAppear -- let's see if that solves the problem with annotations disappearing
 }
-
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -118,19 +118,27 @@ enum viewFilter {
 	[self.fetchRequest setPredicate:predicate];
 }
 
-- (IBAction)changeViewFilter:(id)sender
+- (IBAction)viewSelectorChanged:(id)sender
 {
 	int newFilterValue = self.viewSelector.selectedSegmentIndex;
-	[mapView removeAnnotations:mapView.annotations];
+	if (newFilterValue != lastView)
+		[self changeViewFilterTo:newFilterValue];
+}
+
+- (void)changeViewFilterTo:(int)newFilterValue;
+{
+
 	[self setPredicateForFilter:newFilterValue];
 	// TODO save last value and bounce back to it if nothing found
 	NSArray *fetchResults = [self performFetch];
 	if (fetchResults) {
 		if (fetchResults.count > 0) {
+			[mapView removeAnnotations:mapView.annotations];
 			[mapView addAnnotations:fetchResults];
 			// show the annotated values if they exist but nothing is on screen
 			if ([[mapView annotationsInMapRect:mapView.visibleMapRect] count] == 0) 
 				[self showDefaultMapAnimated:YES];
+			lastView = newFilterValue;
 		} else if (newFilterValue != viewAll) { // fetchResults.count == 0
 			UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:@"No matching gardens found" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
 			[alert show];
@@ -138,22 +146,24 @@ enum viewFilter {
 	}
 }
 
+/*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
     return YES;
 }
+*/
 
 #pragma mark -
 #pragma mark UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-	self.viewSelector.selectedSegmentIndex = viewAll;
-	// TODO send a change event or call the view filter function?
+//	[self changeViewFilterTo:lastView];
+	self.viewSelector.selectedSegmentIndex = self.lastView;
 }
 
-
+#pragma mark -
 #pragma mark Shutdown
 
 - (void)didReceiveMemoryWarning {
@@ -167,6 +177,7 @@ enum viewFilter {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	[self.viewSelector removeTarget:self action:@selector(viewSelectorChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
 

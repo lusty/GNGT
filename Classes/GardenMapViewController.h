@@ -18,6 +18,9 @@
 	NSMutableArray *filteredResults;
 	NSManagedObjectContext *context;
 	CLLocationManager *locationManager;
+
+@private
+	int lastView;
 }
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
@@ -26,6 +29,7 @@
 @property (nonatomic, retain) NSMutableArray *filteredResults;
 @property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) CLLocationManager *locationManager;
+@property (nonatomic) int lastView;
 
 -(IBAction)goToCurrentLocation;
 
