@@ -35,7 +35,7 @@
 @property (nonatomic) BOOL sortModeChanged;
 
 @property (nonatomic, retain) NSManagedObjectContext *context;
-@property (nonatomic, retain) IBOutlet GardenDescriptionViewController *description;
+@property (nonatomic, retain) IBOutlet GardenDescriptionViewController *detailsController;
 @property (nonatomic, retain) UIColor *lightGreen;
 @property (nonatomic, retain) UIColor *darkGreen;
 

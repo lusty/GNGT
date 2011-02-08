@@ -27,7 +27,7 @@
 @synthesize context = _context;
 @synthesize sortMode, sortModeChanged;
 
-@synthesize description = _description;
+@synthesize detailsController = _description;
 @synthesize lightGreen, darkGreen;
 
 @dynamic sectionNameKeyPath;
@@ -100,7 +100,27 @@ enum sorting {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+	// segmented control as the custom title view
+	NSArray *segmentTextContent = [NSArray arrayWithObjects:
+								   NSLocalizedString(@"by city", @""),
+								   NSLocalizedString(@"by name", @""),
+								   nil];
+	UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:segmentTextContent];
+	segmentedControl.selectedSegmentIndex = 0;
+	segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+	segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
+	segmentedControl.frame = CGRectMake(0, 0, 150.0, 30.0);
 	
+	self.navigationItem.titleView = segmentedControl;
+	self.sortControl = segmentedControl;
+	[self.sortControl addTarget:self action:@selector(sortControlChanged:) forControlEvents:UIControlEventValueChanged];
+	[segmentedControl release];
+    
+	self.title = @"Gardens"; // so the back button works correctly down a level
+	
+	self.tableView.sectionIndexMinimumDisplayRowCount = 500; // turn off the letters on the right-hand side
+
 	self.darkGreen = [UIColor colorWithRed:0.176f green:0.396f blue:0.204f alpha:1.0f];
 	self.lightGreen = [UIColor colorWithRed:0.808f green:0.863f blue:0.816 alpha:1.0f];
 	self.sortMode = byCity;
@@ -108,30 +128,9 @@ enum sorting {
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-	self.tableView.sectionIndexMinimumDisplayRowCount = 500; // turn off the letters on the right-hand side
-    self.title = @"Gardens";
-
-	[self.sortControl addTarget:self action:@selector(sortControlChanged:) forControlEvents:UIControlEventValueChanged];
-	
+    [super viewWillAppear:animated];	
 	[self performFetch];
 	[self.tableView reloadData];
-}
-
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-}
-*/
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-	[self.sortControl removeTarget:self action:@selector(sortControlChanged:) forControlEvents:UIControlEventValueChanged];
-
 }
 
 /*
@@ -215,11 +214,8 @@ enum sorting {
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	if (self.description == nil) {
-        self.description = [[[GardenDescriptionViewController alloc] initWithNibName:@"GardenDescriptionViewController" bundle:nil] autorelease];        
-    }
 	GardenInfo *info = (GardenInfo *)[_fetchedResultsController objectAtIndexPath:indexPath];
-	self.description.info = info;
+	self.detailsController.info = info;
     [self.navigationController pushViewController:_description animated:YES];
 }
 
@@ -325,12 +321,13 @@ enum sorting {
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
 	self.fetchedResultsController = nil;
+	[self.sortControl removeTarget:self action:@selector(sortControlChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)dealloc {
 	self.fetchedResultsController = nil;
 	self.context = nil;
-	self.description = nil;
+	self.detailsController = nil;
     [super dealloc];
 }
 

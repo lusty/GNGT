@@ -25,7 +25,7 @@
 @synthesize fetchRequest = _fetchRequest;
 @synthesize locationManager;
 @synthesize lastView;
-@synthesize description;
+@synthesize detailsController;
 
 enum viewFilter {
 	viewAll = 0,
@@ -57,6 +57,25 @@ enum viewFilter {
 - (void)viewDidLoad 
 {	
 	[super viewDidLoad];
+	
+	// segmented control as the custom title view
+	NSArray *segmentTextContent = [NSArray arrayWithObjects:
+								   NSLocalizedString(@"All", @""),
+								   NSLocalizedString(@"Favorites", @""),
+								   NSLocalizedString(@"Sales", @""),
+								   NSLocalizedString(@"Talks", @""),
+								   nil];
+	UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:segmentTextContent];
+	segmentedControl.selectedSegmentIndex = 0;
+	segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+	segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
+	segmentedControl.frame = CGRectMake(0, 0, 400, 30.0);
+	[segmentedControl setImage:[UIImage imageNamed:@"star.png"] forSegmentAtIndex:viewFavorites];
+		
+	self.navigationItem.titleView = segmentedControl;
+	self.viewSelector = segmentedControl;
+	[segmentedControl release];
+	
 	[self showDefaultMapAnimated:NO];
 	[self goToCurrentLocation];
 	self.lastView = self.viewSelector.selectedSegmentIndex = viewAll;
@@ -288,11 +307,12 @@ enum viewFilter {
 
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control { 
-	if (self.description == nil) {
-        self.description = [[[GardenDescriptionViewController alloc] initWithNibName:@"GardenDescriptionViewController" bundle:nil] autorelease];        
+	if (self.detailsController == nil) {
+        self.detailsController = [[[GardenDescriptionViewController alloc] initWithNibName:@"GardenDescriptionViewController" bundle:nil] autorelease];        
     }
-	self.description.info = (GardenInfo *)view.annotation; 
-    [self.navigationController pushViewController:description animated:YES];
+	self.detailsController.info = (GardenInfo *)view.annotation; 
+    [self.navigationController pushViewController:detailsController animated:YES];
+	
 }
 
 - (void)stopShowingDetails {

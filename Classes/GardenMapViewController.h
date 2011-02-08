@@ -21,7 +21,7 @@
 	NSManagedObjectContext *context;
 	CLLocationManager *locationManager;
 
-	GardenDescriptionViewController *description;
+	GardenDescriptionViewController *detailsController;
 
 @private
 	int lastView;
@@ -35,7 +35,7 @@
 @property (nonatomic, retain) CLLocationManager *locationManager;
 
 @property (nonatomic) int lastView;
-@property (nonatomic, retain) IBOutlet GardenDescriptionViewController *description;
+@property (nonatomic, retain) IBOutlet GardenDescriptionViewController *detailsController;
 
 -(IBAction)goToCurrentLocation;
 
