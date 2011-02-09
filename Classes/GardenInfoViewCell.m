@@ -45,7 +45,7 @@ const int NOTES_TAG = 3;
 	self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
 	self.info = NULL;
 
-	CGRect rect = CGRectMake(LEFT_COLUMN_OFFSET, ((ROW_HEIGHT - STAR_CONTROL_SIZE) / 2.0f) - 3.0f, STAR_CONTROL_SIZE, STAR_CONTROL_SIZE);
+	CGRect rect = CGRectMake(LEFT_COLUMN_OFFSET, ((ROW_HEIGHT - STAR_CONTROL_SIZE) / 2.0f)-2.0f, STAR_CONTROL_SIZE, STAR_CONTROL_SIZE);
 	StarControl *checkbox = [[StarControl alloc] initWithFrame: rect];
 	checkbox.tag = CHECKBOX_TAG;
 	[checkbox setBackgroundColor: [UIColor whiteColor]];
