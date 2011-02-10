@@ -147,8 +147,8 @@ enum sorting {
 		sortModeChanged = YES;
 		self.fetchedResultsController = NULL;
 		[self performFetch];
-		[self.tableView reloadData];
 		[self.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES]; // Scroll to the top
+		[self.tableView reloadData];
 	}
 }
 
@@ -201,14 +201,22 @@ enum sorting {
 	
     GardenInfo *info = [_fetchedResultsController objectAtIndexPath:indexPath];
 	BOOL hasNotes = info.hasPlantSale | info.hasGardenTalk;
-	NSString *CellIdentifier = hasNotes ? @"GardenListWIthNotes" : @"GardenListCell";
+	BOOL hasCity = (sortMode == byName);
+	NSString *CellIdentifier = [GardenInfoViewCell reuseIdentifierWithNotes:hasNotes andCity:hasCity];
 	
 	// Don't recycle - we need each cell to be unique both for the attached info and also for the favorite control
-	GardenInfoViewCell* cell = [[[GardenInfoViewCell alloc] initWithReuseIdentifier:CellIdentifier hasNotes:hasNotes] autorelease];
+	GardenInfoViewCell* cell = [[[GardenInfoViewCell alloc] initWithReuseIdentifier:CellIdentifier hasNotes:hasNotes hasCity:hasCity] autorelease];
 	
     // Set up the cell...
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  {  
+    GardenInfo *info = [_fetchedResultsController objectAtIndexPath:indexPath];
+	BOOL hasNotes = info.hasPlantSale | info.hasGardenTalk;
+	BOOL hasCity = (sortMode == byName);
+	return [GardenInfoViewCell heightWithNotes:hasNotes andCity:hasCity];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -243,6 +251,7 @@ enum sorting {
 	
     return view;
 }
+
 
 #pragma mark -
 #pragma mark Fetched results controller delegate

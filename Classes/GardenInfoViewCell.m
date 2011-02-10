@@ -15,6 +15,7 @@
 const CGFloat STAR_CONTROL_SIZE = 42.0f;
 
 const CGFloat ROW_HEIGHT = 48.0f;
+const CGFloat ROW_HEIGHT_WITH_CITY = 68.0f;
 const CGFloat ROW_WIDTH = 320.0f;
 
 const CGFloat LEFT_COLUMN_OFFSET = 14.0f;
@@ -24,30 +25,54 @@ const CGFloat RIGHT_COLUMN_OFFSET = 54.0f;
 const CGFloat RIGHT_COLUMN_WIDTH = 246.0f;
 
 const CGFloat NAME_FONT_SIZE = 18.0f;
-const CGFloat NAME_CENTERED = 9.0f;
-const CGFloat NAME_AT_TOP = 1.0f;
-const CGFloat NAME_HEIGHT = 26.0f;
+const CGFloat NAME_CENTERED = 12.0f;
+const CGFloat NAME_AT_TOP = 6.0f;
+const CGFloat NAME_HEIGHT = 20.0f;
+
+const CGFloat CITY_FONT_SIZE = 14.0f;
+const CGFloat CITY_TOP =  32.0f;
+const CGFloat CITY_HEIGHT = 16.0f;
 
 const CGFloat NOTE_FONT_SIZE = 12.0f;
 const CGFloat NOTE_TOP =  24.0f;
-const CGFloat NOTE_HEIGHT = 19.0f;
+const CGFloat NOTE_TOP_WITH_CITY =  44.0f;
+const CGFloat NOTE_HEIGHT = 14.0f;
 
-const int CHECKBOX_TAG = 1;
-const int NAME_TAG = 2;
-const int NOTES_TAG = 3;
+const CGFloat LABEL_SPACING = 2.0f;
 
 @implementation GardenInfoViewCell
 
 @synthesize info;
 
-- (id)initWithReuseIdentifier:(NSString *)identifier hasNotes:(BOOL)hasNotes
++ (NSString *) reuseIdentifierWithNotes:(BOOL)hasNotes andCity:(BOOL)hasCity
+{
+	return hasCity ? (hasNotes ? @"GardenListWithNotesAndCity" : @"GardenListWithCity") : (hasNotes ? @"GardenListWithNotes" : @"GardenList");
+}
+
++ (CGFloat) heightWithNotes:(BOOL)hasNotes andCity:(BOOL)hasCity
+{
+	return hasCity ? ROW_HEIGHT_WITH_CITY : ROW_HEIGHT;
+}
+
++ (CGFloat) heightWithReuseIdentifier:(NSString *)identifier
+{
+	return (identifier == @"GardenList" || identifier == @"GardenListWithNotes") ? ROW_HEIGHT : ROW_HEIGHT_WITH_CITY;
+}
+
+- (id)initWithReuseIdentifier:(NSString *)identifier hasNotes:(BOOL)hasNotes hasCity:(BOOL)hasCity
 {
 	self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
 	self.info = NULL;
-
+	
+	CGFloat rowHeight = hasCity ? ROW_HEIGHT_WITH_CITY : ROW_HEIGHT;
+	CGFloat nameY = hasNotes ? NAME_AT_TOP : NAME_CENTERED;
+//	CGFloat noteY = hasCity ? NOTE_TOP_WITH_CITY : NOTE_TOP;
+	
+	// TODO three sizes: [name only, name with notes], [name with city], [name with city and notes]
+	
 	UIConstants *constants = [UIConstants sharedUIConstants];
 
-	CGRect rect = CGRectMake(LEFT_COLUMN_OFFSET, ((ROW_HEIGHT - STAR_CONTROL_SIZE) / 2.0f)-2.0f, STAR_CONTROL_SIZE, STAR_CONTROL_SIZE);
+	CGRect rect = CGRectMake(LEFT_COLUMN_OFFSET, ((rowHeight - STAR_CONTROL_SIZE) / 2.0f)-2.0f, STAR_CONTROL_SIZE, STAR_CONTROL_SIZE);
 	StarControl *checkbox = [[StarControl alloc] initWithFrame: rect];
 	checkbox.tag = CHECKBOX_TAG;
 	[checkbox setBackgroundColor: [UIColor whiteColor]];
@@ -55,7 +80,7 @@ const int NOTES_TAG = 3;
 	[checkbox release];
 	
 	UILabel *nameLabel;
-	rect = CGRectMake(RIGHT_COLUMN_OFFSET, (hasNotes ? NAME_AT_TOP : NAME_CENTERED), RIGHT_COLUMN_WIDTH, NAME_HEIGHT);
+	rect = CGRectMake(RIGHT_COLUMN_OFFSET, nameY, RIGHT_COLUMN_WIDTH, NAME_HEIGHT);
 	nameLabel = [[UILabel alloc] initWithFrame:rect];
 	nameLabel.tag = NAME_TAG;
 	nameLabel.font = [UIFont boldSystemFontOfSize:NAME_FONT_SIZE];
@@ -64,18 +89,34 @@ const int NOTES_TAG = 3;
 	nameLabel.highlightedTextColor = [UIColor whiteColor];
 	[nameLabel release];
 
+	if (hasCity) {
+		UILabel *cityLabel;
+		CGFloat newTop = rect.origin.y + rect.size.height + LABEL_SPACING;
+		rect = CGRectMake(RIGHT_COLUMN_OFFSET, newTop, RIGHT_COLUMN_WIDTH, CITY_HEIGHT);
+		cityLabel = [[UILabel alloc] initWithFrame:rect];
+		cityLabel.tag = CITY_TAG;
+		cityLabel.font = [UIFont systemFontOfSize:CITY_FONT_SIZE];
+		cityLabel.textColor = constants.darkGreen;
+//		cityLabel.shadowColor = constants.lightGreen;
+		cityLabel.adjustsFontSizeToFitWidth = NO;
+		cityLabel.hidden = NO;
+		[self addSubview:cityLabel];
+		[cityLabel release];
+	}
+	
 	if (hasNotes) {
-		UILabel *noteLabel;
-		rect = CGRectMake(RIGHT_COLUMN_OFFSET, NOTE_TOP, RIGHT_COLUMN_WIDTH, NOTE_HEIGHT);
-		noteLabel = [[UILabel alloc] initWithFrame:rect];
-		noteLabel.tag = NOTES_TAG;
-		noteLabel.font = [UIFont systemFontOfSize:NOTE_FONT_SIZE];
-		noteLabel.textColor = constants.darkGreen;
-		noteLabel.shadowColor = constants.lightGreen;
-		noteLabel.adjustsFontSizeToFitWidth = NO;
-		noteLabel.hidden = NO;
-		[self addSubview:noteLabel];
-		[noteLabel release];
+		UILabel *cityLabel;
+		CGFloat newTop = rect.origin.y + rect.size.height + LABEL_SPACING;
+		rect = CGRectMake(RIGHT_COLUMN_OFFSET, newTop, RIGHT_COLUMN_WIDTH, NOTE_HEIGHT);
+		cityLabel = [[UILabel alloc] initWithFrame:rect];
+		cityLabel.tag = NOTES_TAG;
+		cityLabel.font = [UIFont systemFontOfSize:NOTE_FONT_SIZE];
+		cityLabel.textColor = constants.darkGreen;
+		cityLabel.shadowColor = constants.lightGreen;
+		cityLabel.adjustsFontSizeToFitWidth = NO;
+		cityLabel.hidden = NO;
+		[self addSubview:cityLabel];
+		[cityLabel release];
 	}
 	
 	self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -94,7 +135,10 @@ const int NOTES_TAG = 3;
 	
 	UILabel *nameLabel= (UILabel *)[self viewWithTag:NAME_TAG];
 	nameLabel.text = info.gardenName;
-
+	
+	UILabel *cityLabel= (UILabel *)[self viewWithTag:CITY_TAG];
+	if (cityLabel) cityLabel.text = info.city;
+	
 	// flag plant sales and talks, adjusting the name label if needed
 	NSString *labelString = [info subtitle];	
 	if (labelString) {

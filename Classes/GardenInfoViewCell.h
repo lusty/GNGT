@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+enum cellTags {
+	CHECKBOX_TAG = 1,
+	NAME_TAG,
+	CITY_TAG,
+	NOTES_TAG
+};
 
 @class GardenInfo;
 @class GardensListViewController;
@@ -18,6 +24,10 @@
 
 @property (nonatomic, retain) GardenInfo *info;
 
-- (id)initWithReuseIdentifier:(NSString *)identifier hasNotes:(BOOL)hasNotes;
++ (NSString *) reuseIdentifierWithNotes:(BOOL)hasNotes andCity:(BOOL)hasCity;
++ (CGFloat) heightWithNotes:(BOOL)hasNotes andCity:(BOOL)hasCity;
++ (CGFloat) heightWithReuseIdentifier:(NSString *)identifier;
+
+- (id)initWithReuseIdentifier:(NSString *)identifier hasNotes:(BOOL)hasNotes hasCity:(BOOL)hasCity;
 
 @end
