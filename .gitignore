@@ -9,6 +9,9 @@ distributions
 # Don't store the temporary database
 gardenList.sqlite3
 
+# nor the packed json file
+*.json.gz
+
 # Don't store the most volatile XCode files as they make merging difficult
 *.pbxuser
 *.perspective
