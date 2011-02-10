@@ -20,8 +20,6 @@
 	
 	NSManagedObjectContext *_context;
 	GardenDescriptionViewController *_description;
-	UIColor *lightGreen;
-	UIColor *darkGreen;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
@@ -36,7 +34,5 @@
 
 @property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) IBOutlet GardenDescriptionViewController *detailsController;
-@property (nonatomic, retain) UIColor *lightGreen;
-@property (nonatomic, retain) UIColor *darkGreen;
 
 @end

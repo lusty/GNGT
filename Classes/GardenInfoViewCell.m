@@ -10,6 +10,7 @@
 #import "GardensListViewController.h"
 #import "StarControl.h"
 #import "GardenInfo.h"
+#import "UIConstants.h"
 
 const CGFloat STAR_CONTROL_SIZE = 42.0f;
 
@@ -34,7 +35,6 @@ const CGFloat NOTE_HEIGHT = 19.0f;
 const int CHECKBOX_TAG = 1;
 const int NAME_TAG = 2;
 const int NOTES_TAG = 3;
-// TODO add plant sale, talk
 
 @implementation GardenInfoViewCell
 
@@ -44,6 +44,8 @@ const int NOTES_TAG = 3;
 {
 	self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
 	self.info = NULL;
+
+	UIConstants *constants = [UIConstants sharedUIConstants];
 
 	CGRect rect = CGRectMake(LEFT_COLUMN_OFFSET, ((ROW_HEIGHT - STAR_CONTROL_SIZE) / 2.0f)-2.0f, STAR_CONTROL_SIZE, STAR_CONTROL_SIZE);
 	StarControl *checkbox = [[StarControl alloc] initWithFrame: rect];
@@ -68,11 +70,11 @@ const int NOTES_TAG = 3;
 		noteLabel = [[UILabel alloc] initWithFrame:rect];
 		noteLabel.tag = NOTES_TAG;
 		noteLabel.font = [UIFont systemFontOfSize:NOTE_FONT_SIZE];
-		noteLabel.textColor = [UIColor colorWithWhite:0.498 alpha:1.000];
+		noteLabel.textColor = constants.darkGreen;
+		noteLabel.shadowColor = constants.lightGreen;
 		noteLabel.adjustsFontSizeToFitWidth = NO;
 		noteLabel.hidden = NO;
 		[self addSubview:noteLabel];
-		noteLabel.highlightedTextColor = [UIColor whiteColor];
 		[noteLabel release];
 	}
 	

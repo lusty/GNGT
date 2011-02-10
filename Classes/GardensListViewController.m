@@ -10,6 +10,7 @@
 #import "GardenDescriptionViewController.h"
 #import "GardenInfo.h"
 #import "GardenInfoViewCell.h"
+#import "UIConstants.h"
 
 @interface GardensListViewController (Private)
 - (IBAction)sortControlChanged:(id)sender;
@@ -28,7 +29,6 @@
 @synthesize sortMode, sortModeChanged;
 
 @synthesize detailsController = _description;
-@synthesize lightGreen, darkGreen;
 
 @dynamic sectionNameKeyPath;
 
@@ -121,8 +121,6 @@ enum sorting {
 	
 	self.tableView.sectionIndexMinimumDisplayRowCount = 500; // turn off the letters on the right-hand side
 
-	self.darkGreen = [UIColor colorWithRed:0.176f green:0.396f blue:0.204f alpha:1.0f];
-	self.lightGreen = [UIColor colorWithRed:0.808f green:0.863f blue:0.816 alpha:1.0f];
 	self.sortMode = byCity;
 	self.sortModeChanged = YES;
 }
@@ -225,11 +223,13 @@ enum sorting {
         return nil;
     }
 	
+	UIConstants *constants = [UIConstants sharedUIConstants];
+	
     // Create label with section title
     UILabel *label = [[[UILabel alloc] init] autorelease];
     label.frame = CGRectMake(0, 0, 320, 20);
-    label.backgroundColor = self.lightGreen;
-    label.textColor = self.darkGreen;
+    label.backgroundColor = constants.lightGreen;
+    label.textColor = constants.darkGreen;
     label.shadowColor = [UIColor lightGrayColor];
     label.shadowOffset = CGSizeMake(0.0, 1.0);
     label.font = [UIFont boldSystemFontOfSize:16];
@@ -237,7 +237,7 @@ enum sorting {
 	
     // Create header view and add label as a subview
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20.0f)];
-	view.backgroundColor = self.lightGreen;
+	view.backgroundColor = constants.lightGreen;
     [view autorelease];
     [view addSubview:label];
 	
