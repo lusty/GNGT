@@ -17,5 +17,9 @@ gardenList.sqlite3
 # Don't store the cruft left by the Python IDE either
 app
 
+# Nor the stuff left by IDEA
+.idea
+*.iml
+
 
 
