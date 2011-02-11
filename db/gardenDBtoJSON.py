@@ -29,15 +29,15 @@ for row in inCursor:
     address = "%(street)s, %(city)s, CA" % ({'street':row[4], 'city':row[5]})
     loc = geocode(address, "false")
 
-    info = dict({'gardenNumber':row[1], 'gardenName':row[2], 'latitude':loc['lat'], 'longitude':loc['lng'], 'street':row[4], 'city':row[5], 'plantSale':row[6]})
-    description =  dict({'designer':row[10], 'installer':row[11], 'sqft':row[14], 'yearInstalled':row[12], 'directions':row[15], 'showcase':row[7], 'wildlife':row[9], 'other':row[8]})
-    info['gardenDescription'] = description
-    gardens.append(info)
+    location = dict({'latitude':loc['lat'], 'longitude':loc['lng'], 'streetAddress':row[4]});
+    info =  dict({'gardenNumber':row[1], 'plantSale':row[6], 'designer':row[10], 'installer':row[11], 'sqft':row[14], 'yearInstalled':row[12], 'directions':row[15], 'showcase':row[7], 'wildlife':row[9], 'other':row[8]})
+    garden = dict({'name':row[2], 'city':row[5], 'location':location, 'infoArray':info})
+    gardens.append(garden)
 
 tour = dict({'tourName':'Going Native Garden Tour', 'url':'www.goingnativegardentour.com', 'tourDate':'2011-04-17', 'gardens':gardens})
-header = dict({'updated':datetime.now().isoformat(), 'format':1})
+header = dict({'updated':datetime.now().isoformat(), 'format':2})
 
-f = open('tour-app-db-00.json', 'w')
+f = open('tour-app-db-01.json', 'w')
 f.write("{\"file\":%(header)s,\n\"tour\":%(tour)s\n}\n" % ({'header':json.dumps(header), 'tour':json.dumps(tour)}))
 f.close()
 

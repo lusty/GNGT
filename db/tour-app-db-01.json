@@ -1,0 +1,1419 @@
+{"file":{
+    "updated": "2011-02-11T13:18:31.663772",
+    "format": 2
+},
+    "tour":{
+        "url": "www.goingnativegardentour.com",
+        "tourDate": "2011-04-17",
+        "tourName": "Going Native Garden Tour",
+        "gardens": [
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 40,
+                    "yearInstalled": 2004,
+                    "wildlife": "Trees and shrubs provide food and shelter for many types of birds.",
+                    "showcase": "The distinctively landscaped parking strip stands out in a sea of lawn, pointing the way to a bird-friendly native garden.",
+                    "sqft": 1500,
+                    "plantSale": "",
+                    "designer": "Stephanie Curtis, Curtis Horticulture",
+                    "other": "This garden is a year-round hummingbird haven. The focal point is a striking mature Western redbud. The native plants are chosen for their wildlife habitat value: coffeeberry, island alumroot, ceanothus, coyote mint, and native grasses.  The wide parking strip is planted with ceanothus and deeergrass. The non-native shrubs (correa and aloe) earn their keep with their hummingbird-attracting flowers in winter when natives are not flowering.",
+                    "directions": "From I-880 in San Jose, exit onto North 1st St heading south. Go 0.3 miles and turn left onto E Hedding St. Go 0.3 miles and turn right onto N 5th St. The house is a short distance ahead on the left.",
+                    "installer": "Curtis Horticulture"
+                },
+                "name": "5th Street Garden",
+                "location": {
+                    "latitude": 37.354787000000002,
+                    "streetAddress": "866 N 5th St",
+                    "longitude": -121.898214
+                }
+            },
+            {
+                "city": "Palo Alto",
+                "infoArray": {
+                    "gardenNumber": 17,
+                    "yearInstalled": 2000,
+                    "wildlife": "",
+                    "showcase": "California natives coexist with plants from other Mediterranean climates in this mature and tidy front yard.  A large mound blanketed in Emerald Carpet manzanita provides the central focus.",
+                    "sqft": 2000,
+                    "plantSale": "",
+                    "designer": "Fran Adams",
+                    "other": "Beach strawberry replaces lawn under the birches.  Redwood and coffeeberry shade Douglas iris.  Wild grape and clematis intertwine on the arbor gate, and California pipevine graces the right side fence. Walks are lined with Heuchera 'Old La Rochette'.  A young madrone is thriving, and wildflowers fill the parking strip. This garden won a first place award for landscape renovation from the Bay Area Chapter of the California Landscape Contractors Association for installer Harris Landscaping.",
+                    "directions": "Between Middlefield and Alma south of Oregon Expressway",
+                    "installer": "Harris Landscaping"
+                },
+                "name": "Adams Garden",
+                "location": {
+                    "latitude": 37.429004900000002,
+                    "streetAddress": "2782 Waverley St",
+                    "longitude": -122.132251
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 66,
+                    "yearInstalled": 2008,
+                    "wildlife": "This garden provides food, shelter, and water for a variety of birds, lizards, bees, and squirrels.",
+                    "showcase": "This professionally-designed garden uses plants from the chaparral plant community in a series of rooms that work with existing conditions in various parts of the garden.  Beautiful stonework walls, ledges and patios give structure to the space and provide seating to enjoy the garden.",
+                    "sqft": 3500,
+                    "plantSale": "",
+                    "designer": "Skyline Design (overall plan) and Alrie Middlebrook, Middlebrook Gardens (p",
+                    "other": "The small front yard provides color and interest with deer grass, coffeeberry, bush poppy, sages, manzanitas, California fuchsia, ceanothus, and pink-flowering currant, with buckwheats, yarrow, asters, Douglas iris, and alum root accents.  In the large back yard, a central circular meadow planted with deer grass and aster provides a focal point.  Plantings outside the meadow include a section with raised vegetable beds and fruit trees, sunny areas populated with white sage, silk tassel, saltbush, ceanothus, coyote brush, coffeeberry, manzanita, coyote mint, California fuchsia, monkeyflowers, and buckwheats.  Shadier areas contain bush anenome, wax myrtle, pink-flowering currant, snowberry, strawberry, Douglas iris, and alum root.",
+                    "directions": "From Hwy 85, proceed south on Almaden Expy to Via Valiente. Turn left on Via Valiente, drive six blocks and turn right on Turnbridge Way.  Turn right on Hurlstone Ln and look for the garden at the end of the cul de sac.",
+                    "installer": "Middlebrook Gardens (plantscape) and Unique Concrete Design (hardscape)"
+                },
+                "name": "Almaden Retreat",
+                "location": {
+                    "latitude": 37.213712999999998,
+                    "streetAddress": "976 Hurlstone Lane",
+                    "longitude": -121.842021
+                }
+            },
+            {
+                "city": "Los Gatos",
+                "infoArray": {
+                    "gardenNumber": 60,
+                    "yearInstalled": 2008,
+                    "wildlife": "All the plants in this garden will provide food and/or shelter for wildlife.  A water feature (not on the tour) provides water.",
+                    "showcase": "This small native garden replaces a resource-intensive lawn with a nature-friendly alternative that enhances the architecture of the building, while also furthering its artistic mission.",
+                    "sqft": 1200,
+                    "plantSale": "",
+                    "designer": "Alrie Middlebrook, Middlebrook Gardens",
+                    "other": "A dry creek theme dominates this professionally-designed garden.  Large flagstones mounted vertically along the dry creek serve an artistic purpose while also masking utility elements of the building.  The garden is heavily mulched with a large California gold gravel that serves as the canvas on which the native plants flourish.  Two ceanothus near the front entrance will be focal points when they mature, along with a Louis Edmunds manzanita.  Other shrubs include a Channel Island tree poppy, pink-flowering currant, bush sunflower, Cedros Island verbena, and toyon.  The remainder of the installation is filled from a palette containing several species of California fuchsia, buckwheats, sages, and penstemons, along with showy milkweed, coyote mint, deer grass, giant wild rye, and Idaho fescue.",
+                    "directions": "From Hwy 17, take the Hwy 9 exit and proceed west on Hwy 9. Turn left at the first light, University Ave.  Follow University Ave to the T and turn right on W Main St.  Proceed several blocks on W Main St and find the garden to the right at the corner of W Main St and Tait Ave.",
+                    "installer": "Volunteers from the California Native Garden Foundation"
+                },
+                "name": "Art Museum of Los Gatos Native Art Garden",
+                "location": {
+                    "latitude": 37.223565200000003,
+                    "streetAddress": "4 Tait Avenue",
+                    "longitude": -121.9858349
+                }
+            },
+            {
+                "city": "Sunnyvale",
+                "infoArray": {
+                    "gardenNumber": 26,
+                    "yearInstalled": 2009,
+                    "wildlife": "Birds, butterflies, and other insects visit this garden.",
+                    "showcase": "This professionally designed property features a number of mature natives including coffeeberry, western redbud, and a large coast live oak.  Ivy and other non-natives were removed and replaced with a lovely selection of native plants requiring far less irrigation.",
+                    "sqft": 7200,
+                    "plantSale": "",
+                    "designer": "Sherri Osaka, Sustainable Landscape Designs",
+                    "other": "The small front yard has a toyon centerpiece accented by deer grass, California fuchsia, and a prostrate form of purple sage on the left.  On the right, a coffeeberry hedge is accented by California, sulfur, and rosy buckwheats.  The spacious back yard features a large coast live oak underplanted with western sword fern and alum roots. A mature western redbud is accompanied by St. Catherine's lace.  Mature coffeeberry and western hawthorn dominate one corner, and hollyleaf cherry the other.  A carpenteria hedge screens the side, and buckwheats edge a tennis court.\\n",
+                    "directions": "From Hwy 85, take the Fremont Ave exit and proceed east on Fremont Ave.  Turn left on Mary, then right on Ticonderoga Dr.  Take the first right onto McIntosh Ave.  At the curve, bear right onto McIntosh Ct.",
+                    "installer": "Stephanie Curtis, Curtis Horticulture"
+                },
+                "name": "Beecher & Vissers Garden",
+                "location": {
+                    "latitude": 37.353791000000001,
+                    "streetAddress": "1235 McIntosh Ct",
+                    "longitude": -122.049836
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 63,
+                    "yearInstalled": 2006,
+                    "wildlife": "Many birds and insects frequent the garden, including hummingbirds, yellow-rumped warblers, house finches, mourning doves, spiders, crickets, honeybees, carpenter bees, ladybugs, and figeater beetles.  Western fence lizards enjoy the many rocks in the garden.  Seedheads are left to provide food, and a small solar fountain provides water for birds.",
+                    "showcase": "This large corner lot is in the fourth year of a multi-year conversion from thirsty non-native plantings to low-water native plantings designed to attract wildlife.  Last year, 2000 sq ft of lawn and a large magnolia tree were removed.  New plantings include bush anenome, sierra golden currant, island alum root, pink-flowering currant, manzanitas, ceanothus, western redbud, chaparral pea, mock orange, spice bush, coffeeberry, monkeyflowers, penstemon, California fuchsia, sage, buckwheats, and several types of grasses and annual wildflowers.  Young valley oak and madrone are insignificant now, but will dominate the space over time.",
+                    "sqft": 3650,
+                    "plantSale": "On tour day, East Bay Wilds Nursery will conduct a plant sale at this garden.  A portion of the proceeds will benefit the Going Native Garden Tour.  Please pay with cash or check.",
+                    "designer": "Pete Veilleux, East Bay Wilds, and homeowner",
+                    "other": "Chaparral mallow, alum root, hummingbird sage, California fuchsia, manzanita and ceanothus are located in the side yard planted the first year.  The side of the house is screened by silver bush lupine, creambush, coffeeberry, pink-flowering currant and toyon.  A young buckeye flanks the curving path to the sitting area.  Across the path, a large boulder provides another nice focal point, with a small depression that can conveniently trap a bit of rainfall for the birds.  Nearby, a small solar fountain bubbles up through a stone set at ground level.  A resident hummingbird uses it frequently for bathing.  The south fence and arbor shade the sitting area, with espaliered Catalina currant, wild grape, and a number of potted succulents softening the structure.\\n\\nParking strips planted in the second year range from heavy shade to full sun. Ferns, snowberry, phacelia, California goldenrod, nightshade, manzanita, deer weed, monkeyflowers, several bunch grasses, buckwheat, and dwarf lupines were selected for low height to protect sight lines for traffic while being compatible with the site and attracting native bees and birds. Native California bulbs thrive in these un-irrigated areas, and annual wildflowers provide a show each spring.",
+                    "directions": "From Hwy 85, take the Union Ave exit and proceed south on Union Ave.  Turn right at the first light, on Carlton.  Proceed two blocks to Bel Estos Dr, and look for the garden on the left at the corner of Carlton and Bel Estos",
+                    "installer": "Pete Veilleux, East Bay Wilds"
+                },
+                "name": "Bel Estos Drive Garden",
+                "location": {
+                    "latitude": 37.248055000000001,
+                    "streetAddress": "4910 Bel Estos Dr.",
+                    "longitude": -121.933864
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 49,
+                    "yearInstalled": 2001,
+                    "wildlife": "Food, water, shelter, and places to raise young are all provided by the homeowners, and the garden invites many different species of birds, butterflies and other insects.",
+                    "showcase": "This mostly native, homeowner designed and installed garden features a certified Monarch butterfly waystation, a large variety of native plants and other sustainable amenities.",
+                    "sqft": 6000,
+                    "plantSale": "",
+                    "designer": "Homeowner",
+                    "other": "The water permeable, gold fines pathway leading to the front entrance is studded with iridescent marbles matching the colors of the nearby armadillo garden sculpture.  The raised beds are planted with sages, buckwheat, monkeyflower, island snapdragon bush, California mock orange, coyote mint, pitcher sage, island mallow, California and coast asters, woolly blue curls, and lilac verbena, and the empty spaces are decorated with potted ceanothus and manzanita.  Tastefully combined color combinations around the home include an inviting blue bench swing, decorative pots and other garden art.  A rain barrel provides extra water during the dry season.\\n\\nIn the back yard a swimming pool was filled in and replaced with a cozy step stone patio and more native plants, including an espaliered golden currant, Cleveland, white and hummingbird sages, western redbud, island mallow, carpenteria, and a young California buckeye underplanted with California fescue grasses.  A small pond, planted with riparian native plants, offers more wildlife habitat.",
+                    "directions": "Head west on Capitol Expy/Hillsdale Ave. From Hillsdale Ave, turn right at Plummer Ave, then 1st left onto Blackstone Ave. The garden will be on the right.",
+                    "installer": "Homeowner"
+                },
+                "name": "Blackstone Monarch Habitat",
+                "location": {
+                    "latitude": 37.272424999999998,
+                    "streetAddress": "1471 Blackstone Ave",
+                    "longitude": -121.89368
+                }
+            },
+            {
+                "city": "Menlo Park",
+                "infoArray": {
+                    "gardenNumber": 8,
+                    "yearInstalled": 1992,
+                    "wildlife": "Various birds and insects are attracted to the diverse mix of plants, which provide shelter and food.",
+                    "showcase": "This attractive, professionally designed front yard garden, features a dry stacked wall, sand-based flagstone paths, and numerous, well placed native plants mixed with citrus, roses and other exotics.",
+                    "sqft": 3000,
+                    "plantSale": "",
+                    "designer": "Erin O'Doherty, Native Revival Nursery (1992), and David Leroy (2002)",
+                    "other": "Coyote brush, a Louis Edmonds manzanita hedge, ground cover ceanothus and hummingbird sage mingle to the left of the driveway.  The right side of the garden is divided by a serpentine dry stacked wall, and planted with a wide variety of natives including Ceanothus and manzanita ground covers, blue-eyed grass, California poppy, Douglas iris, yarrow, Cedros Island verbena, rosy buckwheat, John Dourley manzanita, and California fescue.  In front of the house, carpenteria, pitcher sage and toyon are mixed with citrus and roses.  Oregon grape and hummingbird sage enjoy the dappled shade under a mature camphor tree and a California buckeye.",
+                    "directions": "From Hwy 280 take Alpine Rd. towards Menlo Park. After crossing Sand Hill Rd, keep right onto Santa Cruz Ave. Turn right on Oakdell Drive, right on Lemon St., left on Oak Ave. and right on Brandon Way.",
+                    "installer": ""
+                },
+                "name": "Brandon Way Garden",
+                "location": {
+                    "latitude": 37.434609000000002,
+                    "streetAddress": "380 Brandon Way",
+                    "longitude": -122.187737
+                }
+            },
+            {
+                "city": "Hillsborough",
+                "infoArray": {
+                    "gardenNumber": 1,
+                    "yearInstalled": 2007,
+                    "wildlife": "Permaculture practices are part of this family's activities.  To the right at the driveway entry is a large planter box for substantial vegetable crops, along with sage, buckwheat, coffeeberry and other native plants that attract pollinators.  The garden patio area contains a cutting and herb garden and several citrus trees",
+                    "showcase": "This stunning estate garden showcases natives in sun and shade, on steep hillsides, integrated with existing mature oaks, redwoods, and pines.  Areas near the house are maintained for the enjoyment and use of the family and its guests, while areas further from the house focus on natural beauty and habitat for wildlife",
+                    "sqft": 52000,
+                    "plantSale": "",
+                    "designer": "Peigi Duvall, Indig Design",
+                    "other": "While the original design of this large property included a few native plant selections, the homeowner wished to replant the site to allow them a majority stake throughout the garden.  The redwoods, yerba buena, and ferns at the entry gate begin the parade of plantings up the long driveway that is flanked by two kinds of manzanita, redbuds, and native grasses.  Oregon grape hedges line the entry walls  and help screen the view from the upper pool area to the neighbor's property. Under tall pines, younger oaks, and mature toyon are newer plantings of elderberry, juncus, snowberry, and western hazelnut.  The guest house addition is surrounded by mountain mahogany and spice bush and includes a private patio garden planted with pink-flowering currants, iris, and woodland strawberries. The children's play yard, screened from the family parking area, was once a soggy lawn but is now a fragrant native garden that includes jumping stumps, a small Carex meadow, trampoline and chicken coup. Up to the side garden patio a sunny hillside is filled with desert mallow, native verbena, sages, and Matilija poppy.  Continuing to the partly shaded back garden area there are dogwoods, Catalina perfume, Berkeley sedge, and huckleberry.  A mass of iris (Douglas and PCH) are seen as the path starts downhill and is edged with yerba buena and woodland strawberries.  Barberry, currant, more juncus fill the side beds that are met at the bottom of the path by a graveled fire pit area and fern grotto.\\n\\nThe main entry to the residence is planted with Ceanothus, Idaho fescue, CA Solidago, asters, deer grass, and specimen 'Austin Griffiths' manzanita.  A large lawn for family football games remains but has been lined on one side by a hedge of holly leaf cherry to screen the pool area.  The slope off of the pool area is stabilized by plantings of Pacific ninebark, and Roger's Red grape climbs three single trellises across the downhill steps that can be seen from the driveway entry.  Some areas of this property had very bad soil due to construction debris and needed substantial amendment.  This garden is not wheelchair accessible",
+                    "directions": "From Hwy 92, proceed north on El Camino Real to Ralston Ave in Burlingame.  Turn left on Ralston Ave, then left on Hillsborough Blvd.  Turn right on Bromfield Rd and look for the garden on the right.",
+                    "installer": "Martin Calvillo and Alani Lolohea"
+                },
+                "name": "Bromfield Garden",
+                "location": {
+                    "latitude": 37.562264900000002,
+                    "streetAddress": "1140 Bromfield Road",
+                    "longitude": -122.357027
+                }
+            },
+            {
+                "city": "Palo Alto",
+                "infoArray": {
+                    "gardenNumber": 10,
+                    "yearInstalled": 2007,
+                    "wildlife": "",
+                    "showcase": "Beautifully planted condominium front garden and parking strip features an attractive collection of native trees and shrubs, harmoniously integrated with a few  drought tolerant non-native plants.",
+                    "sqft": 3500,
+                    "plantSale": "",
+                    "designer": "Annaloy Nickum",
+                    "other": "Condominium yards have a deserved an earned reputation for being boring and devoid of wildlife. Bryanton Condominium is a shining example for what's possible instead. The parking strip features deer grass and fescue, drought tolerant and attractive year round. The front yard itself shows a combination of some drought-tolerant meditarrenean climate plants (rosemary,\\nAustralian fuchsia) and many natives.\\n\\nThe front entry design is especially attractive and welcoming. Noteworthy are the trees and tall shrubs: a squirrel-planted oak, several toyons, and a California buckeye. Other native plants include ceanothus, currents, mahonia, and other shrubs and perennials, easy to care for yet beautiful, a joy to look at year round.",
+                    "directions": "1. From Page Mill / Oregon Expressway and Alma Street, take Alma Street North\\n2. Turn right on Channing Avenue\\n3. Turn left on Bryant Street\\n4. 770 Bryant is at the corner of Homer and Bryant, on your left\\n(Note that Homer is a one-way street, use it to return to Alma)",
+                    "installer": "Greg Berlin"
+                },
+                "name": "Bryanton Condominium Front Yard",
+                "location": {
+                    "latitude": 37.443677200000003,
+                    "streetAddress": "770 Bryant St",
+                    "longitude": -122.15810380000001
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 64,
+                    "yearInstalled": 2001,
+                    "wildlife": "This garden provides food and shelter for wildlife from the Guadalupe Watershed and Guadalupe Creek, adjacent. ",
+                    "showcase": "This garden is a labor of love by one of the residents of the neighborhood, supported by other neighbors who live along the way. It contains an impressive collection of chapparal shrubs and plants, interspersed between a variety of young oaks planted by the residents in cooperation with Our City Forest.  It blends beautifully with the Guadalupe Creek riparian zone, which is adjacent to the garden.",
+                    "sqft": 30000,
+                    "plantSale": "On tour day, Almaden Valley Nursery will conduct a plant sale at this garden.  A portion of the proceeds will benefit the Going Native Garden Tour.  Please pay with cash or check.",
+                    "designer": "Patrick Pizzo",
+                    "other": "Backed by huge granite boulders and the meadow beyond, the shrubs and trees stand out nicely, yet seem to be part of the natural landscape.  The plants are hand-watered until established, by Patrick Pizzo, who designed and installed this impressive garden.  Lovely established specimens include a variety of ceanothus and manzanitas, sugar bush, spicebush, bush anenome, mountain mahogany, island bush snapdragon, coast silktassel, lemonade berry, sages, coyote brush, coyote mint, buckwheats, monkeyflowers, silver bush lupine, and much more.",
+                    "directions": "From Hwy 85, go south on Camden to Coleman. Turn left on Coleman, and left again on Redmond, then right on Oak Canyon Drive. Oak Canyon Drive becomes Oak Canyon Place. Continue to the cul-de-sac and turn about. The garden borders the meadow for 0.6 miles. ",
+                    "installer": "Patrick Pizzo"
+                },
+                "name": "Capitancillos Native Plant Demonstration Garden\\n",
+                "location": {
+                    "latitude": 37.232123000000001,
+                    "streetAddress": "1536 Capitancillos Dr",
+                    "longitude": -121.89757899999999
+                }
+            },
+            {
+                "city": "Palo Alto",
+                "infoArray": {
+                    "gardenNumber": 14,
+                    "yearInstalled": 2004,
+                    "wildlife": "Butterflies, bees, squirrels and birds live-in and visit this garden.",
+                    "showcase": "A meandering dry creek bed banked by sedges, a natural Idaho fescue meadow and a solar-powered fountain invites visitors to this native garden.",
+                    "sqft": 4500,
+                    "plantSale": "",
+                    "designer": "Alrie Middlebrook, Middlebrook Gardens",
+                    "other": "The garden features plants from the oak woodland, chaparral, riparian, and grassland plant communities.  The artistic landscape design also includes a children's garden in the back yard with an artificial lawn, an attractive mural, raised vegetable beds made of on-site recycled materials, and fruit trees.  The environmentally friendly garden requires low maintenance.",
+                    "directions": "From 101, take Embarcadero exit toward Stanford.  Turn right on Newell, and right on Channing. The garden will be on the right-hand side of the street.",
+                    "installer": "Middlebrook Gardens"
+                },
+                "name": "Channing Avenue Garden",
+                "location": {
+                    "latitude": 37.448560999999998,
+                    "streetAddress": "1524 Channing Ave",
+                    "longitude": -122.139089
+                }
+            },
+            {
+                "city": "Cupertino",
+                "infoArray": {
+                    "gardenNumber": 34,
+                    "yearInstalled": 2008,
+                    "wildlife": "The back yard abounds with wildlife habitat, including four birdbaths.  Many plants provide food and shelter for birds, butterflies and lizards.",
+                    "showcase": "Beautifully designed property with a focus on sustainability and wildlife habitat, mature specimens of many native shrubs and trees.",
+                    "sqft": 7500,
+                    "plantSale": "On tour day, Almaden Valley Nursery will conduct a plant sale at this garden.  A portion of the proceeds will benefit the Going Native Garden Tour.  Please pay with cash or check.",
+                    "designer": "Homeowners",
+                    "other": "The front yard features mature manzanitas and a coffeeberry, with native morning glory as ground cover. The parking strip is planted with wildflowers.  A decomposed granite path leads to a shade garden by the front entry.  The inviting back yard features a flagstone patio bordered by rock walls with organic vegetable beds within easy reach.  The remainder of the backyard is native landscaping with a dry creek bed. Plantings include many local natives such as coast live oak, California bay, western redbud, ceanothus and blue elderberry.  Other large specimens include Western spicebush, hollyleaf cherry, sugarbush, Channel island mallow, desert willow, bladderpod and a native cypress.  ",
+                    "directions": "From I-280, take the Lawrence Expressway exit and turn west onto Stevens Creek Blvd. Make a U-turn at Tantau Ave and then turn right on Judy Ave. The house is about 0.1 mile on the right.",
+                    "installer": "Homeowner installed plants, hardscape by Bella Terra Landscaping"
+                },
+                "name": "Citta Garden",
+                "location": {
+                    "latitude": 37.321109999999997,
+                    "streetAddress": "10123 Judy Ave",
+                    "longitude": -122.005742
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 51,
+                    "yearInstalled": 2000,
+                    "wildlife": "A birdbath and water are available for birds and other animals, with plants chosen for food and shelter for wildlife. Alligator & fence lizards, many species of birds including various songbirds, hummingbirds, woodpeckers, turkeys, owls, and raptors, skunks, coyotes, deer, opossum, raccoon, small rodents, moles, foxes, feral cats, and many butterflies visit the property.",
+                    "showcase": "Wild-life-friendly, do-it-yourself garden that shows how to transition toward all natives while trying to keep out invasive plants from adjoining open space.",
+                    "sqft": 600,
+                    "plantSale": "",
+                    "designer": "Homeowner",
+                    "other": "The front yard has a woodland feel, shaded by tall evergreens, with a mature, tree-sized coffeeberry behind a small mound as a focal point. Permeable paths lead through mixed plantings of creeping ceanothus, manzanita, Pacific iris and many other natives.  Native honeysuckle and morning glory climb a trellis.   You may spot some of the many birds, lizards and insects that frequent the property. Along the property line the homeowners have planted native shrubs and grasses to keep out invasive weeds that grow on adjoining water district land.",
+                    "directions": "From I-680, exit on Berryessa Rd east (away from San Jose). Go about 1.7 miles and turn right onto Piedmont Rd. Go about 0.1 mile and turn left onto Whitman Way. The house is about 0.4 miles on the right.",
+                    "installer": "Homeowner"
+                },
+                "name": "Cline-Frey Garden",
+                "location": {
+                    "latitude": 37.396937000000001,
+                    "streetAddress": "3510 Whitman Way",
+                    "longitude": -121.83748900000001
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 38,
+                    "yearInstalled": 2009,
+                    "wildlife": "Hummingbirds, squirrels and lizards frequent the garden.",
+                    "showcase": "A small bungalow front yard is reborn as a shady woodland oasis of natives centered by a naturalistic fountain accented with metal sculpture. ",
+                    "sqft": 900,
+                    "plantSale": "",
+                    "designer": "Julie Orr Design",
+                    "other": "This new garden shows that sustainable landscaping can be accomplished through DIY talent and on a shoe-string budget when working closely with a professional landscape designer. The Craftsman home said goodbye to its water-thirsty lawn and concrete hardscape, and now features a dry creek bed that drains rainwater away from the house, marked by a rock fountain surrounded by California gray rush. The old concrete path was resurrected as decorative urbanite walls for native bunch grasses, Pacific iris, evergreen huckleberry and woodland strawberry.   Shrubs include coffeeberry and manzanita.  Island alum root fills a large window box. A natural rock fountain and metal 'cat-tails' birdfeeders encourage birds to visit the garden often. ",
+                    "directions": "From I-880, exit on the Alameda toward the east (toward San Jose). Go to W. Taylor St/Naglee Ave, and make a U-turn at the stop light.  Make the first right onto Asbury St. The house is in the middle of the second block on the right.",
+                    "installer": "Homeowner"
+                },
+                "name": "College Park Native Garden",
+                "location": {
+                    "latitude": 37.339171,
+                    "streetAddress": "948 Asbury Street",
+                    "longitude": -121.917244
+                }
+            },
+            {
+                "city": "Palo Alto",
+                "infoArray": {
+                    "gardenNumber": 16,
+                    "yearInstalled": 2007,
+                    "wildlife": "The owners provide bee and bat houses.  A variety of birds, butterflies, and bats visit the garden",
+                    "showcase": "This professionally-designed garden provides a quiet oasis of nature surrounding this energy-efficient home, while shielding it from the public park next door",
+                    "sqft": 4500,
+                    "plantSale": "",
+                    "designer": "Peigi Duvall, Indig Design",
+                    "other": "A courtyard-style entry area featuring a fountain is flanked by stacked-stone raised vegetable beds and pollinator, sun-loving plants including manzanita, coyote mint, hummingbird sage, and buckwheats, along with a variety of heritage fruit trees.  The path leads into a native woodland community side yard dominated by large oaks shading Douglas iris, yerba buena, woodland strawberry, alum root, common rush, snowberry, and wild ginger.  The back yard features a sunny meadow including yarrow, wildflowers and various grasses set between the entertainment patio complete with brick oven, a raised herb bed, and a gravel sitting and play area at an adobe wall that completely screens the adjacent public park.\\n\\nNote: The garden owners originally battled an oxalis infestation in the meadow.  Cape oxalis is an invasive weed that is difficult to eradicate because of its small and prolific bulbs. Pulling the plants in winter helps weaken them before their spring production of yellow flowers and seeds",
+                    "directions": "From El Camino, take College Ave south/west, then turn left on Dartmouth St.",
+                    "installer": "Rivera Landscaping"
+                },
+                "name": "College Terrace Garden",
+                "location": {
+                    "latitude": 37.418928999999999,
+                    "streetAddress": "2260 Dartmouth St.",
+                    "longitude": -122.152736
+                }
+            },
+            {
+                "city": "Cupertino",
+                "infoArray": {
+                    "gardenNumber": 33,
+                    "yearInstalled": 2005,
+                    "wildlife": "This garden attracts birds including phoebes, finches and hummingbirds as well as bees (native and honey), butterflies and other insects. Many seed bearing perennials and nectar and caterpillar plants planted.  Additional habitat features include logs and rocks for shelter, a birdbath and bee boxes.   This year the school  will be participating in the local Audubon's cavity nester program with nest boxes targeting oak titmice and chestnut-backed chickadees around the school.",
+                    "showcase": "This lovingly maintained school garden focuses on education, wildlife habitat and sustainability.",
+                    "sqft": 1300,
+                    "plantSale": "",
+                    "designer": "Suzanne Redell and Dina Gibbs",
+                    "other": " This long but narrow garden backs against a wall, so the back is shaded by the backing wall while the front is sunny. Large trees also shade one end with the other end in full sun.  Tree trunk sections are used as seats, and old milk bottles as bird feeders.  Wildlife-friendly plantings include many native flowering shrubs, including several species of currants, Western mock orange, ceanothus, blue elderberry, western redbud and native sages.    The beds are a riot of color with blue-eyed grass, California poppies, clarkias and native and hybrid yarrow among the native perennials and grasses. The garden has educational signage, making it a great learning opportunity for those interested in creating wildlife habitat in their gardens.",
+                    "directions": "From I-280, take the Lawrence Expressway exit and turn west onto Stevens Creek Blvd. Go about 1 mile and turn right onto N. Blaney ave. Go about 0.2 mile and turn right into the LP Collins Elementary School parking lot just before Forest Ave. The garden is behind the school to the right of the basketball courts.",
+                    "installer": "The school community"
+                },
+                "name": "Collins School Garden",
+                "location": {
+                    "latitude": 37.327406099999997,
+                    "streetAddress": "10300 N. Blaney Ave",
+                    "longitude": -122.02318630000001
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 37,
+                    "yearInstalled": 2008,
+                    "wildlife": "Birds and beneficial insects visit the garden.",
+                    "showcase": "A large corner lot, formerly covered with lawn, becomes a native oasis, with a pleasant sitting area enclosed with shrubs and flowers, while saving water and maintenance time.",
+                    "sqft": 1200,
+                    "plantSale": "On tour day, Central Coast Wilds (Ecological Concerns) will conduct a plant sale at this garden.  A portion of the proceeds will benefit the Going Native Garden Tour.  Please pay with cash or check.",
+                    "designer": "Darrin B. Miller M.L.A./ Ecological Concerns Inc.",
+                    "other": "Ceanothus and blue wild rye accent the parking strip, with gum plant and seaside daisy for year-round color. The driveway is bordered with deer grass.  Verbena lilacina blooms all-year round, bring color and fragrance to sunny areas. Under the large existing shade tree woodland strawberry, coral-bells and Pacific iris are thriving. Colorful native perennials and grasses surround a sunny pervious patio. A large coffeeberry and California rose provide screening from the street. A beautiful wooden fence surrounds the garden without blocking views.",
+                    "directions": "From I-880, take the Bascom Ave North exit toward Santa Clara and go 0.2 miles on N Bascom Ave. Turn right onto Heatherdale Ave. The house is at the end of the block on the left corner.\\n",
+                    "installer": "Ecological Concerns Inc."
+                },
+                "name": "Cote Residence Garden",
+                "location": {
+                    "latitude": 37.337567999999997,
+                    "streetAddress": "1829 Heatherdale Ave",
+                    "longitude": -121.935489
+                }
+            },
+            {
+                "city": "Portola Valley",
+                "infoArray": {
+                    "gardenNumber": 3,
+                    "yearInstalled": 2002,
+                    "wildlife": "This is a wildlife habitat: food, water, shelter and places to nest and raise young are all present.  The homeowners deliberately keep some areas wild and provide a brush pile.  Among the fauna to be found in the garden include quail, rabbits, and a nice variety of birds and insects.",
+                    "showcase": "This garden oasis, adjacent to the San Francisquito watershed and nestled in an oak woodland setting, features a variety of native plants ranging from newly planted to mature specimens.  The homeowners are knowledgeable gardeners who recognize the benefits of native plants and enjoy the wildlife that they attract.",
+                    "sqft": 28000,
+                    "plantSale": "On tour day, Acterra Native Plant Nursery will conduct a plant sale at this garden.  A portion of the proceeds will benefit the Going Native Garden Tour.  Please pay with cash or check.",
+                    "designer": "",
+                    "other": "A healthy grove of Oregon grape and matching fern planters greet the visitors to the front door.  Coyote brush, hummingbird sage and California fescue mingle in the dappled shade of a live oak.  A raised planter with a Japanese maple specimen is under planted with checkerbloom and manzanita.  Nearby, a meadow of sedges, blue-eyed grass and common rush covers the ground.  The rock garden features fremontia, monkeyflowers, manzanitas, sages, coyote brush and toyon.  The back garden, which is home for many more interesting natives, is edged by a natural creek, and the homeowners have restored the native riparian vegetation along its bank which includes the removal of many invasive species.  Creekside planting includes hazelnut, huckleberry, native ferns, nine bark, currants, strawberry, dogwood, mugwort, asters, California rose and snowberries. The large lawn areas have been mostly replaced with native grass meadows, including purple needle grass, red fescue and meadow sedge.  A mature coffeeberry hedge flanks the back side of the house.  One of the areas in the back garden is dedicated to white flowering plants, such as carpenteria, snowberry, fringe cups, cream bush and white ceanothus",
+                    "directions": "From Hwy 280 take Alpine Rd. towards Portola Valley.  Turn left before the Alpine Hills Tennis Club onto Creek Park Drive and take an immediate left turn.",
+                    "installer": ""
+                },
+                "name": "Creek Park Drive Garden",
+                "location": {
+                    "latitude": 37.379474000000002,
+                    "streetAddress": "5 Creek Park Dr",
+                    "longitude": -122.195931
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 55,
+                    "yearInstalled": 2003,
+                    "wildlife": "The native plant species, bird feeder, and nest box invite such regulars as sparrows, scrub jays, hawks, and small lizards.",
+                    "showcase": "This professionally designed garden paradise has many eye catching elements.   Recycled concrete is used to create different garden sections that are inhabited by ground cover type native species, such as 'David's Choice' artemesia, manzanita and ceanothus.  A courtyard wall was created from on-site soil and cement and sets off the color of California fuchsias in the front yard. Sonoma sage is used between the car tracks along the driveway.  In the back garden, a small lawn is accompanied by a mulched area with boulders, bunch and wire grasses. Newly added is a pondless water feature installed by Brookside. This feature was added to attract additional birds to the garden and to hear the soothing sound of water flowing.",
+                    "sqft": 9000,
+                    "plantSale": "",
+                    "designer": "Sherri Osaka, Sustainable Landscape Designs",
+                    "other": "Nice specimens of vine maple and California sunflower, island alum root dresses up a shady area near the front door.  Native vines decorate many fence sections.  Invasive pampass grass was recently replaced with native 'Canyon Prince' wild rye in a corner of the back garden.",
+                    "directions": "From Quimby and Capitol Expressway, go east to Ruby Avenue and turn left. Turn right on Knightswood Way which becomes Springbrook Avenue. Turn left on Creekmore.",
+                    "installer": "Earthcare Landscaping"
+                },
+                "name": "Creekmore Way Garden",
+                "location": {
+                    "latitude": 37.329720000000002,
+                    "streetAddress": "3125 Creekmore Way",
+                    "longitude": -121.775223
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 65,
+                    "yearInstalled": 2005,
+                    "wildlife": "Fresh water is provided by birdbaths; the food source includes berries, seeds, nectar and pollen; cover and shelter is abundant from the native trees and shrubs.  Regular visitors include birds, butterflies, bees and other insects.",
+                    "showcase": "This self-sustainable, habitat garden is a wonderful example of how to make a home garden diverse and interesting by introducing local native plants from the coastal sage scrub and oak woodland plant communities.  The garden is mostly native with the exception of a few fruit trees.",
+                    "sqft": 4560,
+                    "plantSale": "",
+                    "designer": "Agi Kehoe and homeowner",
+                    "other": "The focus of the front yard is a young coast live oak, planted next to a meandering path and surrounded by drought tolerant shrubs and perennials, such as coffeeberry, fuchsia-flowered gooseberry, hummingbird sage, manzanita and various bunch grasses.  The left side-strip features a dry creek bed, spotted with California rush, and a persimmon tree with prostrate form of coyote brush and black sage.  On the opposite side of the driveway, alkali saccaton mingles with California fuchsia.  In the sunny areas, towards the front door, white sage, Saint Catherine's lace buckwheat and mallow share the space with sulfur buckwheat, foothill penstemon and Idaho fescue.  The backyard is partially shaded on the left side by two mature Monterey pines which are under planted with coffeeberry, carpenteria, Douglas iris, California fescue, ferns, yerba buena and woodland strawberry.  A toyon hedge runs along the back fence towards a blue elderberry in the right corner.  Chaparral currant lines the west side fence, and in the mid section, a small red fescue meadow shares the space with a dark star ceanothus, and a California sunflower. ",
+                    "directions": "From Almaden Expressway, go west on Blossom Hill and turn left on Croydon.",
+                    "installer": "homeowner"
+                },
+                "name": "Croydon Avenue Garden",
+                "location": {
+                    "latitude": 37.243986999999997,
+                    "streetAddress": "5748 Croydon Ave",
+                    "longitude": -121.881388
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 39,
+                    "yearInstalled": 2007,
+                    "wildlife": "This garden provides a wealth of habitat for a variety of bees and butterflies.",
+                    "showcase": "This lovely garden is a good example of the creative use of space in a tiny ornamental yard adorning the designer's office space.  It beautifies the space while also serving as an example of the designer's work.",
+                    "sqft": 1800,
+                    "plantSale": "",
+                    "designer": "Stephanie Curtis, Curtis Horticulture",
+                    "other": "A wide perennial border outside the fence provides a hub of color and activity, showcasing sandhill sage, seaside daisy, golden aster, Idaho fescue, and penstemon.  Two deer grass flank the gate, while California pipevine twines along the fence.  Inside the fence, a lush red fescue meadow is bordered with yarrow, coyote mint, seaside daisy, golden aster, cliff buckwheat, and gumplant, transitioning to a dry creek populated with California gray rush, monkeyflowers, hummingbird sage, bush sunflower, Cedros Island verbena, and Channel Island tree poppy.",
+                    "directions": "From Hwy 87, take the W Julian St exit and proceed west on W Julian St.  Look for the garden on the left just before The Alameda.",
+                    "installer": "Stephanie Curtis, Curtis Horticulture"
+                },
+                "name": "Curtis Horticulture Demonstration Garden",
+                "location": {
+                    "latitude": 37.332962000000002,
+                    "streetAddress": "1034 W Julian St",
+                    "longitude": -121.910904
+                }
+            },
+            {
+                "city": "Alviso",
+                "infoArray": {
+                    "gardenNumber": 31,
+                    "yearInstalled": 1991,
+                    "wildlife": "A butterfly garden contains milkweeds, coffeeberry, and other host and nectar plants for monarchs, swallowtails, cabbage whites, and western pygmy blue butterflies.  Black phoebes, warblers, sparrows, and bushtits are drawn to the songbird garden.  Also common in the restoration area and demonstration garden are hawks, western fence lizards, jackrabbits, cottontails, gopher snakes, and grey foxes.  Information about gardening for wildlife is available in the Environmental Education Center.",
+                    "showcase": "This restoration research area provides a glimpse of rare upland plant communities.  While less than 1% of the Bay Area's natural uplands remain, the U.S. Fish and Wildlife Service is transforming this former dump into valuable upland habitat.  Work done in this restoration research area has led to advances in native plant propagation and seeding technology, natural weed control techniques, and understanding of native plant communities.\\n\\nThe site also includes a demonstration garden, which was created to augment the Refuge's restoration efforts by promoting native plant gardening in the community.  Support from community gardeners is needed to prevent further loss of upland plant and animal species.  Native plant gardens help rebuild the native seed bank, combat invasive weeds, support native pollinator populations, and provide additional habitat for wildlife.  This garden contains mature specimens of ceanothus, fuchsia-flowered gooseberry, pink flowering currant, buckwheat, toyon, and black sage in a naturalistic setting.  Among trees, look for California buckeye, western sycamore, Fremont cottonwood, coast live oak, and alder.",
+                    "sqft": 326000,
+                    "plantSale": "",
+                    "designer": "Community Volunteers",
+                    "other": "Look for the bioswale between the parking lot and the driveway.  Landscaped with rushes, sedges, and willows, it acts as a natural filtration system, mitigating the ecological impacts of the parking lot.\\n\\nOn weekends the Environmental Education Center exhibits and facilities are open to the public.  A 0.5 mile trail guides visitors through the upland restoration research area.  During the GNGT, staff will be available to answer questions about restoration and the demonstration garden.",
+                    "directions": "From 101, take 237 East; from 880/680, take 237 West. Exit at Zanker Road and go north towards the bay for approximately 2 miles, passing the Water Pollution Control plant, landfill, and railroad tracks. Watch for the large brown sign on the right reading Don Edwards SF Bay National Wildlife Refuge. Make a sharp RIGHT turn immediately after this sign and follow the access road to the EEC parking lot.",
+                    "installer": "Community Volunteers and USFWS"
+                },
+                "name": "Don Edwards SF Bay National Wildlife Refuge Native Plant Demonstration Gard",
+                "location": {
+                    "latitude": 37.430320399999999,
+                    "streetAddress": "1751 Grand Blvd",
+                    "longitude": -121.96557420000001
+                }
+            },
+            {
+                "city": "Palo Alto",
+                "infoArray": {
+                    "gardenNumber": 9,
+                    "yearInstalled": 1999,
+                    "wildlife": "This is a wildlife habitat garden.  Food, water, shelter and places to raise young are all present. Wild visitors include birds, small mammals, Pacific tree frogs, Western toads, snakes and bees.",
+                    "showcase": "The native vegetation along the historic San Francisquito Creek is gradually being restored by the members of the San Francisquito Watershed Council, with the aim to out compete the invasive exotic plants.",
+                    "sqft": 5000,
+                    "plantSale": "",
+                    "designer": "",
+                    "other": "A rich selection of mature and newly planted riparian plants can be found in the park, that is also home for the 1067 years old heritage El Palo Alto Redwood, after which the city of Palo Alto was named.  Native wildflowers mingle with different species of California Wild Lilac, Coffeeberry and Bunch Grasses at the park's entrance and put on a terrific show in spring.",
+                    "directions": "From Hwy 101 take the University Ave. exit heading west.  Avoid the downtown traffic by turning right on Middlefield Rd., left on Hawthorn Ave, right on Alma St. and right on Palo Alto Ave.  Parking is available on both sides of Palo Alto Ave.",
+                    "installer": ""
+                },
+                "name": "El Palo Alto Park",
+                "location": {
+                    "latitude": 37.446702000000002,
+                    "streetAddress": "Alma St. & Palo Alto Ave.",
+                    "longitude": -122.1690627
+                }
+            },
+            {
+                "city": "Monte Sereno",
+                "infoArray": {
+                    "gardenNumber": 61,
+                    "yearInstalled": 2007,
+                    "wildlife": "Nectar plants, berry-bearing shrubs, birdbath, and a brush pile attract many wildlife visitors including hummingbirds, jays, bumblebees and mockingbirds to this beautiful garden.",
+                    "showcase": "This stunning landscape showcases a hillside setting for several young black oaks under planted with a variety of native plants.  This garden is a wonderful example of spacing with mature size in mind without sacrificing garden beauty in its youth.  It also illustrates a successful hillside planting strategy that takes into account sun exposure and erosion prevention.",
+                    "sqft": 20000,
+                    "plantSale": "",
+                    "designer": "Stephanie Morris",
+                    "other": "Approaching the house, a prominently featured Dr. Hurd manzanita is surrounded by manzanita groundcover, deergrass, yarrow, California fuchsia, fescue, and artfully placed boulders.  Along a driveway of permeable Eco-stone pavers fuchsia, fescue, yarrow, and sedge plantings abound.  The rear garden is designed to attract birds.  Behind an existing screen of non-native shrubs, a new hedgerow of elderberries, toyons, wild lilacs, lemonade berries, and currants has been planted.  Once this is mature, the non-native shrubs will be removed and replaced with lower-growing natives.  Previously planted with non-native acacias, the western slope of the property is now graced with three young arbutus 'Marina' trees surrounded by wild lilac, currant, coyote brush, elderberry, and coffeeberry.",
+                    "directions": "From Highway 17, take Lark Avenue west. Turn left on Winchester Blvd. Turn left on El Rancho Ave.",
+                    "installer": "Manuel Ramos, C. Ramos Landscaping"
+                },
+                "name": "El Rancho Avenue Garden",
+                "location": {
+                    "latitude": 37.242238,
+                    "streetAddress": "17341 El Rancho Avenue",
+                    "longitude": -121.973354
+                }
+            },
+            {
+                "city": "Menlo Park",
+                "infoArray": {
+                    "gardenNumber": 7,
+                    "yearInstalled": 2007,
+                    "wildlife": "Bees, birds, and squirrels visit the garden and enjoy the pollinator-friendly plants such as the buckwheats, the seeds, and the bird bath.",
+                    "showcase": "Enchanting habitat garden offers lush plantings, meandering paths, bird bath, and a bench, all in front of the house, next to the driveway.",
+                    "sqft": 1000,
+                    "plantSale": "",
+                    "designer": "Sherri Osaka, Sustainable Landscape Designs",
+                    "other": "Where other gardens have lawn and a few boring shrubs, this one has meandering flagstone paths, mature shrubs for nesting birds, nectar-producing plants, and a bird bath. The fragrance of Salvia clevelandii follows the visitor coming up the driveway, while other plantings include coral bells, island snapdragon, manzanita, as well as buckwheats and grasses. The gardener can rest on a bench under the large front window and enjoy an alternate view of the garden. The parking strip includes a specimen Western redbud, buckwheats, and grasses. ",
+                    "directions": "1. From Page Mill and Foothill Expressway, take Foothill Expressway/ Junipero Serra Blvd North.\\n2. Turn right at Alpine Road\\n3. Continue onto Santa Cruz Avenue\\n4. Slight left at Alameda/ Alameda De Las Pulgas\\n5. Turn left at Oakley Avenue\\n6. Turn left at Altschul Avenue. The garden will be on your right.\\nPlease note that Altschul Avenue is a one-way street. ",
+                    "installer": "Cyprex Construction Landscapes"
+                },
+                "name": "Fauver Garden",
+                "location": {
+                    "latitude": 37.430976000000001,
+                    "streetAddress": "1175 Altschul Ave",
+                    "longitude": -122.205405
+                }
+            },
+            {
+                "city": "Palo Alto",
+                "infoArray": {
+                    "gardenNumber": 12,
+                    "yearInstalled": 2008,
+                    "wildlife": "The rich plantings invite pollinators and other critters. Several new oaks were planted in the parking strip and will provide additional habitat, shade, and shelter for the birds\\nthat visit the rich plantings.",
+                    "showcase": " Meandering paths and comfortable benches invite visitors\\nto linger and enjoy this professionally designed large garden, which includes different habitats, sun to shade under oaks.",
+                    "sqft": 13000,
+                    "plantSale": "",
+                    "designer": "Annaloy Nickum ",
+                    "other": "Many churches greet visitors with a large expanse of lawn. First Presbyterian is an exception with its large, professionally designed and installed garden.\\n\\nMounded planting beds, richly planted with a mix of evergreen and flowering natives, provide interest and draw attention to the church building on its large corner lot. Curving paths invite visitors to enjoy the large variety of native plants, and several benches encourage them to sit and gaze at the beauty or enjoy watching the bees that visit blooming ceanothus in the spring.\\n\\nThe sunny area includes salvias, monkeyflowers, and penstemon, while a shady area near a mature oak includes hummingbird sage and native iris. Some already existing plants blend well with the new natives. Several new oaks were planted in the parking strip and will provide additional habitat, shade, and shelter for the birds that visit the rich plantings.",
+                    "directions": "1. From Page Mill / Oregon Expressway and Alma Street, take Alma Street North\\n2. Turn right onto Lincoln Avenue (Right after crossing the Embarcadero Road overpass)\\n3. Turn right at Cowper. The garden will be on your right. \\nThere is a large parking lot off Lincoln before Cowper.  A path that begins in the parking lot goes through the garden.",
+                    "installer": "Ernesto Ramirez"
+                },
+                "name": "First Presbyterian Church/Lincoln Garden\\n",
+                "location": {
+                    "latitude": 37.442881999999997,
+                    "streetAddress": "1140 Cowper St",
+                    "longitude": -122.151445
+                }
+            },
+            {
+                "city": "Mountain View",
+                "infoArray": {
+                    "gardenNumber": 22,
+                    "yearInstalled": 2003,
+                    "wildlife": "Many birds, butterflies, and native bees live in and visit this garden.  Lizards come out in the summer and salamanders enjoy the redwood habitat during the rainy season. The solar-powered fountains are a special attraction for humans and critters alike.",
+                    "showcase": "This peaceful garden invites people and animals to enjoy nature through the changing seasons.  The garden includes a redwood habitat, Mediterranean mounds, and fruit trees.  In 2008, the owner remodeled the front garden, which is now almost 100% native.",
+                    "sqft": 10000,
+                    "plantSale": "On tour day, Gold Rush Nursery will conduct a plant sale at this garden.  A portion of the proceeds will benefit the Going Native Garden Tour.  Please pay with cash or check.",
+                    "designer": "Chris Todd (back)",
+                    "other": "Garden designer Chris Todd helped garden owners plan the replacement of a pool and thirsty lawn.  Instead, they now enjoy colorful, drought-tolerant perennials and a plaza with a hammock.  Benches invite garden visitors to sit and watch the birds and butterflies that enjoy the plants and water sources.  There's a surprise in the garden every day.\\n\\nThe garden owner is Town Mouse in the popular native gardening blog Town Mouse and Country Mouse (http://www.tmousecmouse.blogspot.com).",
+                    "directions": "From Highway 85, take El Camino Real south (towards Sunnyvale), turn left onto Sylvan Avenue and left on Foxborough.",
+                    "installer": "Dale van Doren (front and back)"
+                },
+                "name": "Foxborough Garden",
+                "location": {
+                    "latitude": 37.383957000000002,
+                    "streetAddress": "369 Foxborough Drive",
+                    "longitude": -122.061723
+                }
+            },
+            {
+                "city": "Palo Alto",
+                "infoArray": {
+                    "gardenNumber": 19,
+                    "yearInstalled": 2006,
+                    "wildlife": "The owner provides bee blocks, bird houses, and bird baths in the back yard.  As the front yard plants mature, habitat value will increase.",
+                    "showcase": "This attractive, four-year-old front yard garden was designed and installed by the owner, a Master Gardener, who propagates plants in her small back-yard greenhouse.  A central mound provides a focal point for the garden; access is via a well-constructed flagstone path.",
+                    "sqft": 1500,
+                    "plantSale": "",
+                    "designer": "Homeowner",
+                    "other": "Several varieties of ceanothus, manzanita, and salvia grace this lovely garden, along with asters, penstemons, coyote mint, verbena, coast buckwheat, pink-flowering currant, and western redbud.  Native wildflowers peak in March (see pictures), but many will still be blooming at tour time.  All native plants are labeled and several books about CA native plants will be available for perusal.  A printed plant list will also be available to those interested.  Garden owner will also permit tours of her back yard edible garden that includes fruit trees, berry bushes, a large vegetable garden and friendly chickens.  Challenge: several existing non-native birches and a redwood tree in the native garden have high water requirements, and may ultimately prove incompatible with the chapparal species planted nearby.",
+                    "directions": "From Hwy 101, take San Antonio Rd south, then turn right on Charleston and right on Middlefield",
+                    "installer": "Homeowner"
+                },
+                "name": "Front Yard Natives on Middlefield",
+                "location": {
+                    "latitude": 37.422052000000001,
+                    "streetAddress": "3833 Middlefield Rd",
+                    "longitude": -122.111338
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 50,
+                    "yearInstalled": 1971,
+                    "wildlife": "This is a wildlife habitat garden.  The ponds contain crayfish and attract ducks who visit each year.  The redwoods attract Cooper's Hawks.",
+                    "showcase": "Within its confines, the Outdoor Classroom showcases the native plant communities of the Santa Clara Valley and surrounding foothills.  Paths wind through giant 35 year old redwoods, an oak woodland, and chaparral.  On workdays after a morning of pulling weeds, children can catch crayfish in the ponds in the riparian zone.  These two ponds, connecting stream, and riparian habitat represent Santa Clara Valley's Guadalupe River watershed.",
+                    "sqft": 43560,
+                    "plantSale": "",
+                    "designer": "",
+                    "other": "Many classes at Hacienda have a garden where they can grow the plants of their choice.  Some garden beds are located in the Outdoor Classroom.  Others are situated near the classrooms.  The Outdoor Classroom include: a butterfly caterpillar food bed with milkweed and anise, a scent garden with plants with various interesting herbs, an adult butterfly bed with plants that attract butterflies, and the first grade erosion experiment.  Also look for: passion flower vine, where the gulf fritillary butterfly lays its eggs, native plantain, pomegranate and lime trees, compost and worm bins.\\n",
+                    "directions": "From Hillsdale Avenue between Almaden and Booksin, go south on Vistamont to Rodney.",
+                    "installer": ""
+                },
+                "name": "Hacienda School Garden",
+                "location": {
+                    "latitude": 37.269700899999997,
+                    "streetAddress": "1290 Kimberly Dr",
+                    "longitude": -121.88389840000001
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 62,
+                    "yearInstalled": 2008,
+                    "wildlife": "The variety of native plants provide food and shelter for many birds, insects and small mammals. The yard attracts a variety of bee and butterfly species, and is adored by hummingbirds",
+                    "showcase": "This professionally designed, mostly native garden utilizes native groundcover shrubs and perennials to create an eye-catching tapestry of textures and colors in the front yard.",
+                    "sqft": 1600,
+                    "plantSale": "On tour day, Yerba Buena Nursery will conduct a plant sale at this garden.  A portion of the proceeds will benefit the Going Native Garden Tour.  Please pay with cash or check.",
+                    "designer": "Annaloy Nickum",
+                    "other": "Coffeeberry and evergreen currant are used as effective foundation shrubs at the shady front entrance.  The front pathway is lined with groupings of Idaho fescue bunchgrasses.  The verbena and sage (especially) give the garden a summer-long sweet-spicy scent that works like aromatherapy every time you approach the front door.  Under the canopy of the exotic city trees (ginkgo and Chinese pistache), the front yard is covered with Yankee Point ceanothus, lilac verbena, and sandhill sage.  The groundcovers are accented by western redbud, golden currant, purple sage, Sentinel manzanita, penstemon and woolly blue curls.  The back garden features a young blue oak.  The shade of a mature Bradford Pear provides a nice habitat for giant western chain fern, snowberry and alum root.  Pink-flowering currant, coffeeberry, and island snapdragon bush decorate the beds along the back fence.  The owners also cultivate a small vegetable bed",
+                    "directions": "From Hwy 85, take the Bascom Ave exit and proceed north on Bascom Ave.  Turn right on White Oaks Ave, then after a few blocks turn right again on Halkins Dr.",
+                    "installer": "Homeowner"
+                },
+                "name": "Halkins Drive Garden",
+                "location": {
+                    "latitude": 37.255029999999998,
+                    "streetAddress": "4020 Halkins Dr",
+                    "longitude": -121.943371
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 43,
+                    "yearInstalled": 2009,
+                    "wildlife": "Finches, hummingbirds, bees, butterflies, wasps,and salamanders visit the yard.",
+                    "showcase": "Replacing a lawn under a mature native walnut, this homeowner designed and installed garden uses berms to provide a hospitable environment for native plants.",
+                    "sqft": 1000,
+                    "plantSale": "",
+                    "designer": "Homeowners",
+                    "other": "A beautiful fence separates this front-yard garden from the street.  The old lawn was sheet-mulched to smother it, then dirt was re-used from installation of paths in the back yard to create a raised planting area on top of the mulch.  The garden is planted with a mix of native shrubs and perennials and wildflowers.  Just finishing its first full year, the garden shows how homeowners can sustainably replace a lawn on a budget.\\nThe homeowners are also avid food gardeners.  Their backyard, while officially not part of the tour, is an urban farm containing a vegetable garden, chicken coop, a permaculture herb spiral and several fruit trees.  There's also a small native meadow, a butterfly/hummingbird garden and several fountains. \\n",
+                    "directions": "From I-880, take the exit toward W San Carlos St. Merge onto Stevens Creek Blvd. Turn right at S Bascom Ave, then left at Scott St. From Scott, take the 2nd right onto Arleta Ave. The house is a short distance ahead on the left.",
+                    "installer": "Homeowners"
+                },
+                "name": "J&J's Burbank Garden",
+                "location": {
+                    "latitude": 37.318976900000003,
+                    "streetAddress": "524 Arleta Ave",
+                    "longitude": -121.929434
+                }
+            },
+            {
+                "city": "Sunnyvale",
+                "infoArray": {
+                    "gardenNumber": 24,
+                    "yearInstalled": 1995,
+                    "wildlife": "The garden is certified by the National Wildlife Federation as a wildlife habitat and attracts many kinds of birds, insects, small mammals and lizards.",
+                    "showcase": "This small suburban lot is a bit of native paradise nestled among the old, conventional style landscapes of the surrounding neighborhood.  The large lawns and neatly sheered exotic shrubs were replaced with a wildflower meadow in the front and colorful flowerbeds in the back.  A large collection of natives can be found in containers as well.",
+                    "sqft": 5000,
+                    "plantSale": "",
+                    "designer": "Agi Kehoe",
+                    "other": "Unique garden art and paintings by Roan Victor and Jana Morgan are showcased throughout the entire property.  The front garden features a wildflower/bunch grass meadow with two western redbuds and a Ray Hartman ceanothus, and is highlighted in spring by blue flax, California poppy, Douglas iris, seaside daisy, checkerbloom, California buttercup, single leaf onion, and other annual and perennial wildflowers.  Summer-blooming hummingbird fuchsia flanks the front pathway.  Purple needlegrass is the unifying component of the meadow, while deergrass provides architectural accents.  The large, brick planter by the house is graced with shade-loving plants from the redwood and riparian communities, including ferns, redwood sorrel, wild ginger, woodland strawberry, western azalea, spice bush, salal, and vine maple.   An evergreen huckleberry seems quite at home in a recycled utility sink-turned-planter.  Other unusual natives at the small, north side yard include a climbing wild cucumber and piggyback plant.\\n\\nThe garden gate to the back yard opens to a comfortable patio with a wall fountain and many potted natives.  The garden path was recently updated with mariposa slate decorated by la paz gravel, and it meanders through a woodland and a coastal scrub area.  A wooden bench under the rare, Santa Cruz Cypress, offers a cool spot with a view to a solar-powered urn fountain, favored by hummingbirds and pheobes.  Pacific wax myrtle was planted for a tall privacy screen and provides shade for woodland shrubs and perennials, including snowberry, creek dogwood, ocean spray, pink-flowering currant, western columbine, hummingbird sage, coastal wood fern, woodland sanicle, fringe cups, coral bells, yerba buena, false solomon's seal, and elk clover.   At the west side fence, a carpenteria trio with a western hawthorn overlooks a large copper birdbath that is surrounded by riparian perennials, including golden-eyed grass, iris-leaved rush, California gray rush, and scarlet monkeyflower.",
+                    "directions": "From Highway 101 take the Mathilda Ave. exit heading south; turn left on Maude, right on Sunnyvale and left on Hazelton.",
+                    "installer": "Agi Kehoe and Benz Godinez"
+                },
+                "name": "Kehoe Demonstration Garden",
+                "location": {
+                    "latitude": 37.385522999999999,
+                    "streetAddress": "224 Hazelton Ave",
+                    "longitude": -122.02521400000001
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 53,
+                    "yearInstalled": 2001,
+                    "wildlife": "95% native content, many shrubs, wildflowers allowed to go to seed, leaf duff, bird baths, and many years of being chemical-free make this a safe and welcoming environment for critters.  Since landscaping with native plants, an increase in the number and diversity of birds and insects has been observed.  Among the regular visitors: Anna's hummingbirds, towhees, bushtits, yellow-rumped warblers, mockingbirds, doves, house finches, buckeye butterflies, ladybugs, syrphid flies, yellow jackets, grasshoppers, and crickets.",
+                    "showcase": "This garden demonstrates how a native landscape can enliven a standard tract home lot.  This garden is 95% native with an emphasis on locally native plants.  Of particular interest are locally collected specimens of coffeeberry, chaparral clematis, mugwort, valley oak, and coast live oak.  Plantings are labeled.  The garden design is tweaked endlessly by the owners.",
+                    "sqft": 2500,
+                    "plantSale": "",
+                    "designer": "Henry Mink (2001), Jeffrey Caldwell and Tanya Kucak (2002), Agi Kehoe (2006",
+                    "other": "Bigberry manzanita, golden currant, coyote brush, blue elderberry, black sage, purple sage, hummingbird sage, California grape, checkerbloom, yarrow, Douglas iris, pine bluegrass.  Annuals include clarkias, poppies, and meadowfoam. Look for native bulbs such as one-leaved onion, Ithuriel's spear, prettyface, California brodiaea, and mariposa lily.  Sustainable living features: 3KW photovoltaic panels, two compost bins, breeze-catcher clothesline.",
+                    "directions": "From Hwy 101 take the Tully Rd. exit and head east. Turn right on Glen Angus, an immediate left on Glen Alden and then right on Glen Haig. Take 4th left into Glen Craig.  Parking is available on Glen Haig. ",
+                    "installer": "Homeowner"
+                },
+                "name": "Kumar and Jethanandani Garden",
+                "location": {
+                    "latitude": 37.331280999999997,
+                    "streetAddress": "2927 Glen Craig Court",
+                    "longitude": -121.800156
+                }
+            },
+            {
+                "city": "Belmont",
+                "infoArray": {
+                    "gardenNumber": 2,
+                    "yearInstalled": 2002,
+                    "wildlife": "Natural plants, bird feeders and a bird path provides food, water and shelter for the birds.  The owner provides some nesting boxes, and the coast live oak in the back yard also supports nesting.  Owner's statement: I love feeding the wild birds and wanted a garden that would attract them to the yard.  The new garden has attracted several new species of birds to the yard.  Last spring, we had three different birds raise their fledglings in the yard, including a hummingbird just in view of the window.",
+                    "showcase": "This front yard garden shows an excellent example of using 'Anchor Bay' wild lilac and dwarf coyote brush as a lovely, drought tolerant ground cover instead of a thirsty lawn.",
+                    "sqft": 6400,
+                    "plantSale": "",
+                    "designer": "Fran Adams, A Sense of Place",
+                    "other": "Other, nicely displayed native specimens include white chaparral currant, Dr. Hurd manzanita, Douglas iris, wild California grape and Catalina perfume.  A Howard McMinn manzanita hedge borders the property.",
+                    "directions": "Take Ralston Avenue east from Highway 92 and turn right on Lassen. Go one block to corner of Yosemite and Lassen",
+                    "installer": ""
+                },
+                "name": "Lassen Drive Garden",
+                "location": {
+                    "latitude": 37.510928,
+                    "streetAddress": "1009 Lassen Dr",
+                    "longitude": -122.31774900000001
+                }
+            },
+            {
+                "city": "Palo Alto",
+                "infoArray": {
+                    "gardenNumber": 11,
+                    "yearInstalled": 2007,
+                    "wildlife": "The wide variety of plant choices, available shelter, and several small birdbaths attract many insects and birds throughout the day and evening.",
+                    "showcase": "What started as a reduction of the backyard lawn became a full property transformation to a nearly 100% native plant garden. A large front yard lawn has been replaced by a semiprivate patio and small seating area surrounded by native grasses, a wildflower meadow (annuals and perennials), and mounded planting beds. A meditation labyrinth surrounded by beds of water-wise native plantings has replaced the backyard lawn.",
+                    "sqft": 15000,
+                    "plantSale": "On tour day, Native Revival Nursery will conduct a plant sale at this garden.  A portion of the proceeds will benefit the Going Native Garden Tour.  Please pay with cash or check.",
+                    "designer": "Peigi Duvall, Indig Design",
+                    "other": " A large redwood at the front patio provides shade for yerba buena, ferns, and wild ginger. The parking strip and long side driveway display native irises, rushes, currants and manzanita while a stacked stone planter box just outside the back kitchen door supports vegetables and herbs all year. A large, heritage oak shades half of the backyard and protects snowberry, Catalina perfume, and ferns from the hot summer sun. The sunny side of the back yard, including the pool area, provides just the right environment for Penstemon, fragrant sage, deer grass, and purple needle grass.\\n\\nOther plants throughout the property include redbud, vine maple, barberry, aster, currant, California wax myrtle, Ceanothus, twinberry, dune tansy, California buckwheat, red-twig dogwood, California hemp, Monkeyflower savory, and coyote mint. The design intent has been to use native plants and new hardscape to translate the original formal setting to a California contemporary cottage garden.",
+                    "directions": "From Hwy 101, take the Embarcadero Rd exit and proceed west on Embarcadero Rd.  Turn right on Middlefield Rd, and then left on Lincoln Ave.  Look for the garden to your right in the second block on Lincoln Ave ",
+                    "installer": "Rivera Landscaping"
+                },
+                "name": "Lincoln Avenue Garden",
+                "location": {
+                    "latitude": 37.444453000000003,
+                    "streetAddress": "539 Lincoln Ave",
+                    "longitude": -122.15146
+                }
+            },
+            {
+                "city": "Palo Alto",
+                "infoArray": {
+                    "gardenNumber": 13,
+                    "yearInstalled": 2004,
+                    "wildlife": "Butterflies, bees, lady beetles, squirrels, and many types of birds, regularly visit the garden.  Food sources for beneficial insects are provided as part of the garden's IPM methods.",
+                    "showcase": "Designed, installed and maintained by the UCCE Master Gardeners of Santa Clara County the water-wise garden showcases plants and cultural techniques for summer dry gardening.  The garden strategy is to be as thrifty as possible with water, plant nutrients, and gardener labor, while striving to be an attractive and colorful ornamental garden all year round.",
+                    "sqft": 25000,
+                    "plantSale": "",
+                    "designer": "UCCE Master Gardeners",
+                    "other": "The garden is a place for the public to see low-water consuming plants used in an attractive ornamental landscape.  The garden is planted with a mix of California native and Mediterranean-climate plants.  Plants growing in the garden include manzanita, coffeeberry, ceanothus, yarrow, California fuchsia and sage.  Both shade loving and sun loving natives are growing in the garden.  Winding paths through the garden allow visitors to easily view the plants in the different beds.\\n\\nOne goal is to evaluate new plants for suitability in our climate.  We always are trying out new plants, come see what's new and unusal.\\n\\nThe garden is a good place to learn about low-water-use irrigation.  Several types of low-flow irrigation systems have been installed in the garden and their reliability and effectiveness have been evaluated.\\n\\nAdjacent to the water-wise garden is a second garden featuring international-themed beds that showcase unusal varieties of vegatables intermixed with beautiful flowers. A high-density fruit tree orchard and espaliered apples and pear trees are also on display.\\n\\nUCCE Master Gardeners will be present during the tour to answer any horticulural questions you may have.",
+                    "directions": "From 101, take Embarcadero exit toward Stanford. Turn right on Newell, left on Channing and right on Center to Martin. Walk down the gravel road through the trees.",
+                    "installer": "UCCE Master Gardeners"
+                },
+                "name": "Master Gardeners Demo Garden",
+                "location": {
+                    "latitude": 37.449065400000002,
+                    "streetAddress": "851 Center Dr",
+                    "longitude": -122.1431846
+                }
+            },
+            {
+                "city": "Santa Clara",
+                "infoArray": {
+                    "gardenNumber": 36,
+                    "yearInstalled": 2007,
+                    "wildlife": "The garden was designed to provide food, shelter and places to raise young. The circulating fountain in the back yard offers fresh water.",
+                    "showcase": "This professionally designed garden is restoration inspired and features plants mostly from the oak woodland plant community that once used to exist in this area. Special attention was paid to include many local plants.",
+                    "sqft": 2500,
+                    "plantSale": "",
+                    "designer": "Agi Kehoe",
+                    "other": "In the front yard, Idaho and California fescue grassland with annual and perennial wildflowers are mingling under a coast live oak, a valley oak, a blue elderberry and a California buckeye. For added color and texture, the garden is edged with a combination of bee's bliss sage, dwarf coyote brush and California fuchsia. Additional accents are provided by carpenteria, pink-flowering currant, snowberry, coast silk tassel, toyon and a Dr. Hurd manzanita. An ornamental, meandering dry creek helps to drain some of the storm water runoff. The existing front pathway and the driveway have been resurfaced, and a Chinese pistach and a Japanese maple were retained from the previous landscaping.\\n\\nIn the back yard, the concrete paths and part of the existing patio were broken up and recycled into a permeable hardscaping that extends to the side of the house. In the heart of the garden is an oval-shaped red fescue meadow with a bubbling fountain which can be enjoyed from the patio as well as from the seating wall on the opposite side. The native plants here mingle with raised vegetable beds--built from recycled lumber--and a lemon. Along the back fence, colorful spring accents will be provided by a western redbud and a Ray Hartman ceanothus, while a California wild grape will do the job in the fall. At the west side of the house, holly-leaf cherry will provide privacy and shade from the hot sun. The homeowners are exceptionally eco-minded; they installed solar panels on the roof top, use a rain sensor, a worm compost bin, grow their own organic produce and drive a hybrid vehicle! ",
+                    "directions": "From Hwy 280, take Saratoga Ave north to San Tomas Expy. Turn left on San Tomas Expy, then the first left on Pruneridge, and then the first right on Tanoak Dr.  Proceed about 4 blocks on Tanoak Dr and look for the garden on the right.",
+                    "installer": "Benz Godinez"
+                },
+                "name": "Matt & Val's Native Garden",
+                "location": {
+                    "latitude": 37.332217999999997,
+                    "streetAddress": "471 Tanoak Dr",
+                    "longitude": -121.96922499999999
+                }
+            },
+            {
+                "city": "Portola Valley",
+                "infoArray": {
+                    "gardenNumber": 4,
+                    "yearInstalled": 1996,
+                    "wildlife": "This is a habitat garden and is visited by rabbits, deer, coyotes, bobcats, many kinds of birds and insects, gopher snakes, frogs, woodrats and squirrels.",
+                    "showcase": "This spacious property borders on open space and is nestled against a backdrop of graceful coast live oaks, monterey pines and coast redwoods.  About half of the property is under cultivation and includes an unusually large variety of native species. The homeowners are knowledgeable gardeners who welcome local wildlife into their unfenced garden.",
+                    "sqft": 48800,
+                    "plantSale": "",
+                    "designer": "",
+                    "other": "Mediterranean plants share the space with natives in the entrance garden.  The wild areas on the hillsides includes native bulbs, needlegrasses, toyon, coffeeberry, manzanita, ceanothus, pitcher sage, coyote brush, chamise, poison oak, hillside gooseberry, sticky monkeyflower, blue elderberry and yerba buena.  The back garden has many more surprises, where exotic and native succulents, sages, snowberry, coast silk tassel, matilija poppy, oceanspray, bush anemone and California goldenrod mingle in rock garden beds. Gravel paths meander through the beds and along the outskirts of the garden, where planted merge seamlessly into the surrounding natural landscape.",
+                    "directions": "From Hwy 280 take the Alpine Road exit heading towards Portola Valley.  Turn right on Golden Oak Drive and right on Minoca Road. Please do not park in driveway.",
+                    "installer": ""
+                },
+                "name": "Maxwell/Hanrahan Garden",
+                "location": {
+                    "latitude": 37.386389999999999,
+                    "streetAddress": "40 Minoca Road",
+                    "longitude": -122.19687399999999
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 67,
+                    "yearInstalled": 2006,
+                    "wildlife": "A variety of native trees, shrubs and flowering plants attract 'hummers and other birds, small pollinators of all kinds, our dog, the cats she chases, and the squirrels who duck'.",
+                    "showcase": "This attractive garden features a variety of colorful natives including native edibles and an organic vegetable garden.",
+                    "sqft": 4160,
+                    "plantSale": "",
+                    "designer": "Alrie Middlebrook, Middlebrook Gardens",
+                    "other": "Sculpted berms add visual interest and provide the appropriate slope for plantings of wild lilac, coyote brush, sage, buckwheat, manzanita, coffeeberry, toyon, California fuchsia, penstemon, and woolly blue curls.  A wildflower meadow features several varieties of California poppy set among plantings of purple needlegrass, deergrass, and a young live oak. Juncus, bush anemone, dudleyas, and other coastal natives line the walkway to the front door and provide a good example of how to attractively plant narrow garden beds.\\n\\nA young valley oak, underplanted with woodland strawberry, graces the back garden. Juncus, toyon, yarrow, holly-leafed cherry, and herb gardens border a dry creek bed that flows towards a rebuilt patio of paving stones set in sand.  The small sports turf area, made from recycled materials, is an interesting lawn alternative.",
+                    "directions": "From Hwy 85, take the Cottle Road exit. Go south on Cottle Road. Turn left on Santa Teresa Blvd. Turn right on Vineyard Drive. Turn left on Moselle Drive. Turn right on Moselle Court.",
+                    "installer": "Middlebrook Gardens"
+                },
+                "name": "Moselle Court Garden",
+                "location": {
+                    "latitude": 37.227752000000002,
+                    "streetAddress": "241 Moselle Ct.",
+                    "longitude": -121.785573
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 45,
+                    "yearInstalled": 2008,
+                    "wildlife": "Native plants provide food and shelter for birds and insects.",
+                    "showcase": "Charming, family-friendly garden that integrates native plants, common and unique edibles and sustainable gardening practices.",
+                    "sqft": 3000,
+                    "plantSale": "",
+                    "designer": "Alrie Middlebrook, Middlebrook Gardens",
+                    "other": "The front yard features a small Idaho fescue lawn surrounded by native plants, including bush poppy and white and blue-flowered ceanothus, and permeable paving.  The driveway was cut back to make narrow beds on either side that are planted with native huckleberry and gooseberries and espalier fruit trees.  This area is watered by low-tech graywater irrigation: bringing out basins of dishwater. The back yard has a chicken coop made with recycled materials and a zip line above raised beds of native plants and vegetables. In a narrow side yard Western blue elderberry is used for screening and to provide summer shade. Arroyo willow, along with a grapevine, is being trained to shade a sitting area.",
+                    "directions": "From I-280 in San Jose, exit onto Bird Ave south. Go about 0.3 miles and turn right onto Riverside Dr. The house is on the right on the third block.",
+                    "installer": "Middlebrook Gardens"
+                },
+                "name": "Native and Edibles Paradise",
+                "location": {
+                    "latitude": 37.317273,
+                    "streetAddress": "715 Riverside Dr",
+                    "longitude": -121.900302
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 47,
+                    "yearInstalled": 2007,
+                    "wildlife": "Hummingbirds, woodpeckers, mourning doves, chickadees, songbirds, geckos, and squirrels find food, water, and shelter here.",
+                    "showcase": "This professionally-designed large front yard garden features several mature redwood trees with a meandering dry creek bed.",
+                    "sqft": 3500,
+                    "plantSale": "",
+                    "designer": "Alrie Middlebrook, Middlebrook Gardens",
+                    "other": "This redwood understory has been planted with a variety of plants, including redwood sorrel, columbine, and a small meadow.  Moving into the sunnier areas you will find ceanothus, coyote brush, pitcher sage, and Oregon grape.  A dry creek planted with rushes meanders through.  Near the front door and side fence line are alum root, monkeyflowers, Douglas iris, ninebark, and pink-flowering currant.  A sunny corner at the back showcases California fuchsia, western redbud, and matilija poppy.",
+                    "directions": "From Hwy 280, take Meridian Ave south to Minnesota Ave. Turn left on Minnesota, then proceed to Iris Ct.  Turn right on Iris Ct, then left at the T onto Nevada Ave.  The house is on the right.",
+                    "installer": "Middlebrook Gardens"
+                },
+                "name": "Nevada Avenue Garden",
+                "location": {
+                    "latitude": 37.300809999999998,
+                    "streetAddress": "1114 Nevada Avenue",
+                    "longitude": -121.89614899999999
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 41,
+                    "yearInstalled": 2006,
+                    "wildlife": "Hummingbirds, bush tits, mockingbirds, robins, finches, doves, phoebes, cedar waxwings, honeybees, bumblebees, butterflies, ladybugs, and possum visit the garden, which provides food, water, and shelter.",
+                    "showcase": "This lovely back-yard retreat features many sustainable elements while giving a charming sanctuary feel to this small urban space.",
+                    "sqft": 1560,
+                    "plantSale": "",
+                    "designer": "Alrie Middlebrook, Middlebrook Gardens",
+                    "other": "A flagstone path meanders through the garden, over a dry creek, past a small dune sedge meadow dotted with rushes, to a lovely pot fountain at the back.  Shrubs along the fence-line include toyon, wax myrtle, chaparral currant, and bush anemone.  A sunny area along the driveway is populated with a large bush sunflower, California fuchsia, buckwheats, ceanothus, California wild rose, Cleveland sage, Cedros Island verbena, penstemons, and monkeyflowers.  The fence along the driveway is planted with California grape, and a Catalina ironwood is tucked into the corner of the drive near the garage at the back. Sustainable features in this garden include a Trex deck, downspouts directed into the dry creek, and a pervious driveway of alternativing gravel and pavers.",
+                    "directions": "From Hwy 280 South take Hwy 87 North and exit at Taylor St.  Turn right onto Taylor, right onto 9th St, and look for the garden on your right shortly after crossing Empire St.",
+                    "installer": "Middlebrook Gardens"
+                },
+                "name": "Ninth Street Garden",
+                "location": {
+                    "latitude": 37.348390000000002,
+                    "streetAddress": "487 N 9th Street",
+                    "longitude": -121.888488
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 46,
+                    "yearInstalled": 2009,
+                    "wildlife": "The garden invites many species of birds, bees and other insects and arboreal salamander.",
+                    "showcase": "This is a professionally designed front yard featuring elegant swaths of California buckwheat, Yankee Point ceanothus, and Howard McMinn manzanita, accented by Saint Catherine's lace buckwheat, pitcher sage, deer grass and dudleyas.",
+                    "sqft": 3350,
+                    "plantSale": "",
+                    "designer": "Sherri Osaka, Sustainable Landscape Designs",
+                    "other": "A striking, mature specimen of toyon, accompanied by sulfur, California and rosy buckwheats, tansy leaved phacelia, and Douglas iris, graces a mound next to the driveway.",
+                    "directions": "From Hwy 17, head east on Hamilton Ave. Pass Leigh Ave., then first left into Norman Ave.",
+                    "installer": "Earth Care Landscaping"
+                },
+                "name": "Norman Avenue Garden",
+                "location": {
+                    "latitude": 37.296239,
+                    "streetAddress": "1568 Norman Ave",
+                    "longitude": -121.920602
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 44,
+                    "yearInstalled": 2008,
+                    "wildlife": "To attract wildlife plants are allowed to set seed after flowering.  The garden also provides water and shrubs for shelter.  Hummingbirds, songbirds, butterflies, bees and other flying insects all visit the garden.",
+                    "showcase": "Artfully chosen native plants complement striking designer house colors for a powerful visual effect.",
+                    "sqft": 1760,
+                    "plantSale": "",
+                    "designer": "Alrie Middlebrook, Middlebrook Gardens",
+                    "other": "A dry creek bed accented with blue-green wild rye leads the eye to a small water feature near the front door, planted with cattails.   Extensive berming provides a hospitable environment for many native shrubs and perennials, including manzanita, salvia, ceanothus, deergrass, buckwheats, coffeeberry and saltbush. Wild grapes grow on a low fence, and California live oaks shade the parking strip.",
+                    "directions": "From I-280 in San Jose, exit onto Bird Ave south. Go about 0.3 miles and turn right onto Riverside Dr. The house is on the right on the third block.",
+                    "installer": "Middlebrook Gardens"
+                },
+                "name": "Palm Haven Garden",
+                "location": {
+                    "latitude": 37.317276999999997,
+                    "streetAddress": "721 Riverside Dr",
+                    "longitude": -121.90047199999999
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 56,
+                    "yearInstalled": 2009,
+                    "wildlife": "Hummingbirds, butterflies and bees are frequent visitors with the abundant food and shelter in this garden.",
+                    "showcase": "The focus of the front garden is a mound with ceanothus and native sage surrounding a Western redbud grown as a standard single trunk tree.",
+                    "sqft": 1100,
+                    "plantSale": "",
+                    "designer": "Curtis Horticulture",
+                    "other": "You won't believe this native garden replaced a dead lawn less than a year ago! A permeable flagstone path meanders among native shrubs, grasses and perennials including manzanita, California rush, Idaho fescue, island snapdragon, buckwheats, blue-eyed grass, and island alumroot.  A Ray Hartman ceanothus standard marks the porch corner. A California live oak will provide shade for the parking strip as the garden develops. ",
+                    "directions": "From Hwy 101, take Yerba Buena Rd. East. Continue for about 2.5 miles and take right turn into San Felipe Rd. After about 0.5 miles, turn left at Autumn Estates, then first right into Willow Estates.",
+                    "installer": "Curtis Horticulture"
+                },
+                "name": "Perry Garden",
+                "location": {
+                    "latitude": 37.294235899999997,
+                    "streetAddress": "5144 Willow Estates",
+                    "longitude": -121.7656394
+                }
+            },
+            {
+                "city": "Los Altos Hills",
+                "infoArray": {
+                    "gardenNumber": 20,
+                    "yearInstalled": 2007,
+                    "wildlife": "",
+                    "showcase": "Beautifully designed and maintained demonstration garden includes attactive all-native plantings, a water fountain for humans, dogs, and horses, and informational signs and handouts.",
+                    "sqft": 3500,
+                    "plantSale": "",
+                    "designer": "Stephanie Morris",
+                    "other": "Even garden tour participants who usually skip public gardens might consider making an exception for this stunning, generously sized garden featuring dry stream beds, mature oaks, and many different natives.  Healthy woodland strawberry groundcover, blooming California lilac, and manzanita, toyon, Western redbud, coffeeberry, and other natives provide color and wildlife value year round. \\n\\nCrushed stone paths allow rainwater to remain onsite, and the highly efficient inline drip system also conserves water. A small mounded area uses micro-spray in conjunction with the inline drip lines to illustrate the feasibility of that combination. A full-color 4-page flyer that includes a plant list, layout plan, and photos of the most notable plants will be available on tour day. See www.nativeplantdesign.com/PURdemo.htm for some additional information.",
+                    "directions": "1. From 280 and Foothill Expressway, take Foothill Expressway North. \\n2. Turn left at Edith. \\n3. Turn right at W. Fremont Road. \\n4. Turn right to stay on W. Freemont Road. \\n5. The Water District garden and building will be on your right, followed by a parking lot and then other city buildings. ",
+                    "installer": ""
+                },
+                "name": "Purissima Hills Water District Demonstration Garden\\n",
+                "location": {
+                    "latitude": 37.383854900000003,
+                    "streetAddress": "26375 Fremont Rd",
+                    "longitude": -122.1382732
+                }
+            },
+            {
+                "city": "Sunnyvale",
+                "infoArray": {
+                    "gardenNumber": 25,
+                    "yearInstalled": 2009,
+                    "wildlife": "This garden provides water, food, and shelter which will attract wildlife as the plants mature.",
+                    "showcase": "This professionally designed, recently planted garden features a naturalistic native lawn in the front yard, with an inviting circular stone seating area.  To the left is a large grouping of western redbuds with toyon as a privacy screen.  Espaliered fruit trees and Berkeley sedge adorn the right.\\n",
+                    "sqft": 6000,
+                    "plantSale": "",
+                    "designer": "EcoCentric Design",
+                    "other": "The back yard has a large urbanite area planted with thyme, a flagstone patio with large pot fountain, and a large potted matilija poppy.  Gravel and river rock are used creatively to detail the patio's edge and the area beneath the downspouts.  Wax myrtle screens the area.",
+                    "directions": "From Hwy 85, take the Fremont Ave exit and proceed east on Fremont Ave.  Take the first left onto Bernardo Ave, and travel north on Bernardo.  Turn left on Remington Dr, then continue onto Remington Ct.",
+                    "installer": "Baxter Landscaping"
+                },
+                "name": "Remington Court Garden",
+                "location": {
+                    "latitude": 37.359346000000002,
+                    "streetAddress": "1105 Remington Ct",
+                    "longitude": -122.061819
+                }
+            },
+            {
+                "city": "Monte Sereno",
+                "infoArray": {
+                    "gardenNumber": 58,
+                    "yearInstalled": 1998,
+                    "wildlife": "Deer, coyotes, bobcats, gophers, squirrels, and rabbits are among the wildlife that visit this garden.",
+                    "showcase": "This fabulous large garden is worth the hike up the hill it requires for entry. The site is a testament to how diligence and hard work can overcome the encroachment of invasive non-natives. It includes areas of Oak Woodland, Chapparal, Oak Grassland, and Redwood Forest plant communities. The owner is very enthusiastic about natives, and propagates most of his own plants for introduction into the garden.",
+                    "sqft": 74000,
+                    "plantSale": "",
+                    "designer": "Homeowner",
+                    "other": "Oxalis, exotic annual grasses, cotoneaster, vinca, ivy, eucalyptus, and acacia are among the invasive non-native plants removed from this garden. They are gloriously replaced with thriving natives including toyon, ceanothus, huckleberries, ferns, chapparal currant, prostrate chamise, a variety of sages, eriogonums, buckwheats, and monkeyflowers. Large established oaks and redwoods dominate the site. Upper and lower meadows contain a variety of native grasses, including melica, nassella, festucas, brome, and deer grass, along with annual wildflowers so abundant they are visible when flying over in spring.",
+                    "directions": "From Hwy 9, turn west (towards the hills) on Greenwood Rd.  Follow Greenwood Rd for a short distance, going over 3 speed bumps and down a small hill to where the road splits 3 ways.  Park in this area, then walk up the rightmost road, Greenwood Lane, which is a one-lane road.  Walk about 100 yards up the hill, taking the first private driveway which branches off to the left.  Follow this up as it turns to the left and continues to the old farm house at the end of the driveway between two white posts.\\n",
+                    "installer": "Homeowner"
+                },
+                "name": "Round's Hill",
+                "location": {
+                    "latitude": 37.234138999999999,
+                    "streetAddress": "16210 Greenwood Lane",
+                    "longitude": -121.999622
+                }
+            },
+            {
+                "city": "Sunnyvale",
+                "infoArray": {
+                    "gardenNumber": 28,
+                    "yearInstalled": 2008,
+                    "wildlife": "Once the garden matures, it will provide berries, pollen and nectar as a food source, and the native shrubs offer shelter for visiting wildlife.",
+                    "showcase": "This professionally designed, newly installed, small front yard showcases a native garden under the dappled shade of a mature ash tree. A meandering path of mariposa slate guide visitors through the garden to the front entrance of the home. Cal stone pavers provide extra drainage on the the lower half of the driveway.",
+                    "sqft": 1600,
+                    "plantSale": "",
+                    "designer": "Sherri Osaka, Sustainable Landscaping Designs",
+                    "other": "Island snapdragon accents the trunk of the ash tree.  An evergreen carpenteria hedge flanking the edge of the front yard's deck will develop into a privacy screen as the shrubs mature.  The right side of the path is lined with a coffeeberry hedge that is accented by the true native Carex tumulicola.  On the left side of the path, pink-flowering currant, vine maple, Oregon grape, western sword fern, island alum root and Douglas iris enjoy the dappled shade.",
+                    "directions": "From Hwy 85, take the W Fremont Ave exit and proceed east on W Fremont Ave.  Turn left on Hollenbeck Ave, then right on Harvard Ave, followed by an immediate right on Rubis Dr.  Look for the garden on the right.",
+                    "installer": "Stephanie Curtis, Curtis Horticulture"
+                },
+                "name": "Rubis Drive Garden",
+                "location": {
+                    "latitude": 37.361612999999998,
+                    "streetAddress": "895 Rubis Drive",
+                    "longitude": -122.040746
+                }
+            },
+            {
+                "city": "Santa Clara",
+                "infoArray": {
+                    "gardenNumber": 35,
+                    "yearInstalled": 2007,
+                    "wildlife": "Tree frogs, pacific toads, hummingbirds, juncos, finches, doves, butterflies, dragonflies and other insects find a haven in this garden.",
+                    "showcase": "An enchanting pocket garden with a beautiful small pond surrounded by an amazing variety of native plantings is a magnet for birds, dragonflies, butterflies and frogs.",
+                    "sqft": 300,
+                    "plantSale": "",
+                    "designer": "California Nativescapes - Rebecca Schoenenberger",
+                    "other": "This garden is definitely worth finding in its condo complex.  Once you open the gate you will be astonished by the variety of native plants in a small area. Shady woodland, wetland/riparian, chaparral and coastal bluff plants each have their mini-ecotone. The garden is accented with art and many hanging baskets filled with natives and succulents. Incredibly, there is also a small raised bed for edibles and a rain barrel to capture runoff water. Almost everything in the garden is made from reclaimed materials.",
+                    "directions": "From El Camino Real in Santa Clara between Kiely Blvd/Bowers Ave and San Tomas Expressway, turn onto Bowe Ave (side of Moonlite Shopping Center/Save Mart). \\nWhen you reach the condo complex at the end of Bowe Avenue, you can park in the street or drive in to the complex.  Either way walk/drive down the main road.  Take your  first right, and follow it down to the T junction.  You can park here  \\nwhere any spaces are open (except in the carports).  The last gate on the left is marked #602.  Welcome!\\n",
+                    "installer": "California Nativescapes - Rebecca Schoenenberger"
+                },
+                "name": "Schoenenberger Garden",
+                "location": {
+                    "latitude": 37.350552,
+                    "streetAddress": "1400 Bowe Ave #602",
+                    "longitude": -121.9734495
+                }
+            },
+            {
+                "city": "Palo Alto",
+                "infoArray": {
+                    "gardenNumber": 15,
+                    "yearInstalled": 2008,
+                    "wildlife": "The sedge meadow provides insect habitat, which in turn\\nattracts birds. Flowering perennials attract butterflies and hummingbirds, and the elderberry and manzanita feed birds.",
+                    "showcase": "Front lawn replaced with wildlife habitat that includes a\\nblue elderberry and a sedge meadow. In the back, the kids enjoy a play structure and playhouse, surrounded by native low-water shrubs.",
+                    "sqft": 3500,
+                    "plantSale": "",
+                    "designer": "Fran Adams, A Sense of Place",
+                    "other": "Fran Adams worked with the garden owners on replacing a front lawn with an attractive sedge meadow, mounds for native shrubs and perennials, and a fast-growing blue elderberry specimen tree.  The sedge meadow requires no irrigation or mowing and other plants, including well-placed manzanita, sages, and California fuchsia are easy to maintain and provide year-round color.  A specimen deer grass elegantly invites passers by to pause and take notice of this attractive front yard.  A lovely row of native current, underplanted with cinquefoil, welcomes visitors from the side yard to the back. In the back, a play structure on rubberific mulch, stepping stumps, and a playhouse delight the kids.  The mix of native and non-native shrubs and bunch grasses, a small lemon tree, and seasonal herbs provide an attractive green surrounding to the kid's kingdom.  What child would not want to play here? ",
+                    "directions": "1. From 85 and 101, take 101 North and exit at Embarcadero heading West (toward Stanford).\\n2. Cross the freeway, and take the first left onto Saint Francis Drive. \\n3. Follow Saint Francis as it curves to the left, avoiding the cul-de-sacs.\\n4. The garden will be on your left.\\n",
+                    "installer": "Healy Landscape Construction"
+                },
+                "name": "Sedge Meadow\\n",
+                "location": {
+                    "latitude": 37.446125000000002,
+                    "streetAddress": "2385 Saint Francis Dr",
+                    "longitude": -122.123684
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 57,
+                    "yearInstalled": 2008,
+                    "wildlife": "Food, water, shelter and nesting places are provided, and the garden has already been discovered by a variety of insects and birds.  As the garden matures, its wildlife habitat value will greatly improve over time.",
+                    "showcase": "This school garden is an attractive outdoor learning center for any adventurous class at Seven Trees Elementary school.   Students and their parents learn about native plants while volunteering after school in the garden.  On tour day, students will serve as docents in the garden, to share what they've learned.",
+                    "sqft": 3000,
+                    "plantSale": "",
+                    "designer": "Original design by Agi Kehoe, updated by Larry Volpe and his fifth grade st",
+                    "other": "Plants in the garden include ceanothus, lemonade berry, toyons, coast silk tassel, and a variety of pollen, nectar, and berry plants.  A dozen native trees are planted nearby, with the help of Our City Forest.  The native garden is planted near the class vegetable garden, to discourage the school district maintenance crews from spraying herbicides near the food crops and children.  Children in the class will research the native plants in the garden and present this information to tour-goers on tour day.",
+                    "directions": "From Capitol Expressway and Monterey Rd, follow Capitol Expressway north. Take the first right on Seven Trees Blvd, and immediately bear left onto El Cajon Dr. Turn right on Mira Loma Way.",
+                    "installer": "Larry Volpe and fifth grade students"
+                },
+                "name": "Seven Trees School Native Plant Garden",
+                "location": {
+                    "latitude": 37.2814598,
+                    "streetAddress": "3975 Mira Loma Way",
+                    "longitude": -121.8288941
+                }
+            },
+            {
+                "city": "Los Gatos",
+                "infoArray": {
+                    "gardenNumber": 59,
+                    "yearInstalled": 2005,
+                    "wildlife": "Crows, jays, hummingbirds, juncos, hawks, sparrows, butterflies, spiders and lizards frequent this garden. Food, shelter and water are available with a large variety of plants, stone sink, active constructed creek and wall fountain.",
+                    "showcase": "This lovely new terraced hillside garden features colorful natives from a variety of plant communities, a living roof, a unique water feature, and original art.",
+                    "sqft": 5000,
+                    "plantSale": "On tour day, Middlebrook Gardens Nursery will conduct a plant sale at this garden.  A portion of the proceeds will benefit the Going Native Garden Tour.  Please pay with cash or check.",
+                    "designer": "Alrie Middlebrook, Middlebrook Gardens",
+                    "other": "Four different varieties of dwarf fruit trees espaliered on mirage trellises are under planted with native buckwheat, salvia, penstemon, and douglas iris.  A view from the dining room has been improved by building a tall wall near the fence, with a green roof and complex original mosaic murals; one scene blends art with reality, as a pipe in the mosaic waterfall spills into a manmade creek below the mural.  On both sides of the creek, softly undulating berms provide the appropriate slope for varieties of monkeyflower, native grasses, coyote mint, penstemon, salvia, buckwheat, woolly blue curls, and hummingbird fuchsia.  In the shadier portion of the garden, dwarf conifers share space with holly-leafed cherry, vine maple, snowberry, heuchera, ribes, coffeeberry, and other natives.  Some plants are set closer together or closer to walls than their mature size would suggest, but the owner plans to espalier some and remove others as the garden matures to prevent crowding.  This environmentally friendly, art-filled garden offers many places to sit and enjoy the view.",
+                    "directions": "From Hwy 17, take the Hwy 9 exit and proceed west on Hwy 9. Turn left at the first light, University Ave.  Follow University Ave to the T and turn right on W Main St.  Proceed several blocks on W Main St then turn right on Bayview Ave and immediately left on Pennsylvania Ave.  Proceed up the hill on Pennsylvania Ave, then turn right on Wissahickon at the top.  Look for the garden several houses ahead on the right.",
+                    "installer": "Middlebrook Gardens"
+                },
+                "name": "Slatebrook Garden",
+                "location": {
+                    "latitude": 37.227680900000003,
+                    "streetAddress": "140 Wissahickon Ave",
+                    "longitude": -121.992098
+                }
+            },
+            {
+                "city": "Redwood City",
+                "infoArray": {
+                    "gardenNumber": 6,
+                    "yearInstalled": 2008,
+                    "wildlife": "The transformation has been a delight for the hummingbirds, butterflies, bees, salamanders, as well as the human visitors to the garden.",
+                    "showcase": "Spacious front garden features a sheltered sitting area, mounds of beautiful natives, and fruit trees.",
+                    "sqft": 2000,
+                    "plantSale": "",
+                    "designer": "Peigi Duvall, Indig Design",
+                    "other": "This professionally designed and installed front garden immediately attracts the visitor with terra-cotta colored lattice at the front porch and at the front sitting area that display gourds and provide screening from the street.  The flagstone and gravel used for paving the sitting area and a path echo the color of the lattice.  Clusters of special stones throughout the garden complement and play in this scheme.  Over the years, the owners had to remove six Monterey pines, which had succumbed to old age.  Instead, the garden now includes mounds of native grasses, buckwheats, poppies and other sun-loving natives and some shade-tolerant natives like ferns and coral bells under the two remaining Monterey pine. A rain garden drain ensures that roof runoff percolates well into the garden.\\n\\nAdditional native plantings include a Catalina ironwood, California sunflower, Coffeeberry, Salvia 'Bee's Bliss', hummingbird sage, Matilija poppy, and native succulents. Intermingled with the natives are some vegetables such as lettuce and cabbage, as the season permits.  Apricot, Meyer lemon, sour cherry and a smoke tree round out the enticing mix of beauty and utility",
+                    "directions": "1. From 85 and 101, take 101 North and exit at Marsh Road. \\n2. Turn left and cross the freeway. \\n3. Turn right at Florence\\n4. Take the first left onto Spring Street. The garden will be on your left. \\n",
+                    "installer": ""
+                },
+                "name": "Spring Street Garden",
+                "location": {
+                    "latitude": 37.477938000000002,
+                    "streetAddress": "3508 Spring Street",
+                    "longitude": -122.19206699999999
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 52,
+                    "yearInstalled": 2007,
+                    "wildlife": "Wildlife are invited into this garden with shelter, food and water (provided in the back yard).  Existing mature shrubs provide cover, while newer plantings provide nectar and seeds.",
+                    "showcase": "This professionally-designed front yard garden is a good example of how one can incorporate natives into an existing landscape while preserving existing mature trees and shrubs.",
+                    "sqft": 800,
+                    "plantSale": "",
+                    "designer": "Stephanie Curtis, Curtis Horticulture",
+                    "other": "An attractive flagstone path divides this garden into several zones.  To the right of the path an attractive small meadow features Berkeley sedge (until recently thought to be native) and non-native Idaho fescue.  Island snapdragon provides a transition between the meadow and the large existing non-native privet hedge along the property line.  To the left of the path, hummingbird sage, coyote mint, douglas iris, yarrow, monkeyflower, and coffeeberry provide color and interest.  Island alum root and pink- flowering currant enjoy the shady area near the house under a mature tree.  A small bench provides a resting place to sit and enjoy the garden.",
+                    "directions": "From Hwy 680, proceed east on McKee Rd.  Turn left on Staples Ave (two blocks after passing N. White Rd).  The house is on the left.",
+                    "installer": "Stephanie Curtis, Curtis Horticulture"
+                },
+                "name": "Staples Avenue Garden",
+                "location": {
+                    "latitude": 37.377737000000003,
+                    "streetAddress": "335 Staples Avenue",
+                    "longitude": -121.833589
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 48,
+                    "yearInstalled": 2007,
+                    "wildlife": "The garden supplies plants that flower in every season for a steady food supply, and flowers are allowed to go to seed.",
+                    "showcase": "This professionally-designed lawn replacement serves as a beautiful and inviting entry to Lincoln House, the church office for Stone Church of Willow Glen.",
+                    "sqft": 200,
+                    "plantSale": "",
+                    "designer": "Alrie Middlebrook, Middlebrook Gardens in cooperation with Hilleguus Faber",
+                    "other": "This lovely garden includes a wide variety of interesting plants from the chaparral plant community.  Shrubs includeseveral low-growing ceanothus, coffeeberry, hollyleaf cherry, Cedros Island verbena, western redbud, and an unusual red-flowering currant. Deer grass, giant wild rye, and California fescue provide structural accents, while a large number of perrenials (yarrow, buckwheats, sages, asters, and penstemons) and annuals provide seasonal color and forage for wildlife.  In the shadier areas, snowberry, western sword fern, island bush snapdragon, and island alum root thrive.",
+                    "directions": "From Hwy 87, take the Curtner Ave exit and proceed west on Curtner Ave.  Turn right on Lincoln Ave and look for the garden about four blocks up on the left.",
+                    "installer": "Boy Scout Eagle project"
+                },
+                "name": "Stone Church Willow Glen",
+                "location": {
+                    "latitude": 37.294981,
+                    "streetAddress": "1937 Lincoln Avenue",
+                    "longitude": -121.89167
+                }
+            },
+            {
+                "city": "Sunnyvale",
+                "infoArray": {
+                    "gardenNumber": 27,
+                    "yearInstalled": 2008,
+                    "wildlife": "The garden was designed to provide habitat for various birds, butterflies, bumble bees and other insects.  Food, shelter and places to raise young are all present.  A bird bath and a circulating fountain supply fresh water.\\n",
+                    "showcase": "Recycled urbanite and brick pathways, an urbanite patio and a unique style of water permeable driveway highlights the new hardscaping elements of this professionally designed garden, predominantly landscaped with native plants.",
+                    "sqft": 4100,
+                    "plantSale": "On tour day, Bay Natives Nursery will conduct a plant sale at this garden.  A portion of the proceeds will benefit the Going Native Garden Tour.  Please pay with cash or check.",
+                    "designer": "Agi Kehoe",
+                    "other": "The front garden's mound was built of extra soil from the back yard and is supported by a beautiful, serpentine shaped, dry stack wall that is accented by John Dourley manzanita.  The mound is decorated with a leafy reed grass meadow, punctuated with narrow-leaved milkweed. Bee's bliss sage and Carmel Sur manzanita edges the front urbanite pathway which borders a newly constructed porch before it connects to the back garden.  The lower part of the front yard features a valley oak, underplanted with hummingbird sage and pigeon point coyote brush.  California goldenrod, California fuchsia and coast aster provide summer colors.  California fescue, blue-eyed grass and ithuriel's spier bulbs thrive under a mature liquidambar city tree.  Leatherleaf coffeeberry and a dark star ceanothus provide a casual hedge along the property line next to the driveway.\\n\\nIn the back garden, a retaining wall edges the back fence that is planted with toyon, Ray Hartman ceanothus, snowberry, Douglas iris and pink coral bells.  A Roger's red wild grape is trained on the side fence, and the center of the garden features a newly constructed raised bed that is edged by mossy mason fieldstone and planted with St. Catherine's lace and rosy buckweat, blue-eyed grass, and hairy gum plant.  Foothill penstemon, Idahoe fescue, yarrow, seaside daisy, coyote mint and goldenrod provide additional color and texture.  Shady areas feature yerba buena, espaliered evergreen currant and western sword fern.  A meandering goldfines path connects to the urbanite patio and access paths.",
+                    "directions": "From Hwy 85, take the W Fremont Ave exit and proceed east on W Fremont Ave.  Turn left on Hollenbeck Ave, then right on Harvard Ave, followed by an immediate right on Rubis Dr.  Look for the garden on the right.",
+                    "installer": "Earthcare Landscaping"
+                },
+                "name": "Strauss Family Garden",
+                "location": {
+                    "latitude": 37.360432000000003,
+                    "streetAddress": "1033 Rubis Dr",
+                    "longitude": -122.040902
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 54,
+                    "yearInstalled": 2008,
+                    "wildlife": "With currants, wildflower and grass seeds for food, many birds include doves, house finches, mockingbirds, towhees, cedar waxwings, robins, and white crowned sparrows visit the property.  Doves love blazing star seeds. Many insects, including skippers, visit the California phacelia and the naked stem buckwheat.",
+                    "showcase": "This small gem features 37 plants grown by the occupants from seeds or cuttings, amongst other nursery bought plants.  The lawn was covered with newspapers and free wood mulch, and later planted into.  This garden shows how a native garden can be done on a budget.",
+                    "sqft": 1050,
+                    "plantSale": "",
+                    "designer": "Susan Sundberg",
+                    "other": "An existing large juniper, two roses, and a camellia are all that remain of the previous landscaping.  The house shades the garden all winter, but in the summer much of the garden is flooded with sun.  Shade-loving perennials grow near the tree, with a native honeysuckle using the juniper as a trellis. Many native perennials and annuals grow along side a small dry creek bed, including California phacelia, California goldenrod, coyote mint, monkeyflower, California fuchsia, blue flax and penstemon.   The side yard has a row of currants and a small rainwater swale. The parking strip features a riot of self-sowing wildflowers, poppies, lupine, chia and blazing star, mixed with naked stem buckwheat and native grasses. Eventually the street will be shaded by a black oak, which has been started from an acorn.",
+                    "directions": "From US-101, exit onto Tully Rd east. Go about 3 miles and turn left onto Reno Dr. Take the first right onto Rio Brave Dr. The house is about 0.1 miles ahead on the right",
+                    "installer": "Susan Sundberg and sister (the homeowner)"
+                },
+                "name": "Sundberg Garden",
+                "location": {
+                    "latitude": 37.338866000000003,
+                    "streetAddress": "3444 Rio Bravo Dr",
+                    "longitude": -121.78800099999999
+                }
+            },
+            {
+                "city": "Redwood City",
+                "infoArray": {
+                    "gardenNumber": 5,
+                    "yearInstalled": 2002,
+                    "wildlife": "The garden has been a NWF Backyard Wildlife Habitat since 2005.  It attracts sparrows, American goldfinch, hummingbirds, hawks, crows, mourning doves, house finch, bushtits, juncos, woodpeckers, raccoons, and squirrels.  Nesting and shelter are provided with man-made nesting boxes, a redwood tree and large shrubs.  The natural seeds are left on the plants for the birds to eat in addition to the hanging bird feeders.  A bird bath in the front and the creek are source of water for the wild life.",
+                    "showcase": "During the fall of 2009 some changes were made to this small city garden to create a more California native garden.  The front planting area, called Mockingbird Meadow, includes a special collection of manzanitas. Of note are two 'Sunset' manzanita, a variety developed for the 75th anniversary of Sunset Magazine.  A large silver bush lupine planted in 2001 produces an abundant show of flowers every March.  In the corner climbs a 'Rodger Red' grape vine which produced most of the 86 pounds of grapes that were processed into a rich jelly and juice in 2009.  A dry creek bed of Lin Creek cobbles from Lyngso Garden Materials provides drainage for the native plants during the rainy season.  The side pathway has a large bay laurel tree and snowberry bush both planted by the original home owners.\\n\\nEagle Rock Refuge, the back yard, was planted in 2004.  It has a collection of sages: hummingbird, aromas, bee's bliss, amethyst bluff, Winifred Gilman, and Allen Chickering.  Some of the sage prunings are used as incense and the fresh leaves for seasoning.  The fruit from the lemonade berry was collected and the essence made into a delicious jelly.  Another prized manzanita, the Louis Edmunds 'Serpentine' is found here with its rich chocolate colored bark and light green leaves.  During the winter the 'Joyce Coulter' ceanothus is a mass of blue blossoms covering an area 9 feet by 18 feet.",
+                    "sqft": 5000,
+                    "plantSale": "",
+                    "designer": "Annaloy Nickum",
+                    "other": "The backyard chickens provide organic plant food and clean up the snails and slugs the natural way besides providing eggs.  In 2008 the garden was chosen to receive a Redwood City Mayor's Beautification Award for Landscape Improvement.",
+                    "directions": "Going North on 101, exit at Marsh Rd. towards Atherton/Menlo Park. Turn right on Florence (at Starbuck's), which turns into Bay Rd. Turn left on 6th Ave.",
+                    "installer": "Huiltron Landscaping"
+                },
+                "name": "The Sullivan Garden",
+                "location": {
+                    "latitude": 37.480964999999998,
+                    "streetAddress": "839 6th Ave.",
+                    "longitude": -122.198227
+                }
+            },
+            {
+                "city": "Sunnyvale",
+                "infoArray": {
+                    "gardenNumber": 29,
+                    "yearInstalled": 2007,
+                    "wildlife": "Lizards, squirrels, hummingbirds, and many other birds such as finches visit the garden and enjoy the food and shelter it provides.",
+                    "showcase": "Large front garden has abundant plantings and showcases \\n a living stone wall and mounds.",
+                    "sqft": 1620,
+                    "plantSale": "",
+                    "designer": "Alrie Middlebrook",
+                    "other": "This snugly planted garden includes native maples (Acer circinatum) near the house and mounds generously planted with buck wheats, sages, and a specimen manzanita (still small). A river of poppies  flows from the low wall along the street to a path along the house. The path divides the shadier area with the maples, Douglas iris, and huckleberry from the sunnier area that includes grasses, buckwheats, and low-growing sages. The whole front garden has been mulched with light pebbles, an attractive and effective alternative to the ever-present woodchips.",
+                    "directions": "From El Camino Real, turn into Fair Oaks Ave, then take the first turn right into Iris Ave. Pierino Ave. will be the fourth street on the right.",
+                    "installer": "Middlebrook Gardens"
+                },
+                "name": "The Wool's Wild Garden",
+                "location": {
+                    "latitude": 37.360959000000001,
+                    "streetAddress": "755 Pierino Avenue",
+                    "longitude": -122.020533
+                }
+            },
+            {
+                "city": "Palo Alto",
+                "infoArray": {
+                    "gardenNumber": 18,
+                    "yearInstalled": 2006,
+                    "wildlife": "The shelter, berries, and nectar and pollen plants create\\nan exceptional wildlife habitat, and bees, butterfies, wrens, thrush, hummingbirds,\\nsquirrels, scrub jays, and towhees visit the garden. A small bird bath in the\\nback is the finishing touch and truly makes this garden a wildlife paradise.",
+                    "showcase": "The garden includes a mature, mostly native, front garden\\nwith a specimen toyon, a newly installed courtyard garden combining natives with a few mediterranean climate plants, and a back garden with meandering paths inviting visitors to enjoy its new plantings.",
+                    "sqft": 2500,
+                    "plantSale": "",
+                    "designer": "Annaloy Nickum",
+                    "other": "The lovely mature front garden includes specimen trees and and mounds that combine a few Mediterranean plants such as lavender and rosemary and natives such as ceanothus and salvias.  The design well-complements the home's classic Eichler architecture.  The newly installed courtyard garden includes a dry stream bed, a delight as viewed from inside the home.  Visitors can enjoy a combination of Australian correa (providing winter food for the hummingbirds) and natives such as seaside daisy and coral bells.  The backyard has also been recently installed.  The work included improving poor soil and poor drainage with mounding and some amending.  The backyard includes attractive decomposed granite paths that invite the visitor to linger and enjoy the many different native shrubs and perennials, including manzanita, penstemon, and salvias.  As the plantings mature, more shade will be provided to the patio where views back into the garden will be very pleasing.",
+                    "directions": "1.From Page Mill / Oregon Expressway and Alma Street, take Alma Street South.\\n2. Turn left onto Loma Verde Avenue  (two streets before East Meadow).\\n3. Take the second right onto Ramona Street. The garden will be on your right. ",
+                    "installer": "Earthcare Landscaping"
+                },
+                "name": "Three Habitats Garden",
+                "location": {
+                    "latitude": 37.422001000000002,
+                    "streetAddress": "3298 Ramona Dr",
+                    "longitude": -122.126789
+                }
+            },
+            {
+                "city": "Mountain View",
+                "infoArray": {
+                    "gardenNumber": 21,
+                    "yearInstalled": 2000,
+                    "wildlife": "Hummingbirds, native bees, butterflies, mourning doves, and other birds visit this garden.",
+                    "showcase": "This lovely front yard in full sun showcases many different sages that include bee's bliss, Cleveland sage, white sage, and hummingbird sage.",
+                    "sqft": 1200,
+                    "plantSale": "",
+                    "designer": "Annaloy Nickum",
+                    "other": "Toyon, sugarbush, mallow, matillija poppy, golden aster, deer grass, yarrow, bush lupine, wooly blue curls, monkeyflowers, and large and small buckwheats add to the richness of this garden.  This established garden receives low, drip irrigation during the dry months.  The owners take pride in maintaining this garden.",
+                    "directions": "From El Camino and El Monte, head south on El Monte and turn left onto Todd at Springer.",
+                    "installer": "Earthcare Landscaping"
+                },
+                "name": "Todd Street Garden",
+                "location": {
+                    "latitude": 37.385725999999998,
+                    "streetAddress": "1620 Todd St",
+                    "longitude": -122.09527799999999
+                }
+            },
+            {
+                "city": "Santa Clara",
+                "infoArray": {
+                    "gardenNumber": 32,
+                    "yearInstalled": 1999,
+                    "wildlife": "Among the wildlife to be found are checkerspot butterflies, bumblebees, jackrabbits, Baltimore oriole, Anna's hummingbird, black phoebe, white crowned sparrow, and golden crown sparrow.",
+                    "showcase": "Ulistac Natural area is 40 acres of open space that showcases seven distinctive natural habitats, including grassland, coastal scrub, oak savannah, riparian woodland, sycamore woodland, oak woodland, and wetlands.",
+                    "sqft": 1742000,
+                    "plantSale": "",
+                    "designer": "",
+                    "other": "You may wish to limit your visit on tour day to the butterfly and hummingbird garden, in which you can see many mature native species including  saltbush, Cedros Island verbena, coffeeberry, golden currant, holly-leaf cherry, gumplant, California buckeye, toyon,  blue elderberry, flannelbush, chaparral currant, St. Catherine's lace, Cleveland sage, purple sage, and several varieties of ceanothus, penstemons and lupines.  Lick Mill Park, across the street, offers restroom and picnic facilities, making Ulistac Natural Area a good spot for a bag lunch and restroom stop to break up your tour day.\\n\\nUlistac Natural area is a city of Santa Clara municipal park.  The ongoing restoration project in the park is spearheaded by the Ulistac Natural Area Community Habitat Restoration Project (UNA-CHRP). Numerous volunteers including individuals, community clubs, nonprofit agencies, foundations, and local corporations contribute time and money to the restoration of Ulistac Natural Area.  In particular, Wilcox High School students and Santa Clara University are major contributors to the effort.",
+                    "directions": "From Hwy 101 take Montague Expwy east.  Turn left on Lick Mill Blvd and look for the garden on the right just before Tasman Dr",
+                    "installer": ""
+                },
+                "name": "Ulistac Natural Area",
+                "location": {
+                    "latitude": 37.397923599999999,
+                    "streetAddress": "4901 Lick Mill Blvd",
+                    "longitude": -121.9444598
+                }
+            },
+            {
+                "city": "Morgan Hill",
+                "infoArray": {
+                    "gardenNumber": 68,
+                    "yearInstalled": 2008,
+                    "wildlife": "A birdbath provides water for birds and butterflies attracted by the native plantings, especially the valley oak with its abundance of acorns and insect life. Fox squirrels, toads, and bumblebees also visit the garden.\\n",
+                    "showcase": "A magnificent old valley oak anchors a native bird and butterfly garden with shady plants under the oak gradually transitioning to a full sun area by the road. ",
+                    "sqft": 3000,
+                    "plantSale": "",
+                    "designer": "Homeowner",
+                    "other": "A large valley oak shades a porch sitting area ideal for watching wildlife. Ceanothus border the porch and Pacific iris cluster under the oak. Coffeeberry and fuchsia-flowered gooseberry are planted along the fence that borders the property. The central path is accented by California fescue. The garden is separated from the driveway by raised beds for edibles. In the hot and sunny area of the garden  Ceanothus and manzanita are thriving around a young California buckeye and western redbud. Sulfur buckwheats provide color along the street.",
+                    "directions": "From US-101 in Morgan Hill, exit at Tennant Ave and go west on Tennant Ave about 1 mile. Turn left onto Monterey Rd. Go about 0.5 miles and take the second right onto Watsonville Rd. Go about 0.3 miles and take the second right onto La Arboleda Way. Go a short way and turn right onto Via Largo Court. The house is a short distance ahead on the left beyond a park.",
+                    "installer": "Homeowner"
+                },
+                "name": "Via Largo Garden",
+                "location": {
+                    "latitude": 37.104475000000001,
+                    "streetAddress": "365 Via Largo",
+                    "longitude": -121.64005400000001
+                }
+            },
+            {
+                "city": "Sunnyvale",
+                "infoArray": {
+                    "gardenNumber": 30,
+                    "yearInstalled": 2002,
+                    "wildlife": "Habitats are encouraged by leaf and twig piles, bird bath, birdhouses, shrubs and trees for shelter, food, and nesting.",
+                    "showcase": "A designer's demonstration and experimental garden, the garden has evolved to embrace the concept of sustainability with a strong prominence of native and drought tolerant plantings.",
+                    "sqft": 4000,
+                    "plantSale": "",
+                    "designer": "AFLA Landscape Architecture",
+                    "other": "Well established tree ceanothus and pink-flowered currant with meadow plantings of deergrass, Douglas iris, California poppy, baby blue eyes, and globe gilia.  An attempt is made here to respect the microclimatic conditions of the site by placing plants that belong to a specific plant community together.  For example, plants from the Riparian and Redwood plant communities were planted in shady areas that would get more frequent water, and dry shady areas were planted with Oak woodland plants, etc.  The garden also has a large vegetable box, fruit trees, and an area for composting.",
+                    "directions": "This garden is located on Wolfe Rd, between Central Expressway and El Camino Real, in Sunnyvale.",
+                    "installer": "Ashini Fernando"
+                },
+                "name": "Wolfe Road Garden",
+                "location": {
+                    "latitude": 37.363343,
+                    "streetAddress": "789 South Wolfe Rd",
+                    "longitude": -122.014487
+                }
+            },
+            {
+                "city": "San Jose",
+                "infoArray": {
+                    "gardenNumber": 42,
+                    "yearInstalled": 2004,
+                    "wildlife": "This is a wildlife habitat garden.",
+                    "showcase": "This professionally designed garden features colorful, drought tolerant natives, a bunch grass/wildflower meadow next to a small lawn, vine covered arbors, and a peaceful, adirondack chair seating area with coffeeberry, Santa Catalina Island currant, pacific coast Iris, and a bubbling boulder fountain that attract birds.  Island alum root creates an evergreen backdrop to the small patio area.  The front yard features a small dry-stacked natural stone wall and integrated boulders, along with native plantings and small accents such as sea thrift and stonecrop.",
+                    "sqft": 6256,
+                    "plantSale": "",
+                    "designer": "Stephanie Morris",
+                    "other": "Toyon, pacific wax myrtle and wild lilac soften the fence around the property.  The landscape was designed to protect and showcase the magnificent valley oak that provides dappled shade for most of the back garden.",
+                    "directions": "From Hwy 101, take the Julian St exit.  At the end of the ramp, turn left on McKee Rd.  Continue as McKee Rd becomes Julian St.  Turn right on N 17th St, and look for the garden on the left in the second block.",
+                    "installer": "Earthcare Landscaping"
+                },
+                "name": "Zappel Garden",
+                "location": {
+                    "latitude": 37.351120000000002,
+                    "streetAddress": "443 N 17th St",
+                    "longitude": -121.880202
+                }
+            }
+        ]
+    }
+}
