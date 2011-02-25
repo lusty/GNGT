@@ -48,7 +48,7 @@ enum sorting {
 									   ascending:YES
 									   selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
 		NSSortDescriptor *nameSort = [[[NSSortDescriptor alloc] 
-									   initWithKey:@"gardenName" 
+									   initWithKey:@"name" 
 									   ascending:YES
 									   selector:@selector(localizedCaseInsensitiveCompare:)] autorelease];
 		NSMutableArray *temp = [NSMutableArray arrayWithObject:nameSort];
@@ -63,7 +63,7 @@ enum sorting {
 	if (_fetchRequest == NULL) {
 		_fetchRequest = [[NSFetchRequest alloc] init];
 		NSEntityDescription *entity = [NSEntityDescription 
-									   entityForName:@"GardenInfo" inManagedObjectContext:_context];
+									   entityForName:@"Garden" inManagedObjectContext:_context];
 		[_fetchRequest setEntity:entity];
 //		[_fetchRequest setFetchBatchSize:20];
 	}

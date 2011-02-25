@@ -43,7 +43,7 @@ enum viewFilter {
     if (_fetchRequest == NULL) {
 		_fetchRequest = [[NSFetchRequest alloc] init];
 		NSEntityDescription *entity = [NSEntityDescription 
-									   entityForName:@"GardenInfo" inManagedObjectContext:context];
+									   entityForName:@"GardenLocation" inManagedObjectContext:context];
 		[_fetchRequest setEntity:entity];
 		[_fetchRequest setResultType:NSManagedObjectResultType];
 	}	
