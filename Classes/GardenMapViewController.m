@@ -1,4 +1,3 @@
-    //
 //  GardenMapViewController.m
 //  GNGT
 //
@@ -8,7 +7,8 @@
 
 #import "GardenMapViewController.h"
 #import "GardenDescriptionViewController.h"
-#import "GardenInfo.h"
+#import "Garden.h"
+#import "GardenLocation.h"
 
 @interface GardenMapViewController (Private)
 - (void)startStandardUpdates;
@@ -204,7 +204,6 @@ enum viewFilter {
 	[self.viewSelector removeTarget:self action:@selector(viewSelectorChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
-
 - (void)dealloc {
     [super dealloc];
 }
@@ -236,9 +235,12 @@ enum viewFilter {
             viewForAnnotation:(id <MKAnnotation>)annotation {
 	if(annotation == aMapView.userLocation) return nil;
 	
-	BOOL isFavorite = [((GardenInfo *)annotation).isFavorite boolValue];
-	BOOL hasPlantSale = ((GardenInfo *)annotation).hasPlantSale;
-	BOOL hasGardenTalk = ((GardenInfo *)annotation).hasGardenTalk;
+	GardenLocation *loc = (GardenLocation *)annotation;
+	Garden *garden = loc.garden;
+	
+	BOOL isFavorite = [garden.isFavorite boolValue];
+	BOOL hasPlantSale = garden.hasPlantSale;
+	BOOL hasGardenTalk = garden.hasGardenTalk;
 		
 	NSString *imageName = isFavorite ? @"favorite.png" : @"poppy.png";
 	
@@ -310,7 +312,7 @@ enum viewFilter {
 	if (self.detailsController == nil) {
         self.detailsController = [[[GardenDescriptionViewController alloc] initWithNibName:@"GardenDescriptionViewController" bundle:nil] autorelease];        
     }
-	self.detailsController.info = (GardenInfo *)view.annotation; 
+	self.detailsController.info = (Garden *)view.annotation; 
     [self.navigationController pushViewController:detailsController animated:YES];
 	
 }

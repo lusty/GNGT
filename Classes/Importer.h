@@ -6,8 +6,7 @@
 //  Copyright 2011 NextQuestion Consulting. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-
+#import <CoreData/CoreData.h>
 
 @interface Importer : NSObject {
 	NSManagedObjectContext *moc;

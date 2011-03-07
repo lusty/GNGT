@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class GardenInfo;
+@class Garden;
 @class StarControl;
 
 @interface GardenDescriptionViewController : UITableViewController {
@@ -17,7 +17,7 @@
 	UILabel		*nameLabel;
 	UILabel		*numberLabel;
 	
-	GardenInfo *info;
+	Garden *info;
 	NSMutableArray *labels;
 	NSMutableArray *values;
 }
@@ -26,7 +26,7 @@
 @property (nonatomic, retain) IBOutlet StarControl *starControl;
 @property (nonatomic, retain) IBOutlet UILabel *nameLabel;
 @property (nonatomic, retain) IBOutlet UILabel *numberLabel;
-@property (nonatomic, retain) GardenInfo *info;
+@property (nonatomic, retain) Garden *info;
 @property (nonatomic, retain) NSMutableArray *labels;
 @property (nonatomic, retain) NSMutableArray *values;
 

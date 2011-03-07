@@ -15,14 +15,14 @@ enum cellTags {
 	NOTES_TAG
 };
 
-@class GardenInfo;
+@class Garden;
 @class GardensListViewController;
 
 @interface GardenInfoViewCell : UITableViewCell {
-	GardenInfo *info;
+	Garden *info;
 }
 
-@property (nonatomic, retain) GardenInfo *info;
+@property (nonatomic, retain) Garden *info;
 
 + (NSString *) reuseIdentifierWithNotes:(BOOL)hasNotes andCity:(BOOL)hasCity;
 + (CGFloat) heightWithNotes:(BOOL)hasNotes andCity:(BOOL)hasCity;

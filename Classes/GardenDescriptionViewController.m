@@ -7,8 +7,8 @@
 //
 
 #import "GardenDescriptionViewController.h"
-#import "GardenInfo.h"
-#import "GardenDescription.h"
+#import "Garden.h"
+//#import "GardenDescription.h"
 #import "StarControl.h"
 
 @interface GardenDescriptionViewController (Private)
@@ -24,12 +24,12 @@
 @synthesize labels, values;
 @synthesize headerView, starControl, nameLabel, numberLabel;
 
-- (GardenInfo *)info
+- (Garden *)info
 {
     return [[info retain] autorelease]; 
 }
 
-- (void)setInfo:(GardenInfo *)anInfo
+- (void)setInfo:(Garden *)anInfo
 {
     if (info != anInfo) {
         [info release];
@@ -65,11 +65,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-	BOOL authorized = YES; // TODO have the application set this from outside
+//	BOOL authorized = YES; // TODO have the application set this from outside
 	
 	// Build the data used by the display table
 	[self.labels removeAllObjects];
 	[self.values removeAllObjects];
+/*
 	GardenDescription *description = info.gardenDescription;
 	
 	[self addLabel:@"Plant sale" andText:info.plantSale];
@@ -90,13 +91,12 @@
 	[self addLabel:@"Showcase feature" andText:description.showcase];
 	[self addLabel:@"Gardening for wildlife" andText:description.wildlife];
 	[self addLabel:@"Other garden attractions" andText:description.other];
-	
+*/	
 	UITableView *tview = (UITableView *)self.view;
 
 	// Set up the view header
-	self.nameLabel.text = info.gardenName;
-	self.numberLabel.text = [info.gardenNumber stringValue];
-	// TODO Add the garden number
+	self.nameLabel.text = info.name;
+//	self.numberLabel.text = [info.gardenNumber stringValue];
 	starControl.on = [info.isFavorite boolValue];
 	[starControl addTarget:self action:@selector(starControlChanged:) forControlEvents:UIControlEventTouchUpInside];
 	

@@ -8,7 +8,7 @@
 
 #import "GardensListViewController.h"
 #import "GardenDescriptionViewController.h"
-#import "GardenInfo.h"
+#import "Garden.h"
 #import "GardenInfoViewCell.h"
 #import "UIConstants.h"
 
@@ -192,14 +192,14 @@ enum sorting {
 
 // Customize the appearance of table view cells.
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    GardenInfo *info = [_fetchedResultsController objectAtIndexPath:indexPath];
+    Garden *info = [_fetchedResultsController objectAtIndexPath:indexPath];
 	((GardenInfoViewCell*)cell).info = info;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 
 		 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-    GardenInfo *info = [_fetchedResultsController objectAtIndexPath:indexPath];
+    Garden *info = [_fetchedResultsController objectAtIndexPath:indexPath];
 	BOOL hasNotes = info.hasPlantSale | info.hasGardenTalk;
 	BOOL hasCity = (sortMode == byName);
 	NSString *CellIdentifier = [GardenInfoViewCell reuseIdentifierWithNotes:hasNotes andCity:hasCity];
@@ -213,14 +213,14 @@ enum sorting {
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  {  
-    GardenInfo *info = [_fetchedResultsController objectAtIndexPath:indexPath];
+    Garden *info = [_fetchedResultsController objectAtIndexPath:indexPath];
 	BOOL hasNotes = info.hasPlantSale | info.hasGardenTalk;
 	BOOL hasCity = (sortMode == byName);
 	return [GardenInfoViewCell heightWithNotes:hasNotes andCity:hasCity];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	GardenInfo *info = (GardenInfo *)[_fetchedResultsController objectAtIndexPath:indexPath];
+	Garden *info = (Garden *)[_fetchedResultsController objectAtIndexPath:indexPath];
 	self.detailsController.info = info;
     [self.navigationController pushViewController:_description animated:YES];
 }

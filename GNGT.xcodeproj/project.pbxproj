@@ -16,7 +16,6 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
 		5C26EDC31303C24D0035E9C5 /* UIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C26EDC21303C24D0035E9C5 /* UIConstants.m */; };
-		5C309BA61305E59300AF4C72 /* ImportJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C309BA51305E59300AF4C72 /* ImportJSON.m */; };
 		5C42631712F7F951007E0ABF /* flowerpot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C42631512F7F951007E0ABF /* flowerpot.png */; };
 		5C42631812F7F951007E0ABF /* flowerpot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C42631612F7F951007E0ABF /* flowerpot@2x.png */; };
 		5C4C84F012EDF9AF0086B133 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4C84EF12EDF9AF0086B133 /* MapKit.framework */; };
@@ -25,13 +24,25 @@
 		5C50D2DF12FCDA8E001C94EF /* TourInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C50D2DD12FCDA8E001C94EF /* TourInfoController.xib */; };
 		5C50D2EC12FCE29A001C94EF /* clarkia.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C50D2EA12FCE29A001C94EF /* clarkia.png */; };
 		5C50D2ED12FCE29A001C94EF /* clarkia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C50D2EB12FCE29A001C94EF /* clarkia@2x.png */; };
+		5C6A428013243D6C00FE9096 /* _Garden.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A427513243D6C00FE9096 /* _Garden.m */; };
+		5C6A428113243D6C00FE9096 /* _GardenLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A427713243D6C00FE9096 /* _GardenLocation.m */; };
+		5C6A428213243D6C00FE9096 /* _InfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A427913243D6C00FE9096 /* _InfoItem.m */; };
+		5C6A428313243D6C00FE9096 /* _Tour.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A427B13243D6C00FE9096 /* _Tour.m */; };
+		5C6A428413243D6C00FE9096 /* Garden.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A427D13243D6C00FE9096 /* Garden.m */; };
+		5C6A428513243D6C00FE9096 /* GardenLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A427F13243D6C00FE9096 /* GardenLocation.m */; };
 		5C8714BE12EE4B830025B7B0 /* GardenMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8714BD12EE4B830025B7B0 /* GardenMapViewController.m */; };
 		5C8714C312EE4CCA0025B7B0 /* GardenMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8714C212EE4CCA0025B7B0 /* GardenMapView.xib */; };
-		5C901E2C12F8DFE00091BB68 /* AddTalks.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5C901E2B12F8DFE00091BB68 /* AddTalks.xcmappingmodel */; };
 		5C901E6E12F8E7470091BB68 /* talk.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C901E6C12F8E7470091BB68 /* talk.png */; };
 		5C901E6F12F8E7470091BB68 /* talk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C901E6D12F8E7470091BB68 /* talk@2x.png */; };
 		5C99568112EFA6D0003D4908 /* StarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C99568012EFA6D0003D4908 /* StarControl.m */; };
+		5CB4EEC41324528D006C1040 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 5CB4EE5C1324528D006C1040 /* CHANGELOG.md */; };
+		5CB4EEC51324528D006C1040 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4EE5E1324528D006C1040 /* JSONKit.m */; };
+		5CB4EEC61324528D006C1040 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5CB4EE5F1324528D006C1040 /* README.md */; };
+		5CB4EEF0132453F2006C1040 /* Importer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4EEEF132453F2006C1040 /* Importer.m */; };
+		5CB4EEF3132453FF006C1040 /* InfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4EEF2132453FF006C1040 /* InfoItem.m */; };
+		5CB4EEF61324540B006C1040 /* Tour.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4EEF51324540B006C1040 /* Tour.m */; };
 		5CCF0CB512FF18A500D88913 /* FilteredGardenList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CCF0CB312FF18A500D88913 /* FilteredGardenList.xib */; };
+		5CD3A5651324584B004E5098 /* GNGT.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5CD3A5641324584B004E5098 /* GNGT.sqlite */; };
 		5CDF404912FC8C8B0014742E /* chevron.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF404512FC8C8B0014742E /* chevron.png */; };
 		5CDF404A12FC8C8B0014742E /* chevron@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF404612FC8C8B0014742E /* chevron@2x.png */; };
 		5CDF404B12FC8C8B0014742E /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF404712FC8C8B0014742E /* favorite.png */; };
@@ -43,7 +54,6 @@
 		5CE4733F12F69110009DCC8C /* poppy.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CE4733D12F69110009DCC8C /* poppy.png */; };
 		5CE4734012F69110009DCC8C /* poppy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CE4733E12F69110009DCC8C /* poppy@2x.png */; };
 		5CE7F51612F0E7A70023C96A /* GardenInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7F51512F0E7A70023C96A /* GardenInfoViewCell.m */; };
-		5CE7F55212F0F1220023C96A /* AddFavorite.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7F55112F0F1220023C96A /* AddFavorite.xcmappingmodel */; };
 		C992612B12FDEC5E00FA5E8B /* GNGTAppIco.png in Resources */ = {isa = PBXBuildFile; fileRef = C992612A12FDEC5E00FA5E8B /* GNGTAppIco.png */; };
 		C992D8CF12E2FA50004E4C35 /* GardensListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C992D8CE12E2FA50004E4C35 /* GardensListViewController.m */; };
 /* End PBXBuildFile section */
@@ -62,8 +72,6 @@
 		5C26EDC01303C2370035E9C5 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		5C26EDC11303C24D0035E9C5 /* UIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
 		5C26EDC21303C24D0035E9C5 /* UIConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConstants.m; sourceTree = "<group>"; };
-		5C309BA41305E59300AF4C72 /* ImportJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportJSON.h; sourceTree = "<group>"; };
-		5C309BA51305E59300AF4C72 /* ImportJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportJSON.m; sourceTree = "<group>"; };
 		5C42631512F7F951007E0ABF /* flowerpot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flowerpot.png; sourceTree = "<group>"; };
 		5C42631612F7F951007E0ABF /* flowerpot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flowerpot@2x.png"; sourceTree = "<group>"; };
 		5C4C84EF12EDF9AF0086B133 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -73,34 +81,40 @@
 		5C50D2DD12FCDA8E001C94EF /* TourInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TourInfoController.xib; sourceTree = "<group>"; };
 		5C50D2EA12FCE29A001C94EF /* clarkia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clarkia.png; sourceTree = "<group>"; };
 		5C50D2EB12FCE29A001C94EF /* clarkia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clarkia@2x.png"; sourceTree = "<group>"; };
-		5C63CF20132437D00023C4B4 /* _Garden.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _Garden.h; sourceTree = "<group>"; };
-		5C63CF21132437D00023C4B4 /* _Garden.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _Garden.m; sourceTree = "<group>"; };
-		5C63CF22132437D00023C4B4 /* _GardenLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _GardenLocation.h; sourceTree = "<group>"; };
-		5C63CF23132437D10023C4B4 /* _GardenLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _GardenLocation.m; sourceTree = "<group>"; };
-		5C63CF24132437D10023C4B4 /* _InfoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _InfoItem.h; sourceTree = "<group>"; };
-		5C63CF25132437D10023C4B4 /* _InfoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _InfoItem.m; sourceTree = "<group>"; };
-		5C63CF26132437D10023C4B4 /* _Tour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _Tour.h; sourceTree = "<group>"; };
-		5C63CF27132437D10023C4B4 /* _Tour.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _Tour.m; sourceTree = "<group>"; };
-		5C63CF28132437D10023C4B4 /* Garden.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Garden.h; sourceTree = "<group>"; };
-		5C63CF29132437D20023C4B4 /* Garden.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Garden.m; sourceTree = "<group>"; };
-		5C63CF2A132437D20023C4B4 /* GardenLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GardenLocation.h; sourceTree = "<group>"; };
-		5C63CF2B132437D20023C4B4 /* GardenLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GardenLocation.m; sourceTree = "<group>"; };
-		5C63CF2C132437D20023C4B4 /* InfoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoItem.h; sourceTree = "<group>"; };
-		5C63CF2D132437D30023C4B4 /* InfoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoItem.m; sourceTree = "<group>"; };
-		5C63CF2E132437D30023C4B4 /* Tour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tour.h; sourceTree = "<group>"; };
-		5C63CF2F132437D30023C4B4 /* Tour.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tour.m; sourceTree = "<group>"; };
+		5C6A427413243D6C00FE9096 /* _Garden.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Garden.h; sourceTree = "<group>"; };
+		5C6A427513243D6C00FE9096 /* _Garden.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Garden.m; sourceTree = "<group>"; };
+		5C6A427613243D6C00FE9096 /* _GardenLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _GardenLocation.h; sourceTree = "<group>"; };
+		5C6A427713243D6C00FE9096 /* _GardenLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _GardenLocation.m; sourceTree = "<group>"; };
+		5C6A427813243D6C00FE9096 /* _InfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _InfoItem.h; sourceTree = "<group>"; };
+		5C6A427913243D6C00FE9096 /* _InfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _InfoItem.m; sourceTree = "<group>"; };
+		5C6A427A13243D6C00FE9096 /* _Tour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Tour.h; sourceTree = "<group>"; };
+		5C6A427B13243D6C00FE9096 /* _Tour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Tour.m; sourceTree = "<group>"; };
+		5C6A427C13243D6C00FE9096 /* Garden.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Garden.h; sourceTree = "<group>"; };
+		5C6A427D13243D6C00FE9096 /* Garden.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Garden.m; sourceTree = "<group>"; };
+		5C6A427E13243D6C00FE9096 /* GardenLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenLocation.h; sourceTree = "<group>"; };
+		5C6A427F13243D6C00FE9096 /* GardenLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenLocation.m; sourceTree = "<group>"; };
 		5C8714BC12EE4B830025B7B0 /* GardenMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenMapViewController.h; sourceTree = "<group>"; };
 		5C8714BD12EE4B830025B7B0 /* GardenMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenMapViewController.m; sourceTree = "<group>"; };
 		5C8714C212EE4CCA0025B7B0 /* GardenMapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GardenMapView.xib; sourceTree = "<group>"; };
 		5C901E0F12F8DE360091BB68 /* GNGT 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GNGT 3.xcdatamodel"; sourceTree = "<group>"; };
-		5C901E2B12F8DFE00091BB68 /* AddTalks.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = AddTalks.xcmappingmodel; sourceTree = "<group>"; };
 		5C901E6C12F8E7470091BB68 /* talk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = talk.png; sourceTree = "<group>"; };
 		5C901E6D12F8E7470091BB68 /* talk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk@2x.png"; sourceTree = "<group>"; };
 		5C99567F12EFA6D0003D4908 /* StarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarControl.h; sourceTree = "<group>"; };
 		5C99568012EFA6D0003D4908 /* StarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarControl.m; sourceTree = "<group>"; };
 		5CB3AC3213050667000F56FC /* GNGT_4.xcdatamodel */ = {isa = PBXFileReference; comments = "xmod
 "; lastKnownFileType = wrapper.xcdatamodel; path = GNGT_4.xcdatamodel; sourceTree = "<group>"; };
+		5CB4ED8713244E4A006C1040 /* gngt-db-01.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "gngt-db-01.json"; path = "db/gngt-db-01.json"; sourceTree = "<group>"; };
+		5CB4EE5C1324528D006C1040 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
+		5CB4EE5D1324528D006C1040 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		5CB4EE5E1324528D006C1040 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		5CB4EE5F1324528D006C1040 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		5CB4EEEF132453F2006C1040 /* Importer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Importer.m; sourceTree = "<group>"; };
+		5CB4EEF1132453FF006C1040 /* InfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoItem.h; path = Classes/InfoItem.h; sourceTree = SOURCE_ROOT; };
+		5CB4EEF2132453FF006C1040 /* InfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoItem.m; path = Classes/InfoItem.m; sourceTree = SOURCE_ROOT; };
+		5CB4EEF41324540B006C1040 /* Tour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tour.h; path = Classes/Tour.h; sourceTree = SOURCE_ROOT; };
+		5CB4EEF51324540B006C1040 /* Tour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tour.m; path = Classes/Tour.m; sourceTree = SOURCE_ROOT; };
 		5CCF0CB312FF18A500D88913 /* FilteredGardenList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FilteredGardenList.xib; path = ../Classes/FilteredGardenList.xib; sourceTree = "<group>"; };
+		5CD3A5641324584B004E5098 /* GNGT.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = GNGT.sqlite; path = db/GNGT.sqlite; sourceTree = "<group>"; };
 		5CDF404512FC8C8B0014742E /* chevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chevron.png; sourceTree = "<group>"; };
 		5CDF404612FC8C8B0014742E /* chevron@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chevron@2x.png"; sourceTree = "<group>"; };
 		5CDF404712FC8C8B0014742E /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
@@ -114,7 +128,6 @@
 		5CE4733E12F69110009DCC8C /* poppy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poppy@2x.png"; sourceTree = "<group>"; };
 		5CE7F51412F0E7A70023C96A /* GardenInfoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenInfoViewCell.h; sourceTree = "<group>"; };
 		5CE7F51512F0E7A70023C96A /* GardenInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenInfoViewCell.m; sourceTree = "<group>"; };
-		5CE7F55112F0F1220023C96A /* AddFavorite.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = AddFavorite.xcmappingmodel; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* GNGT-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GNGT-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		C992612A12FDEC5E00FA5E8B /* GNGTAppIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GNGTAppIco.png; sourceTree = "<group>"; };
 		C992D8CD12E2FA50004E4C35 /* GardensListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardensListViewController.h; sourceTree = "<group>"; };
@@ -141,13 +154,13 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5CB4EEEE132453DD006C1040 /* db */,
+				5CB4EDA41324528C006C1040 /* JSONKit */,
 				5C309BA21305E50F00AF4C72 /* Util */,
-				5CE2FCE912E8C82A00D88C6A /* Model */,
 				5C309BA31305E51A00AF4C72 /* App delegate */,
+				5C6A427313243D6C00FE9096 /* model */,
 				5CE2FCE812E8C82400D88C6A /* Views */,
 				5C99568C12EFA7DB003D4908 /* Controls */,
-				5C309BA41305E59300AF4C72 /* ImportJSON.h */,
-				5C309BA51305E59300AF4C72 /* ImportJSON.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -186,7 +199,8 @@
 			children = (
 				5CDF404012FC8C530014742E /* ui */,
 				5CDF403F12FC8C300014742E /* images */,
-				5CDF404112FC8C690014742E /* core data */,
+				5CB4ED8313244E2E006C1040 /* json */,
+				5CDF404112FC8C690014742E /* db */,
 				8D1107310486CEB800E47090 /* GNGT-Info.plist */,
 			);
 			name = Resources;
@@ -222,27 +236,27 @@
 			name = "App delegate";
 			sourceTree = "<group>";
 		};
-		5C63CF1F132437CF0023C4B4 /* GNGT */ = {
+		5C6A427313243D6C00FE9096 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				5C63CF20132437D00023C4B4 /* _Garden.h */,
-				5C63CF21132437D00023C4B4 /* _Garden.m */,
-				5C63CF22132437D00023C4B4 /* _GardenLocation.h */,
-				5C63CF23132437D10023C4B4 /* _GardenLocation.m */,
-				5C63CF24132437D10023C4B4 /* _InfoItem.h */,
-				5C63CF25132437D10023C4B4 /* _InfoItem.m */,
-				5C63CF26132437D10023C4B4 /* _Tour.h */,
-				5C63CF27132437D10023C4B4 /* _Tour.m */,
-				5C63CF28132437D10023C4B4 /* Garden.h */,
-				5C63CF29132437D20023C4B4 /* Garden.m */,
-				5C63CF2A132437D20023C4B4 /* GardenLocation.h */,
-				5C63CF2B132437D20023C4B4 /* GardenLocation.m */,
-				5C63CF2C132437D20023C4B4 /* InfoItem.h */,
-				5C63CF2D132437D30023C4B4 /* InfoItem.m */,
-				5C63CF2E132437D30023C4B4 /* Tour.h */,
-				5C63CF2F132437D30023C4B4 /* Tour.m */,
+				5CB4EEF41324540B006C1040 /* Tour.h */,
+				5CB4EEF51324540B006C1040 /* Tour.m */,
+				5CB4EEF1132453FF006C1040 /* InfoItem.h */,
+				5CB4EEF2132453FF006C1040 /* InfoItem.m */,
+				5C6A427413243D6C00FE9096 /* _Garden.h */,
+				5C6A427513243D6C00FE9096 /* _Garden.m */,
+				5C6A427613243D6C00FE9096 /* _GardenLocation.h */,
+				5C6A427713243D6C00FE9096 /* _GardenLocation.m */,
+				5C6A427813243D6C00FE9096 /* _InfoItem.h */,
+				5C6A427913243D6C00FE9096 /* _InfoItem.m */,
+				5C6A427A13243D6C00FE9096 /* _Tour.h */,
+				5C6A427B13243D6C00FE9096 /* _Tour.m */,
+				5C6A427C13243D6C00FE9096 /* Garden.h */,
+				5C6A427D13243D6C00FE9096 /* Garden.m */,
+				5C6A427E13243D6C00FE9096 /* GardenLocation.h */,
+				5C6A427F13243D6C00FE9096 /* GardenLocation.m */,
 			);
-			path = GNGT;
+			path = model;
 			sourceTree = "<group>";
 		};
 		5C99568C12EFA7DB003D4908 /* Controls */ = {
@@ -252,6 +266,33 @@
 				5C99568012EFA6D0003D4908 /* StarControl.m */,
 			);
 			name = Controls;
+			sourceTree = "<group>";
+		};
+		5CB4ED8313244E2E006C1040 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				5CB4ED8713244E4A006C1040 /* gngt-db-01.json */,
+			);
+			name = json;
+			sourceTree = "<group>";
+		};
+		5CB4EDA41324528C006C1040 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				5CB4EE5C1324528D006C1040 /* CHANGELOG.md */,
+				5CB4EE5D1324528D006C1040 /* JSONKit.h */,
+				5CB4EE5E1324528D006C1040 /* JSONKit.m */,
+				5CB4EE5F1324528D006C1040 /* README.md */,
+			);
+			path = JSONKit;
+			sourceTree = SOURCE_ROOT;
+		};
+		5CB4EEEE132453DD006C1040 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				5CB4EEEF132453F2006C1040 /* Importer.m */,
+			);
+			name = db;
 			sourceTree = "<group>";
 		};
 		5CDF403F12FC8C300014742E /* images */ = {
@@ -288,15 +329,13 @@
 			path = ui;
 			sourceTree = "<group>";
 		};
-		5CDF404112FC8C690014742E /* core data */ = {
+		5CDF404112FC8C690014742E /* db */ = {
 			isa = PBXGroup;
 			children = (
+				5CD3A5641324584B004E5098 /* GNGT.sqlite */,
 				2819305F112F816700ECF9B4 /* GNGT.xcdatamodeld */,
-				5CE7F55112F0F1220023C96A /* AddFavorite.xcmappingmodel */,
-				5C901E2B12F8DFE00091BB68 /* AddTalks.xcmappingmodel */,
-				5C63CF1F132437CF0023C4B4 /* GNGT */,
 			);
-			name = "core data";
+			name = db;
 			sourceTree = "<group>";
 		};
 		5CE2FCE812E8C82400D88C6A /* Views */ = {
@@ -316,13 +355,6 @@
 				5C50D2DC12FCDA8E001C94EF /* TourInfoController.m */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		5CE2FCE912E8C82A00D88C6A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +426,9 @@
 				5C50D2ED12FCE29A001C94EF /* clarkia@2x.png in Resources */,
 				C992612B12FDEC5E00FA5E8B /* GNGTAppIco.png in Resources */,
 				5CCF0CB512FF18A500D88913 /* FilteredGardenList.xib in Resources */,
+				5CB4EEC41324528D006C1040 /* CHANGELOG.md in Resources */,
+				5CB4EEC61324528D006C1040 /* README.md in Resources */,
+				5CD3A5651324584B004E5098 /* GNGT.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,12 +446,19 @@
 				5C8714BE12EE4B830025B7B0 /* GardenMapViewController.m in Sources */,
 				5C99568112EFA6D0003D4908 /* StarControl.m in Sources */,
 				5CE7F51612F0E7A70023C96A /* GardenInfoViewCell.m in Sources */,
-				5CE7F55212F0F1220023C96A /* AddFavorite.xcmappingmodel in Sources */,
-				5C901E2C12F8DFE00091BB68 /* AddTalks.xcmappingmodel in Sources */,
 				5CDFEF7412F92271006AC87D /* GardenDescriptionViewController.m in Sources */,
 				5C50D2DE12FCDA8E001C94EF /* TourInfoController.m in Sources */,
 				5C26EDC31303C24D0035E9C5 /* UIConstants.m in Sources */,
-				5C309BA61305E59300AF4C72 /* ImportJSON.m in Sources */,
+				5C6A428013243D6C00FE9096 /* _Garden.m in Sources */,
+				5C6A428113243D6C00FE9096 /* _GardenLocation.m in Sources */,
+				5C6A428213243D6C00FE9096 /* _InfoItem.m in Sources */,
+				5C6A428313243D6C00FE9096 /* _Tour.m in Sources */,
+				5C6A428413243D6C00FE9096 /* Garden.m in Sources */,
+				5C6A428513243D6C00FE9096 /* GardenLocation.m in Sources */,
+				5CB4EEC51324528D006C1040 /* JSONKit.m in Sources */,
+				5CB4EEF0132453F2006C1040 /* Importer.m in Sources */,
+				5CB4EEF3132453FF006C1040 /* InfoItem.m in Sources */,
+				5CB4EEF61324540B006C1040 /* Tour.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

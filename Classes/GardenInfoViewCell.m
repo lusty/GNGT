@@ -9,7 +9,7 @@
 #import "GardenInfoViewCell.h"
 #import "GardensListViewController.h"
 #import "StarControl.h"
-#import "GardenInfo.h"
+#import "Garden.h"
 #import "UIConstants.h"
 
 const CGFloat STAR_CONTROL_SIZE = 42.0f;
@@ -123,7 +123,7 @@ const CGFloat LABEL_SPACING = 2.0f;
 	return self;
 }
 
-- (void)setInfo:(GardenInfo *)newInfo {
+- (void)setInfo:(Garden *)newInfo {
 	if (self.info == newInfo) return;
 	[info release];
 	info = [newInfo retain];
@@ -134,7 +134,7 @@ const CGFloat LABEL_SPACING = 2.0f;
 	[checkbox addTarget:self action:@selector(starControlChanged:) forControlEvents:UIControlEventTouchUpInside];
 	
 	UILabel *nameLabel= (UILabel *)[self viewWithTag:NAME_TAG];
-	nameLabel.text = info.gardenName;
+	nameLabel.text = info.name;
 	
 	UILabel *cityLabel= (UILabel *)[self viewWithTag:CITY_TAG];
 	if (cityLabel) cityLabel.text = info.city;

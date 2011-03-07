@@ -7,11 +7,12 @@
 //
 
 #import "GNGTAppDelegate.h"
-#import "GardenInfo.h"
-#import "GardenDescription.h"
+#import "Garden.h"
 #import "GardensListViewController.h"
 #import "GardenMapViewController.h"
 
+#import "JSONKit.h"
+#import "Importer.h"
 
 @implementation GNGTAppDelegate
 
@@ -40,8 +41,8 @@
 - (void)gardenInfoChangeHandler:(NSNotification *)notification
 {
 	NSError *err = nil;
-	GardenInfo *info = [notification object];
-	[info.managedObjectContext save:&err];
+	Garden *garden = [notification object];
+	[garden.managedObjectContext save:&err];
 	// TODO handle the error if it's non-nil
 }
 
@@ -149,12 +150,17 @@
     if (persistentStoreCoordinator_ != nil) {
         return persistentStoreCoordinator_;
     }
-    
+		
+/*
+// Only use these for generating a blank database prior to import
+	NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"GNGT.sqlite"];
+	NSString* documentsPath = [self applicationDocumentsDirectory];
+*/
 	NSString* documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
 	NSString *storePath = [documentsPath stringByAppendingPathComponent: @"GNGT.sqlite"];
 	NSURL *storeURL = [NSURL fileURLWithPath:storePath];
-	
-	// Put down default db if it doesn't already exist
+
+	// Put down starter db if it doesn't already exist
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	if (![fileManager fileExistsAtPath:storePath]) {
 		NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:@"GNGT" ofType:@"sqlite"];
@@ -162,9 +168,9 @@
 			[fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
 		}
 	}
-    
+
     NSError *error = nil;
-	NSDictionary *storeOptions = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],NSMigratePersistentStoresAutomaticallyOption, [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
+	NSDictionary *storeOptions = NULL; // [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],NSMigratePersistentStoresAutomaticallyOption, [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
 	persistentStoreCoordinator_ = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![persistentStoreCoordinator_ addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:storeOptions error:&error]) {
         /*
@@ -194,6 +200,14 @@
         abort();
     }    
     
+/*
+	// Do the import (one time only)
+	Importer *importer = [[Importer alloc] initWithContext:[self managedObjectContext]];
+	NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"gngt-db-01" ofType:@"json"]; 
+	NSData *data = [NSData dataWithContentsOfFile:jsonPath];
+	NSMutableDictionary *parsed = [data mutableObjectFromJSONData];
+	[importer tour:parsed error:&error];
+*/	
     return persistentStoreCoordinator_;
 }
 
