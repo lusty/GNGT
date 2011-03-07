@@ -17,7 +17,7 @@
 	UILabel		*nameLabel;
 	UILabel		*numberLabel;
 	
-	Garden *info;
+	Garden *garden;
 	NSMutableArray *labels;
 	NSMutableArray *values;
 }
@@ -26,7 +26,7 @@
 @property (nonatomic, retain) IBOutlet StarControl *starControl;
 @property (nonatomic, retain) IBOutlet UILabel *nameLabel;
 @property (nonatomic, retain) IBOutlet UILabel *numberLabel;
-@property (nonatomic, retain) Garden *info;
+@property (nonatomic, retain) Garden *garden;
 @property (nonatomic, retain) NSMutableArray *labels;
 @property (nonatomic, retain) NSMutableArray *values;
 

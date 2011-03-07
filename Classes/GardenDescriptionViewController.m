@@ -8,6 +8,8 @@
 
 #import "GardenDescriptionViewController.h"
 #import "Garden.h"
+#import "InfoItem.h"
+#import "GardenLocation.h"
 //#import "GardenDescription.h"
 #import "StarControl.h"
 
@@ -20,21 +22,27 @@
 
 @implementation GardenDescriptionViewController
 
-@dynamic info;
+@dynamic garden;
 @synthesize labels, values;
 @synthesize headerView, starControl, nameLabel, numberLabel;
 
-- (Garden *)info
+- (Garden *)garden
 {
-    return [[info retain] autorelease]; 
+    return [[garden retain] autorelease]; 
 }
 
-- (void)setInfo:(Garden *)anInfo
+- (void)setGarden:(Garden *)anInfo
 {
-    if (info != anInfo) {
-        [info release];
-        info = [anInfo retain];
+    if (garden != anInfo) {
+        [garden release];
+        garden = [anInfo retain];
     }
+}
+
+- (void)addLabel:(NSString *)labelText forKey:(NSString *)key 
+{
+	NSString *valueText = [garden itemForKey:key];
+	[self addLabel:labelText andText:valueText];
 }
 
 - (void)addLabel:(NSString *)labelText andText:(NSString *)valueText 
@@ -65,39 +73,37 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-//	BOOL authorized = YES; // TODO have the application set this from outside
+	BOOL authorized = YES; // TODO have the application set this from outside
 	
 	// Build the data used by the display table
 	[self.labels removeAllObjects];
 	[self.values removeAllObjects];
-/*
-	GardenDescription *description = info.gardenDescription;
+
+
+	[self addLabel:@"Garden talk" forKey:@"Plant sale"];
 	
-	[self addLabel:@"Plant sale" andText:info.plantSale];
-	[self addLabel:@"Garden talk" andText:info.gardenTalk];
-	
-	if (authorized && info.street && info.street.length > 0) {
-		[self addLabel:@"Address" andText:[NSString stringWithFormat:@"%@, %@", info.street, info.city]];
+	if (authorized && garden.location && garden.location.streetAddress && garden.location.streetAddress.length > 0) {
+		[self addLabel:@"Address" andText:[NSString stringWithFormat:@"%@, %@", garden.location.streetAddress, garden.city]];
 	} else {
-		[self addLabel:@"City" andText:info.city];
+		[self addLabel:@"City" andText:garden.city];
 	}
 	
 	// Description items, may be a secondary table
-	[self addLabel:@"Designer" andText:description.designer]; // TODO add disclosure for designer if needed
-	[self addLabel:@"Installer" andText:description.gardenInstaller];
-	if (description.sqft)
-		[self addLabel:@"Size" andText:[NSString stringWithFormat:@"%i sq. ft.", [description.sqft intValue]]];
-	[self addLabel:@"Installed in" andNumber:description.yearInstalled];
-	[self addLabel:@"Showcase feature" andText:description.showcase];
-	[self addLabel:@"Gardening for wildlife" andText:description.wildlife];
-	[self addLabel:@"Other garden attractions" andText:description.other];
-*/	
+	[self addLabel:@"Designer" forKey:@"designer"]; // TODO add disclosure for designer if needed
+	[self addLabel:@"Installer" forKey:@"installer"];
+	if ([garden itemForKey:@"sqft"])
+		[self addLabel:@"Size" andText:[NSString stringWithFormat:@"%@ sq. ft.", [garden itemForKey:@"sqft"]]];
+	[self addLabel:@"Installed in" forKey:@"yearInstalled"];
+	[self addLabel:@"Showcase feature" forKey:@"showcase"];
+	[self addLabel:@"Gardening for wildlife" forKey:@"wildlife"];
+	[self addLabel:@"Other garden attractions" forKey:@"other"];
+
 	UITableView *tview = (UITableView *)self.view;
 
 	// Set up the view header
-	self.nameLabel.text = info.name;
-//	self.numberLabel.text = [info.gardenNumber stringValue];
-	starControl.on = [info.isFavorite boolValue];
+	self.nameLabel.text = garden.name;
+	self.numberLabel.text = [garden itemForKey:@"gardenNumber"];
+	starControl.on = [garden.isFavorite boolValue];
 	[starControl addTarget:self action:@selector(starControlChanged:) forControlEvents:UIControlEventTouchUpInside];
 	
 	[tview setTableHeaderView:headerView];
@@ -109,7 +115,7 @@
 - (void)starControlChanged:(id)control
 {
 	BOOL checked= [control on];
-	self.info.isFavorite = [NSNumber numberWithBool:checked];
+	self.garden.isFavorite = [NSNumber numberWithBool:checked];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -277,8 +283,8 @@ const float DETAIL_MAIN_FONT_SIZE = 12.0;
 }
 
 - (void)dealloc {
-	[info release];
-	info = nil;
+	[garden release];
+	garden = nil;
     [super dealloc];
 }
 

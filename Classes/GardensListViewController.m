@@ -221,7 +221,7 @@ enum sorting {
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	Garden *info = (Garden *)[_fetchedResultsController objectAtIndexPath:indexPath];
-	self.detailsController.info = info;
+	self.detailsController.garden = info;
     [self.navigationController pushViewController:_description animated:YES];
 }
 
