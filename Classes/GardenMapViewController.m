@@ -16,6 +16,8 @@
 - (NSArray *)performFetch;
 - (void)setPredicateForFilter:(int)filterType;
 - (void)changeViewFilterTo:(int)newFilterValue;
+- (BOOL)updateAnnotations;
+
 @end
 
 @implementation GardenMapViewController
@@ -42,8 +44,7 @@ enum viewFilter {
 	
     if (_fetchRequest == NULL) {
 		_fetchRequest = [[NSFetchRequest alloc] init];
-		NSEntityDescription *entity = [NSEntityDescription 
-									   entityForName:@"GardenLocation" inManagedObjectContext:context];
+		NSEntityDescription *entity = [NSEntityDescription entityForName:@"Garden" inManagedObjectContext:context];
 		[_fetchRequest setEntity:entity];
 		[_fetchRequest setResultType:NSManagedObjectResultType];
 	}	
@@ -99,9 +100,25 @@ enum viewFilter {
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
+	[self updateAnnotations];	
+}
+
+- (BOOL)updateAnnotations
+{
 	NSArray *fetchResults = [self performFetch];
-	if (fetchResults)
-		[mapView addAnnotations:fetchResults];
+	[mapView removeAnnotations:mapView.annotations];
+	BOOL ok = fetchResults != NULL && fetchResults.count > 0;
+	if (ok) {
+		NSMutableArray *annotations = [NSMutableArray arrayWithCapacity:fetchResults.count];
+		for (Garden *garden in fetchResults) {
+			[annotations addObject:garden.location];
+		}
+		[mapView addAnnotations:annotations];
+		// show the annotated values if they exist but nothing is on screen
+		if ([[mapView annotationsInMapRect:mapView.visibleMapRect] count] == 0) 
+			[self showDefaultMapAnimated:YES];
+	}
+	return ok;
 }
 
 #pragma mark -
@@ -120,7 +137,7 @@ enum viewFilter {
 
 - (void)setPredicateForFilter:(int)filterType
 {
-	// TODO if this doesn't work, go to in-memory filtering
+	// TODO  go to in-memory filtering
 	NSPredicate *predicate = NULL;
 	switch (filterType) {
 		case viewAll:
@@ -149,24 +166,16 @@ enum viewFilter {
 		[self changeViewFilterTo:newFilterValue];
 }
 
-- (void)changeViewFilterTo:(int)newFilterValue;
+- (void)changeViewFilterTo:(int)newFilterValue
 {
 
 	[self setPredicateForFilter:newFilterValue];
 	// TODO save last value and bounce back to it if nothing found
-	NSArray *fetchResults = [self performFetch];
-	if (fetchResults) {
-		if (fetchResults.count > 0) {
-			[mapView removeAnnotations:mapView.annotations];
-			[mapView addAnnotations:fetchResults];
-			// show the annotated values if they exist but nothing is on screen
-			if ([[mapView annotationsInMapRect:mapView.visibleMapRect] count] == 0) 
-				[self showDefaultMapAnimated:YES];
-			lastView = newFilterValue;
-		} else if (newFilterValue != viewAll) { // fetchResults.count == 0
-			UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:@"No matching gardens found" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
-			[alert show];
-		}
+	if ([self updateAnnotations]) {
+		lastView = newFilterValue;
+	} else if (newFilterValue != viewAll) { // fetchResults.count == 0
+		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:@"No matching gardens found" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+		[alert show];
 	}
 }
 
@@ -218,16 +227,7 @@ enum viewFilter {
 	region.span.latitudeDelta = 0.15f;
 	[self.mapView setRegion:region animated:YES];
 	
-	// TODO show just the annotations within this region? (possible optimization)
-//	NSError *error = nil;
-//	if (mapView.annotations.count <= 1) {
-//		if ([self.fetchedResultsController performFetch:&error]) {
-//			[mapView addAnnotations:fetchedResultsController.fetchedObjects];
-//		}
-//		// TODO else, log the error
-//	}
-
-	
+	// TODO show just the annotations within this region? (possible optimization)	
 }
 
 #pragma mark MapKit Delegate
