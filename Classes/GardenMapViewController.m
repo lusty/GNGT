@@ -137,7 +137,6 @@ enum viewFilter {
 
 - (void)setPredicateForFilter:(int)filterType
 {
-	// TODO  go to in-memory filtering
 	NSPredicate *predicate = NULL;
 	switch (filterType) {
 		case viewAll:
@@ -149,11 +148,11 @@ enum viewFilter {
 			break;
 		
 		case viewPlantSales:
-			predicate = [NSPredicate predicateWithFormat:@"plantSale > ''"];
+			predicate = [NSPredicate predicateWithFormat:@"hasPlantSale == %@", [NSNumber numberWithBool:YES]];
 			break;
 		
 		case viewTalks:
-			predicate = [NSPredicate predicateWithFormat:@"gardenTalk > ''"];
+			predicate = [NSPredicate predicateWithFormat:@"hasGardenTalk == %@", [NSNumber numberWithBool:YES]];
 			break;
 	}
 	[self.fetchRequest setPredicate:predicate];
@@ -239,8 +238,8 @@ enum viewFilter {
 	Garden *garden = loc.garden;
 	
 	BOOL isFavorite = [garden.isFavorite boolValue];
-	BOOL hasPlantSale = garden.hasPlantSale;
-	BOOL hasGardenTalk = garden.hasGardenTalk;
+	BOOL hasPlantSale = garden.hasPlantSaleValue;
+	BOOL hasGardenTalk = garden.hasGardenTalkValue;
 		
 	NSString *imageName = isFavorite ? @"favorite.png" : @"poppy.png";
 	

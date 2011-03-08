@@ -23,9 +23,9 @@
 
 
 
-@property (nonatomic, retain) NSDate *tourNSDate;
+@property (nonatomic, retain) NSString *url;
 
-//- (BOOL)validateTourNSDate:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateUrl:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -35,21 +35,21 @@
 
 
 
-@property (nonatomic, retain) NSString *url;
+@property (nonatomic, retain) NSString *tourName;
 
-//- (BOOL)validateUrl:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateTourName:(id*)value_ error:(NSError**)error_;
+
+
+
+@property (nonatomic, retain) NSDate *tourNSDate;
+
+//- (BOOL)validateTourNSDate:(id*)value_ error:(NSError**)error_;
 
 
 
 @property (nonatomic, retain) NSDate *hidePrivateBeforeDate;
 
 //- (BOOL)validateHidePrivateBeforeDate:(id*)value_ error:(NSError**)error_;
-
-
-
-@property (nonatomic, retain) NSString *tourName;
-
-//- (BOOL)validateTourName:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -74,8 +74,8 @@
 @interface _Tour (CoreDataGeneratedPrimitiveAccessors)
 
 
-- (NSDate*)primitiveTourNSDate;
-- (void)setPrimitiveTourNSDate:(NSDate*)value;
+- (NSString*)primitiveUrl;
+- (void)setPrimitiveUrl:(NSString*)value;
 
 
 
@@ -86,20 +86,20 @@
 
 
 
-- (NSString*)primitiveUrl;
-- (void)setPrimitiveUrl:(NSString*)value;
+- (NSString*)primitiveTourName;
+- (void)setPrimitiveTourName:(NSString*)value;
+
+
+
+
+- (NSDate*)primitiveTourNSDate;
+- (void)setPrimitiveTourNSDate:(NSDate*)value;
 
 
 
 
 - (NSDate*)primitiveHidePrivateBeforeDate;
 - (void)setPrimitiveHidePrivateBeforeDate:(NSDate*)value;
-
-
-
-
-- (NSString*)primitiveTourName;
-- (void)setPrimitiveTourName:(NSString*)value;
 
 
 

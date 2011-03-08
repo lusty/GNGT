@@ -114,6 +114,7 @@ void logValidationErrors(NSError **err)
 	Garden* result = (Garden*)[self extractObject:@"Garden" from:parsedStructure];
 	loc.name = result.name;
 	// TODO patch the note into the location
+	[result updateBeforeSave];
 	[moc save:err];
 	logValidationErrors(err);
 	return result;

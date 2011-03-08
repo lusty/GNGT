@@ -14,6 +14,8 @@
 
 
 
+
+
 @interface GardenID : NSManagedObjectID {}
 @end
 
@@ -25,9 +27,25 @@
 
 
 
+@property (nonatomic, retain) NSString *city;
+
+//- (BOOL)validateCity:(id*)value_ error:(NSError**)error_;
+
+
+
 @property (nonatomic, retain) NSString *name;
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
+
+
+
+@property (nonatomic, retain) NSNumber *hasPlantSale;
+
+@property BOOL hasPlantSaleValue;
+- (BOOL)hasPlantSaleValue;
+- (void)setHasPlantSaleValue:(BOOL)value_;
+
+//- (BOOL)validateHasPlantSale:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -41,15 +59,19 @@
 
 
 
+@property (nonatomic, retain) NSNumber *hasGardenTalk;
+
+@property BOOL hasGardenTalkValue;
+- (BOOL)hasGardenTalkValue;
+- (void)setHasGardenTalkValue:(BOOL)value_;
+
+//- (BOOL)validateHasGardenTalk:(id*)value_ error:(NSError**)error_;
+
+
+
 @property (nonatomic, retain) NSString *note;
 
 //- (BOOL)validateNote:(id*)value_ error:(NSError**)error_;
-
-
-
-@property (nonatomic, retain) NSString *city;
-
-//- (BOOL)validateCity:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -94,8 +116,23 @@
 @interface _Garden (CoreDataGeneratedPrimitiveAccessors)
 
 
+- (NSString*)primitiveCity;
+- (void)setPrimitiveCity:(NSString*)value;
+
+
+
+
 - (NSString*)primitiveName;
 - (void)setPrimitiveName:(NSString*)value;
+
+
+
+
+- (NSNumber*)primitiveHasPlantSale;
+- (void)setPrimitiveHasPlantSale:(NSNumber*)value;
+
+- (BOOL)primitiveHasPlantSaleValue;
+- (void)setPrimitiveHasPlantSaleValue:(BOOL)value_;
 
 
 
@@ -109,14 +146,17 @@
 
 
 
+- (NSNumber*)primitiveHasGardenTalk;
+- (void)setPrimitiveHasGardenTalk:(NSNumber*)value;
+
+- (BOOL)primitiveHasGardenTalkValue;
+- (void)setPrimitiveHasGardenTalkValue:(BOOL)value_;
+
+
+
+
 - (NSString*)primitiveNote;
 - (void)setPrimitiveNote:(NSString*)value;
-
-
-
-
-- (NSString*)primitiveCity;
-- (void)setPrimitiveCity:(NSString*)value;
 
 
 

@@ -200,7 +200,7 @@ enum sorting {
 		 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
     Garden *info = [_fetchedResultsController objectAtIndexPath:indexPath];
-	BOOL hasNotes = info.hasPlantSale | info.hasGardenTalk;
+	BOOL hasNotes = [info.hasPlantSale boolValue] | [info.hasGardenTalk boolValue];
 	BOOL hasCity = (sortMode == byName);
 	NSString *CellIdentifier = [GardenInfoViewCell reuseIdentifierWithNotes:hasNotes andCity:hasCity];
 	
@@ -214,7 +214,7 @@ enum sorting {
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  {  
     Garden *info = [_fetchedResultsController objectAtIndexPath:indexPath];
-	BOOL hasNotes = info.hasPlantSale | info.hasGardenTalk;
+	BOOL hasNotes = [info.hasPlantSale boolValue] | [info.hasGardenTalk boolValue];
 	BOOL hasCity = (sortMode == byName);
 	return [GardenInfoViewCell heightWithNotes:hasNotes andCity:hasCity];
 }

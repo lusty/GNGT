@@ -29,8 +29,16 @@
 + (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 	
+	if ([key isEqualToString:@"hasPlantSaleValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"hasPlantSale"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+	}
 	if ([key isEqualToString:@"isPublicValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"isPublic"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+	}
+	if ([key isEqualToString:@"hasGardenTalkValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"hasGardenTalk"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 	}
 	if ([key isEqualToString:@"isFavoriteValue"]) {
@@ -44,8 +52,41 @@
 
 
 
+@dynamic city;
+
+
+
+
+
+
 @dynamic name;
 
+
+
+
+
+
+@dynamic hasPlantSale;
+
+
+
+- (BOOL)hasPlantSaleValue {
+	NSNumber *result = [self hasPlantSale];
+	return [result boolValue];
+}
+
+- (void)setHasPlantSaleValue:(BOOL)value_ {
+	[self setHasPlantSale:[NSNumber numberWithBool:value_]];
+}
+
+- (BOOL)primitiveHasPlantSaleValue {
+	NSNumber *result = [self primitiveHasPlantSale];
+	return [result boolValue];
+}
+
+- (void)setPrimitiveHasPlantSaleValue:(BOOL)value_ {
+	[self setPrimitiveHasPlantSale:[NSNumber numberWithBool:value_]];
+}
 
 
 
@@ -77,14 +118,33 @@
 
 
 
+@dynamic hasGardenTalk;
+
+
+
+- (BOOL)hasGardenTalkValue {
+	NSNumber *result = [self hasGardenTalk];
+	return [result boolValue];
+}
+
+- (void)setHasGardenTalkValue:(BOOL)value_ {
+	[self setHasGardenTalk:[NSNumber numberWithBool:value_]];
+}
+
+- (BOOL)primitiveHasGardenTalkValue {
+	NSNumber *result = [self primitiveHasGardenTalk];
+	return [result boolValue];
+}
+
+- (void)setPrimitiveHasGardenTalkValue:(BOOL)value_ {
+	[self setPrimitiveHasGardenTalk:[NSNumber numberWithBool:value_]];
+}
+
+
+
+
+
 @dynamic note;
-
-
-
-
-
-
-@dynamic city;
 
 
 

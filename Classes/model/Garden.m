@@ -3,15 +3,7 @@
 
 @implementation Garden
 
-- (BOOL)hasPlantSale
-{
-	return NO; // TODO implement
-}
-
-- (BOOL)hasGardenTalk
-{
-	return NO; // TODO implement
-}
+@dynamic subtitle;
 
 - (NSString*)subtitle
 {
@@ -26,7 +18,20 @@
 			[_keyedItems setValue:item.itemValue forKey:item.itemKey];
 		}
 	}
-	return [_keyedItems objectForKey:key];
+	NSString *result = [_keyedItems objectForKey:key];
+	return result;
+}
+
+/**
+ * Called by the importer to copy any date from the children to here before
+ * writing this to the database.
+ */
+- (void)updateBeforeSave
+{
+	BOOL hgt = ([self itemForKey:@"gardenTalk"] != nil);
+	BOOL hps = ([self itemForKey:@"plantSale"] != nil);
+	[self setHasGardenTalkValue:hgt];
+	[self setHasPlantSaleValue:hps];
 }
 
 -(void) dealloc
