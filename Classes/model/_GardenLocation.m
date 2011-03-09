@@ -29,12 +29,12 @@
 + (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 	
-	if ([key isEqualToString:@"longitudeValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"longitude"];
-		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
-	}
 	if ([key isEqualToString:@"latitudeValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"latitude"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+	}
+	if ([key isEqualToString:@"longitudeValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"longitude"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 	}
 
@@ -53,32 +53,6 @@
 
 @dynamic name;
 
-
-
-
-
-
-@dynamic longitude;
-
-
-
-- (float)longitudeValue {
-	NSNumber *result = [self longitude];
-	return [result floatValue];
-}
-
-- (void)setLongitudeValue:(float)value_ {
-	[self setLongitude:[NSNumber numberWithFloat:value_]];
-}
-
-- (float)primitiveLongitudeValue {
-	NSNumber *result = [self primitiveLongitude];
-	return [result floatValue];
-}
-
-- (void)setPrimitiveLongitudeValue:(float)value_ {
-	[self setPrimitiveLongitude:[NSNumber numberWithFloat:value_]];
-}
 
 
 
@@ -111,6 +85,32 @@
 
 - (void)setPrimitiveLatitudeValue:(float)value_ {
 	[self setPrimitiveLatitude:[NSNumber numberWithFloat:value_]];
+}
+
+
+
+
+
+@dynamic longitude;
+
+
+
+- (float)longitudeValue {
+	NSNumber *result = [self longitude];
+	return [result floatValue];
+}
+
+- (void)setLongitudeValue:(float)value_ {
+	[self setLongitude:[NSNumber numberWithFloat:value_]];
+}
+
+- (float)primitiveLongitudeValue {
+	NSNumber *result = [self primitiveLongitude];
+	return [result floatValue];
+}
+
+- (void)setPrimitiveLongitudeValue:(float)value_ {
+	[self setPrimitiveLongitude:[NSNumber numberWithFloat:value_]];
 }
 
 

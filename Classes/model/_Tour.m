@@ -36,7 +36,7 @@
 
 
 
-@dynamic tourNSDate;
+@dynamic hidePrivateBeforeDate;
 
 
 
@@ -57,14 +57,21 @@
 
 
 
-@dynamic hidePrivateBeforeDate;
-
-
-
-
-
-
 @dynamic tourName;
+
+
+
+
+
+
+@dynamic updatedOn;
+
+
+
+
+
+
+@dynamic tourNSDate;
 
 
 
