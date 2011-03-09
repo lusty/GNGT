@@ -14,7 +14,14 @@
 #import "JSONKit.h"
 #import "Importer.h"
 
+#include "GTMHTTPFetcher.h"
+
 #undef REBUILD_DATABASE
+
+@interface GNGTAppDelegate(Private)
+- (void)beginCheckForUpdate;
+- (void)updateCheck:(GTMHTTPFetcher *)fetcher finishedWithData:(NSData *)retrievedData error:(NSError *)error;
+@end
 
 @implementation GNGTAppDelegate
 
@@ -37,6 +44,8 @@
 		name:@"GardenInfoChanged" object:nil];
     [self.window makeKeyAndVisible];
     
+	// Kick off a check to see if we have the latest map
+	[self beginCheckForUpdate];
 /*
 	// =================
 	// TEST TEST TEST
@@ -46,6 +55,31 @@
 	// =================
 */
     return YES;
+}
+
+- (void)beginCheckForUpdate
+{
+	NSURL *url = [NSURL URLWithString:@"http://www.example.com/"]; // This will need to change depending on the tour
+	NSURLRequest *request = [NSURLRequest requestWithURL:url];
+	GTMHTTPFetcher* myFetcher = [GTMHTTPFetcher fetcherWithRequest:request];
+	[myFetcher beginFetchWithDelegate:self
+					didFinishSelector:@selector(updateCheck:finishedWithData:error:)];
+}
+
+
+- (void)updateCheck:(GTMHTTPFetcher *)fetcher finishedWithData:(NSData *)retrievedData error:(NSError *)error {
+	if (error != nil) {
+		// failed; either an NSURLConnection error occurred, or the server returned
+		// a status value of at least 300
+		//
+		// the NSError domain string for server status errors is kGTMHTTPFetcherStatusDomain
+//		int status = [error code];
+	} else {
+		// fetch succeeded
+		// Add a notification to the tab bar
+		UITabBarItem *tab = [tabBarController.tabBar.items objectAtIndex:0];
+		tab.badgeValue = @"1";
+	}
 }
 
 - (void)gardenInfoChangeHandler:(NSNotification *)notification
