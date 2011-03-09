@@ -119,7 +119,7 @@
 		5CB4EEF2132453FF006C1040 /* InfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoItem.m; sourceTree = "<group>"; };
 		5CB4EEF41324540B006C1040 /* Tour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tour.h; sourceTree = "<group>"; };
 		5CB4EEF51324540B006C1040 /* Tour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tour.m; sourceTree = "<group>"; };
-		5CCF0CB312FF18A500D88913 /* FilteredGardenList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FilteredGardenList.xib; path = ../Classes/FilteredGardenList.xib; sourceTree = "<group>"; };
+		5CCF0CB312FF18A500D88913 /* FilteredGardenList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilteredGardenList.xib; sourceTree = "<group>"; };
 		5CD3A5641324584B004E5098 /* GNGT.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = GNGT.sqlite; path = db/GNGT.sqlite; sourceTree = "<group>"; };
 		5CDF404512FC8C8B0014742E /* chevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chevron.png; sourceTree = "<group>"; };
 		5CDF404612FC8C8B0014742E /* chevron@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chevron@2x.png"; sourceTree = "<group>"; };

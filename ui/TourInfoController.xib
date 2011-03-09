@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="1"/>
+			<integer value="24"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -47,7 +47,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 20}, {332, 29}}</string>
 						<reference key="NSSuperview" ref="797077336"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -76,7 +75,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{137, 50}, {163, 175}}</string>
 						<reference key="NSSuperview" ref="797077336"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -102,7 +100,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 57}, {109, 190}}</string>
 						<reference key="NSSuperview" ref="797077336"/>
-						<reference key="NSWindow"/>
 						<int key="IBUIContentMode">5</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -111,10 +108,35 @@
 							<string key="NSResourceName">clarkia.png</string>
 						</object>
 					</object>
+					<object class="IBUIButton" id="216102265">
+						<reference key="NSNextResponder" ref="797077336"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{20, 255}, {280, 37}}</string>
+						<reference key="NSSuperview" ref="797077336"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<object class="NSFont" key="IBUIFont">
+							<string key="NSName">Helvetica-Bold</string>
+							<double key="NSSize">15</double>
+							<int key="NSfFlags">16</int>
+						</object>
+						<int key="IBUIButtonType">1</int>
+						<string key="IBUINormalTitle">Download updated map</string>
+						<reference key="IBUIHighlightedTitleColor" ref="430139847"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<object class="NSColor" key="IBUINormalTitleShadowColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MC41AA</bytes>
+						</object>
+					</object>
 				</object>
 				<string key="NSFrameSize">{320, 411}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">2</int>
 					<bytes key="NSRGB">MC43NzY0NzA2NjEyIDAuODI3NDUxMDUwMyAwLjc3NjQ3MDY2MTIAA</bytes>
@@ -133,6 +155,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 20}, {332, 29}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -158,6 +181,7 @@
 						<int key="NSvFlags">301</int>
 						<string key="NSFrame">{{20, 57}, {280, 200}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -186,6 +210,7 @@ V2F0ZXIgRGlzdHJpY3QgCldhdGVyc2hlZCBXYXRjaCAKWWVyYmEgQnVlbmEgTnVyc2VyeSA</string>
 				</object>
 				<string key="NSFrameSize">{320, 411}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">2</int>
 					<bytes key="NSRGB">MC44MDc4NDMyMDgzIDAuODYyNzQ1MTY1OCAwLjgxNTY4NjM0NTEAA</bytes>
@@ -205,6 +230,23 @@ V2F0ZXIgRGlzdHJpY3QgCldhdGVyc2hlZCBXYXRjaCAKWWVyYmEgQnVlbmEgTnVyc2VyeSA</string>
 						<reference key="destination" ref="797077336"/>
 					</object>
 					<int key="connectionID">30</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">downloadUpdate</string>
+						<reference key="source" ref="216102265"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">35</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">updateButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="216102265"/>
+					</object>
+					<int key="connectionID">36</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -256,6 +298,7 @@ V2F0ZXIgRGlzdHJpY3QgCldhdGVyc2hlZCBXYXRjaCAKWWVyYmEgQnVlbmEgTnVyc2VyeSA</string>
 							<reference ref="66938936"/>
 							<reference ref="647748488"/>
 							<reference ref="176639448"/>
+							<reference ref="216102265"/>
 						</object>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">Page1</string>
@@ -273,6 +316,11 @@ V2F0ZXIgRGlzdHJpY3QgCldhdGVyc2hlZCBXYXRjaCAKWWVyYmEgQnVlbmEgTnVyc2VyeSA</string>
 					<object class="IBObjectRecord">
 						<int key="objectID">7</int>
 						<reference key="object" ref="66938936"/>
+						<reference key="parent" ref="797077336"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">34</int>
+						<reference key="object" ref="216102265"/>
 						<reference key="parent" ref="797077336"/>
 					</object>
 				</object>
@@ -293,6 +341,7 @@ V2F0ZXIgRGlzdHJpY3QgCldhdGVyc2hlZCBXYXRjaCAKWWVyYmEgQnVlbmEgTnVyc2VyeSA</string>
 					<string>24.IBEditorWindowLastContentRect</string>
 					<string>24.IBPluginDependency</string>
 					<string>24.IBViewBoundsToFrameTransform</string>
+					<string>34.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>4.IBViewBoundsToFrameTransform</string>
 					<string>5.IBPluginDependency</string>
@@ -304,7 +353,7 @@ V2F0ZXIgRGlzdHJpY3QgCldhdGVyc2hlZCBXYXRjaCAKWWVyYmEgQnVlbmEgTnVyc2VyeSA</string>
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>TourInfoController</string>
 					<string>UIResponder</string>
-					<string>{{302, 223}, {320, 480}}</string>
+					<string>{{548, 144}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAw8yAAA</bytes>
@@ -317,11 +366,12 @@ V2F0ZXIgRGlzdHJpY3QgCldhdGVyc2hlZCBXYXRjaCAKWWVyYmEgQnVlbmEgTnVyc2VyeSA</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABCrgAAw+4AAA</bytes>
 					</object>
-					<string>{{106, 140}, {320, 480}}</string>
+					<string>{{714, 124}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABBAAAAw+CAAA</bytes>
 					</object>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABBoAAAwjwAAA</bytes>
@@ -352,7 +402,7 @@ V2F0ZXIgRGlzdHJpY3QgCldhdGVyc2hlZCBXYXRjaCAKWWVyYmEgQnVlbmEgTnVyc2VyeSA</string>
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">30</int>
+			<int key="maxID">36</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

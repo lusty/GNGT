@@ -20,4 +20,6 @@
 - (IBAction)downloadUpdate;
 - (IBAction)registerForTour;
 
+- (void)setBadgeText:(NSString*)value;
+
 @end

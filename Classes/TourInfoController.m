@@ -48,6 +48,15 @@
 }
 
 #pragma mark -
+#pragma mark UI operations
+
+- (void)setBadgeText:(NSString*)value;
+{
+	// TODO find the tab bar item as a child
+//	tabBarItem.badgeValue = value;
+}
+
+#pragma mark -
 #pragma mark User-selectable commands
 
 - (IBAction)downloadUpdate
