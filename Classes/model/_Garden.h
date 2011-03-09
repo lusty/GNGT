@@ -16,6 +16,7 @@
 
 
 
+
 @interface GardenID : NSManagedObjectID {}
 @end
 
@@ -82,6 +83,16 @@
 - (void)setIsFavoriteValue:(BOOL)value_;
 
 //- (BOOL)validateIsFavorite:(id*)value_ error:(NSError**)error_;
+
+
+
+@property (nonatomic, retain) NSNumber *isSponsor;
+
+@property BOOL isSponsorValue;
+- (BOOL)isSponsorValue;
+- (void)setIsSponsorValue:(BOOL)value_;
+
+//- (BOOL)validateIsSponsor:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -166,6 +177,15 @@
 
 - (BOOL)primitiveIsFavoriteValue;
 - (void)setPrimitiveIsFavoriteValue:(BOOL)value_;
+
+
+
+
+- (NSNumber*)primitiveIsSponsor;
+- (void)setPrimitiveIsSponsor:(NSNumber*)value;
+
+- (BOOL)primitiveIsSponsorValue;
+- (void)setPrimitiveIsSponsorValue:(BOOL)value_;
 
 
 

@@ -36,7 +36,7 @@
 
 
 
-@dynamic url;
+@dynamic tourNSDate;
 
 
 
@@ -50,14 +50,7 @@
 
 
 
-@dynamic tourName;
-
-
-
-
-
-
-@dynamic tourNSDate;
+@dynamic url;
 
 
 
@@ -65,6 +58,13 @@
 
 
 @dynamic hidePrivateBeforeDate;
+
+
+
+
+
+
+@dynamic tourName;
 
 
 

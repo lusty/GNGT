@@ -70,6 +70,7 @@
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* GNGT_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNGT_Prefix.pch; sourceTree = "<group>"; };
+		5C096FB0132715D600C06842 /* GNGT_5a.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GNGT_5a.xcdatamodel; sourceTree = "<group>"; };
 		5C26EDC01303C2370035E9C5 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		5C26EDC11303C24D0035E9C5 /* UIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
 		5C26EDC21303C24D0035E9C5 /* UIConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConstants.m; sourceTree = "<group>"; };
@@ -584,9 +585,10 @@
 				5C901E0F12F8DE360091BB68 /* GNGT 3.xcdatamodel */,
 				5CB3AC3213050667000F56FC /* GNGT_4.xcdatamodel */,
 				5C5FE94B1325B61000A5B564 /* GNGT_5.xcdatamodel */,
+				5C096FB0132715D600C06842 /* GNGT_5a.xcdatamodel */,
 			);
 			comments = "xmod \n--output-dir Classes/model\n";
-			currentVersion = 5C5FE94B1325B61000A5B564 /* GNGT_5.xcdatamodel */;
+			currentVersion = 5C096FB0132715D600C06842 /* GNGT_5a.xcdatamodel */;
 			path = GNGT.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -58,13 +58,6 @@
 
 
 
-@dynamic streetAddress;
-
-
-
-
-
-
 @dynamic longitude;
 
 
@@ -86,6 +79,13 @@
 - (void)setPrimitiveLongitudeValue:(float)value_ {
 	[self setPrimitiveLongitude:[NSNumber numberWithFloat:value_]];
 }
+
+
+
+
+
+@dynamic streetAddress;
+
 
 
 

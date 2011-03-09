@@ -35,12 +35,6 @@
 
 
 
-@property (nonatomic, retain) NSString *streetAddress;
-
-//- (BOOL)validateStreetAddress:(id*)value_ error:(NSError**)error_;
-
-
-
 @property (nonatomic, retain) NSNumber *longitude;
 
 @property float longitudeValue;
@@ -48,6 +42,12 @@
 - (void)setLongitudeValue:(float)value_;
 
 //- (BOOL)validateLongitude:(id*)value_ error:(NSError**)error_;
+
+
+
+@property (nonatomic, retain) NSString *streetAddress;
+
+//- (BOOL)validateStreetAddress:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -89,17 +89,17 @@
 
 
 
-- (NSString*)primitiveStreetAddress;
-- (void)setPrimitiveStreetAddress:(NSString*)value;
-
-
-
-
 - (NSNumber*)primitiveLongitude;
 - (void)setPrimitiveLongitude:(NSNumber*)value;
 
 - (float)primitiveLongitudeValue;
 - (void)setPrimitiveLongitudeValue:(float)value_;
+
+
+
+
+- (NSString*)primitiveStreetAddress;
+- (void)setPrimitiveStreetAddress:(NSString*)value;
 
 
 

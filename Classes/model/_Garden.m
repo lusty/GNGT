@@ -45,6 +45,10 @@
 		NSSet *affectingKey = [NSSet setWithObject:@"isFavorite"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 	}
+	if ([key isEqualToString:@"isSponsorValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"isSponsor"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+	}
 
 	return keyPaths;
 }
@@ -171,6 +175,32 @@
 
 - (void)setPrimitiveIsFavoriteValue:(BOOL)value_ {
 	[self setPrimitiveIsFavorite:[NSNumber numberWithBool:value_]];
+}
+
+
+
+
+
+@dynamic isSponsor;
+
+
+
+- (BOOL)isSponsorValue {
+	NSNumber *result = [self isSponsor];
+	return [result boolValue];
+}
+
+- (void)setIsSponsorValue:(BOOL)value_ {
+	[self setIsSponsor:[NSNumber numberWithBool:value_]];
+}
+
+- (BOOL)primitiveIsSponsorValue {
+	NSNumber *result = [self primitiveIsSponsor];
+	return [result boolValue];
+}
+
+- (void)setPrimitiveIsSponsorValue:(BOOL)value_ {
+	[self setPrimitiveIsSponsor:[NSNumber numberWithBool:value_]];
 }
 
 
