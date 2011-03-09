@@ -130,22 +130,6 @@
 		5CE4733E12F69110009DCC8C /* poppy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poppy@2x.png"; sourceTree = "<group>"; };
 		5CE7F51412F0E7A70023C96A /* GardenInfoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenInfoViewCell.h; sourceTree = "<group>"; };
 		5CE7F51512F0E7A70023C96A /* GardenInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenInfoViewCell.m; sourceTree = "<group>"; };
-		5CF50A88132613F8006488AE /* _Garden.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _Garden.h; sourceTree = "<group>"; };
-		5CF50A89132613F9006488AE /* _Garden.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _Garden.m; sourceTree = "<group>"; };
-		5CF50A8A132613F9006488AE /* _GardenLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _GardenLocation.h; sourceTree = "<group>"; };
-		5CF50A8B132613F9006488AE /* _GardenLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _GardenLocation.m; sourceTree = "<group>"; };
-		5CF50A8C132613FA006488AE /* _InfoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _InfoItem.h; sourceTree = "<group>"; };
-		5CF50A8D132613FA006488AE /* _InfoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _InfoItem.m; sourceTree = "<group>"; };
-		5CF50A8E132613FA006488AE /* _Tour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _Tour.h; sourceTree = "<group>"; };
-		5CF50A8F132613FA006488AE /* _Tour.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _Tour.m; sourceTree = "<group>"; };
-		5CF50A90132613FB006488AE /* Garden.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Garden.h; sourceTree = "<group>"; };
-		5CF50A91132613FB006488AE /* Garden.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Garden.m; sourceTree = "<group>"; };
-		5CF50A92132613FC006488AE /* GardenLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GardenLocation.h; sourceTree = "<group>"; };
-		5CF50A93132613FC006488AE /* GardenLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GardenLocation.m; sourceTree = "<group>"; };
-		5CF50A94132613FC006488AE /* InfoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoItem.h; sourceTree = "<group>"; };
-		5CF50A95132613FD006488AE /* InfoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoItem.m; sourceTree = "<group>"; };
-		5CF50A96132613FD006488AE /* Tour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tour.h; sourceTree = "<group>"; };
-		5CF50A97132613FE006488AE /* Tour.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tour.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* GNGT-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GNGT-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		C992612A12FDEC5E00FA5E8B /* GNGTAppIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GNGTAppIco.png; sourceTree = "<group>"; };
 		C992D8CD12E2FA50004E4C35 /* GardensListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardensListViewController.h; sourceTree = "<group>"; };
@@ -352,7 +336,6 @@
 			children = (
 				5CD3A5641324584B004E5098 /* GNGT.sqlite */,
 				2819305F112F816700ECF9B4 /* GNGT.xcdatamodeld */,
-				5CF50A87132613F8006488AE /* GNGT */,
 			);
 			name = db;
 			sourceTree = "<group>";
@@ -375,30 +358,6 @@
 			);
 			name = Views;
 			sourceTree = "<group>";
-		};
-		5CF50A87132613F8006488AE /* GNGT */ = {
-			isa = PBXGroup;
-			children = (
-				5CF50A88132613F8006488AE /* _Garden.h */,
-				5CF50A89132613F9006488AE /* _Garden.m */,
-				5CF50A8A132613F9006488AE /* _GardenLocation.h */,
-				5CF50A8B132613F9006488AE /* _GardenLocation.m */,
-				5CF50A8C132613FA006488AE /* _InfoItem.h */,
-				5CF50A8D132613FA006488AE /* _InfoItem.m */,
-				5CF50A8E132613FA006488AE /* _Tour.h */,
-				5CF50A8F132613FA006488AE /* _Tour.m */,
-				5CF50A90132613FB006488AE /* Garden.h */,
-				5CF50A91132613FB006488AE /* Garden.m */,
-				5CF50A92132613FC006488AE /* GardenLocation.h */,
-				5CF50A93132613FC006488AE /* GardenLocation.m */,
-				5CF50A94132613FC006488AE /* InfoItem.h */,
-				5CF50A95132613FD006488AE /* InfoItem.m */,
-				5CF50A96132613FD006488AE /* Tour.h */,
-				5CF50A97132613FE006488AE /* Tour.m */,
-			);
-			name = GNGT;
-			path = /Users/rdclark/.Trash/GNGT;
-			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 

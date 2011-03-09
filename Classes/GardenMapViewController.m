@@ -107,7 +107,7 @@ enum viewFilter {
 {
 	NSArray *fetchResults = [self performFetch];
 	[mapView removeAnnotations:mapView.annotations];
-	BOOL ok = fetchResults != NULL && fetchResults.count > 0;
+	BOOL ok = fetchResults && fetchResults.count > 0;
 	if (ok) {
 		NSMutableArray *annotations = [NSMutableArray arrayWithCapacity:fetchResults.count];
 		for (Garden *garden in fetchResults) {
@@ -167,13 +167,16 @@ enum viewFilter {
 
 - (void)changeViewFilterTo:(int)newFilterValue
 {
-
 	[self setPredicateForFilter:newFilterValue];
 	// TODO save last value and bounce back to it if nothing found
 	if ([self updateAnnotations]) {
 		lastView = newFilterValue;
 	} else if (newFilterValue != viewAll) { // fetchResults.count == 0
-		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:@"No matching gardens found" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+		NSString *message = NULL;
+		if (newFilterValue == 1) message = @"No favorites found";
+		else if (newFilterValue == 2) message = @"No plant sales found";
+		else if (newFilterValue == 3) message = @"No garden talks found";
+		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
 		[alert show];
 	}
 }
@@ -189,10 +192,14 @@ enum viewFilter {
 #pragma mark -
 #pragma mark UIAlertViewDelegate
 
+/**
+ * Bounces back to the last filter setting (before the unsuccessful request).
+ */
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-//	[self changeViewFilterTo:lastView];
 	self.viewSelector.selectedSegmentIndex = self.lastView;
+	[self setPredicateForFilter:self.lastView];
+	[self updateAnnotations];
 }
 
 #pragma mark -
