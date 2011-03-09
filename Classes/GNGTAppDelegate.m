@@ -37,6 +37,14 @@
 		name:@"GardenInfoChanged" object:nil];
     [self.window makeKeyAndVisible];
     
+/*
+	// =================
+	// TEST TEST TEST
+	// Add a notification to the tab bar
+	UITabBarItem *tab = [tabBarController.tabBar.items objectAtIndex:0];
+	tab.badgeValue = @"1";
+	// =================
+*/
     return YES;
 }
 
