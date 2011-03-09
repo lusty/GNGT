@@ -5,6 +5,7 @@
 //  Copyright 2011 NextQuestion Consulting. All rights reserved.
 //
 
+#import "DatabaseAccess.h"
 #import "GardenMapViewController.h"
 #import "GardenDescriptionViewController.h"
 #import "Garden.h"
@@ -23,7 +24,6 @@
 @implementation GardenMapViewController
 @synthesize mapView, viewSelector;
 @synthesize filteredResults;
-@synthesize context;
 @synthesize fetchRequest = _fetchRequest;
 @synthesize locationManager;
 @synthesize lastView;
@@ -54,7 +54,12 @@ enum viewFilter {
 #pragma mark -
 #pragma mark View setup
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-//- (void)viewWillAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated 
+{
+	context = [DatabaseAccess sharedDatabaseAccess].managedObjectContext;
+	[super viewWillAppear:animated];
+}
+
 - (void)viewDidLoad 
 {	
 	[super viewDidLoad];
@@ -90,11 +95,6 @@ enum viewFilter {
 	//	region.span.longitudeDelta = 0.15f;
 	//	region.span.latitudeDelta = 0.15f;
 	[self.mapView setRegion:region animated:animated];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-	[super viewWillAppear:animated]; 
-	[mapView removeAnnotations:mapView.annotations]; // Drop them here and return in viewWillAppear -- let's see if that solves the problem with annotations disappearing
 }
 
 - (void)viewDidAppear:(BOOL)animated

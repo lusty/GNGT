@@ -32,7 +32,6 @@
 @property (nonatomic) int sortMode;
 @property (nonatomic) BOOL sortModeChanged;
 
-@property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) IBOutlet GardenDescriptionViewController *detailsController;
 
 @end

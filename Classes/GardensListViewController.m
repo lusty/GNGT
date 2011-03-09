@@ -6,6 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import "DatabaseAccess.h"
 #import "GardensListViewController.h"
 #import "GardenDescriptionViewController.h"
 #import "Garden.h"
@@ -25,7 +26,6 @@
 @synthesize fetchRequest = _fetchRequest;
 @synthesize sortDescriptors = _sortDescriptors;;
 @synthesize fetchedResultsController = _fetchedResultsController;
-@synthesize context = _context;
 @synthesize sortMode, sortModeChanged;
 
 @synthesize detailsController = _description;
@@ -126,6 +126,7 @@ enum sorting {
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+	_context = [DatabaseAccess sharedDatabaseAccess].managedObjectContext;
     [super viewWillAppear:animated];	
 	[self performFetch];
 	[self.tableView reloadData];
@@ -335,7 +336,7 @@ enum sorting {
 
 - (void)dealloc {
 	self.fetchedResultsController = nil;
-	self.context = nil;
+	_context = nil;
 	self.detailsController = nil;
     [super dealloc];
 }

@@ -228,14 +228,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">gardenListController</string>
-						<reference key="source" ref="664661524"/>
-						<reference key="destination" ref="187374657"/>
-					</object>
-					<int key="connectionID">22</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">tabBarController</string>
 						<reference key="source" ref="664661524"/>
 						<reference key="destination" ref="309257525"/>
@@ -249,14 +241,6 @@
 						<reference key="destination" ref="187374657"/>
 					</object>
 					<int key="connectionID">46</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">gardenMapController</string>
-						<reference key="source" ref="664661524"/>
-						<reference key="destination" ref="210053973"/>
-					</object>
-					<int key="connectionID">72</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -289,14 +273,6 @@
 						<reference key="destination" ref="42688480"/>
 					</object>
 					<int key="connectionID">83</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">tabBarItem</string>
-						<reference key="source" ref="201310938"/>
-						<reference key="destination" ref="1049352549"/>
-					</object>
-					<int key="connectionID">84</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -558,16 +534,12 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>gardenListController</string>
-							<string>gardenMapController</string>
 							<string>navController</string>
 							<string>tabBarController</string>
 							<string>window</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>GardensListViewController</string>
-							<string>GardenMapViewController</string>
 							<string>UINavigationController</string>
 							<string>UITabBarController</string>
 							<string>UIWindow</string>
@@ -577,22 +549,12 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>gardenListController</string>
-							<string>gardenMapController</string>
 							<string>navController</string>
 							<string>tabBarController</string>
 							<string>window</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBToOneOutletInfo">
-								<string key="name">gardenListController</string>
-								<string key="candidateClassName">GardensListViewController</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">gardenMapController</string>
-								<string key="candidateClassName">GardenMapViewController</string>
-							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">navController</string>
 								<string key="candidateClassName">UINavigationController</string>
@@ -827,13 +789,11 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>registrationButton</string>
-							<string>tabBarItem</string>
 							<string>updateButton</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIButton</string>
-							<string>UITabBarItem</string>
 							<string>UIButton</string>
 						</object>
 					</object>
@@ -842,7 +802,6 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>registrationButton</string>
-							<string>tabBarItem</string>
 							<string>updateButton</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -850,10 +809,6 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">registrationButton</string>
 								<string key="candidateClassName">UIButton</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">tabBarItem</string>
-								<string key="candidateClassName">UITabBarItem</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">updateButton</string>

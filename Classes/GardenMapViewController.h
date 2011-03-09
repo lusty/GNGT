@@ -31,7 +31,6 @@
 @property (nonatomic, retain) IBOutlet UISegmentedControl *viewSelector;
 @property (nonatomic, retain) NSFetchRequest *fetchRequest;
 @property (nonatomic, retain) NSMutableArray *filteredResults;
-@property (nonatomic, retain) NSManagedObjectContext *context;
 @property (nonatomic, retain) CLLocationManager *locationManager;
 
 @property (nonatomic) int lastView;
