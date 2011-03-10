@@ -6,14 +6,11 @@
 
 - (NSString*)itemForKey:(NSString*)key
 {
-	if (_keyedItems == NULL) {
-		_keyedItems = [NSMutableDictionary dictionaryWithCapacity:self.primitiveInfo.count];
 		for (InfoItem *item in self.primitiveInfo) {
-			[_keyedItems setValue:item.itemValue forKey:item.itemKey];
+            if ([key isEqualToString:item.itemKey]) 
+                return item.itemValue;
 		}
-	}
-	NSString *result = [_keyedItems objectForKey:key];
-	return result;
+	return nil;
 }
 
 /**
@@ -26,13 +23,6 @@
 	BOOL hps = ([self itemForKey:@"plantSale"] != nil);
 	[self setHasGardenTalkValue:hgt];
 	[self setHasPlantSaleValue:hps];
-}
-
--(void) dealloc
-{
-	[_keyedItems release];
-    _keyedItems = nil;
-	[super dealloc];
 }
 
 @end
