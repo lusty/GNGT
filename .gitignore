@@ -16,6 +16,7 @@ gardenList.sqlite3
 *.pbxuser
 *.perspective
 *.perspectivev3
+*.xcodeproj/project.xcworkspace/xcuserdata
 
 # Don't store the cruft left by the Python IDE either
 app

@@ -107,7 +107,6 @@
 		5C8714BC12EE4B830025B7B0 /* GardenMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GardenMapViewController.h; sourceTree = "<group>"; };
 		5C8714BD12EE4B830025B7B0 /* GardenMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GardenMapViewController.m; sourceTree = "<group>"; };
 		5C8714C212EE4CCA0025B7B0 /* GardenMapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GardenMapView.xib; sourceTree = "<group>"; };
-		5C87E1FC13274E9100D32AF2 /* GNGT_5b.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GNGT_5b.xcdatamodel; sourceTree = "<group>"; };
 		5C87E21113274F5700D32AF2 /* _UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _UserInfo.h; sourceTree = "<group>"; };
 		5C87E21213274F5700D32AF2 /* _UserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _UserInfo.m; sourceTree = "<group>"; };
 		5C87E21313274F5700D32AF2 /* UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
@@ -118,6 +117,7 @@
 		5C901E6D12F8E7470091BB68 /* talk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk@2x.png"; sourceTree = "<group>"; };
 		5C92ECC2132862660064F21E /* DateFormatters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormatters.h; sourceTree = "<group>"; };
 		5C92ECC3132862660064F21E /* DateFormatters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatters.m; sourceTree = "<group>"; };
+		5C94EA8713289D3C00092950 /* GNGT_5c.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GNGT_5c.xcdatamodel; sourceTree = "<group>"; };
 		5C99567F12EFA6D0003D4908 /* StarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarControl.h; sourceTree = "<group>"; };
 		5C99568012EFA6D0003D4908 /* StarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarControl.m; sourceTree = "<group>"; };
 		5CB4EE5C1324528D006C1040 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
@@ -528,6 +528,7 @@
 				INFOPLIST_FILE = "GNGT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = GNGT;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -542,6 +543,7 @@
 				INFOPLIST_FILE = "GNGT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = GNGT;
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -572,6 +574,7 @@
 				INFOPLIST_FILE = "GNGT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = GNGT;
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = "Ad Hoc";
@@ -634,10 +637,10 @@
 		2819305F112F816700ECF9B4 /* GNGT.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5C87E1FC13274E9100D32AF2 /* GNGT_5b.xcdatamodel */,
+				5C94EA8713289D3C00092950 /* GNGT_5c.xcdatamodel */,
 			);
 			comments = "xmod \n--output-dir Classes/model\n";
-			currentVersion = 5C87E1FC13274E9100D32AF2 /* GNGT_5b.xcdatamodel */;
+			currentVersion = 5C94EA8713289D3C00092950 /* GNGT_5c.xcdatamodel */;
 			path = GNGT.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
