@@ -3,12 +3,6 @@
 
 @implementation Garden
 
-@dynamic subtitle;
-
-- (NSString*)subtitle
-{
-	return @""; // TODO implement
-}
 
 - (NSString*)itemForKey:(NSString*)key
 {

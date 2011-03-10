@@ -10,6 +10,7 @@
 #import "GardensListViewController.h"
 #import "StarControl.h"
 #import "Garden.h"
+#import "GardenLocation.h"
 #import "UIConstants.h"
 
 const CGFloat STAR_CONTROL_SIZE = 42.0f;
@@ -140,7 +141,7 @@ const CGFloat LABEL_SPACING = 2.0f;
 	if (cityLabel) cityLabel.text = info.city;
 	
 	// flag plant sales and talks, adjusting the name label if needed
-	NSString *labelString = [info subtitle];	
+	NSString *labelString = [info.location subtitle];	
 	if (labelString) {
 		UILabel *notesLabel = (UILabel *)[self viewWithTag:NOTES_TAG];
 		notesLabel.text = labelString;

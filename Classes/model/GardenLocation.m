@@ -1,4 +1,5 @@
 #import "GardenLocation.h"
+#import "Garden.h"
 
 @implementation GardenLocation
 
@@ -15,39 +16,22 @@
 
 - (NSString *)title
 {
-    return self.name;
+    return self.garden.name;
 }
 
-/*
- - (BOOL) hasPlantSale 
- {
- return self.plantSale != NULL && self.plantSale.length > 0;
- }
- 
- - (BOOL) hasGardenTalk 
- {
- return self.gardenTalk != NULL && self.gardenTalk.length > 0;
- }
- 
- - (NSString *)title
- {
- return self.gardenName;
- }
- 
  - (NSString *) subtitle
  {
- NSString *result = NULL;
- if ([self hasPlantSale]) result = @"plant sale";
- 
- if ([self hasGardenTalk]) {
- if (result) {
- result = [result stringByAppendingString:@", garden talk"];
- } else {
- result = @"garden talk";
+	 NSString *result = NULL;
+	 if (self.garden.hasPlantSaleValue) result = @"plant sale";
+	 
+	 if (self.garden.hasGardenTalkValue) {
+		 if (result) {
+			 result = [result stringByAppendingString:@", garden talk"];
+		 } else {
+			 result = @"garden talk";
+		 }
+	 }
+	 return result;
  }
- }
- return result;
- }
- */
 
 @end

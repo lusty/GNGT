@@ -10,7 +10,6 @@
 #import "Garden.h"
 #import "InfoItem.h"
 #import "GardenLocation.h"
-//#import "GardenDescription.h"
 #import "StarControl.h"
 
 @interface GardenDescriptionViewController (Private)
@@ -41,7 +40,7 @@
 
 - (void)addLabel:(NSString *)labelText forKey:(NSString *)key 
 {
-	NSString *valueText = [garden itemForKey:key];
+	NSString *valueText = [self.garden itemForKey:key];
 	[self addLabel:labelText andText:valueText];
 }
 

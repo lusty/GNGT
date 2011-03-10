@@ -318,7 +318,8 @@ enum viewFilter {
 	if (self.detailsController == nil) {
         self.detailsController = [[[GardenDescriptionViewController alloc] initWithNibName:@"GardenDescriptionViewController" bundle:nil] autorelease];        
     }
-	self.detailsController.garden = (Garden *)view.annotation; 
+	GardenLocation *loc = (GardenLocation *)view.annotation;
+	self.detailsController.garden = loc.garden; 
     [self.navigationController pushViewController:detailsController animated:YES];
 	
 }
