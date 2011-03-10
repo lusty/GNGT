@@ -9,6 +9,9 @@
 #import "DatabaseAccess.h"
 #import "SynthesizeSingleton.h"
 
+#import "JSONKit.h"
+#import "Importer.h"
+
 #undef REBUILD_DATABASE
 
 @implementation DatabaseAccess
@@ -118,10 +121,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DatabaseAccess)
 #ifdef REBUILD_DATABASE
 	// Do the import (one time only)
 	Importer *importer = [[Importer alloc] initWithContext:[self managedObjectContext]];
-	NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"gngt-db-01" ofType:@"json"]; 
+	NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"gngt2011-public" ofType:@"json"]; 
 	NSData *data = [NSData dataWithContentsOfFile:jsonPath];
 	NSMutableDictionary *parsed = [data mutableObjectFromJSONData];
-	[importer tour:parsed error:&error];
+	if (parsed && parsed.count > 0) [importer tour:parsed error:&error];
 #endif
 	
     return persistentStoreCoordinator_;

@@ -1,0 +1,166 @@
+{"file":{
+    "updated":"2011-03-01T00:00:00-08:00",
+    "format":2
+},"tour":{
+    "url":"www.goingnativegardentour.org",
+    "tourDate":"2011-04-17",
+    "tourName":"Going Native Garden Tour",
+    "gardens":[
+        {
+            "city":"San Jose",
+            "name":"The Environmental Laboratory for Sustainability and Ecological Education",
+            "infoArray": {
+                "plantSale":"",
+                "gardenNumber":61,
+                "yearInstalled":2002,
+                "designer":"Middlebrook Gardens",
+                "showcase":"",
+                "sqft":11300,
+                "wildlife":"",
+                "other":"",
+                "directions":"",
+                "installer":"Middlebrook Gardens"
+            },
+            "location": {
+                "streetAddress":"76 Race St.",
+                "latitude":37.3293425,
+                "longitude":-121.9117973
+            },
+            "isPublic":true
+        },
+        {
+            "city":"Portola Valley",
+            "name":"Portola Valley - Town Center Facilities",
+            "infoArray": {
+                "plantSale":"",
+                "gardenNumber":8,
+                "yearInstalled":2007,
+                "designer":"Carducci &amp; Associates",
+                "showcase":"Portola Valley&#39;s Town Center Facilities are a shining example of garden-like plantings, redwood groves, native oak savannas with grassland, and a creek restoration with willows, dogwoods, rushes and sedges.  This native paradise invites visitors to rest on the benches, gaze at the mountains, and enjoy the song of the birds and frogs!",
+                "sqft":479160,
+                "wildlife":"Bordering on open space, the area is visited by hawks, herons, swallows and songbirds, frogs, snakes, lizards, and by a variety of pollinators.",
+                "other":"The areas close to the buildings are planted with seaside daisy, buckwheat, young oaks, snowberry, coffeeberry, sages and blue elderberry.   The redwood grove is accented by vine maple and ferns.",
+                "directions":"1. Going north on 280, take exit 22 for Alpine Rd toward Portola Valley. <br\/>2. Turn left and continue to follow Alpine Rd. <br\/>3. Turn right at Portola Rd. <br\/>4. Destination will be on the left.",
+                "installer":"Bothman Company and Acterra volunteers"
+            },
+            "location": {
+                "streetAddress":"765 Portola Road",
+                "latitude":37.3817758,
+                "longitude":-122.2302121
+            },
+            "isPublic":true
+        },
+        {
+            "city":"Palo Alto",
+            "name":"Master Gardeners Demo Garden",
+            "infoArray": {
+                "plantSale":"",
+                "gardenNumber":12,
+                "yearInstalled":2004,
+                "designer":"UCCE Master Gardeners",
+                "showcase":"Designed, installed and maintained by the UCCE Master Gardeners of Santa Clara County the water-wise garden showcases plants and cultural techniques for summer dry gardening.  The garden strategy is to be as thrifty as possible with water, plant nutrients, and gardener labor, while striving to be an attractive and colorful ornamental garden all year round.",
+                "sqft":25000,
+                "wildlife":"Butterflies, bees, lady beetles, squirrels, and many types of birds, regularly visit the garden.  Food sources for beneficial insects are provided as part of the garden&#39;s IPM methods.",
+                "other":"The garden is a place for the public to see low-water consuming plants used in an attractive ornamental landscape.  The garden is planted with a mix of California native and Mediterranean-climate plants.  Plants growing in the garden include manzanita, coffeeberry, ceanothus, yarrow, California fuchsia and sage.  Both shade loving and sun loving natives are growing in the garden.  Winding paths through the garden allow visitors to easily view the plants in the different beds.<br\/><br\/>One goal is to evaluate new plants for suitability in our climate.  We always are trying out new plants, come see what&#39;s new and unusal.<br\/><br\/>The garden is a good place to learn about low-water-use irrigation.  Several types of low-flow irrigation systems have been installed in the garden and their reliability and effectiveness have been evaluated.<br\/><br\/>Adjacent to the water-wise garden is a second garden featuring international-themed beds that showcase unusal varieties of vegatables intermixed with beautiful flowers. A high-density fruit tree orchard and espaliered apples and pear trees are also on display.<br\/><br\/>UCCE Master Gardeners will be present during the tour to answer any horticulural questions you may have.",
+                "directions":"From 101, take Embarcadero exit toward Stanford. Turn right on Newell, left on Channing and right on Center to Martin. Walk down the gravel road through the trees.",
+                "installer":"UCCE Master Gardeners"
+            },
+            "location": {
+                "streetAddress":"851 Center Dr",
+                "latitude":37.4490654,
+                "longitude":-122.1431846
+            },
+            "isPublic":true
+        },
+        {
+            "city":"Cupertino",
+            "name":"The Nancy Hertert Memorial Native Plant Demonstration Garden",
+            "infoArray": {
+                "plantSale":"",
+                "gardenNumber":33,
+                "yearInstalled":2007,
+                "designer":"Volunteers",
+                "showcase":"Situated next to the beautiful, riparian corridor of Stevens creek, this native plant demonstration garden, maintained by volunteers, is a wildlife paradise. Enjoy the beautiful and well designed habitat, supported by hanging bird baths, different bird feeders and houses. A rich collection of natives provide shelter and food for the many visiting wildlife throughout the year.",
+                "sqft":1050,
+                "wildlife":"Close to Steven&#39;s Creek, the garden is visited by deer, quail, woodpeckers, finches, birds, bees, butterflies and many other creatures.",
+                "other":"Manzanitas, a holly-leaf cherry, chamise, bush anemone, ground cover sage, and California fuchsia enliven the sunny parts of the garden. A majestic, old live oak and mature Monterey pines offer shade and shelter further afield. The garden is next to McClellan Ranch Park, which includes an education center, walking paths, and public restrooms.",
+                "directions":"1. Going north or south on 85, take the Stevens Creek Blvd exit.<br\/>2. Take a right on Stevens Creek <br\/>3. Take the first left on Bubb Road. <br\/>4. Take a right on McClellan Ranch (approx. 0.6 miles). McClellan Ranch Park will be on the right (approx. 0.7 miles).",
+                "installer":"Volunteers"
+            },
+            "location": {
+                "streetAddress":"22221 McClellan Rd",
+                "latitude":37.312831,
+                "longitude":-122.063698
+            },
+            "isPublic":true
+        },
+        {
+            "city":"Alviso",
+            "name":"Don Edwards San Francisco Bay National Wildlife Refuge Environmental Education Center",
+            "infoArray": {
+                "gardenNumber":35,
+                "plantSale":"",
+                "yearInstalled":1991,
+                "designer":"Community Volunteers",
+                "showcase":"This restoration research area provides a glimpse of rare upland plant communities.  While less than 1% of the Bay Area&#39;s natural uplands remain, the U.S. Fish and Wildlife Service is transforming this former dump into valuable upland habitat.  Work done in this restoration research area has led to advances in native plant propagation and seeding technology, natural weed control techniques, and understanding of native plant communities.<br\/><br\/>The site also includes a demonstration garden, which was created to augment the Refuge&#39;s restoration efforts by promoting native plant gardening in the community.  Support from community gardeners is needed to prevent further loss of upland plant and animal species.  Native plant gardens help rebuild the native seed bank, combat invasive weeds, support native pollinator populations, and provide additional habitat for wildlife.  This garden contains mature specimens of ceanothus, fuchsia-flowered gooseberry, pink flowering currant, buckwheat, toyon, and black sage in a naturalistic setting.  Among trees, look for California buckeye, western sycamore, Fremont cottonwood, coast live oak, and alder.",
+                "sqft":326000,
+                "wildlife":"A butterfly garden contains milkweeds, coffeeberry, and other host and nectar plants for monarchs, swallowtails, cabbage whites, and western pygmy blue butterflies.  Black phoebes, warblers, sparrows, and bushtits are drawn to the songbird garden.  Also common in the restoration area and demonstration garden are hawks, western fence lizards, jackrabbits, cottontails, gopher snakes, and grey foxes.  Information about gardening for wildlife is available in the Environmental Education Center.",
+                "other":"Look for the bioswale between the parking lot and the driveway.  Landscaped with rushes, sedges, and willows, it acts as a natural filtration system, mitigating the ecological impacts of the parking lot.<br\/><br\/>On weekends the Environmental Education Center exhibits and facilities are open to the public.  A 0.5 mile trail guides visitors through the upland restoration research area.  During the GNGT, staff will be available to answer questions about restoration and the demonstration garden.",
+                "directions":"From 101, take 237 East; from 880\/680, take 237 West. Exit at Zanker Road and go north towards the bay for approximately 2 miles, passing the Water Pollution Control plant, landfill, and railroad tracks. Watch for the large brown sign on the right reading &quot;Don Edwards SF Bay National Wildlife Refuge&quot;. Make a sharp RIGHT turn immediately after this sign and follow the access road to the EEC parking lot.",
+                "installer":"Community Volunteers and USFWS"
+            },
+            "location": {
+                "streetAddress":"1751 Grand Blvd",
+                "latitude":37.43919,
+                "longitude":-121.959442
+            },
+            "isPublic":true
+        },
+        {
+            "city":"Santa Clara",
+            "name":"Ulistac Natural Area",
+            "infoArray": {
+                "gardenNumber":36,
+                "plantSale":"",
+                "yearInstalled":1999,
+                "designer":"",
+                "showcase":"Ulistac Natural area is 40 acres of open space that showcases seven distinctive natural habitats, including grassland, coastal scrub, oak savannah, riparian woodland, sycamore woodland, oak woodland, and wetlands.",
+                "sqft":1742000,
+                "wildlife":"Among the wildlife to be found are checkerspot butterflies, bumblebees, jackrabbits, Baltimore oriole, Anna&#39;s hummingbird, black phoebe, white crowned sparrow, and golden crown sparrow.",
+                "other":"You may wish to limit your visit on tour day to the butterfly and hummingbird garden, in which you can see many mature native species including  saltbush, Cedros Island verbena, coffeeberry, golden currant, holly-leaf cherry, gumplant, California buckeye, toyon,  blue elderberry, flannelbush, chaparral currant, St. Catherine&#39;s lace, Cleveland sage, purple sage, and several varieties of ceanothus, penstemons and lupines.  Lick Mill Park, across the street, offers restroom and picnic facilities, making Ulistac Natural Area a good spot for a bag lunch and restroom stop to break up your tour day.<br\/><br\/>Ulistac Natural area is a city of Santa Clara municipal park.  The ongoing restoration project in the park is spearheaded by the Ulistac Natural Area Community Habitat Restoration Project (UNA-CHRP). Numerous volunteers including individuals, community clubs, nonprofit agencies, foundations, and local corporations contribute time and money to the restoration of Ulistac Natural Area.  In particular, Wilcox High School students and Santa Clara University are major contributors to the effort.",
+                "directions":"From Hwy 101 take Montague Expwy east.  Turn left on Lick Mill Blvd and look for the garden on the right just before Tasman Dr",
+                "installer":""
+            },
+            "location": {
+                "streetAddress":"4901 Lick Mill Blvd",
+                "latitude":37.406238,
+                "longitude":-121.956665
+            },
+            "isPublic":true
+        },
+        {
+            "city":"Campbell",
+            "name":"Edith Morley Park Native Garden",
+            "infoArray": {
+                "gardenNumber":46,
+                "plantSale":"",
+                "yearInstalled":2001,
+                "designer":"",
+                "showcase":"This large native garden is a beautiful attraction of Edith Morley Park. Paths divide the garden into sections and lead visitors from one area to the next, with a dramatic waterfall, stream, and pond gracing one end of the garden.",
+                "sqft":120000,
+                "wildlife":"Among the wildlife that use this garden are Canada geese, waxwings, and hawks.",
+                "other":"Large meadow areas showcase bunch grasses, yarrow, western redbud, and western sycamore. These transition to chapparal, where ceanothus, coffeeberry, sages, manzanitas, buckwheats, and deer grass provide a dramatic display along with coast live oak, valley oak, and black oak. Further into the garden, a waterfall, stream, and pond are beautifully worked into the landscape along with rushes, and willows. Benches and tables throughout provide opportunities to stop and enjoy the garden. Bring your bag lunch and make this your lunch stop on the tour.",
+                "directions":"From Hwy 17, take Camden Ave about a half block to Curtner Ave. Turn left on Curtner, then left again onto S. Mcglincey Ln. Bear right onto E. Mcglincey Ln, then left on Campbell Technology Parkway. Follow the road around the park to the native garden next to the community garden.",
+                "installer":""
+            },
+            "location": {
+                "streetAddress":"615 Campbell Technology Parkway",
+                "latitude":37.2794918,
+                "longitude":-121.9409355
+            },
+            "isPublic":true
+        }
+    ],
+    "doNotShowPrivateBefore":"2011-04-03T10:00:00-07:00",
+    "doNotShowPrivateAfter":"2011-04-17T16:00:00-07:00"
+}}
