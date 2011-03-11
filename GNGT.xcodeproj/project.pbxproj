@@ -19,6 +19,7 @@
 		5C26EDC31303C24D0035E9C5 /* UIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C26EDC21303C24D0035E9C5 /* UIConstants.m */; };
 		5C42631712F7F951007E0ABF /* flowerpot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C42631512F7F951007E0ABF /* flowerpot.png */; };
 		5C42631812F7F951007E0ABF /* flowerpot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C42631612F7F951007E0ABF /* flowerpot@2x.png */; };
+		5C48F8A7132A0744005FA880 /* gngt2011-public.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C2B457913281A1200FC5CC5 /* gngt2011-public.json */; };
 		5C4C84F012EDF9AF0086B133 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4C84EF12EDF9AF0086B133 /* MapKit.framework */; };
 		5C4C84F612EDFABD0086B133 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4C84F512EDFABD0086B133 /* CoreLocation.framework */; };
 		5C50D2DE12FCDA8E001C94EF /* TourInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C50D2DC12FCDA8E001C94EF /* TourInfoController.m */; };
@@ -48,7 +49,6 @@
 		5CB4EEF3132453FF006C1040 /* InfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4EEF2132453FF006C1040 /* InfoItem.m */; };
 		5CB4EEF61324540B006C1040 /* Tour.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4EEF51324540B006C1040 /* Tour.m */; };
 		5CCF0CB512FF18A500D88913 /* FilteredGardenList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CCF0CB312FF18A500D88913 /* FilteredGardenList.xib */; };
-		5CD3A5651324584B004E5098 /* GNGT.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5CD3A5641324584B004E5098 /* GNGT.sqlite */; };
 		5CDF404912FC8C8B0014742E /* chevron.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF404512FC8C8B0014742E /* chevron.png */; };
 		5CDF404A12FC8C8B0014742E /* chevron@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF404612FC8C8B0014742E /* chevron@2x.png */; };
 		5CDF404B12FC8C8B0014742E /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF404712FC8C8B0014742E /* favorite.png */; };
@@ -130,7 +130,6 @@
 		5CB4EEF41324540B006C1040 /* Tour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tour.h; sourceTree = "<group>"; };
 		5CB4EEF51324540B006C1040 /* Tour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tour.m; sourceTree = "<group>"; };
 		5CCF0CB312FF18A500D88913 /* FilteredGardenList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilteredGardenList.xib; sourceTree = "<group>"; };
-		5CD3A5641324584B004E5098 /* GNGT.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = GNGT.sqlite; path = db/GNGT.sqlite; sourceTree = "<group>"; };
 		5CDF404512FC8C8B0014742E /* chevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chevron.png; sourceTree = "<group>"; };
 		5CDF404612FC8C8B0014742E /* chevron@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chevron@2x.png"; sourceTree = "<group>"; };
 		5CDF404712FC8C8B0014742E /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
@@ -376,7 +375,6 @@
 			isa = PBXGroup;
 			children = (
 				5C2B457913281A1200FC5CC5 /* gngt2011-public.json */,
-				5CD3A5641324584B004E5098 /* GNGT.sqlite */,
 				2819305F112F816700ECF9B4 /* GNGT.xcdatamodeld */,
 			);
 			name = db;
@@ -472,7 +470,7 @@
 				5CCF0CB512FF18A500D88913 /* FilteredGardenList.xib in Resources */,
 				5CB4EEC41324528D006C1040 /* CHANGELOG.md in Resources */,
 				5CB4EEC61324528D006C1040 /* README.md in Resources */,
-				5CD3A5651324584B004E5098 /* GNGT.sqlite in Resources */,
+				5C48F8A7132A0744005FA880 /* gngt2011-public.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

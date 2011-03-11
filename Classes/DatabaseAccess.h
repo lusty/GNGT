@@ -23,6 +23,7 @@
 
 - (NSURL *)applicationDocumentsDirectory;
 - (void)saveContext;
+- (void)importJSONFile:(NSString*)jsonPath error:(NSError**)error;
 
 + (DatabaseAccess *)sharedDatabaseAccess;
 

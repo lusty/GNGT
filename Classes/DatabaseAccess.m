@@ -80,54 +80,38 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DatabaseAccess)
 #ifdef REBUILD_DATABASE
 	// Remove database if it exists; we'll replace it with a freshly imported copy
 	[fileManager removeItemAtURL:storeURL error:NULL];
-#else
-	// Copy starter db from bundle if it doesn't already exist
-	if (![fileManager fileExistsAtPath:[storeURL path]]) {
-		NSURL *defaultStorePath = [[NSBundle mainBundle] URLForResource:@"GNGT" withExtension:@"sqlite"];
-		[fileManager copyItemAtURL:defaultStorePath toURL:storeURL error:NULL];
-	}
 #endif
+    BOOL needsInitialImport = ![fileManager fileExistsAtPath:[storeURL path]];
 	
 	NSDictionary *storeOptions = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],NSMigratePersistentStoresAutomaticallyOption, [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
 	persistentStoreCoordinator_ = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![persistentStoreCoordinator_ addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:storeOptions error:&error]) {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-         
-         Typical reasons for an error here include:
-         * The persistent store is not accessible;
-         * The schema for the persistent store is incompatible with current managed object model.
-         Check the error message to determine what the actual problem was.
-         
-         
-         If the persistent store is not accessible, there is typically something wrong with the file path. Often, a file URL is pointing into the application's resources directory instead of a writeable directory.
-         
-         If you encounter schema incompatibility errors during development, you can reduce their frequency by:
-         * Simply deleting the existing store:
-         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil]
-         
-         * Performing automatic lightweight migration by passing the following dictionary as the options parameter: 
-         [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],NSMigratePersistentStoresAutomaticallyOption, [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
-         
-         Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
-         
-         */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort(); // TODO do something more appropriate for a production app
+        // That failed, sop rebuild the database
+        [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
+        needsInitialImport = YES; 
+        if (![persistentStoreCoordinator_ addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+                NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+                abort(); // TODO do something more appropriate for a production app
+        }
     }    
     
-#ifdef REBUILD_DATABASE
-	// Do the import (one time only)
-	Importer *importer = [[Importer alloc] initWithContext:[self managedObjectContext]];
-	NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"gngt2011-public" ofType:@"json"]; 
-	NSData *data = [NSData dataWithContentsOfFile:jsonPath];
-	NSMutableDictionary *parsed = [data mutableObjectFromJSONData];
-	if (parsed && parsed.count > 0) [importer tour:parsed error:&error];
-#endif
+    if (needsInitialImport) {
+        NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"gngt2011-public" ofType:@"json"]; 
+        [self importJSONFile:jsonPath error:&error];
+    }
 	
     return persistentStoreCoordinator_;
+}
+
+- (void)importJSONFile:(NSString*)jsonPath error:(NSError**)error
+{
+	NSData *data = [NSData dataWithContentsOfFile:jsonPath];
+	NSMutableDictionary *parsed = [data mutableObjectFromJSONData];
+	if (parsed && parsed.count > 0) {
+        Importer *importer = [[Importer alloc] initWithContext:[self managedObjectContext]];
+        [importer tour:parsed error:error];
+        [importer release];
+    }
 }
 
 - (void)saveContext
