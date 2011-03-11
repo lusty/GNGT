@@ -3,8 +3,15 @@
 //  GNGT
 //
 //  Created by DIANA K STANLEY on 1/16/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+//  Revised by Richard Clark on 3/10/11.
+//  Copyright 2011 NextQuestion Consulting. All rights reserved.
+
+/*
+ * Plan of attack for searching: 
+ * - Set up an appropriate predicate.
+ * - Predicate tracks whether we're in a search
+ * - Need to look at which table view is active (see table search sample)
+ */
 
 #import "DatabaseAccess.h"
 #import "GardensListViewController.h"
@@ -15,7 +22,7 @@
 
 @interface GardensListViewController (Private)
 - (IBAction)sortControlChanged:(id)sender;
-- (void)updateFetchRequest;
+- (NSFetchRequest*)configureFetchRequestForSearch:(NSString*)searchString;
 - (void)performFetch;
 @end
 
@@ -87,12 +94,25 @@ enum sorting {
 		[[NSFetchedResultsController alloc] initWithFetchRequest:self.fetchRequest 
 											managedObjectContext:_context sectionNameKeyPath:self.sectionNameKeyPath 
 													   cacheName:nil];
-		_fetchedResultsController.delegate = self;
+// Disable the delege to get rid of changed result tracking 
+// (TODO do a reload on view activation)
+//		_fetchedResultsController.delegate = self;
 	}
     return [[_fetchedResultsController retain] autorelease];    
 	
 }
 
+- (NSFetchRequest*)configureFetchRequestForSearch:(NSString*)searchString
+{
+    // TODO handle empty search strings
+    NSPredicate *predicate = nil;
+    if (searchString && [searchString length] > 0) {
+        NSString *wildcardedString = [NSString stringWithFormat:@"*%@*", searchString];
+        predicate = [NSPredicate predicateWithFormat:@"(name like[cd] %@) OR (city like[cd] %@) OR (ANY info.itemValue like[cd] %@)", wildcardedString, wildcardedString, wildcardedString];
+    }
+    [_fetchRequest setPredicate:predicate];
+    return _fetchRequest;
+}
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -156,6 +176,7 @@ enum sorting {
 - (void)performFetch;
 {
 	NSError *error;
+//    [self configureFetchRequestForSearch:@"Middle"]; // TODO remove
 	if (![[self fetchedResultsController] performFetch:&error]) {
 		// Update to handle the error appropriately.
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
@@ -316,6 +337,31 @@ enum sorting {
 	// Ensure that the table is up to date on returning from a detail view (e.g. if the favorites star changed)
 	[self.tableView reloadData];
 }
+
+#pragma mark -
+#pragma mark UISearchDisplayController Delegate Methods
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self configureFetchRequestForSearch:searchString];
+    [self performFetch];
+    return YES; // reload the view
+}
+
+- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
+{
+    // Don't add the letter index on the right
+    self.searchDisplayController.searchResultsTableView.sectionIndexMinimumDisplayRowCount = 500;
+}
+
+- (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller
+{
+    // Remove the search filter
+    [self configureFetchRequestForSearch:nil];
+    [self performFetch];
+	[self.tableView reloadData];
+}
+
 
 #pragma mark -
 #pragma mark Memory management

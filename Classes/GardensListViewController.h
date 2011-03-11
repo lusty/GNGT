@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class GardenDescriptionViewController;
 
-@interface GardensListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, UINavigationControllerDelegate> {
+@interface GardensListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, UINavigationControllerDelegate, UISearchDisplayDelegate> {
 	UITableView *tableView;
 	UISegmentedControl *sortControl;
 	NSArray *_sortDescriptors;
