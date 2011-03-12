@@ -10,6 +10,10 @@
 
 
 @implementation TourInfoController
+@synthesize registrationPage;
+@synthesize sponsorPage;
+@synthesize infoPage;
+@synthesize viewSelector;
 
 @synthesize updateButton, registrationButton;
 
@@ -20,6 +24,12 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
+- (void)viewDidLoad
+{
+    activeView = nil;
+    [super viewDidLoad];
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -37,13 +47,19 @@
 }
 
 - (void)viewDidUnload {
+//    if (activeView) {
+//        [self.view 
+//    }
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 
 - (void)dealloc {
+    [viewSelector release];
+    [infoPage release];
+    [sponsorPage release];
+    [sponsorPage release];
+    [registrationPage release];
     [super dealloc];
 }
 
