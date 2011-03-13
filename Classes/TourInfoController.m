@@ -22,32 +22,19 @@
 @synthesize emailField;
 @synthesize registrationCompletedPrompt;
 @synthesize registrationPendingPrompt;
-@synthesize viewSelector;
-@synthesize registrationPage, sponsorPage, infoPage;
 
 @synthesize updateButton, showRegistrationPageButton;
 @synthesize openWebButton, updateButton2;
 
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
 - (void)viewDidLoad
 {
     registrationManager = [RegistrationManager sharedRegistrationManager];
     updateManager = [UpdateManager sharedUpdateManager];
     databaseAccess = [DatabaseAccess sharedDatabaseAccess];
-    
-    [self addPage:sponsorPage];
-    [self addPage:registrationPage];
-    [self addPage:infoPage];
-    pages = [[NSArray arrayWithObjects:infoPage, registrationPage, sponsorPage, nil] retain];
-    
-	[self.viewSelector addTarget:self action:@selector(viewSelectorChanged:) forControlEvents:UIControlEventValueChanged];
+     
+    UIScrollView *sv = (UIScrollView*)self.view;
+    sv.contentSize = CGSizeMake(320.0, 545.0); // TODO calculate from subview sizes
     
     emailActivityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     emailActivityIndicator.hidesWhenStopped = YES;
@@ -97,10 +84,11 @@
 }
 
 - (void)viewDidUnload {
-    [pages release];
-    pages = nil;
     [emailActivityIndicator release];
     emailActivityIndicator = nil;
+    
+    // TODO release the rest of the IB outlets
+    
     [super viewDidUnload];
 }
 
@@ -110,20 +98,6 @@
     [super dealloc];
 }
 
-#pragma mark View page switching
-
-- (IBAction)viewSelectorChanged:(id)sender
-{
-	int selectionIndex = self.viewSelector.selectedSegmentIndex;
-	UIView *selectedView = (UIView*)[pages objectAtIndex:selectionIndex];
-    [self.view bringSubviewToFront:selectedView];
-}
-
-- (void)addPage:(UIView*)page
-{
-    [self.view addSubview:page];
-    [page setFrame:CGRectOffset(page.bounds, 0.0, 44.0)];
-}
 
 #pragma mark -
 #pragma mark UI operations
@@ -190,17 +164,6 @@
 	// TODO implement
 }
 
-- (IBAction)showRegistrationPage
-{
-    [self.viewSelector setSelectedSegmentIndex:2];
-	[self.view bringSubviewToFront:registrationPage];
-}
-
-- (IBAction)showInfoPage
-{
-    [self.viewSelector setSelectedSegmentIndex:0];
-	[self.view bringSubviewToFront:infoPage];
-}
 
 
 @end
