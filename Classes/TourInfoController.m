@@ -7,8 +7,9 @@
 //
 
 #import "TourInfoController.h"
-#import "UpdateManager.h"
 #import "DatabaseAccess.h"
+#import "UpdateManager.h"
+#import "RegistrationManager.h"
 #import "UserInfo.h"
 
 @interface TourInfoController(Private)
@@ -37,6 +38,7 @@
 
 - (void)viewDidLoad
 {
+    registrationManager = [RegistrationManager sharedRegistrationManager];
     updateManager = [UpdateManager sharedUpdateManager];
     databaseAccess = [DatabaseAccess sharedDatabaseAccess];
     
@@ -78,6 +80,7 @@
     BOOL registered = userInfo.isRegisteredForTourValue;
     BOOL wantsRegistration = !registered && hasEmail;
     
+    showRegistrationPageButton.hidden = registered;
     registrationButton.hidden = registered;
     openWebButton.hidden = !wantsRegistration;
     registrationCompletedPrompt.hidden = !registered;
@@ -162,15 +165,13 @@
     UserInfo *userInfo = databaseAccess.userInfo;
     if (email && email.length > 0) {
         [emailActivityIndicator startAnimating];
-        [updateManager getRegistrationStatusForEmail:email andCall:^(NSString *registrationStatus) {
+        [registrationManager updateRegistrationForUser:userInfo withEmail:email andCall:^(UserInfo *userInfo, NSError *error) {
             [emailActivityIndicator stopAnimating];
-            if (registrationStatus == nil) { 
+            if (error) { 
                 // network error
                 UIAlertView *someError = [[[UIAlertView alloc] initWithTitle: @"Network error" message: @"Could not communicate with the server" delegate: nil cancelButtonTitle: @"Ok" otherButtonTitles: nil] autorelease];
                 [someError show];
             } else {
-                userInfo.email = email;
-                userInfo.isRegisteredForTourValue = [REGISTERED isEqualToString:registrationStatus];
                 NSError *saveError = nil;
                 [databaseAccess.managedObjectContext save:&saveError];            
             }

@@ -38,11 +38,14 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DatabaseAccess)
         NSEntityDescription *entity = [UserInfo entityInManagedObjectContext:moc];
         [request setEntity:entity];
         NSError *error = nil;
-        NSArray *fetched = [moc executeFetchRequest:request error:&error];
-        if (fetched) _userInfo = [[fetched objectAtIndex:0] retain];
-//        [request release];
-//        [entity release];
-//        [fetched release];
+        NSArray *fetchResults = [moc executeFetchRequest:request error:&error];
+        if (fetchResults) _userInfo = [[fetchResults objectAtIndex:0] retain];
+        if (error == nil && fetchResults.count > 0) {
+            _userInfo = [[fetchResults objectAtIndex:0] retain];
+        } else {
+            _userInfo = [[UserInfo insertInManagedObjectContext:moc]retain];
+        }
+        [request release];
     }
     return _userInfo;
 }
@@ -67,7 +70,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DatabaseAccess)
     }
     return managedObjectContext_;
 }
-
 
 /**
  Returns the managed object model for the application.

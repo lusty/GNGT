@@ -38,6 +38,7 @@
 		5C87E22E1327508A00D32AF2 /* UpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87E22D1327508A00D32AF2 /* UpdateManager.m */; };
 		5C87E2791327609B00D32AF2 /* _UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87E21213274F5700D32AF2 /* _UserInfo.m */; };
 		5C87E27A1327609C00D32AF2 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87E21413274F5800D32AF2 /* UserInfo.m */; };
+		5C8B4114132C5ACA00DC8FFF /* RegistrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8B4113132C5ACA00DC8FFF /* RegistrationManager.m */; };
 		5C901E6E12F8E7470091BB68 /* talk.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C901E6C12F8E7470091BB68 /* talk.png */; };
 		5C901E6F12F8E7470091BB68 /* talk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C901E6D12F8E7470091BB68 /* talk@2x.png */; };
 		5C92ECC4132862660064F21E /* DateFormatters.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C92ECC3132862660064F21E /* DateFormatters.m */; };
@@ -113,6 +114,9 @@
 		5C87E21413274F5800D32AF2 /* UserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		5C87E22C1327508A00D32AF2 /* UpdateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateManager.h; sourceTree = "<group>"; };
 		5C87E22D1327508A00D32AF2 /* UpdateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateManager.m; sourceTree = "<group>"; };
+		5C8B4112132C5ACA00DC8FFF /* RegistrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationManager.h; sourceTree = "<group>"; };
+		5C8B4113132C5ACA00DC8FFF /* RegistrationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationManager.m; sourceTree = "<group>"; };
+		5C8B4115132C5DB500DC8FFF /* GNGT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNGT.h; sourceTree = "<group>"; };
 		5C901E6C12F8E7470091BB68 /* talk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = talk.png; sourceTree = "<group>"; };
 		5C901E6D12F8E7470091BB68 /* talk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk@2x.png"; sourceTree = "<group>"; };
 		5C92ECC2132862660064F21E /* DateFormatters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormatters.h; sourceTree = "<group>"; };
@@ -258,6 +262,7 @@
 			children = (
 				1D3623240D0F684500981E51 /* GNGTAppDelegate.h */,
 				1D3623250D0F684500981E51 /* GNGTAppDelegate.m */,
+				5C8B4115132C5DB500DC8FFF /* GNGT.h */,
 			);
 			name = "App delegate";
 			sourceTree = "<group>";
@@ -295,6 +300,8 @@
 				5C04551B13271EBD00DD7232 /* gtm-http-fetcher */,
 				5C87E22C1327508A00D32AF2 /* UpdateManager.h */,
 				5C87E22D1327508A00D32AF2 /* UpdateManager.m */,
+				5C8B4112132C5ACA00DC8FFF /* RegistrationManager.h */,
+				5C8B4113132C5ACA00DC8FFF /* RegistrationManager.m */,
 			);
 			name = net;
 			sourceTree = "<group>";
@@ -507,6 +514,7 @@
 				5C87E2791327609B00D32AF2 /* _UserInfo.m in Sources */,
 				5C87E27A1327609C00D32AF2 /* UserInfo.m in Sources */,
 				5C92ECC4132862660064F21E /* DateFormatters.m in Sources */,
+				5C8B4114132C5ACA00DC8FFF /* RegistrationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

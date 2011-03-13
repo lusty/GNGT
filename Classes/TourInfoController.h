@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class RegistrationManager;
 @class UpdateManager;
 @class DatabaseAccess;
 
@@ -33,6 +34,7 @@
     UILabel *registrationPendingPrompt;
 
 @private
+    RegistrationManager *registrationManager;
     UpdateManager *updateManager;
     DatabaseAccess *databaseAccess;
 }

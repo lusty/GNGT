@@ -35,7 +35,7 @@
 	[self.window makeKeyAndVisible];
     
 	updateManager = [UpdateManager sharedUpdateManager]; // retained by default
-	[updateManager applicationFinishedLaunchingWithOptions:launchOptions];
+//	[updateManager applicationFinishedLaunchingWithOptions:launchOptions];
     return YES;
 }
 
