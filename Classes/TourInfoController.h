@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class UpdateManager;
+@class DatabaseAccess;
 
-@interface TourInfoController : UIViewController {
+@interface TourInfoController : UIViewController<UITextViewDelegate> {
     UISegmentedControl *viewSelector;
-    UIView *activeView;
+    NSArray *pages;
+    UIActivityIndicatorView *emailActivityIndicator;
     
     // Info page
     UIView *infoPage;
@@ -19,25 +22,43 @@
 
     // Registration page
     UIView *registrationPage;
+    UITextField *emailField;
     UIButton *registrationButton;
+    IBOutlet UIButton *startRegistrationButton;
     
     // Sponsor page
     UIView *sponsorPage;
+    UIButton *updateButton2;
+    UILabel *registrationCompletedPrompt;
+    UILabel *registrationPendingPrompt;
+
+@private
+    UpdateManager *updateManager;
+    DatabaseAccess *databaseAccess;
 }
 
 @property (nonatomic, retain) IBOutlet UISegmentedControl *viewSelector;
 
 @property (nonatomic, retain) IBOutlet UIView *infoPage;
 @property (nonatomic, retain) IBOutlet UIButton *updateButton;
+@property (nonatomic, retain) IBOutlet UIButton *showRegistrationPageButton;
 
 @property (nonatomic, retain) IBOutlet UIView *registrationPage;
-@property (nonatomic, retain) IBOutlet UIButton *registrationButton;
+@property (nonatomic, retain) IBOutlet UITextField *emailField;
+@property (nonatomic, retain) IBOutlet UIButton *openWebButton;
+@property (nonatomic, retain) IBOutlet UIButton *updateButton2;
+
+@property (nonatomic, retain) IBOutlet UILabel *registrationCompletedPrompt;
+@property (nonatomic, retain) IBOutlet UILabel *registrationPendingPrompt;
 
 @property (nonatomic, retain) IBOutlet UIView *sponsorPage;
 
 
+- (IBAction)checkEmailAddress;
 - (IBAction)downloadUpdate;
 - (IBAction)registerForTour;
+- (IBAction)showRegistrationPage;
+- (IBAction)showInfoPage;
 
 - (void)setBadgeText:(NSString*)value;
 

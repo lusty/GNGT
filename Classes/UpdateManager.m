@@ -63,16 +63,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(UpdateManager)
 	[myFetcher beginFetchWithDelegate:self didFinishSelector:@selector(updateCheck:finishedWithData:error:)];
 }
 
-- (void)beginCheckForRegistration
-{
-	if (self.userInfo.email == nil || self.userInfo.email.length == 0) return; // no email address
-	
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&%@", baseURL, self.userInfo.email]];
-	NSURLRequest *request = [NSURLRequest requestWithURL:url];
-	GTMHTTPFetcher* myFetcher = [GTMHTTPFetcher fetcherWithRequest:request];
-	[myFetcher beginFetchWithDelegate:self didFinishSelector:@selector(registrationCheck:finishedWithData:error:)];
-}
-
 - (void)updateCheck:(GTMHTTPFetcher *)fetcher finishedWithData:(NSData *)retrievedData error:(NSError *)error {
 	if (error != nil) {
 		[notificationCenter postNotification:[NSNotification notificationWithName:ERROR_NOTIFICATION object:error]];
@@ -81,6 +71,16 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(UpdateManager)
 		updateAvailable = YES;
 		[notificationCenter postNotification:[NSNotification notificationWithName:UPDATE_NOTIFICATION object:nil]];
 	}
+}
+
+- (void)beginCheckForRegistration
+{
+	if (self.userInfo.email == nil || self.userInfo.email.length == 0) return; // no email address
+	
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&%@", baseURL, self.userInfo.email]];
+	NSURLRequest *request = [NSURLRequest requestWithURL:url];
+	GTMHTTPFetcher* myFetcher = [GTMHTTPFetcher fetcherWithRequest:request];
+	[myFetcher beginFetchWithDelegate:self didFinishSelector:@selector(registrationCheck:finishedWithData:error:)];
 }
 
 - (void)registrationCheck:(GTMHTTPFetcher *)fetcher finishedWithData:(NSData *)retrievedData error:(NSError *)error {
@@ -92,6 +92,29 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(UpdateManager)
 													  length:[retrievedData length] encoding: NSUTF8StringEncoding];
 		[notificationCenter postNotification:[NSNotification notificationWithName:REGISTRATION_NOTIFICATION object:self.registrationStatus]];
 	}
+}
+
+/**
+ * Look up the user's registration status
+ * @param email user email
+ * @param callback called with the registration status (REGISTERED, NOT-REGESISTERED, or nil for a network error)
+ */
+- (void) getRegistrationStatusForEmail:(NSString*)email andCall:(void (^)(NSString *result))callback
+{
+    if (email && email.length > 0) {
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&email=%@", baseURL, email]];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        GTMHTTPFetcher* myFetcher = [GTMHTTPFetcher fetcherWithRequest:request];
+        [myFetcher beginFetchWithCompletionHandler:^(NSData* data, NSError* error){
+            if (error) {
+                callback(nil);
+            } else {
+                NSString *returnedValue = [[NSString alloc] initWithBytes:[data bytes] length:[data length] encoding: NSUTF8StringEncoding];
+                BOOL isRegistered = [returnedValue isEqualToString:REGISTERED];
+                callback(isRegistered ? REGISTERED : NOT_REGISTERED);
+            }
+        }];
+    }
 }
 
 #pragma mark -

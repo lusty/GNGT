@@ -12,10 +12,14 @@
 #import "JSONKit.h"
 #import "Importer.h"
 
+#import "UserInfo.h"
+
 #undef REBUILD_DATABASE
 
 @implementation DatabaseAccess
 SYNTHESIZE_SINGLETON_FOR_CLASS(DatabaseAccess)
+
+@dynamic userInfo;
 
 - (void)dealloc {
     [managedObjectContext_ release];
@@ -24,6 +28,24 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DatabaseAccess)
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark Object access
+- (UserInfo*) userInfo
+{
+    if (!_userInfo) {
+        NSManagedObjectContext *moc = self.managedObjectContext;
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [UserInfo entityInManagedObjectContext:moc];
+        [request setEntity:entity];
+        NSError *error = nil;
+        NSArray *fetched = [moc executeFetchRequest:request error:&error];
+        if (fetched) _userInfo = [[fetched objectAtIndex:0] retain];
+//        [request release];
+//        [entity release];
+//        [fetched release];
+    }
+    return _userInfo;
+}
 
 #pragma mark -
 #pragma mark Core Data stack

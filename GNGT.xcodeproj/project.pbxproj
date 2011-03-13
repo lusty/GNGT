@@ -171,13 +171,11 @@
 			children = (
 				5C309BA31305E51A00AF4C72 /* App delegate */,
 				5CB4EEEE132453DD006C1040 /* db */,
-				5C04551B13271EBD00DD7232 /* gtm-http-fetcher */,
-				5CB4EDA41324528C006C1040 /* JSONKit */,
-				5C309BA21305E50F00AF4C72 /* Util */,
+				5C87E22F1327509500D32AF2 /* net */,
+				5C309BA21305E50F00AF4C72 /* util */,
 				5C6A427313243D6C00FE9096 /* model */,
 				5CE2FCE812E8C82400D88C6A /* Views */,
 				5C99568C12EFA7DB003D4908 /* Controls */,
-				5C87E22F1327509500D32AF2 /* Updates */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -245,14 +243,14 @@
 			path = "gtm-http-fetcher";
 			sourceTree = "<group>";
 		};
-		5C309BA21305E50F00AF4C72 /* Util */ = {
+		5C309BA21305E50F00AF4C72 /* util */ = {
 			isa = PBXGroup;
 			children = (
 				5C26EDC01303C2370035E9C5 /* SynthesizeSingleton.h */,
 				5C92ECC2132862660064F21E /* DateFormatters.h */,
 				5C92ECC3132862660064F21E /* DateFormatters.m */,
 			);
-			name = Util;
+			name = util;
 			sourceTree = "<group>";
 		};
 		5C309BA31305E51A00AF4C72 /* App delegate */ = {
@@ -291,13 +289,14 @@
 			path = model;
 			sourceTree = "<group>";
 		};
-		5C87E22F1327509500D32AF2 /* Updates */ = {
+		5C87E22F1327509500D32AF2 /* net */ = {
 			isa = PBXGroup;
 			children = (
+				5C04551B13271EBD00DD7232 /* gtm-http-fetcher */,
 				5C87E22C1327508A00D32AF2 /* UpdateManager.h */,
 				5C87E22D1327508A00D32AF2 /* UpdateManager.m */,
 			);
-			name = Updates;
+			name = net;
 			sourceTree = "<group>";
 		};
 		5C99568C12EFA7DB003D4908 /* Controls */ = {
@@ -330,6 +329,7 @@
 		5CB4EEEE132453DD006C1040 /* db */ = {
 			isa = PBXGroup;
 			children = (
+				5CB4EDA41324528C006C1040 /* JSONKit */,
 				5CB4EEEF132453F2006C1040 /* Importer.m */,
 				5C7002B5132726EE00CD0D59 /* DatabaseAccess.h */,
 				5C7002B6132726EE00CD0D59 /* DatabaseAccess.m */,

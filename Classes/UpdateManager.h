@@ -34,9 +34,14 @@
 - (void)beginCheckForRegistration;
 - (void)beginCheckForUpdate;
 
+- (void) getRegistrationStatusForEmail:(NSString*)email andCall:(void (^)(NSString *result))callback;
+
 #define ERROR_NOTIFICATION @"NetworkError"
 #define UPDATE_NOTIFICATION @"FileUpdateAvailable"
 #define REGISTRATION_NOTIFICATION @"RegistrationStatus"
+
+#define REGISTERED @"REGISTERED"
+#define NOT_REGISTERED @"NOT_REGISTERED"
 
 @end
 
