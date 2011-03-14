@@ -39,7 +39,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DatabaseAccess)
         [request setEntity:entity];
         NSError *error = nil;
         NSArray *fetchResults = [moc executeFetchRequest:request error:&error];
-        if (fetchResults) _userInfo = [[fetchResults objectAtIndex:0] retain];
         if (error == nil && fetchResults.count > 0) {
             _userInfo = [[fetchResults objectAtIndex:0] retain];
         } else {

@@ -19,7 +19,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(RegistrationManager)
 /**
  * Look up the user's registration status
  * @param email user email
- * @param callback called with the registration status (REGISTERED, NOT-REGESISTERED, or nil for a network error)
+ * @param callback called with an updated userInfo object and the error status.
  */
 - (void) updateRegistrationForUser:(UserInfo*)user withEmail:(NSString*)email andCall:(void (^)(UserInfo *userInfo, NSError *error))callback
 {

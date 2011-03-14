@@ -11,8 +11,10 @@
 @class RegistrationManager;
 @class UpdateManager;
 @class DatabaseAccess;
+@class UserInfo;
 
 @interface TourInfoController : UIViewController<UITextViewDelegate> {
+    
     UIActivityIndicatorView *emailActivityIndicator;
     
     // Info page
@@ -20,35 +22,30 @@
 
     // Registration page
     UITextField *emailField;
-    UIButton *registrationButton;
-    IBOutlet UIButton *startRegistrationButton;
     
     // Sponsor page
     UIButton *updateButton2;
-    UILabel *registrationCompletedPrompt;
-    UILabel *registrationPendingPrompt;
 
 @private
+    CGFloat lastScrollPosition;
+    BOOL isCheckingRegistration;
+    BOOL shouldHideRegistrationView;
     RegistrationManager *registrationManager;
     UpdateManager *updateManager;
     DatabaseAccess *databaseAccess;
 }
 
+@property (nonatomic, retain) IBOutlet UIView *upperView;
+@property (nonatomic, retain) IBOutlet UIView *registrationView;
+@property (nonatomic, retain) IBOutlet UIView *lowerView;
+
 @property (nonatomic, retain) IBOutlet UIButton *updateButton;
-@property (nonatomic, retain) IBOutlet UIButton *showRegistrationPageButton;
-
 @property (nonatomic, retain) IBOutlet UITextField *emailField;
-@property (nonatomic, retain) IBOutlet UIButton *openWebButton;
-@property (nonatomic, retain) IBOutlet UIButton *updateButton2;
 
-@property (nonatomic, retain) IBOutlet UILabel *registrationCompletedPrompt;
-@property (nonatomic, retain) IBOutlet UILabel *registrationPendingPrompt;
+@property (nonatomic, retain) UserInfo *userInfo;
 
-
-
-- (IBAction)checkEmailAddress;
+//- (IBAction)checkEmailAddress;
 - (IBAction)downloadUpdate;
-- (IBAction)registerForTour;
 
 - (void)setBadgeText:(NSString*)value;
 
