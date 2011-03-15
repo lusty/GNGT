@@ -48,10 +48,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-
-
     updateButton2.hidden = YES;
-//    UserInfo *userInfo = databaseAccess.userInfo;
 //    NSString *email = userInfo.email;
 //    emailField.text = email;
 
@@ -61,7 +58,6 @@
 
 - (void)updateDisplay
 {
-    UserInfo *userInfo = databaseAccess.userInfo;
     BOOL registered = userInfo.isRegisteredForTourValue;
     
     UIScrollView *sv = (UIScrollView*)self.view;
@@ -77,7 +73,6 @@
     h += 4.0 + self.lowerView.bounds.size.height;
     sv.contentSize = CGSizeMake(w, h);
 }
-
 
 - (void)didReceiveMemoryWarning 
 {
@@ -204,15 +199,14 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (self.registrationView && !self.registrationView.hidden && self.userInfo.isRegisteredForTour) {
-        [UIView animateWithDuration:0.25
-                         animations:^{
-                             self.registrationView.alpha = 0.0; 
-                             CGFloat v = self.upperView.bounds.size.height + 4.0;
-                             self.lowerView.bounds = CGRectOffset(self.lowerView.frame, 0.0, v);
-                         }
-                         completion:^(BOOL finished){ [self.registrationView removeFromSuperview]; 
-                                                       self.registrationView = nil;}];
+    if (self.registrationView && !self.registrationView.hidden && userInfo.isRegisteredForTourValue) {
+        [UIView animateWithDuration:0.25 
+                         animations:^{ self.registrationView.alpha = 0.0; } 
+                         completion:^(BOOL finished){ self.registrationView.hidden = finished; }];
+        CGRect newLocation = CGRectOffset(lowerView.bounds, 0.0, upperView.bounds.size.height + 4.0); // TODO get the height of the upper view
+        [UIView animateWithDuration:0.25 delay:0.25 options:0 
+                         animations:^{lowerView.frame = newLocation; } 
+                         completion:nil];
     }
 }
 
