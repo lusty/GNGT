@@ -10,6 +10,7 @@
 #import "DatabaseAccess.h"
 #import "UpdateManager.h"
 #import "RegistrationManager.h"
+#import "RegistrationWebViewController.h"
 #import "UserInfo.h"
 
 @interface TourInfoController(Private)
@@ -17,6 +18,8 @@
 - (void)receivedKeyboardWillHideNotification:(NSNotification*)notification;
 - (void)receivedKeyboardHiddenNotification:(NSNotification*)notification;
 - (void)updateDisplay;
+- (void)checkRegistrationForEmail:(NSString*)email;
+- (void)openRegistrationPageWithEmail:(NSString*)email;
 @end
 
 @implementation TourInfoController
@@ -156,50 +159,57 @@
 
 - (void)receivedKeyboardHiddenNotification:(NSNotification*)notification
 {
-    if (isCheckingRegistration) return; // don't post a double update
+    NSString *email = emailField.text;
+   if (isCheckingRegistration) return;
     isCheckingRegistration = YES;
     
-    NSString *email = emailField.text;
-    if (email && email.length > 0) {
-        [emailActivityIndicator startAnimating];
-        NSLog(@"About to call registration manager");
-        [registrationManager updateRegistrationForUser:userInfo withEmail:email andCall:^(UserInfo *user, NSError *error) {
-            NSLog(@"In callback with error %@", error);
-            [emailActivityIndicator stopAnimating];
-            if (error) { 
-                // network error
-                UIAlertView *someError = [[[UIAlertView alloc] initWithTitle: @"Network error" message: @"Could not communicate with the server" delegate: nil cancelButtonTitle: @"Ok" otherButtonTitles: nil] autorelease];
-                [someError show];
+    if (email == nil || email.length == 0) return;
+    [emailActivityIndicator startAnimating];
+    NSLog(@"About to call registration manager");
+    [registrationManager updateRegistrationForUser:userInfo withEmail:email andCall:^(UserInfo *user, NSError *error) {
+        NSLog(@"In callback with error %@", error);
+        [emailActivityIndicator stopAnimating];
+        if (error) { 
+            // network error
+            UIAlertView *someError = [[[UIAlertView alloc] initWithTitle: @"Network error" message: @"Could not communicate with the server" delegate: nil cancelButtonTitle: @"Ok" otherButtonTitles: nil] autorelease];
+            [someError show];
+        } else {
+            NSError *saveError = nil;
+            [databaseAccess.managedObjectContext save:&saveError]; 
+            UIAlertView *confirmation = nil;
+            if (user.isRegisteredForTourValue) {
+                [self updateDisplay]; // TODO delegate back to the master controller to update the display instead
+                confirmation = [[[UIAlertView alloc] initWithTitle: @"Thank you" message: @"Your registration is complete." delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil] autorelease];
             } else {
-                NSError *saveError = nil;
-                [databaseAccess.managedObjectContext save:&saveError]; 
-                UIAlertView *confirmation = nil;
-                if (user.isRegisteredForTourValue) {
-                    [self updateDisplay]; // TODO delegate back to the master controller to update the display instead
-                    confirmation = [[[UIAlertView alloc] initWithTitle: @"Thank you" message: @"Your registration is complete." delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil] autorelease];
-                } else {
-                    // TODO delegate to self and process the result accordingly
-                    NSLog(@"Displaying non-registration message"); // TODO remove <<<
-                    confirmation = [[[UIAlertView alloc] initWithTitle: @"Registration" message: @"Your registration is not yet complete. Please proceed to the web site to complete it." delegate: self cancelButtonTitle: @"Cancel" otherButtonTitles: @"Open web page", nil] autorelease];
-                }
-                [confirmation show];
+                // TODO delegate to self and process the result accordingly
+                NSLog(@"Displaying non-registration message"); // TODO remove <<<
+                confirmation = [[[UIAlertView alloc] initWithTitle: @"Registration" message: @"Your registration is not yet complete. Please proceed to the web site to complete it." delegate: self cancelButtonTitle: @"Cancel" otherButtonTitles: @"Open web page", nil] autorelease];
             }
-            isCheckingRegistration = NO;
-            
-            // TODO only call this if registration succeeds (and the user has dismissed the dialog)
-            
-            
-            [self updateDisplay];
-        }];
-    }
+            [confirmation show];
+        }
+        isCheckingRegistration = NO;
+        
+        // TODO only call this if registration succeeds (and the user has dismissed the dialog)
+        
+        
+        [self updateDisplay];
+    }];
 }
 
 #pragma mark -
-#pragma mark UIAleryViewDelegate
+#pragma mark UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (self.registrationView && !self.registrationView.hidden && userInfo.isRegisteredForTourValue) {
+    BOOL registrationCompletionPending = registrationView && !registrationView.hidden;
+    if (!registrationCompletionPending) return;
+    
+    if (buttonIndex == 1 && !userInfo.isRegisteredForTourValue) {
+        // the only 2-button dialog leads to the web view
+        [alertView dismissWithClickedButtonIndex:0 animated:YES];
+        [self openRegistrationPageWithEmail:userInfo.email];
+        
+    } else if (registrationView && !registrationView.hidden && userInfo.isRegisteredForTourValue) {
         [UIView animateWithDuration:0.25 
                          animations:^{ self.registrationView.alpha = 0.0; } 
                          completion:^(BOOL finished){ self.registrationView.hidden = finished; }];
@@ -208,6 +218,51 @@
                          animations:^{lowerView.frame = newLocation; } 
                          completion:nil];
     }
+}
+
+- (void)openRegistrationPageWithEmail:(NSString*)email
+{
+    // Open a web view modally using a temporary navigation controller
+    RegistrationWebViewController *regVC = [[RegistrationWebViewController alloc] init];    
+    // Create the nav controller and add the view controllers.
+    UINavigationController*  navController = [[UINavigationController alloc]
+                                                 initWithRootViewController:regVC];
+    navController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    
+    // TODO set the nav controllers delegate to me so I can catch their dismissal
+    
+    NSString *boundary = @"----GNGTApp";
+    NSURL *url = [NSURL URLWithString: @"http://gngt.org/GNGT/EmailRequestNC.php"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod: @"POST"];    
+    
+    // ITS A DAMN MULTIPART REQUEST.
+    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
+    [request setValue:contentType forHTTPHeaderField:@"Content-type"];
+    
+    NSMutableData *postBody = [NSMutableData data];
+    [postBody appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[@"Content-Disposition: form-data; name=\"hansel_and_gretel\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[email dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [postBody appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[@"Content-Disposition: form-data; name=\"rumpelstiltskin\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[email dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [postBody appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[@"Content-Disposition: form-data; name=\"dispatch\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[@"Continue the Registration" dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    //Load the request in the UIWebView.
+    [request setHTTPBody:postBody];
+    
+    [self presentModalViewController:navController animated:YES];
+    [regVC.webView loadRequest: request];
+    
+    // Release the view controllers to prevent over-retention.
+    [regVC release];
+    [navController release];
 }
 
 #pragma mark -

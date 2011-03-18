@@ -17,6 +17,7 @@
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
 		5C04551E13271EBD00DD7232 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C04551D13271EBD00DD7232 /* GTMHTTPFetcher.m */; };
 		5C26EDC31303C24D0035E9C5 /* UIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C26EDC21303C24D0035E9C5 /* UIConstants.m */; };
+		5C32B719132F3053004DAB5A /* RegistrationWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C32B717132F3053004DAB5A /* RegistrationWebViewController.m */; };
 		5C42631712F7F951007E0ABF /* flowerpot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C42631512F7F951007E0ABF /* flowerpot.png */; };
 		5C42631812F7F951007E0ABF /* flowerpot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C42631612F7F951007E0ABF /* flowerpot@2x.png */; };
 		5C48F8A7132A0744005FA880 /* gngt2011-public.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C2B457913281A1200FC5CC5 /* gngt2011-public.json */; };
@@ -82,6 +83,8 @@
 		5C26EDC11303C24D0035E9C5 /* UIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
 		5C26EDC21303C24D0035E9C5 /* UIConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConstants.m; sourceTree = "<group>"; };
 		5C2B457913281A1200FC5CC5 /* gngt2011-public.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "gngt2011-public.json"; path = "db/gngt2011-public.json"; sourceTree = "<group>"; };
+		5C32B716132F3053004DAB5A /* RegistrationWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationWebViewController.h; sourceTree = "<group>"; };
+		5C32B717132F3053004DAB5A /* RegistrationWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationWebViewController.m; sourceTree = "<group>"; };
 		5C42631512F7F951007E0ABF /* flowerpot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flowerpot.png; sourceTree = "<group>"; };
 		5C42631612F7F951007E0ABF /* flowerpot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flowerpot@2x.png"; sourceTree = "<group>"; };
 		5C4C84EF12EDF9AF0086B133 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -402,6 +405,8 @@
 				5CDFEF7212F92271006AC87D /* GardenDescriptionViewController.m */,
 				5C50D2DB12FCDA8E001C94EF /* TourInfoController.h */,
 				5C50D2DC12FCDA8E001C94EF /* TourInfoController.m */,
+				5C32B716132F3053004DAB5A /* RegistrationWebViewController.h */,
+				5C32B717132F3053004DAB5A /* RegistrationWebViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -515,6 +520,7 @@
 				5C87E27A1327609C00D32AF2 /* UserInfo.m in Sources */,
 				5C92ECC4132862660064F21E /* DateFormatters.m in Sources */,
 				5C8B4114132C5ACA00DC8FFF /* RegistrationManager.m in Sources */,
+				5C32B719132F3053004DAB5A /* RegistrationWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

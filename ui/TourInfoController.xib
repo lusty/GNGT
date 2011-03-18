@@ -271,7 +271,6 @@
 								<int key="NSvFlags">301</int>
 								<string key="NSFrame">{{20, 53}, {280, 200}}</string>
 								<reference key="NSSuperview" ref="841848207"/>
-								<reference key="NSNextKeyView"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
@@ -567,7 +566,7 @@ V2F0ZXIgRGlzdHJpY3QgCldhdGVyc2hlZCBXYXRjaCAKWWVyYmEgQnVlbmEgTnVyc2VyeSA</string>
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">137</int>
+			<int key="maxID">138</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

@@ -46,7 +46,6 @@
 
 //- (IBAction)checkEmailAddress;
 - (IBAction)downloadUpdate;
-
 - (void)setBadgeText:(NSString*)value;
 
 @end
