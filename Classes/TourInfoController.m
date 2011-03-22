@@ -220,16 +220,25 @@
     }
 }
 
+- (void) closeRegistrationPage:(id)sender
+{
+    if (navController == nil) return;
+    [navController dismissModalViewControllerAnimated:YES];
+    navController = nil;
+    // TODO recheck for a registration
+}
+
+
 - (void)openRegistrationPageWithEmail:(NSString*)email
 {
     // Open a web view modally using a temporary navigation controller
     RegistrationWebViewController *regVC = [[RegistrationWebViewController alloc] init];    
     // Create the nav controller and add the view controllers.
-    UINavigationController*  navController = [[UINavigationController alloc]
-                                                 initWithRootViewController:regVC];
+    navController = [[UINavigationController alloc] initWithRootViewController:regVC];
     navController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    
-    // TODO set the nav controllers delegate to me so I can catch their dismissal
+    UINavigationItem *navItem = navController.navigationBar.topItem;
+    navItem.title = @"Online registration";
+    navItem.rightBarButtonItem = [[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(closeRegistrationPage:)] autorelease];
     
     NSString *boundary = @"----GNGTApp";
     NSURL *url = [NSURL URLWithString: @"http://gngt.org/GNGT/EmailRequestNC.php"];

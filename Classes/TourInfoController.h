@@ -33,6 +33,7 @@
     RegistrationManager *registrationManager;
     UpdateManager *updateManager;
     DatabaseAccess *databaseAccess;
+    UINavigationController*  navController;
 }
 
 @property (nonatomic, retain) IBOutlet UIView *upperView;
