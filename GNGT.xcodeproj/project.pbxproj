@@ -17,6 +17,12 @@
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
 		5C04551E13271EBD00DD7232 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C04551D13271EBD00DD7232 /* GTMHTTPFetcher.m */; };
 		5C26EDC31303C24D0035E9C5 /* UIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C26EDC21303C24D0035E9C5 /* UIConstants.m */; };
+		5C2BBC56133D8FEE000B6EAD /* 53-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C2BBC50133D8FEE000B6EAD /* 53-house.png */; };
+		5C2BBC57133D8FEE000B6EAD /* 53-house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C2BBC51133D8FEE000B6EAD /* 53-house@2x.png */; };
+		5C2BBC58133D8FEE000B6EAD /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C2BBC52133D8FEE000B6EAD /* 103-map.png */; };
+		5C2BBC59133D8FEE000B6EAD /* 103-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C2BBC53133D8FEE000B6EAD /* 103-map@2x.png */; };
+		5C2BBC5A133D8FEE000B6EAD /* 170-butterfly.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C2BBC54133D8FEE000B6EAD /* 170-butterfly.png */; };
+		5C2BBC5B133D8FEE000B6EAD /* 170-butterfly@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C2BBC55133D8FEE000B6EAD /* 170-butterfly@2x.png */; };
 		5C42631712F7F951007E0ABF /* flowerpot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C42631512F7F951007E0ABF /* flowerpot.png */; };
 		5C42631812F7F951007E0ABF /* flowerpot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C42631612F7F951007E0ABF /* flowerpot@2x.png */; };
 		5C48F8A7132A0744005FA880 /* gngt2011-public.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C2B457913281A1200FC5CC5 /* gngt2011-public.json */; };
@@ -82,6 +88,12 @@
 		5C26EDC11303C24D0035E9C5 /* UIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
 		5C26EDC21303C24D0035E9C5 /* UIConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConstants.m; sourceTree = "<group>"; };
 		5C2B457913281A1200FC5CC5 /* gngt2011-public.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "gngt2011-public.json"; path = "db/gngt2011-public.json"; sourceTree = "<group>"; };
+		5C2BBC50133D8FEE000B6EAD /* 53-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53-house.png"; sourceTree = "<group>"; };
+		5C2BBC51133D8FEE000B6EAD /* 53-house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53-house@2x.png"; sourceTree = "<group>"; };
+		5C2BBC52133D8FEE000B6EAD /* 103-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map.png"; sourceTree = "<group>"; };
+		5C2BBC53133D8FEE000B6EAD /* 103-map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map@2x.png"; sourceTree = "<group>"; };
+		5C2BBC54133D8FEE000B6EAD /* 170-butterfly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "170-butterfly.png"; sourceTree = "<group>"; };
+		5C2BBC55133D8FEE000B6EAD /* 170-butterfly@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "170-butterfly@2x.png"; sourceTree = "<group>"; };
 		5C42631512F7F951007E0ABF /* flowerpot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flowerpot.png; sourceTree = "<group>"; };
 		5C42631612F7F951007E0ABF /* flowerpot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flowerpot@2x.png"; sourceTree = "<group>"; };
 		5C4C84EF12EDF9AF0086B133 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -347,6 +359,12 @@
 		5CDF403F12FC8C300014742E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5C2BBC50133D8FEE000B6EAD /* 53-house.png */,
+				5C2BBC51133D8FEE000B6EAD /* 53-house@2x.png */,
+				5C2BBC52133D8FEE000B6EAD /* 103-map.png */,
+				5C2BBC53133D8FEE000B6EAD /* 103-map@2x.png */,
+				5C2BBC54133D8FEE000B6EAD /* 170-butterfly.png */,
+				5C2BBC55133D8FEE000B6EAD /* 170-butterfly@2x.png */,
 				C992612A12FDEC5E00FA5E8B /* GNGTAppIco.png */,
 				5C50D2EA12FCE29A001C94EF /* clarkia.png */,
 				5C50D2EB12FCE29A001C94EF /* clarkia@2x.png */,
@@ -478,6 +496,12 @@
 				5CB4EEC41324528D006C1040 /* CHANGELOG.md in Resources */,
 				5CB4EEC61324528D006C1040 /* README.md in Resources */,
 				5C48F8A7132A0744005FA880 /* gngt2011-public.json in Resources */,
+				5C2BBC56133D8FEE000B6EAD /* 53-house.png in Resources */,
+				5C2BBC57133D8FEE000B6EAD /* 53-house@2x.png in Resources */,
+				5C2BBC58133D8FEE000B6EAD /* 103-map.png in Resources */,
+				5C2BBC59133D8FEE000B6EAD /* 103-map@2x.png in Resources */,
+				5C2BBC5A133D8FEE000B6EAD /* 170-butterfly.png in Resources */,
+				5C2BBC5B133D8FEE000B6EAD /* 170-butterfly@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
