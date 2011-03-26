@@ -83,7 +83,7 @@ enum viewFilter {
 	[segmentedControl release];
 	
 	[self showDefaultMapAnimated:NO];
-	[self goToCurrentLocation];
+//	[self goToCurrentLocation]; // don't home in on the current location (yet)
 	self.lastView = self.viewSelector.selectedSegmentIndex = viewAll;
 	[self.viewSelector addTarget:self action:@selector(viewSelectorChanged:) forControlEvents:UIControlEventValueChanged];
 }
@@ -168,7 +168,7 @@ enum viewFilter {
 - (void)changeViewFilterTo:(int)newFilterValue
 {
 	[self setPredicateForFilter:newFilterValue];
-	// TODO save last value and bounce back to it if nothing found
+	// saves last value and bounce back to it if nothing found
 	if ([self updateAnnotations]) {
 		lastView = newFilterValue;
 	} else if (newFilterValue != viewAll) { // fetchResults.count == 0
@@ -180,14 +180,6 @@ enum viewFilter {
 		[alert show];
 	}
 }
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return YES;
-}
-*/
 
 #pragma mark -
 #pragma mark UIAlertViewDelegate
@@ -232,8 +224,6 @@ enum viewFilter {
 	region.span.longitudeDelta = 0.15f;
 	region.span.latitudeDelta = 0.15f;
 	[self.mapView setRegion:region animated:YES];
-	
-	// TODO show just the annotations within this region? (possible optimization)	
 }
 
 #pragma mark MapKit Delegate
